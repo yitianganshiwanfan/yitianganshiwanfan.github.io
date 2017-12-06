@@ -1,0 +1,909 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP的请求参数和编码 · HTTP知识总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch4_http_resp_status_code.html" />
+    
+    
+    <link rel="prev" href="ch2_http_header.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"crifan","repo":"http_summary","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.crifan.com" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../http_intro/">
+            
+                <a href="../http_intro/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    HTTP简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../http_intro/ch1_http_learn_purpose.html">
+            
+                <a href="../http_intro/ch1_http_learn_purpose.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    HTTP学习目的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../http_intro/ch2_http_intro.html">
+            
+                <a href="../http_intro/ch2_http_intro.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    HTTP简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../http_intro/ch3_http_internal_process.html">
+            
+                <a href="../http_intro/ch3_http_internal_process.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    HTTP内部流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../http_intro/ch4_http_basic_logic.html">
+            
+                <a href="../http_intro/ch4_http_basic_logic.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    HTTP基本逻辑总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    HTTP详解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ch1_http_structure.html">
+            
+                <a href="ch1_http_structure.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    HTTP的典型结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch2_http_header.html">
+            
+                <a href="ch2_http_header.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    HTTP的Header头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="ch3_http_req_param_encode.html">
+            
+                <a href="ch3_http_req_param_encode.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    HTTP的请求参数和编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="ch4_http_resp_status_code.html">
+            
+                <a href="ch4_http_resp_status_code.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    HTTP的响应的状态码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="ch5_http_resp_data_format_json.html">
+            
+                <a href="ch5_http_resp_data_format_json.html">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    HTTP的响应数据格式JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../http_related/">
+            
+                <a href="../http_related/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    HTTP相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../http_related/ch1_http_tool_lib.html">
+            
+                <a href="../http_related/ch1_http_tool_lib.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    HTTP的工具和库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../http_related/ch2_http_api_design.html">
+            
+                <a href="../http_related/ch2_http_api_design.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    HTTP的后台API设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../http_related/ch3_http_note_summary.html">
+            
+                <a href="../http_related/ch3_http_note_summary.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    HTTP相关心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../appendix/">
+            
+                <a href="../appendix/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../appendix/good_tutorial.html">
+            
+                <a href="../appendix/good_tutorial.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    优质教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../appendix/reference.html">
+            
+                <a href="../appendix/reference.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HTTP的请求参数和编码</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="http&#x7684;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x548C;&#x53C2;&#x6570;&#x7F16;&#x7801;">HTTP&#x7684;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x548C;&#x53C2;&#x6570;&#x7F16;&#x7801;</h1>
+<p>&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;HTTP&#x7684;&#x8BF7;&#x6C42;&#x53C2;&#x6570;<code>Request Parameters</code>&#x548C;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x7F16;&#x7801;<code>Request Parameters Encoding</code></p>
+<h2 id="get&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#xFF1A;query-string">GET&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#xFF1A;<code>query string</code></h2>
+<p>&#x5178;&#x578B;&#x7684;&#x662F;&#xFF1A;</p>
+<p>GET&#xFF1A;&#x53C2;&#x6570;&#x60F3;&#x8981;&#x653E;&#x5728;url&#x4E2D;&#x4EE5;<code>?key1=value1&amp;key2=value2</code>&#x7684;&#x5F62;&#x5F0F;</p>
+<p>&#x5219;&#x6709;&#x4E24;&#x79CD;&#x505A;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>&#x81EA;&#x5DF1;&#x628A;&#x53C2;&#x6570;&#x7EC4;&#x5408;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x653E;&#x5230;url&#x4E2D;</li>
+<li>&#x628A;&#x53C2;&#x6570;&#xFF08;&#x5B57;&#x5178;&#xFF0C;&#x5BF9;&#x8C61;&#x7B49;&#xFF09;&#x8C03;&#x7528;url encode&#x51FD;&#x6570;&#x53BB;&#x7F16;&#x7801;&#xFF0C;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x683C;&#x5F0F;&#xFF08;&#x518D;&#x653E;&#x5230;url&#x4E2D;&#xFF09;</li>
+</ul>
+<blockquote>
+<p><strong>[info] GET&#x7684;&#x4E00;&#x822C;&#x7279;&#x70B9;</strong></p>
+<ul>
+<li>GET &#x8BF7;&#x6C42;&#x6709;&#x957F;&#x5EA6;&#x9650;&#x5236;<ul>
+<li>&#x6240;&#x4EE5;query string&#x4E00;&#x822C;&#x88AB;&#x9650;&#x5236;&#x5728;1024&#x4E2A;&#x5B57;&#x8282;<ul>
+<li>&#x8D85;&#x8FC7;&#x9650;&#x5236;&#x5219;&#x540E;&#x53F0;&#x65E0;&#x6CD5;&#x89E3;&#x6790;&#x53C2;&#x6570;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GET &#x8BF7;&#x6C42;&#x53EF;&#x88AB;&#x7F13;&#x5B58;</li>
+<li>GET &#x8BF7;&#x6C42;&#x4FDD;&#x7559;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x4E2D;</li>
+<li>GET &#x8BF7;&#x6C42;&#x53EF;&#x88AB;&#x6536;&#x85CF;&#x4E3A;&#x4E66;&#x7B7E;</li>
+<li>GET &#x8BF7;&#x6C42;&#x4E0D;&#x5E94;&#x5728;&#x5904;&#x7406;&#x654F;&#x611F;&#x6570;&#x636E;&#x65F6;&#x4F7F;&#x7528;</li>
+<li>GET &#x8BF7;&#x6C42;&#x53EA;&#x5E94;&#x5F53;&#x7528;&#x4E8E;&#x53D6;&#x56DE;&#x6570;&#x636E;</li>
+</ul>
+</blockquote>
+<h2 id="post&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#xFF1A;post-body">POST&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#xFF1A;<code>post body</code></h2>
+<p>&#x5178;&#x578B;&#x7684;&#x662F;&#xFF1A;&#x628A;&#x4E00;&#x5806;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x653E;&#x5230;<code>post</code>&#x7684;<code>body</code>&#x4E2D;&#xFF0C;&#x683C;&#x5F0F;&#x4E00;&#x822C;&#x90FD;&#x662F;<code>json</code>&#x683C;&#x5F0F;</p>
+<p>&#x5219;&#x4E00;&#x822C;&#x4E5F;&#x6709;&#x4E24;&#x79CD;&#x505A;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>&#x81EA;&#x5DF1;&#x628A;&#x53C2;&#x6570;&#xFF08;&#x5BF9;&#x8C61;&#xFF0C;&#x5B57;&#x5178;&#x7B49;&#xFF09;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;json&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x8C03;&#x7528;&#x5E93;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;&#x53BB;encode&#x4F60;&#x7684;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x4E3A;json</li>
+</ul>
+<p>&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x89E3;&#x91CA;&#xFF1A;</p>
+<blockquote>
+<p><strong>[info] POST&#x7684;&#x4E00;&#x822C;&#x7279;&#x70B9;</strong></p>
+<ul>
+<li>POST &#x8BF7;&#x6C42;&#x4E0D;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;</li>
+<li>POST &#x8BF7;&#x6C42;&#x4E0D;&#x4F1A;&#x4FDD;&#x7559;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x4E2D;</li>
+<li>POST &#x4E0D;&#x80FD;&#x88AB;&#x6536;&#x85CF;&#x4E3A;&#x4E66;&#x7B7E;</li>
+<li>POST &#x8BF7;&#x6C42;&#x5BF9;&#x6570;&#x636E;&#x957F;&#x5EA6;&#x6CA1;&#x6709;&#x8981;&#x6C42;</li>
+</ul>
+</blockquote>
+<h2 id="get&#x548C;post&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#x7684;&#x7F16;&#x7801;">GET&#x548C;POST&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#x7684;&#x7F16;&#x7801;</h2>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<h3 id="http&#x5E93;axios&#x4E2D;create&#x65F6;&#x652F;&#x6301;&#x7684;config&#x4E2D;&#x7684;paramsserializer">http&#x5E93;axios&#x4E2D;create&#x65F6;&#x652F;&#x6301;&#x7684;config&#x4E2D;&#x7684;paramsSerializer</h3>
+<p>&#x5C31;&#x652F;&#x6301;&#x5229;&#x7528;&#x5176;&#x4ED6;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>Javascript&#x4E2D;&#x7684;&#xFF1A;<ul>
+<li>qs&#x5E93;<ul>
+<li><a href="https://www.npmjs.com/package/qs" target="_blank">https://www.npmjs.com/package/qs</a></li>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;<ul>
+<li><code>Qs.stringify(params, {arrayFormat: &apos;brackets&apos;})</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="alamofire&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;get&#x7684;&#x53C2;&#x6570;&#x652F;&#x6301;url-encoding&#xFF0C;&#x5BF9;&#x4E8E;post&#x652F;&#x6301;json-encoding">Alamofire&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;get&#x7684;&#x53C2;&#x6570;&#x652F;&#x6301;url encoding&#xFF0C;&#x5BF9;&#x4E8E;post&#x652F;&#x6301;json encoding</h3>
+<p>&#x6240;&#x4EE5;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#xFF1A;</p>
+<pre class="language-"><code class="lang-swift">    <span class="token keyword">var</span> paramEncoding<span class="token punctuation">:</span><span class="token builtin">ParameterEncoding</span> <span class="token operator">=</span> <span class="token builtin">JSONEncoding</span><span class="token punctuation">.</span><span class="token keyword">default</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>httpMethod <span class="token operator">==</span> <span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        paramEncoding <span class="token operator">=</span> <span class="token builtin">URLEncoding</span><span class="token punctuation">.</span><span class="token keyword">default</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> curHttpReq <span class="token operator">=</span> <span class="token builtin">Alamofire</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> method<span class="token punctuation">:</span> httpMethod<span class="token punctuation">,</span> parameters<span class="token punctuation">:</span> parameters<span class="token punctuation">,</span> encoding<span class="token punctuation">:</span> paramEncoding<span class="token punctuation">,</span> headers<span class="token punctuation">:</span> curHeaders<span class="token punctuation">)</span>
+</code></pre>
+<p><img src="../assets/img/2B2421A4-B01C-49BA-B49F-607CD2E7A6C2.png" alt=""></p>
+<p>&#x7136;&#x540E;&#x4ECE;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5BF9;&#x4E8E;get&#x7684;url&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#xFF1A;</p>
+<p>get&#x4E2D;&#x7684;url&#x7684;&#x53C2;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8BA9;Alamofire&#x5185;&#x90E8;&#x53BB;&#x5229;&#x7528;URLEncoding&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;?key1=value1&amp;key2=value2&#x7684;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-swift"><span class="token keyword">var</span> parameters <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">String</span> <span class="token punctuation">:</span> <span class="token builtin">AnyObject</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+parameters <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;planId&quot;</span><span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>visitId <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>missionInfo<span class="token punctuation">.</span>missionInfo<span class="token punctuation">.</span>name <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;pics&quot;</span><span class="token punctuation">:</span>pics <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;publisher&quot;</span><span class="token punctuation">:</span>gCurUserItem<span class="token punctuation">.</span>userInfo<span class="token punctuation">.</span>pkEmpno <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;resultDescription&quot;</span><span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>missionInfo<span class="token punctuation">.</span>missionInfo<span class="token punctuation">.</span>resultDescription <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;finish&quot;</span><span class="token punctuation">:</span>finishInt <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;planProblem&quot;</span><span class="token punctuation">:</span>planProblem <span class="token keyword">as</span> <span class="token builtin">AnyObject</span>
+<span class="token punctuation">]</span>
+
+<span class="token function">getUrlRespJson_async</span><span class="token punctuation">(</span>
+    httpMethod<span class="token punctuation">:</span> hTTPMethod<span class="token punctuation">,</span>
+    url<span class="token punctuation">:</span>  url<span class="token punctuation">,</span>
+    parameters<span class="token punctuation">:</span> parameters<span class="token punctuation">,</span>
+    respJsonHandle<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span><span class="token keyword">weak</span> <span class="token keyword">self</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token keyword">in</span>
+</code></pre>
+<p><img src="../assets/img/0450D66D-6641-403F-BF7F-ED9496AD4A30.png" alt=""></p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5BF9;&#x4E8E;POST&#x6765;&#x8BF4;&#xFF0C;&#x628A;json&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;json&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-swift"><span class="token keyword">let</span> parameters <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>missionInfo<span class="token punctuation">.</span>missionProblem<span class="token punctuation">.</span>id <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;checkPlanId&quot;</span><span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>checkPlanId <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;checkResult&quot;</span><span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>resultCell<span class="token punctuation">.</span>textview<span class="token punctuation">.</span>text <span class="token keyword">as</span> <span class="token builtin">AnyObject</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;pass&quot;</span><span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">.</span>pass <span class="token keyword">as</span> <span class="token builtin">AnyObject</span> <span class="token punctuation">,</span>
+
+<span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token punctuation">[</span><span class="token builtin">String</span> <span class="token punctuation">:</span> <span class="token builtin">AnyObject</span><span class="token punctuation">]</span><span class="token operator">?</span>
+
+<span class="token function">getUrlRespJson_async</span><span class="token punctuation">(</span>
+    httpMethod<span class="token punctuation">:</span> <span class="token punctuation">.</span>post<span class="token punctuation">,</span>
+    url<span class="token punctuation">:</span>  <span class="token builtin">ServerApi</span><span class="token punctuation">.</span><span class="token function">getProblemIdResult</span><span class="token punctuation">(</span>visitId<span class="token punctuation">:</span> <span class="token keyword">self</span><span class="token punctuation">.</span>visitId<span class="token punctuation">,</span>problemId<span class="token punctuation">:</span> <span class="token keyword">self</span><span class="token punctuation">.</span>missionInfo<span class="token punctuation">.</span>missionProblem<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    parameters<span class="token punctuation">:</span> parameters <span class="token punctuation">,</span>
+    respJsonHandle<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span><span class="token keyword">weak</span> <span class="token keyword">self</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token keyword">in</span>
+</code></pre>
+<p><img src="../assets/img/7C86AF70-EADF-4E11-A766-12467A62C778.png" alt=""><br>&#x5219;&#x5185;&#x90E8;&#x7684;Alamofire&#x5C31;&#x4F1A;&#x628A;&#x8BE5;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;JSONEncoding&#x8F6C;&#x6362;&#x4E3A;json&#x5B57;&#x7B26;&#x4E32;&#x4E86;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;<br>python&#x4E2D;&#xFF0C;get&#x4E2D;url&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x5229;&#x7528;<code>urllib.urlencode</code>&#xFF08;&#x6216;<code>urllib.quote_plus</code>&#xFF09;&#x53BB;&#x628A;dict&#x5B57;&#x5178;&#x8F6C;&#x6362;&#x4E3A;key=value&#x7684;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> urllib
+params <span class="token operator">=</span> urllib<span class="token punctuation">.</span>urlencode<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&apos;spam&apos;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&apos;eggs&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&apos;bacon&apos;</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+url <span class="token operator">=</span> <span class="token string">&quot;http://www.musi-cal.com/cgi-bin/query?%s&quot;</span><span class="token punctuation">;</span> <span class="token operator">%</span> params
+</code></pre>
+<h2 id="&#x5173;&#x4E8E;http&#x53C2;&#x6570;&#x7F16;&#x7801;&#x7684;&#x5E38;&#x89C1;&#x573A;&#x666F;&#x548C;&#x95EE;&#x9898;">&#x5173;&#x4E8E;HTTP&#x53C2;&#x6570;&#x7F16;&#x7801;&#x7684;&#x5E38;&#x89C1;&#x573A;&#x666F;&#x548C;&#x95EE;&#x9898;</h2>
+<h3 id="&#x7A7A;&#x683C;&#x5E94;&#x8BE5;&#x88AB;encode&#x7F16;&#x7801;&#x4E3A;&#x8FD8;&#x662F;20&#xFF1F;">&#x7A7A;&#x683C;&#x5E94;&#x8BE5;&#x88AB;encode&#x7F16;&#x7801;&#x4E3A;<code>+</code>&#x8FD8;&#x662F;<code>%20</code>&#xFF1F;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x63A5;&#x89E6;Python&#x7684;url&#x7684;encode&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x4E00;&#x4E2A;&#x73B0;&#x8C61;&#xFF1A;</p>
+<p>&#x597D;&#x50CF;&#x7A7A;&#x683C;&#x6709;&#x65F6;&#x5019;&#x88AB;&#x7F16;&#x7801;&#x4E3A;+&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x88AB;&#x7F16;&#x7801;&#x4E3A;%20&#xFF0C;&#x5230;&#x5E95;&#x54EA;&#x4E2A;&#x624D;&#x5BF9;&#xFF1F;</p>
+<p>Percent Encode&#x4E5F;&#x88AB;&#x53EB;&#x505A;URL Encode<br>Percent Encode&#x6307;&#x7684;&#x662F;&#xFF0C;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#xFF0C;&#x5728;&#x88AB;&#xFF08;url&#xFF09;encode&#x540E;&#xFF0C;&#x5F80;&#x5F80;&#x90FD;&#x662F;&#x53D8;&#x6210;%xx<br>&#x6BD4;&#x5982;&#xFF1A;<br>&#x5185;&#x90E8;&#x5BF9;&#x5E94;&#x7740;HTTP&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x7C7B;&#x578B;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#xFF1A;<code>application/x-www-form-urlencoded</code></p>
+<p>&#x8868;&#x683C;&#x592A;&#x957F;&#xFF0C;&#x5206;&#x4E24;&#x4E2A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Exclamation_mark" target="_blank">!</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Number_sign" target="_blank">#</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Dollar_sign" target="_blank">$</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Ampersand" target="_blank">&amp;</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Apostrophe_%28mark%29" target="_blank">&apos;</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Parenthesis" target="_blank">(</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Parenthesis" target="_blank">)</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Asterisk" target="_blank">*</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Plus_sign" target="_blank">+</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">%21</td>
+<td style="text-align:left">%23</td>
+<td style="text-align:left">%24</td>
+<td style="text-align:left">%26</td>
+<td style="text-align:left">%27</td>
+<td style="text-align:left">%28</td>
+<td style="text-align:left">%29</td>
+<td style="text-align:left">%2A</td>
+<td style="text-align:left">%2B</td>
+</tr>
+</tbody>
+</table>
+<p>&#x548C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Comma" target="_blank">,</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Slash_%28punctuation%29" target="_blank">/</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Colon_%28punctuation%29" target="_blank">:</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Semicolon" target="_blank">;</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Equal_sign" target="_blank">=</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Question_mark" target="_blank">?</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/@" target="_blank">@</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Square_bracket" target="_blank">[</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Square_bracket" target="_blank">]</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">%2C</td>
+<td style="text-align:left">%2F</td>
+<td style="text-align:left">%3A</td>
+<td style="text-align:left">%3B</td>
+<td style="text-align:left">%3D</td>
+<td style="text-align:left">%3F</td>
+<td style="text-align:left">%40</td>
+<td style="text-align:left">%5B</td>
+<td style="text-align:left">%5D</td>
+</tr>
+</tbody>
+</table>
+<p>&#x800C;&#x5176;&#x4ED6;&#x5E38;&#x89C1;&#x7684;&#x5B57;&#x7B26;&#x88AB;&#x7F16;&#x7801;&#x540E;&#x7684;&#x6548;&#x679C;&#x662F;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Newline" target="_blank">newline</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Space_%28punctuation%29" target="_blank">space</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Double_quote" target="_blank">&quot;</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Percent_sign" target="_blank">%</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Hyphen" target="_blank">-</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Full_stop" target="_blank">.</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Angle_bracket" target="_blank">&lt;</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Angle_bracket" target="_blank">&gt;</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">%0A or %0D or %0D%0A</td>
+<td style="text-align:left">%20</td>
+<td style="text-align:left">%22</td>
+<td style="text-align:left">%25</td>
+<td style="text-align:left">%2D</td>
+<td style="text-align:left">%2E</td>
+<td style="text-align:left">%3C</td>
+<td style="text-align:left">%3E</td>
+</tr>
+</tbody>
+</table>
+<p>&#x548C;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Back_slash" target="_blank">\</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Caret" target="_blank">^</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Underscore" target="_blank">_</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Grave_accent" target="_blank">`</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Curly_bracket" target="_blank">{</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Vertical_bar" target="_blank">|</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Curly_bracket" target="_blank">}</a></th>
+<th style="text-align:left"><a href="https://en.wikipedia.org/wiki/Tilde" target="_blank">~</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">%5C</td>
+<td style="text-align:left">%5E</td>
+<td style="text-align:left">%5F</td>
+<td style="text-align:left">%60</td>
+<td style="text-align:left">%7B</td>
+<td style="text-align:left">%7C</td>
+<td style="text-align:left">%7D</td>
+<td style="text-align:left">%7E</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5373;&#xFF1A;</p>
+<p>&#x7A7A;&#x683C;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x88AB;url encode=percent encode&#xFF0C;&#x7684;&#x7ED3;&#x679C;&#x662F;%20</p>
+<p>&#x4F46;&#x662F;&#x4E4B;&#x6240;&#x4EE5;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x770B;&#x5230;+&#x662F;&#x56E0;&#x4E3A;&#xFF1A;</p>
+<p>&#x5386;&#x53F2;&#x4E0A;&#xFF0C;&#x6700;&#x65E9;&#x7684;&#x7F51;&#x9875;&#x6280;&#x672F;&#x4E2D;&#xFF0C;&#x5728;&#x8868;&#x5355;form&#x88AB;&#xFF08;&#x901A;&#x8FC7;HTTP&#x7684;GET&#xFF0F;POST&#x7B49;&#x8BF7;&#x6C42;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#xFF09;&#x63D0;&#x4EA4;&#x65F6;&#xFF0C;&#x952E;key&#x548C;&#x503C;value&#xFF0C;&#x90FD;&#x662F;&#x88AB;percent encode=url encode&#x7684;</p>
+<p>&#x5BF9;&#x5E94;&#x7740;&#x7C7B;&#x578B;&#x662F;&#xFF1A;<code>application/x-www-form-urlencoded</code></p>
+<p>&#x4F46;&#x662F;&#x540E;&#x6765;&#x6709;&#x4E9B;&#x53D8;&#x79CD;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x5176;&#x4E2D;&#x5C31;&#x5305;&#x62EC;&#x628A;&#x7A7A;&#x683C;space&#x7F16;&#x7801;&#x4E3A;+&#xFF08;&#x800C;&#x4E0D;&#x662F;%20&#xFF09;</p>
+<blockquote>
+<p><strong>[success] &#x7A7A;&#x683C;&#x88AB;&#x7F16;&#x7801;&#x7684;&#x903B;&#x8F91;&#x7684;&#x5386;&#x53F2;</strong></p>
+<ul>
+<li>&#x7A7A;&#x683C;&#x88AB;url encode=percent encode&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#xFF1A;<strong>%20</strong></li>
+<li>&#x800C;&#x4E4B;&#x524D;&#x5386;&#x53F2;&#x4E0A;&#x6709;&#x4E9B;&#x53D8;&#x79CD;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x4F1A;&#x7F16;&#x7801;&#x4E3A;&#xFF1A;<strong>+</strong></li>
+</ul>
+</blockquote>
+<p>&#x800C;Python&#x4E2D;&#x5BF9;&#x4E8E;url encode&#x76F8;&#x5173;&#x7684;&#x51FD;&#x6570;&#x6709;3&#x79CD;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x6548;&#x679C;&#x5206;&#x522B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment" spellcheck="true">#!/usr/bin/python</span>
+<span class="token comment" spellcheck="true"># -*- coding: utf-8 -*-</span>
+
+<span class="token keyword">import</span> urllib
+
+paraValue <span class="token operator">=</span> <span class="token string">&quot;Crifan Li&quot;</span>
+queryPara <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">&quot;name&quot;</span> <span class="token punctuation">:</span>  paraValue <span class="token punctuation">}</span>
+urlEncodedQueryPara <span class="token operator">=</span> urllib<span class="token punctuation">.</span>urlencode<span class="token punctuation">(</span>queryPara<span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token string">&quot;urlEncodedQueryPara=%s&quot;</span><span class="token operator">%</span><span class="token punctuation">(</span>urlEncodedQueryPara<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># urlEncodedQueryPara=name=Crifan+Li</span>
+quotedValue <span class="token operator">=</span> urllib<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>paraValue<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># quotedValue=Crifan%20Li</span>
+quotedPlusValue <span class="token operator">=</span> urllib<span class="token punctuation">.</span>quote_plus<span class="token punctuation">(</span>paraValue<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># quotedPlusValue=Crifan+Li</span>
+<span class="token keyword">print</span> <span class="token string">&quot;quotedValue=%s,quotedPlusValue=%s&quot;</span><span class="token operator">%</span><span class="token punctuation">(</span>quotedValue<span class="token punctuation">,</span> quotedPlusValue<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><strong>[success] &#x7A7A;&#x683C;&#x88AB;&#x7F16;&#x7801;</strong></p>
+<ul>
+<li><code>urllib.urlencode</code>&#x7F16;&#x7801;&#xFF08;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#xFF09;value<ul>
+<li><code>urllib.quote_plus</code>&#x7F16;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;&#x7A7A;&#x683C;&#x7F16;&#x7801;&#x4E3A;<strong>+</strong></li>
+</ul>
+</li>
+<li><code>urllib.quote</code>&#x7F16;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;&#x7A7A;&#x683C;&#x7F16;&#x7801;&#x4E3A;<strong>%20</strong></li>
+</ul>
+</blockquote>
+<h3 id="&#x5728;url&#x5730;&#x5740;&#x91CC;&#x5305;&#x542B;&#x4E2D;&#x6587;&#x65F6;&#x7684;&#x7F16;&#x7801;&#x663E;&#x793A;&#x548C;&#x5185;&#x90E8;&#x903B;&#x8F91;">&#x5728;url&#x5730;&#x5740;&#x91CC;&#x5305;&#x542B;&#x4E2D;&#x6587;&#x65F6;&#x7684;&#x7F16;&#x7801;&#x663E;&#x793A;&#x548C;&#x5185;&#x90E8;&#x903B;&#x8F91;</h3>
+<p>&#x80CC;&#x666F;&#xFF1A;<br>&#x5982;&#x679C;url&#x5730;&#x5740;&#x4E2D;&#x6709;&#x975E;&#x666E;&#x901A;&#x7684;ASCII&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x90FD;&#x662F;&#x4F1A;&#x88AB;&#x7F16;&#x7801;&#x540E;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x770B;&#x5230;&#x7684;&#x5982;&#x679C;url&#x5730;&#x5740;&#x4E2D;&#x6709;&#x4E2D;&#x6587;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x6253;&#x5F00;&#x90FD;&#x662F;%xx&#x4E4B;&#x7C7B;&#x7684;&#x5730;&#x5740;<br>&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x4E32;&#x7F16;&#x7801;&#x903B;&#x8F91;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E2D;&#x6587;&#x7C7B;&#x5B57;&#x7B26;&#x88AB;url encode&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x5728;&#x7EBF;&#x7F51;&#x7AD9;&#x53EF;&#x4EE5;&#x5E2E;&#x4F60;&#x5B9E;&#x73B0;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li><code>http://tool.chinaz.com/tools/urlencode.aspx</code></li>
+<li><code>http://tool.oschina.net/encode?type=4</code></li>
+</ul>
+<p>&#x8F93;&#x5165;&#x4E2D;&#x6587;<strong>&#x674E;&#x8302;</strong>&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#xFF08;UTF-8&#xFF09;&#x7F16;&#x7801;&#x4E3A;&#xFF1A;<code>%e6%9d%8e%e8%8c%82</code></p>
+<p><img src="../assets/img/665389BA-F1E4-4A17-B2FF-BEF7E773DD8D.png" alt=""><br><img src="../assets/img/D980D429-8ED2-4EAF-92A0-EC1AAD7E542B.png" alt=""></p>
+<blockquote>
+<p><strong>[success] &#x63D0;&#x793A;</strong></p>
+<ul>
+<li>&#x4E00;&#x822C;&#x7F51;&#x9875;&#x5730;&#x5740;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x90FD;&#x7528;&#x7684;&#x662F;UTF-8</li>
+<li>&#x4E0A;&#x9762;&#x7F16;&#x7801;&#x4E5F;&#x90FD;&#x662F;&#x91C7;&#x7528;&#x7684;UTF-8&#x7F16;&#x7801;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;</li>
+</ul>
+</blockquote>
+<p>&#x800C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x6362;&#x6210;&#x522B;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x6BD4;&#x5982;&#x53E6;&#x4E00;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x4E2D;&#x6587;&#x7F16;&#x7801;GB2312&#xFF0C;&#x5219;&#x7F16;&#x7801;&#x51FA;&#x6765;&#x7684;&#x662F;&#x53E6;&#x5916;&#x7684;&#x7ED3;&#x679C;&#xFF1A;<br><img src="../assets/img/61CD3BDE-03EF-48A8-811E-DE5572656473.png" alt=""></p>
+<blockquote>
+<p><strong>[success] &#x540C;&#x6837;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E0D;&#x540C;&#x7F16;&#x7801;&#x7684;&#x6548;&#x679C;</strong></p>
+<ul>
+<li>&#x674E;&#x8302; -&#x300B; <code>UTF-8</code>&#x7F16;&#x7801;&#x540E; -&#x300B;<code>%e6%9d%8e%e8%8c%82</code></li>
+<li>&#x674E;&#x8302; -&#x300B; <code>GB2312</code>&#x7F16;&#x7801;&#x540E; -&#x300B; <code>%c0%ee%c3%af</code></li>
+</ul>
+</blockquote>
+<h3 id="&#x4E3A;&#x4F55;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x7684;url&#x5730;&#x5740;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E2D;&#x6587;&#xFF0C;&#x800C;&#x4E0D;&#x662F;url-encode&#x4E4B;&#x540E;&#x7684;xx&#xFF1F;">&#x4E3A;&#x4F55;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x7684;url&#x5730;&#x5740;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E2D;&#x6587;&#xFF0C;&#x800C;&#x4E0D;&#x662F;url encode&#x4E4B;&#x540E;&#x7684;%xx&#xFF1F;</h3>
+<p>&#x800C;&#x4F60;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x4E2D;&#x6587;&#x5730;&#x5740;&#x5176;&#x5B9E;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x5E2E;&#x4F60;&#x89E3;&#x7801;&#x540E;&#x7684;&#x4E2D;&#x6587;<br>&#x771F;&#x6B63;&#x7684;url&#x5730;&#x5740;&#x662F;%xx&#x5F62;&#x5F0F;&#x7684;&#x88AB;&#xFF08;UTF-8&#xFF09;&#x7F16;&#x7801;&#x540E;&#x7684;&#x5730;&#x5740;<br>&#x6BD4;&#x5982;&#x4F60;&#x5728;Chrome&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x5730;&#x5740;&#x4E2D;&#x6709;&#x4E2D;&#x6587;&#xFF1A;<br><code>https://github.com/imaidev/imaidev.github.io/wiki/wifi&#x55C5;&#x63A2;&#x4E0E;&#x5BA2;&#x6D41;&#x7EDF;&#x8BA1;</code></p>
+<p><img src="../assets/img/chrome_address_with_zhcn.png" alt=""></p>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#x5185;&#x90E8;&#x771F;&#x6B63;&#x7684;&#x5730;&#x5740;&#x662F;&#xFF1A;</p>
+<p><a href="https://github.com/imaidev/imaidev.github.io/wiki/wifi&#x55C5;&#x63A2;&#x4E0E;&#x5BA2;&#x6D41;&#x7EDF;&#x8BA1;" target="_blank">https://github.com/imaidev/imaidev.github.io/wiki/wifi%E5%97%85%E6%8E%A2%E4%B8%8E%E5%AE%A2%E6%B5%81%E7%BB%9F%E8%AE%A1</a></p>
+<p>-&#x300B;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#xFF0C;&#x5728;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x53F3;&#x952E;-&#x300B;&#x590D;&#x5236;<br><img src="../assets/img/8BE31A06-4506-4265-B436-888B09223C51.png" alt=""><br>&#x518D;&#x7C98;&#x8D34;&#x5230;&#x522B;&#x7684;&#x6587;&#x672C;&#x5DE5;&#x5177;&#x4E2D;&#xFF0C;&#x800C;&#x5F97;&#x5230;&#x770B;&#x5230;&#x771F;&#x6B63;&#x7684;&#x88AB;&#x7F16;&#x7801;&#x540E;&#x7684;&#x5730;&#x5740;&#xFF1A;<br><img src="../assets/img/644015DB-FDF6-48F8-AB2C-E68C76C63AD8.png" alt=""><br>&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x628A;&#x8BE5;&#x5730;&#x5740;&#x53BB;&#xFF08;&#x5229;&#x7528;&#x524D;&#x9762;&#x8BF4;&#x7684;&#x5728;&#x7EBF;&#x7F51;&#x7AD9;&#x5E2E;&#x5FD9;&#xFF09;&#x89E3;&#x7801;&#x4E5F;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x540C;&#x6837;&#x7684;&#x4E2D;&#x6587;&#xFF1A;</p>
+<p><a href="http://tool.oschina.net/encode?type=4" target="_blank">http://tool.oschina.net/encode?type=4</a><br><img src="../assets/img/0E984231-A46A-49DA-AB4C-8B1B6859BCE2.png" alt=""></p>
+<footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank">&#x77E5;&#x8BC6;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2017-12-06 10:48:23
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch2_http_header.html" class="navigation navigation-prev " aria-label="Previous page: HTTP的Header头">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch4_http_resp_status_code.html" class="navigation navigation-next " aria-label="Next page: HTTP的响应的状态码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP的请求参数和编码","level":"1.3.3","depth":2,"next":{"title":"HTTP的响应的状态码","level":"1.3.4","depth":2,"path":"http_detail/ch4_http_resp_status_code.md","ref":"http_detail/ch4_http_resp_status_code.md","articles":[]},"previous":{"title":"HTTP的Header头","level":"1.3.2","depth":2,"path":"http_detail/ch2_http_header.md","ref":"http_detail/ch2_http_header.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","alerts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"toolbar-button":{"label":"下载PDF","icon":"fa-file-pdf-o","url":"http://book.crifan.com/books/http_summary/pdf/http_summary.pdf"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/http_summary/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"alerts":{},"github-buttons":{"buttons":[{"user":"crifan","repo":"http_summary","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTTP知识总结","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结HTTP方面的技术供参考和学习"},"file":{"path":"http_detail/ch3_http_req_param_encode.md","mtime":"2017-12-06T02:48:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-06T09:37:22.427Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,734 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP内部流程 · HTTP知识总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch4_http_basic_logic.html" />
+    
+    
+    <link rel="prev" href="ch2_http_intro.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"crifan","repo":"http_summary","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.crifan.com" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    HTTP简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch1_http_learn_purpose.html">
+            
+                <a href="ch1_http_learn_purpose.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    HTTP学习目的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ch2_http_intro.html">
+            
+                <a href="ch2_http_intro.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    HTTP简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="ch3_http_internal_process.html">
+            
+                <a href="ch3_http_internal_process.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    HTTP内部流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="ch4_http_basic_logic.html">
+            
+                <a href="ch4_http_basic_logic.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    HTTP基本逻辑总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../http_detail/">
+            
+                <a href="../http_detail/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    HTTP详解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../http_detail/ch1_http_structure.html">
+            
+                <a href="../http_detail/ch1_http_structure.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    HTTP的典型结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../http_detail/ch2_http_header.html">
+            
+                <a href="../http_detail/ch2_http_header.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    HTTP的Header头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../http_detail/ch3_http_req_param_encode.html">
+            
+                <a href="../http_detail/ch3_http_req_param_encode.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    HTTP的请求参数和编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../http_detail/ch4_http_resp_status_code.html">
+            
+                <a href="../http_detail/ch4_http_resp_status_code.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    HTTP的响应的状态码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../http_detail/ch5_http_resp_data_format_json.html">
+            
+                <a href="../http_detail/ch5_http_resp_data_format_json.html">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    HTTP的响应数据格式JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../http_related/">
+            
+                <a href="../http_related/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    HTTP相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../http_related/ch1_http_tool_lib.html">
+            
+                <a href="../http_related/ch1_http_tool_lib.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    HTTP的工具和库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../http_related/ch2_http_api_design.html">
+            
+                <a href="../http_related/ch2_http_api_design.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    HTTP的后台API设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../http_related/ch3_http_note_summary.html">
+            
+                <a href="../http_related/ch3_http_note_summary.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    HTTP相关心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../appendix/">
+            
+                <a href="../appendix/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../appendix/good_tutorial.html">
+            
+                <a href="../appendix/good_tutorial.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    优质教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../appendix/reference.html">
+            
+                <a href="../appendix/reference.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HTTP内部流程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="http&#x5185;&#x90E8;&#x6D41;&#x7A0B;">HTTP&#x5185;&#x90E8;&#x6D41;&#x7A0B;</h1>
+<p>&#x5176;&#x5B9E;&#x5185;&#x90E8;&#x90FD;&#x662F;&#x901A;&#x7528;&#x7684;HTTP&#x7684;&#x903B;&#x8F91;&#xFF1A;</p>
+<ul>
+<li>&#x53D1;&#x9001;HTTP&#x7684;&#x8BF7;&#x6C42;</li>
+<li>&#x63A5;&#x53D7;&#x5230;&#x54CD;&#x5E94;&#x540E;<ul>
+<li>&#x89E3;&#x6790;&#x5E76;&#x663E;&#x793A;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;</li>
+<li>&#x89E3;&#x6790;&#x5F97;&#x5230;&#x6240;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+</li>
+</ul>
+<p>&#x90A3;&#x5982;&#x4F55;&#x624D;&#x80FD;&#x770B;&#x5230;&#x5185;&#x90E8;&#x7684;HTTP&#x7684;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x5462;&#xFF1F;
+&#x6709;&#x5F88;&#x591A;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x67E5;&#x770B;&#x5185;&#x90E8;&#x5230;&#x5E95;&#x53D1;&#x9001;&#x4E86;&#x4EC0;&#x4E48;&#x6837;&#x7684;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x548C;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x54CD;&#x5E94;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x7F51;&#x9875;<ul>
+<li>&#x53EF;&#x4EE5;&#x7528;<code>Chrome</code>/<code>Safari</code>/<code>Firefox</code>&#x7B49;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x5E26;&#x7684;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#xFF1A;<code>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</code></li>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x53BB;&#x6A21;&#x62DF;<ul>
+<li>&#x6BD4;&#x5982;&#xFF1A;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;<code>curl</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x5BF9;&#x4E8E;&#x5199;&#x4EE3;&#x7801;&#x8C03;&#x7528;&#x540E;&#x53F0;&#x63A5;&#x53E3;<ul>
+<li>&#x53EF;&#x4EE5;&#x7528;postman&#x53BB;&#x6A21;&#x62DF;&#x548C;&#x67E5;&#x770B;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x67E5;&#x770B;&#x5185;&#x90E8;&#x7684;&#x5177;&#x4F53;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<h2 id="&#x7528;chrome&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x53BB;&#x67E5;&#x770B;">&#x7528;Chrome&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x53BB;&#x67E5;&#x770B;</h2>
+<p>&#x5148;&#x53BB;&#x6253;&#x5F00;&#xFF1A;
+&#x53F3;&#x4E0A;&#x89D2; &#x4E09;&#x4E2A;&#x70B9;-&#x300B;&#x66F4;&#x591A;&#x5DE5;&#x5177;-&#x300B;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;
+<img src="../assets/img/9EED85A6-83B3-42DB-85D5-2B3B3E5F06A5.png" alt=""></p>
+<p>&#x70B9;&#x51FB;&#x5230;Network&#x5217;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x53BB;&#x8BBF;&#x95EE;&#x5730;&#x5740;www.baidu.com</p>
+<p>&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4F1A;&#x6709;&#x4E00;&#x5806;&#x7684;&#x5185;&#x5BB9;&#x5217;&#x51FA;&#x6765;&#xFF0C;&#x70B9;&#x51FB;&#x7B2C;&#x4E00;&#x4E2A;www.baidu.com&#x7684;Header</p>
+<p>&#x5373;&#x53EF;&#x770B;&#x5230;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;Request&#x548C;Response&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><img src="../assets/img/681BB8D6-73BC-4EAD-804E-4014E5C12299.png" alt=""></p>
+<p>&#x901A;&#x8FC7;&#x70B9;&#x51FB;Request Headers&#x548C;Response Headers&#x7684;view source&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x672A;&#x88AB;&#x89E3;&#x6790;&#x4E4B;&#x524D;&#x7684;&#x539F;&#x59CB;&#x5185;&#x5BB9;&#xFF1A;
+<img src="../assets/img/B7221FAE-3275-4973-88BC-D4E79EB59875.png" alt="">
+<img src="../assets/img/58E15E6F-F862-4DFA-B248-EA981AB89FE6.png" alt=""></p>
+<p>&#x5BF9;&#x5E94;&#x7684;&#x539F;&#x59CB;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
+<p>Request&#x8BF7;&#x6C42;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">GET / HTTP/1.1
+Host: www.baidu.com
+Connection: keep-alive
+Cache-Control: max-age<span class="token operator">=</span>0
+User-Agent: Mozilla/5.0 <span class="token punctuation">(</span>Macintosh<span class="token punctuation">;</span> Intel Mac OS X 10_12_6<span class="token punctuation">)</span> AppleWebKit/537.36 <span class="token punctuation">(</span>KHTML, like Gecko<span class="token punctuation">)</span> Chrome/61.0.3163.100 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml<span class="token punctuation">;</span>q<span class="token operator">=</span>0.9,image/webp,image/apng,*/*<span class="token punctuation">;</span>q<span class="token operator">=</span>0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh<span class="token punctuation">;</span>q<span class="token operator">=</span>0.8,en<span class="token punctuation">;</span>q<span class="token operator">=</span>0.6
+Cookie: BAIDUID<span class="token operator">=</span>6720BF4EAED8C8448EB6540DAF83BE56:FG<span class="token operator">=</span>1<span class="token punctuation">;</span> BIDUPSID<span class="token operator">=</span>6720BF4EAED8C8448EB6540DAF83BE56<span class="token punctuation">;</span> PSTM<span class="token operator">=</span>1449798993<span class="token punctuation">;</span> MCITY<span class="token operator">=</span>-224%3A<span class="token punctuation">;</span> BD_CK_SAM<span class="token operator">=</span>1<span class="token punctuation">;</span> PSINO<span class="token operator">=</span>3<span class="token punctuation">;</span> BD_HOME<span class="token operator">=</span>0<span class="token punctuation">;</span> H_PS_PSSID<span class="token operator">=</span>1430_24568_21116_24880_20929<span class="token punctuation">;</span> BD_UPN<span class="token operator">=</span>123253
+</code></pre>
+<p>Response&#x54CD;&#x5E94;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">HTTP/1.1 200 OK
+Bdpagetype: 1
+Bdqid: 0xd4bdc47c00000909
+Bduserid: 0
+Cache-Control: private
+Connection: Keep-Alive
+Content-Encoding: <span class="token function">gzip</span>
+Content-Type: text/html<span class="token punctuation">;</span> charset<span class="token operator">=</span>utf-8
+Cxy_all: baidu+1ea6be4d211f802306f9e10940507eba
+Date: Mon, 13 Nov 2017 01:32:41 GMT
+Expires: Mon, 13 Nov 2017 01:32:06 GMT
+Server: BWS/1.1
+Set-Cookie: BDSVRTM<span class="token operator">=</span>0<span class="token punctuation">;</span> path<span class="token operator">=</span>/
+Set-Cookie: BD_HOME<span class="token operator">=</span>0<span class="token punctuation">;</span> path<span class="token operator">=</span>/
+Set-Cookie: H_PS_PSSID<span class="token operator">=</span>1430_24568_21116_24880_20929<span class="token punctuation">;</span> path<span class="token operator">=</span>/<span class="token punctuation">;</span> domain<span class="token operator">=</span>.baidu.com
+Strict-Transport-Security: max-age<span class="token operator">=</span>172800
+Vary: Accept-Encoding
+X-Powered-By: HPHP
+X-Ua-Compatible: IE<span class="token operator">=</span>Edge,chrome<span class="token operator">=</span>1
+Transfer-Encoding: chunked
+</code></pre>
+<h2 id="&#x7528;curl&#x5DE5;&#x5177;&#x53BB;&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x767E;&#x5EA6;&#x7684;&#x8FC7;&#x7A0B;">&#x7528;curl&#x5DE5;&#x5177;&#x53BB;&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x767E;&#x5EA6;&#x7684;&#x8FC7;&#x7A0B;</h2>
+<p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">curl -v www.baidu.com
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">&#x279C;  ~ curl -v www.baidu.com
+* Rebuilt URL to: www.baidu.com/
+*   Trying 180.97.33.107<span class="token punctuation">..</span>.
+* TCP_NODELAY <span class="token keyword">set</span>
+* Connected to www.baidu.com <span class="token punctuation">(</span>180.97.33.107<span class="token punctuation">)</span> port 80 <span class="token punctuation">(</span><span class="token comment" spellcheck="true">#0)</span>
+<span class="token operator">&gt;</span> GET / HTTP/1.1
+<span class="token operator">&gt;</span> Host: www.baidu.com
+<span class="token operator">&gt;</span> User-Agent: curl/7.54.0
+<span class="token operator">&gt;</span> Accept: */*
+<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span> HTTP/1.1 200 OK
+<span class="token operator">&lt;</span> Server: bfe/1.0.8.18
+<span class="token operator">&lt;</span> Date: Mon, 13 Nov 2017 01:35:55 GMT
+<span class="token operator">&lt;</span> Content-Type: text/html
+<span class="token operator">&lt;</span> Content-Length: 2381
+<span class="token operator">&lt;</span> Last-Modified: Mon, 23 Jan 2017 13:28:24 GMT
+<span class="token operator">&lt;</span> Connection: Keep-Alive
+<span class="token operator">&lt;</span> ETag: <span class="token string">&quot;588604f8-94d&quot;</span>
+<span class="token operator">&lt;</span> Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform
+<span class="token operator">&lt;</span> Pragma: no-cache
+<span class="token operator">&lt;</span> Set-Cookie: BDORZ<span class="token operator">=</span>27315<span class="token punctuation">;</span> max-age<span class="token operator">=</span>86400<span class="token punctuation">;</span> domain<span class="token operator">=</span>.baidu.com<span class="token punctuation">;</span> path<span class="token operator">=</span>/
+<span class="token operator">&lt;</span> Accept-Ranges: bytes
+<span class="token operator">&lt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span>--STATUS OK--<span class="token operator">&gt;</span><span class="token operator">&lt;</span>html<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span><span class="token operator">&lt;</span>meta http-equiv<span class="token operator">=</span>content-type content<span class="token operator">=</span>text/html<span class="token punctuation">;</span>charset<span class="token operator">=</span>utf-8<span class="token operator">&gt;</span><span class="token operator">&lt;</span>meta http-equiv<span class="token operator">=</span>X-UA-Compatible content<span class="token operator">=</span>IE<span class="token operator">=</span>Edge<span class="token operator">&gt;</span><span class="token operator">&lt;</span>meta content<span class="token operator">=</span>always name<span class="token operator">=</span>referrer<span class="token operator">&gt;</span><span class="token operator">&lt;</span>link rel<span class="token operator">=</span>stylesheet type<span class="token operator">=</span>text/css href<span class="token operator">=</span>http://s1.bdstatic.com/r/www/cache/bdorz/baidu.min.css<span class="token operator">&gt;</span><span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#xFF0C;&#x4F60;&#x5C31;&#x77E5;&#x9053;<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token operator">&lt;</span>body link<span class="token operator">=</span><span class="token comment" spellcheck="true">#0000cc&gt; &lt;div id=wrapper&gt; &lt;div id=head&gt; .............. &lt;a href=http://jianyi.baidu.com/ class=cp-feedback&gt;&#x610F;&#x89C1;&#x53CD;&#x9988;&lt;/a&gt;&amp;nbsp;&#x4EAC;ICP&#x8BC1;030173&#x53F7;&amp;nbsp; &lt;img src=//www.baidu.com/img/gs.gif&gt;; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</span>
+* Connection <span class="token comment" spellcheck="true">#0 to host www.baidu.com left intact</span>
+</code></pre>
+<p><img src="../assets/img/1D928B86-A1C2-404B-A682-48332C1F71DF.png" alt=""></p>
+<h2 id="&#x7528;postman&#x53BB;&#x6A21;&#x62DF;&#x524D;&#x9762;&#x7684;&#x8C03;&#x7528;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x7684;&#x767B;&#x5F55;&#x8FC7;&#x7A0B;">&#x7528;<code>postman</code>&#x53BB;&#x6A21;&#x62DF;&#x524D;&#x9762;&#x7684;&#x8C03;&#x7528;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x7684;&#x767B;&#x5F55;&#x8FC7;&#x7A0B;</h2>
+<p><img src="../assets/img/4ACF224B-4768-406B-B28D-50F8131C38C4.png" alt=""></p>
+<p>&#x5176;&#x4E2D;&#x5185;&#x90E8;&#x53D1;&#x9001;&#x7684;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Code&#x67E5;&#x770B;&#xFF1A;
+<img src="../assets/img/523C7AA5-AF8F-477A-A7CF-BA415AC37F8F.png" alt=""></p>
+<pre class="language-"><code class="lang-bash">POST /v1/skr/login HTTP/1.1
+Host: 123.206.101.36:9090
+Content-Type: application/json<span class="token punctuation">;</span> charset<span class="token operator">=</span>UTF-8
+authorization: Bearer mum5emp17q28st6v36ajltfvf3
+Cache-Control: no-cache
+Postman-Token: deb6784d-3689-32ce-ac01-687c22ad1b6e
+
+<span class="token punctuation">{</span>
+    <span class="token string">&quot;user&quot;</span> <span class="token keyword">:</span> <span class="token string">&quot;13429&quot;</span>,
+    <span class="token string">&quot;password&quot;</span> <span class="token keyword">:</span> <span class="token string">&quot;666666&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank">&#x77E5;&#x8BC6;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2017-11-25 22:26:17
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch2_http_intro.html" class="navigation navigation-prev " aria-label="Previous page: HTTP简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch4_http_basic_logic.html" class="navigation navigation-next " aria-label="Next page: HTTP基本逻辑总结">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP内部流程","level":"1.2.3","depth":2,"next":{"title":"HTTP基本逻辑总结","level":"1.2.4","depth":2,"path":"http_intro/ch4_http_basic_logic.md","ref":"http_intro/ch4_http_basic_logic.md","articles":[]},"previous":{"title":"HTTP简介","level":"1.2.2","depth":2,"path":"http_intro/ch2_http_intro.md","ref":"http_intro/ch2_http_intro.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","alerts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"toolbar-button":{"label":"下载PDF","icon":"fa-file-pdf-o","url":"http://book.crifan.com/books/http_summary/pdf/http_summary.pdf"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/http_summary/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"alerts":{},"github-buttons":{"buttons":[{"user":"crifan","repo":"http_summary","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTTP知识总结","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结HTTP方面的技术供参考和学习"},"file":{"path":"http_intro/ch3_http_internal_process.md","mtime":"2017-11-25T14:26:17.858Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-06T09:37:22.427Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
