@@ -5,4 +5,4 @@
 对应的在线预览查看页面的首页地址是：`https://crifan.github.io/`
 
 目前已存放的页面：
-- [HTTP知识总结](https://crifan.github.io/http_summary/)
+- [HTTP知识总结](https://crifan.github.io/http_summary/website)
