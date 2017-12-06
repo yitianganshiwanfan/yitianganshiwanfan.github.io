@@ -1,6 +1,6 @@
 
 # 说明
-这个代码仓库`https://github.com/crifan/crifan.github.io`是`github`中用来存放我`Crifan`个人的静态页面的。
+这个代码仓库`https://github.com/crifan/crifan.github.io`是`github`中用来存放我[Crifan](https://github.com/crifan)个人的静态页面的。
 
 对应的在线预览查看页面的首页地址是：`https://crifan.github.io/`
 
