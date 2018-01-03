@@ -7,3 +7,4 @@
 目前已存放的电子书页面：
 - [HTTP知识总结](https://crifan.github.io/http_summary/website)
 - [HTTP后台端：RESTful API接口设计](https://crifan.github.io/http_restful_api/website)
+- [计算机编程通用逻辑知识概念](https://crifan.github.io/program_common_logic/website)
