@@ -9,6 +9,7 @@
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/computer_program/next_generation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/computer_program/config_file_xxxfile.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/computer_program/i18n_l10n.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/computer_program/knowledge_skill_map.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/computer_program/cheat_sheet_handout.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/computer_program/compile_and_link.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/embedded/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -21,6 +22,7 @@
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/various_language/print.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/various_language/logging.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/various_language/async_wait.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/various_language/getter_setter.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/various_language/python/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/various_language/python/adapter.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/program_common_logic/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
