@@ -724,11 +724,146 @@
 <code>https://github.com/crifan/crifanLib/blob/master/python/crifanLib.py</code></p>
 <h4 id="flask">Flask</h4>
 <p>Python&#x7684;Flask&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x6253;&#x5370;log</p>
-<p>&#x8BE6;&#x89C1;&#xFF1A;</p>
-<ul>
-<li>&#xFF3B;&#x672A;&#x89E3;&#x51B3;&#xFF3D;Flask&#x4E2D;&#x7ED9;app&#x7684;&#x8F93;&#x51FA;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x7684;debugger&#x6DFB;&#x52A0;&#x51FD;&#x6570;&#x540D;</li>
-<li>&#xFF3B;&#x5DF2;&#x89E3;&#x51B3;&#xFF3D;Flask&#x4E2D;&#x8F93;&#x51FA;log&#x65E5;&#x5FD7;&#x5230;&#x6587;&#x4EF6;&#x4E14;&#x81EA;&#x5B9A;&#x4E49;&#x8F93;&#x51FA;&#x683C;&#x5F0F;</li>
-</ul>
+<p>&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#xFF1A;
+<code>config.py</code></p>
+<pre class="language-"><code class="lang-python"><span class="token comment" spellcheck="true">############################################################</span>
+<span class="token comment" spellcheck="true"># File Log</span>
+<span class="token comment" spellcheck="true">############################################################</span>
+LOG_FILE_FILENAME <span class="token operator">=</span> <span class="token string">&quot;logs/sipevents.log&quot;</span>
+
+LOG_FILE_FORMAT <span class="token operator">=</span> <span class="token string">&quot;[%(asctime)s %(levelname)s %(filename)s:%(lineno)d %(funcName)s] %(message)s&quot;</span>
+</code></pre>
+<p><code>__init__.py</code></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> logging
+<span class="token keyword">from</span> logging<span class="token punctuation">.</span>handlers <span class="token keyword">import</span> RotatingFileHandler
+
+fileHandler <span class="token operator">=</span> RotatingFileHandler<span class="token punctuation">(</span>
+    app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">&apos;LOG_FILE_FILENAME&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    maxBytes <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span><span class="token number">1024</span><span class="token operator">*</span><span class="token number">1024</span><span class="token punctuation">,</span>
+    backupCount <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    encoding <span class="token operator">=</span> <span class="token string">&quot;UTF-8&quot;</span><span class="token punctuation">)</span>
+fileHandler<span class="token punctuation">.</span>setLevel<span class="token punctuation">(</span>logging<span class="token punctuation">.</span>DEBUG<span class="token punctuation">)</span>
+
+fileLogFormatterStr <span class="token operator">=</span> app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">&quot;LOG_FILE_FORMAT&quot;</span><span class="token punctuation">]</span>
+fileLogFormatter <span class="token operator">=</span> logging<span class="token punctuation">.</span>Formatter<span class="token punctuation">(</span>fileLogFormatterStr<span class="token punctuation">)</span>
+fileHandler<span class="token punctuation">.</span>setFormatter<span class="token punctuation">(</span>fileLogFormatter<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span>logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>fileHandler<span class="token punctuation">)</span>
+</code></pre>
+<p><code>run.py</code></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> sipevents <span class="token keyword">import</span> app
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span>debug<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;log&#x7684;&#x6548;&#x679C;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>2016-09-02 16:59:25,938 DEBUG views.py:804 creat_event<span class="token punctuation">]</span> requestMethod<span class="token operator">=</span>GET
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x53C2;&#x6570;&#x7684;&#x89E3;&#x91CA;&#x662F;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8F93;&#x51FA;&#x6548;&#x679C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%(asctime)s</td>
+<td>2016-09-02 16:59:25,938</td>
+</tr>
+<tr>
+<td>%(levelname)s</td>
+<td>DEBUG</td>
+</tr>
+<tr>
+<td>%(filename)s</td>
+<td>views.py</td>
+</tr>
+<tr>
+<td>%(lineno)d</td>
+<td>804</td>
+</tr>
+<tr>
+<td>%(funcName)s</td>
+<td>creat_event</td>
+</tr>
+<tr>
+<td>%(message)s</td>
+<td>requestMethod=GET</td>
+</tr>
+</tbody>
+</table>
+<p>&#x66F4;&#x52A0;&#x5B8C;&#x6574;&#x7684;&#x53C2;&#x6570;&#x89E3;&#x91CA;&#x662F;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x542B;&#x4E49;&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%(name)s</td>
+<td>Logger&#x7684;&#x540D;&#x5B57;</td>
+</tr>
+<tr>
+<td>%(levelno)s</td>
+<td>&#x6570;&#x5B57;&#x5F62;&#x5F0F;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;</td>
+</tr>
+<tr>
+<td>%(levelname)s</td>
+<td>&#x6587;&#x672C;&#x5F62;&#x5F0F;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;</td>
+</tr>
+<tr>
+<td>%(pathname)s</td>
+<td>&#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x6A21;&#x5757;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x540D;&#xFF0C;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
+</tr>
+<tr>
+<td>%(filename)s</td>
+<td>&#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x6A21;&#x5757;&#x7684;&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+<tr>
+<td>%(module)s</td>
+<td>&#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x6A21;&#x5757;&#x540D;</td>
+</tr>
+<tr>
+<td>%(funcName)s</td>
+<td>&#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;&#x540D;</td>
+</tr>
+<tr>
+<td>%(lineno)d</td>
+<td>&#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x53E5;&#x6240;&#x5728;&#x7684;&#x4EE3;&#x7801;&#x884C;</td>
+</tr>
+<tr>
+<td>%(created)f</td>
+<td>&#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF0C;&#x7528;UNIX&#x6807;&#x51C6;&#x7684;&#x8868;&#x793A;&#x65F6;&#x95F4;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x8868;&#x793A;</td>
+</tr>
+<tr>
+<td>%(relativeCreated)d</td>
+<td>&#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x65F6;&#x7684;&#xFF0C;&#x81EA;Logger&#x521B;&#x5EFA;&#x4EE5;&#x6765;&#x7684;&#x6BEB;&#x79D2;&#x6570;</td>
+</tr>
+<tr>
+<td>%(asctime)s</td>
+<td>&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#x662F;&quot;2003-07-08 16:49:45,896&quot;&#x3002;&#x9017;&#x53F7;&#x540E;&#x9762;&#x7684;&#x662F;&#x6BEB;&#x79D2;</td>
+</tr>
+<tr>
+<td>%(thread)d</td>
+<td>&#x7EBF;&#x7A0B;ID&#x3002;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
+</tr>
+<tr>
+<td>%(threadName)s</td>
+<td>&#x7EBF;&#x7A0B;&#x540D;&#x3002;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
+</tr>
+<tr>
+<td>%(process)d</td>
+<td>&#x8FDB;&#x7A0B;ID&#x3002;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
+</tr>
+<tr>
+<td>%(message)s</td>
+<td>&#x7528;&#x6237;&#x8F93;&#x51FA;&#x7684;&#x6D88;&#x606F;</td>
+</tr>
+</tbody>
+</table>
 <h3 id="swift">Swift</h3>
 <p>iOS&#x7684;swift&#x4E2D;&#x4E5F;&#x9047;&#x5230;&#x8FC7;log&#x5E93;&#xFF1A;<a href="https://github.com/DaveWoodCom/XCGLogger" target="_blank">XCGLogger</a></p>
 <p>&#x5176;&#x4E2D;&#x7684;log&#x7684;&#x5B9A;&#x4E49;&#x662F;&#xFF1A;</p>
@@ -782,7 +917,7 @@
   gLog<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>&quot;&#x4E0A;&#x4F20;&#x9644;&#x4EF6;&#x5931;&#x8D25;<span class="token punctuation">:</span> \<span class="token punctuation">(</span>encodingError<span class="token punctuation">)</span>&#x201D;<span class="token punctuation">)</span>
 </code></pre>
 <footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank">&#x77E5;&#x8BC6;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-01-02 23:12:23
+2018-01-10 23:02:53
 </span></footer>
                                 
                                 </section>
@@ -826,7 +961,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"log日志","level":"1.5.2","depth":2,"next":{"title":"async和wait","level":"1.5.3","depth":2,"path":"various_language/async_wait.md","ref":"various_language/async_wait.md","articles":[]},"previous":{"title":"print打印","level":"1.5.1","depth":2,"path":"various_language/print.md","ref":"various_language/print.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","alerts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"toolbar-button":{"label":"下载PDF","icon":"fa-file-pdf-o","url":"http://book.crifan.com/books/program_common_logic/pdf/program_common_logic.pdf"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/program_common_logic/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"alerts":{},"github-buttons":{"buttons":[{"user":"crifan","repo":"program_common_logic","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"计算机编程通用逻辑知识概念","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结计算机编程通用逻辑知识概念"},"file":{"path":"various_language/logging.md","mtime":"2018-01-02T15:12:23.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-10T03:41:50.339Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"log日志","level":"1.5.2","depth":2,"next":{"title":"async和wait","level":"1.5.3","depth":2,"path":"various_language/async_wait.md","ref":"various_language/async_wait.md","articles":[]},"previous":{"title":"print打印","level":"1.5.1","depth":2,"path":"various_language/print.md","ref":"various_language/print.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","alerts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"toolbar-button":{"label":"下载PDF","icon":"fa-file-pdf-o","url":"http://book.crifan.com/books/program_common_logic/pdf/program_common_logic.pdf"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/program_common_logic/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"alerts":{},"github-buttons":{"buttons":[{"user":"crifan","repo":"program_common_logic","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"计算机编程通用逻辑知识概念","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结计算机编程通用逻辑知识概念"},"file":{"path":"various_language/logging.md","mtime":"2018-01-10T15:02:53.270Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-10T15:03:58.070Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
