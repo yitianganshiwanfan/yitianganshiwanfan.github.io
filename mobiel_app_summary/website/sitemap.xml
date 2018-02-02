@@ -8,13 +8,7 @@
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/hybrid_app/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/hybrid_app/h5_shell_app.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/hybrid_app/hybrid_framework.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type/device_size/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type/device_size/phone.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type/device_size/pad.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type/os_type/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type/os_type/ios.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type/os_type/android.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/message_push/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/message_push/service_vendor/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -22,6 +16,9 @@
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/message_push/dev_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/message_push/dev_summary/ios_push.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/message_push/dev_summary/android_push.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/debug_mobile_h5/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/debug_mobile_h5/debug_ios_webview.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/debug_mobile_h5/debug_android_webview.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/phone_call_record/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/phone_call_record/ios_record.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/phone_call_record/android_record.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
