@@ -3,11 +3,7 @@
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/common_project_mode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/native_app.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/hybrid_app/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/hybrid_app/h5_shell_app.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/app_mode/hybrid_app/hybrid_framework.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/common_app_mode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_intro/mobile_dev_type.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_dev_summary/message_push/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
