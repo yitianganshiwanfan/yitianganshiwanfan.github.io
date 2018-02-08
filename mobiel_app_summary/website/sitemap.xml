@@ -29,6 +29,9 @@
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_to_store/ios/enterprise/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_to_store/ios/enterprise/ota.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_to_store/android/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_install_usage/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_install_usage/ios.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_install_usage/android.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_ops/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_ops/data_analysis/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobiel_app_summary/website/app_ops/data_analysis/talkingdata.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
