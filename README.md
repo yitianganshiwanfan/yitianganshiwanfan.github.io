@@ -4,7 +4,7 @@
 
 https://github.com/crifan/crifan.github.io
 
-是`github`中用来存放我[Crifan](https://github.com/crifan)个人的`github`的静态页面的。
+是`github`中用来存放我[Crifan](https://github.com/crifan)个人的`github`静态页面的。
 
 对应的在线预览查看页面的首页地址是：
 
