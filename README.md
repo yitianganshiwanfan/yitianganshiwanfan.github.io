@@ -1,6 +1,6 @@
 # 说明
 
-这个代码仓库`https://github.com/crifan/crifan.github.io`是`github`中用来存放我[Crifan](https://github.com/crifan)个人的静态页面的。
+这个代码仓库`https://github.com/crifan/crifan.github.io`是`github`中用来存放我[Crifan](https://github.com/crifan)个人的`github`的静态页面的。
 
 对应的在线预览查看页面的首页地址是：`https://crifan.github.io/`
 
@@ -19,3 +19,5 @@
 - [工作和职业相关知识](https://crifan.github.io/work_job_summary/website)
 - [XPath知识总结](https://crifan.github.io/xpath_summary/website)
 - [有道云笔记和云协作使用总结](https://crifan.github.io/youdao_note_summary/website)
+
+关于上述的Gitbook电子书（以及之前的更多其他的电子书）的使用说明，详见：[Crifan的电子书的使用说明](https://github.com/crifan/crifan_ebook_readme)
