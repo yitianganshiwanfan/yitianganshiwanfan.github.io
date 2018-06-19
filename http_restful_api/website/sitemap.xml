@@ -5,6 +5,7 @@
 <url> <loc>https://book.crifan.com/gitbook/http_restful_api/website/restful_intro/example.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_restful_api/website/restful_rule/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_restful_api/website/restful_rule/rule.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/http_restful_api/website/restful_rule/hateoas.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_restful_api/website/restful_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_restful_api/website/restful_tool/test_tool.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_restful_api/website/restful_tool/framework_lib.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
