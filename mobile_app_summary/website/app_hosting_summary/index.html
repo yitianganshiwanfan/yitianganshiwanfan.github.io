@@ -1,0 +1,1399 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>APP托管总结 · 移动端APP开发总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="platforms/" />
+    
+    
+    <link rel="prev" href="../app_dev_summary/phone_call_record/android_record.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"repo":"mobiel_app_summary","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.crifan.com" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../app_dev_intro/">
+            
+                <a href="../app_dev_intro/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    APP开发简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../app_dev_intro/common_project_mode.html">
+            
+                <a href="../app_dev_intro/common_project_mode.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    APP相关项目常见模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../app_dev_intro/common_app_mode.html">
+            
+                <a href="../app_dev_intro/common_app_mode.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    常见APP模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../app_dev_intro/mobile_dev_type.html">
+            
+                <a href="../app_dev_intro/mobile_dev_type.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    移动设备类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../app_dev_summary/">
+            
+                <a href="../app_dev_summary/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    APP开发总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../app_dev_summary/message_push/">
+            
+                <a href="../app_dev_summary/message_push/">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    消息推送
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../app_dev_summary/message_push/service_vendor/">
+            
+                <a href="../app_dev_summary/message_push/service_vendor/">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    服务商
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" data-path="../app_dev_summary/message_push/service_vendor/jpush.html">
+            
+                <a href="../app_dev_summary/message_push/service_vendor/jpush.html">
+            
+                    
+                        <b>1.3.1.1.1.</b>
+                    
+                    极光推送JPush
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../app_dev_summary/message_push/dev_summary/">
+            
+                <a href="../app_dev_summary/message_push/dev_summary/">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    开发总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="../app_dev_summary/message_push/dev_summary/ios_push.html">
+            
+                <a href="../app_dev_summary/message_push/dev_summary/ios_push.html">
+            
+                    
+                        <b>1.3.1.2.1.</b>
+                    
+                    iOS消息推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.2" data-path="../app_dev_summary/message_push/dev_summary/android_push.html">
+            
+                <a href="../app_dev_summary/message_push/dev_summary/android_push.html">
+            
+                    
+                        <b>1.3.1.2.2.</b>
+                    
+                    Android消息推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../app_dev_summary/debug_mobile_h5/">
+            
+                <a href="../app_dev_summary/debug_mobile_h5/">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    调试移动端Webview/H5页面
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../app_dev_summary/debug_mobile_h5/debug_ios_webview.html">
+            
+                <a href="../app_dev_summary/debug_mobile_h5/debug_ios_webview.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    调试iOS的Webview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../app_dev_summary/debug_mobile_h5/debug_android_webview.html">
+            
+                <a href="../app_dev_summary/debug_mobile_h5/debug_android_webview.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    调试Android的Webview
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../app_dev_summary/phone_call_record/">
+            
+                <a href="../app_dev_summary/phone_call_record/">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    通话录音
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../app_dev_summary/phone_call_record/ios_record.html">
+            
+                <a href="../app_dev_summary/phone_call_record/ios_record.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    iOS通话录音
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../app_dev_summary/phone_call_record/android_record.html">
+            
+                <a href="../app_dev_summary/phone_call_record/android_record.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    Android通话录音
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    APP托管总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="platforms/">
+            
+                <a href="platforms/">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    APP托管平台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="platforms/fir_im.html">
+            
+                <a href="platforms/fir_im.html">
+            
+                    
+                        <b>1.4.1.1.</b>
+                    
+                    fir.im
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="platforms/pgyer.html">
+            
+                <a href="platforms/pgyer.html">
+            
+                    
+                        <b>1.4.1.2.</b>
+                    
+                    蒲公英pgyer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../app_to_store/">
+            
+                <a href="../app_to_store/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    APP上架总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../app_to_store/ios/">
+            
+                <a href="../app_to_store/ios/">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    iOS上架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../app_to_store/ios/adhoc.html">
+            
+                <a href="../app_to_store/ios/adhoc.html">
+            
+                    
+                        <b>1.5.1.1.</b>
+                    
+                    内测：AdHoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../app_to_store/ios/app_store.html">
+            
+                <a href="../app_to_store/ios/app_store.html">
+            
+                    
+                        <b>1.5.1.2.</b>
+                    
+                    公开市场：AppStore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../app_to_store/ios/enterprise/">
+            
+                <a href="../app_to_store/ios/enterprise/">
+            
+                    
+                        <b>1.5.1.3.</b>
+                    
+                    内部发布：企业版
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.3.1" data-path="../app_to_store/ios/enterprise/ota.html">
+            
+                <a href="../app_to_store/ios/enterprise/ota.html">
+            
+                    
+                        <b>1.5.1.3.1.</b>
+                    
+                    OTA版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../app_to_store/android/">
+            
+                <a href="../app_to_store/android/">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    Android上架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../app_install_usage/">
+            
+                <a href="../app_install_usage/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    APP安装和使用总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../app_install_usage/ios.html">
+            
+                <a href="../app_install_usage/ios.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    iOS的APP的安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../app_install_usage/android.html">
+            
+                <a href="../app_install_usage/android.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    Android的APP的安装和使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../app_ops/">
+            
+                <a href="../app_ops/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    APP涉及后期运维总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../app_ops/data_analysis/">
+            
+                <a href="../app_ops/data_analysis/">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    数据统计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../app_ops/data_analysis/talkingdata.html">
+            
+                <a href="../app_ops/data_analysis/talkingdata.html">
+            
+                    
+                        <b>1.7.1.1.</b>
+                    
+                    TalkingData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../app_ops/data_analysis/umeng.html">
+            
+                <a href="../app_ops/data_analysis/umeng.html">
+            
+                    
+                        <b>1.7.1.2.</b>
+                    
+                    友盟UMeng
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../app_ops/data_analysis/bugly.html">
+            
+                <a href="../app_ops/data_analysis/bugly.html">
+            
+                    
+                        <b>1.7.1.3.</b>
+                    
+                    Bugly
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../app_ops/crash_collection/">
+            
+                <a href="../app_ops/crash_collection/">
+            
+                    
+                        <b>1.7.2.</b>
+                    
+                    崩溃日志收集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../app_ops/crash_collection/bugly.html">
+            
+                <a href="../app_ops/crash_collection/bugly.html">
+            
+                    
+                        <b>1.7.2.1.</b>
+                    
+                    Bugly
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../app_ops/inside_report_issue/">
+            
+                <a href="../app_ops/inside_report_issue/">
+            
+                    
+                        <b>1.7.3.</b>
+                    
+                    应用内问题反馈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../app_ops/inside_report_issue/pgyer.html">
+            
+                <a href="../app_ops/inside_report_issue/pgyer.html">
+            
+                    
+                        <b>1.7.3.1.</b>
+                    
+                    蒲公英pgyer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../ios_dev_summary/">
+            
+                <a href="../ios_dev_summary/">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    iOS开发总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../ios_dev_summary/language/">
+            
+                <a href="../ios_dev_summary/language/">
+            
+                    
+                        <b>1.8.1.</b>
+                    
+                    开发语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../ios_dev_summary/language/objective_c.html">
+            
+                <a href="../ios_dev_summary/language/objective_c.html">
+            
+                    
+                        <b>1.8.1.1.</b>
+                    
+                    Objective-C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../ios_dev_summary/language/swift.html">
+            
+                <a href="../ios_dev_summary/language/swift.html">
+            
+                    
+                        <b>1.8.1.2.</b>
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../ios_dev_summary/dev_tool/">
+            
+                <a href="../ios_dev_summary/dev_tool/">
+            
+                    
+                        <b>1.8.2.</b>
+                    
+                    开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../ios_dev_summary/dev_tool/xcode.html">
+            
+                <a href="../ios_dev_summary/dev_tool/xcode.html">
+            
+                    
+                        <b>1.8.2.1.</b>
+                    
+                    XCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../ios_dev_summary/dev_tool/appcode.html">
+            
+                <a href="../ios_dev_summary/dev_tool/appcode.html">
+            
+                    
+                        <b>1.8.2.2.</b>
+                    
+                    AppCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../ios_dev_summary/apple_developer_account.html">
+            
+                <a href="../ios_dev_summary/apple_developer_account.html">
+            
+                    
+                        <b>1.8.3.</b>
+                    
+                    苹果开发者账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../ios_dev_summary/good_lib_tool.html">
+            
+                <a href="../ios_dev_summary/good_lib_tool.html">
+            
+                    
+                        <b>1.8.4.</b>
+                    
+                    好用的库和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../android_dev_summary/">
+            
+                <a href="../android_dev_summary/">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    Android开发总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../android_dev_summary/language/">
+            
+                <a href="../android_dev_summary/language/">
+            
+                    
+                        <b>1.9.1.</b>
+                    
+                    开发语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../android_dev_summary/language/java.html">
+            
+                <a href="../android_dev_summary/language/java.html">
+            
+                    
+                        <b>1.9.1.1.</b>
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../android_dev_summary/language/kotlin.html">
+            
+                <a href="../android_dev_summary/language/kotlin.html">
+            
+                    
+                        <b>1.9.1.2.</b>
+                    
+                    Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../android_dev_summary/dev_tool/">
+            
+                <a href="../android_dev_summary/dev_tool/">
+            
+                    
+                        <b>1.9.2.</b>
+                    
+                    开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../android_dev_summary/dev_tool/eclipse_adt.html">
+            
+                <a href="../android_dev_summary/dev_tool/eclipse_adt.html">
+            
+                    
+                        <b>1.9.2.1.</b>
+                    
+                    Eclipse+ADT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../android_dev_summary/dev_tool/android_studio.html">
+            
+                <a href="../android_dev_summary/dev_tool/android_studio.html">
+            
+                    
+                        <b>1.9.2.2.</b>
+                    
+                    Android Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../android_dev_summary/good_lib_tool.html">
+            
+                <a href="../android_dev_summary/good_lib_tool.html">
+            
+                    
+                        <b>1.9.3.</b>
+                    
+                    好用的库和工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../appendix/">
+            
+                <a href="../appendix/">
+            
+                    
+                        <b>1.10.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../appendix/reference.html">
+            
+                <a href="../appendix/reference.html">
+            
+                    
+                        <b>1.10.1.</b>
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >APP托管总结</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="app&#x6258;&#x7BA1;&#x603B;&#x7ED3;">APP&#x6258;&#x7BA1;&#x603B;&#x7ED3;</h1>
+<p>&#x5728;&#x53D1;&#x5E03;&#x5230;&#x5176;&#x4ED6;app&#x6258;&#x7BA1;&#x5E73;&#x53F0;&#x671F;&#x95F4;&#xFF0C;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x7ED9;&#x5BF9;&#x4E8E;&#x9875;&#x9762;&#x7684;&#x547D;&#x540D;</p>
+<h2 id="&#x9879;&#x76EE;&#x53D1;&#x5E03;&#x65F6;&#x9875;&#x9762;&#x547D;&#x540D;&#x89C4;&#x5219;">&#x9879;&#x76EE;&#x53D1;&#x5E03;&#x65F6;&#x9875;&#x9762;&#x547D;&#x540D;&#x89C4;&#x5219;</h2>
+<p>&#x6BD4;&#x5982;&#x8981;&#x5C06;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x53D1;&#x5E03;&#x5230;fir.im&#x65F6;&#xFF0C;&#x7ED9;&#x9875;&#x9762;&#x7684;&#x77ED;&#x5199;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x547D;&#x4EE4;&#xFF0C;&#x5C31;&#x548C;&#x9879;&#x76EE;&#x8D77;&#x5305;&#x540D;&#xFF0C;&#x5F88;&#x7C7B;&#x4F3C;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#xFF1A;</p>
+<blockquote>
+<p>&#x5927;&#x4F17;RSE &#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5730;&#x5740;&#xFF1A;</p>
+<p>Android&#xFF1A;<a href="https://fir.im/ArdVolkswagenRSE" target="_blank">https://fir.im/ArdVolkswagenRSE</a></p>
+<p>iOS&#xFF1A; <a href="https://fir.im/iOSVolkswagenRSE&#x201D;" target="_blank">https://fir.im/iOSVolkswagenRSE&#x201D;</a></p>
+</blockquote>
+<p>&#x5EFA;&#x8BAE;fir.im&#x4E2D;&#x8DEF;&#x5F84;&#x547D;&#x540D;&#x89C4;&#x5219;&#x4E3A;&#xFF1A;<strong>&#x9879;&#x76EE;&#x540D;+&#x5E73;&#x53F0;+&#x73AF;&#x5883;</strong></p>
+<p>&#x6BD4;&#x5982;&#x6B64;&#x5904;&#x5C31;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x9879;&#x76EE;&#x540D;&#xFF1A;RSE&#xFF0C;&#x9A7C;&#x5CF0;&#x6CD5;&#x547D;&#x540D;&#xFF08;camel casing&#xFF09;&#xFF0C;Rse</li>
+<li>&#x5E73;&#x53F0;&#xFF1A;iOS&#x6216;Android&#x7B49;</li>
+<li>&#x73AF;&#x5883;&#xFF1A;<ul>
+<li>&#x5F00;&#x53D1;&#x7248;dev</li>
+<li>&#x6D4B;&#x8BD5;&#x7248;test-&#x300B;tst</li>
+<li>&#x6B63;&#x5F0F;&#x7248;<ul>
+<li>production-&#x300B;prd</li>
+<li>release-&#x300B;rls</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="-firim&#x9875;&#x9762;&#x547D;&#x540D;&#x4E3E;&#x4F8B;"><i class="fa fa-info"></i>  fir.im&#x9875;&#x9762;&#x547D;&#x540D;&#x4E3E;&#x4F8B;</h3></div><div class="panel-body"><p>&#x4E4B;&#x524D;&#x7684;RSE&#x7684;&#x538B;&#x6D4B;&#x7248;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4F9B;&#x53C2;&#x8003;&#xFF1A;</p><p>&#x3010;&#x538B;&#x6D4B; &#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x7248;&#x3011;</p><ul>
+<li>&#x5353;&#x8D8A;&#x96F6;&#x552E;RSE &#x538B;&#x6D4B;&#x7248; iOS 1.071 20170221 <a href="https://fir.im/RseiOSStress" target="_blank">https://fir.im/RseiOSStress</a></li>
+<li>&#x5353;&#x8D8A;&#x96F6;&#x552E;RSE &#x538B;&#x6D4B;&#x7248; Android v1.7.1 20170221 <a href="https://fir.im/RseAndroidStress" target="_blank">https://fir.im/RseAndroidStress</a></li>
+</ul><p>&#x5176;&#x4E2D;&#xFF1A;</p><ul>
+<li>Rse&#xFF1A;&#x8868;&#x793A;RSE&#xFF08;&#x5353;&#x8D8A;&#x96F6;&#x552E;&#xFF09;&#x9879;&#x76EE;&#x7684;&#x9A7C;&#x5CF0;&#x6CD5;&#x547D;&#x540D;</li>
+<li>iOS&#x6216;Anroid&#x8868;&#x793A;&#x5E73;&#x53F0;</li>
+<li>Stress&#xFF1A;&#x8868;&#x793A; &#x538B;&#x529B;&#x6D4B;&#x8BD5; Stress Test &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7B80;&#x5199;</li>
+</ul></div></div>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x516C;&#x53F8;&#xFF0C;&#x9879;&#x76EE;&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x524D;&#x671F;&#x4E0D;&#x4E86;&#x89E3;&#x7528;&#x54EA;&#x4E2A;&#x5355;&#x8BCD;&#x6216;&#x5982;&#x4F55;&#x7F29;&#x5199;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;</p>
+<p>-&gt; &#x968F;&#x7740;&#x6DF1;&#x5165;&#x63A5;&#x89E6;&#x548C;&#x4E86;&#x89E3;&#xFF0C;&#x6162;&#x6162;&#x5C31;&#x77E5;&#x9053;&#x5E38;&#x89C1;&#x7F29;&#x5199;&#x4E86;&#x3002;</p>
+<p>&#x6B64;&#x5904;&#x7684; &#x5927;&#x4F17; &#x5FB7;&#x8BED;&#x7684;&#x82F1;&#x6587;&#x5199;&#x6CD5; &#x7684;&#x786E;&#x662F;&#xFF1A;Volkswagen</p>
+<p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x662F; &#x4E0A;&#x6C7D;&#x5927;&#x4F17; &#x5219;&#x662F; csvw</p>
+<p>-&gt; &#x7531;&#x4E4B;&#x524D;&#x63A5;&#x89E6;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#xFF1A;</p>
+<ol>
+<li>&#x4E0A;&#x6C7D;&#x5927;&#x4F17;&#x7684;&#x4E3B;&#x9875;&#x662F;&#xFF1A;<a href="http://www.csvw.com" target="_blank">http://www.csvw.com</a></li>
+<li>&#x4E4B;&#x524D;&#x9879;&#x76EE;&#x4E2D;&#x77E5;&#x9053;&#x5BF9;&#x65B9;&#x5458;&#x5DE5;&#x7684;&#x90AE;&#x7BB1;&#x662F;&#xFF1A;xxx@csvw.com</li>
+</ol>
+<p>-&gt;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x662F;&#x5FB7;&#x56FD;&#x5927;&#x4F17;&#xFF08;&#x603B;&#x90E8;&#xFF09;&#xFF0C;&#x5219;&#x7528;&#xFF1A;Volkswagen&#xFF0C;&#x6216;&#x7B80;&#x5199;vw</li>
+<li>&#x5982;&#x679C;&#x662F;&#x5BA2;&#x6237;&#x662F;&#x4E0A;&#x6C7D;&#x5927;&#x4F17;&#xFF0C;&#x5219;&#x7528;&#xFF1A;csvw</li>
+</ul>
+<p>-&gt; &#x6B64;&#x5904;&#xFF0C;&#x5EFA;&#x8BAE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>RseiOSCsvw</li>
+<li>RseAndroidCsvw<ul>
+<li>-&gt; &#x5982;&#x679C;&#x592A;&#x957F;&#xFF0C;&#x53EF;&#x6539;&#x4E3A;&#xFF1A;RseAdrCsvw</li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank">&#x77E5;&#x8BC6;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-06-18 17:02:42
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../app_dev_summary/phone_call_record/android_record.html" class="navigation navigation-prev " aria-label="Previous page: Android通话录音">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="platforms/" class="navigation navigation-next " aria-label="Next page: APP托管平台">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"APP托管总结","level":"1.4","depth":1,"next":{"title":"APP托管平台","level":"1.4.1","depth":2,"path":"app_hosting_summary/platforms/README.md","ref":"app_hosting_summary/platforms/README.md","articles":[{"title":"fir.im","level":"1.4.1.1","depth":3,"path":"app_hosting_summary/platforms/fir_im.md","ref":"app_hosting_summary/platforms/fir_im.md","articles":[]},{"title":"蒲公英pgyer","level":"1.4.1.2","depth":3,"path":"app_hosting_summary/platforms/pgyer.md","ref":"app_hosting_summary/platforms/pgyer.md","articles":[]}]},"previous":{"title":"Android通话录音","level":"1.3.3.2","depth":3,"path":"app_dev_summary/phone_call_record/android_record.md","ref":"app_dev_summary/phone_call_record/android_record.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"该文件修订时间：","copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/mobiel_app_summary/pdf/mobiel_app_summary.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/mobiel_app_summary/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"mobiel_app_summary","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"移动端APP开发总结","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结移动端APP开发相关的技术和心得"},"file":{"path":"app_hosting_summary/README.md","mtime":"2018-06-18T09:02:42.149Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-19T05:52:59.550Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
