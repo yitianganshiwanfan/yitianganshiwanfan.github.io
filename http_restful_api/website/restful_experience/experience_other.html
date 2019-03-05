@@ -93,7 +93,7 @@
     <link rel="next" href="../appendix/" />
     
     
-    <link rel="prev" href="resp_data_style.html" />
+    <link rel="prev" href="pagination.html" />
     
 
     <style>
@@ -407,12 +407,27 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.3" data-path="experience_other.html">
+        <li class="chapter " data-level="1.6.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    分页设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4" data-path="experience_other.html">
             
                 <a href="experience_other.html">
             
                     
-                        <b>1.6.3.</b>
+                        <b>1.6.4.</b>
                     
                     其他心得
             
@@ -533,75 +548,6 @@
 <p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
 <p>&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#xFF08;&#x5185;&#x90E8;id&#x4E3A;8&#x7684;&#xFF09;&#x6B4C;&#x624B;&#x7684;&#x6240;&#x6709;&#x7684;&#x4E13;&#x8F91;&#xFF1A;
 <code>GET /artists/8/albums</code></p>
-<h2 id="&#x5F53;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x591A;&#x4E86;&#x5219;&#xFF1A;paging&#x5206;&#x9875;"><a name="&#x5F53;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x591A;&#x4E86;&#x5219;&#xFF1A;paging&#x5206;&#x9875;" class="plugin-anchor" href="#&#x5F53;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x591A;&#x4E86;&#x5219;&#xFF1A;paging&#x5206;&#x9875;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F53;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x591A;&#x4E86;&#x5219;&#xFF1A;paging&#x5206;&#x9875;</h2>
-<p>&#x5982;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6B4C;&#x624B;&#x7684;&#x4E13;&#x8F91;&#x592A;&#x591A;&#xFF0C;&#x5219;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5206;&#x9875;<code>paging</code></p>
-<p>&#x8BBE;&#x8BA1;&#x5206;&#x9875;&#x7684;API&#x65F6;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x53EF;&#x53C2;&#x8003;&#x4E4B;&#x524D;&#x67D0;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x8FD4;&#x56DE;&#x7684;&#x683C;&#x5F0F;&#xFF1A;</p>
-<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
-    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;get task/orders ok&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">&quot;curPageNum&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token property">&quot;hasNext&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-        <span class="token property">&quot;hasPrev&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        <span class="token property">&quot;numPerPage&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
-        <span class="token property">&quot;tasks&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">&quot;task-10b01105-ec53-41bb-810e-720ab468bdf7&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>......<span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;task-da013992-e7aa-4ae9-8b6f-bdf621b9fbaa&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>......<span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;task-f3c0c660-e7f5-4583-bab2-23c7006dadc4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>......<span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token property">&quot;task-f7a4d0df-3142-444b-a962-83660acd447f&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>......<span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">&quot;totalNum&quot;</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
-        <span class="token property">&quot;totalPageNum&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>&#x5177;&#x4F53;&#x7684;&#x89E3;&#x91CA;&#xFF1A;
-Pagination&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x5230;&#x7684;&#x5C5E;&#x6027;&#x5C31;&#x662F;&#xFF1A;</p>
-<ul>
-<li><code>items</code>&#xFF1A;&#x5177;&#x4F53;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x4E2A;&#x5217;&#x8868;<ul>
-<li>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;items&#x53BB;&#x83B7;&#x53D6;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x4E86;&#x3002;
-&#x5176;&#x4ED6;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#xFF1A;</li>
-</ul>
-</li>
-<li><code>page</code>&#xFF1A;&#x5F53;&#x524D;&#x7684;&#x9875;&#x6570;</li>
-<li><code>pages</code>&#xFF1A;&#x603B;&#x7684;&#x9875;&#x6570;</li>
-<li><code>per_page</code>&#xFF1A;&#x6BCF;&#x4E00;&#x9875;&#x7684;&#x4E2A;&#x6570;</li>
-<li><code>has_prev</code>&#xFF1A;&#x662F;&#x5426;&#x6709;&#x524D;&#x4E00;&#x9875;</li>
-<li><code>has_next</code>&#xFF1A;&#x662F;&#x5426;&#x6709;&#x540E;&#x4E00;&#x9875;</li>
-<li><code>total</code>&#xFF1A;&#xFF08;&#x7B26;&#x5408;&#x5F53;&#x524D;&#x5206;&#x9875;&#x67E5;&#x8BE2;&#x7684;&#xFF09;&#x603B;&#xFF08;&#x7684;&#x9879;&#x76EE;&#x7684;&#xFF09;&#x4E2A;&#x6570;</li>
-</ul>
-<p>&#x5177;&#x4F53;&#x7684;Python&#x7684;<code>Flask+SQLAlchemy</code>&#x7684;API&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F9B;&#x53C2;&#x8003;&#xFF1A;</p>
-<pre class="language-"><code class="lang-python">    curPageTaskList <span class="token operator">=</span> None
-    taskPagination <span class="token operator">=</span> None
-
-    <span class="token keyword">if</span> curRole <span class="token operator">==</span> UserRole<span class="token punctuation">.</span>Initiator<span class="token punctuation">:</span>
-        taskPagination <span class="token operator">=</span> Task<span class="token punctuation">.</span>query<span class="token punctuation">.</span>filter_by<span class="token punctuation">(</span>initiatorId<span class="token operator">=</span>userId<span class="token punctuation">)</span><span class="token punctuation">.</span>paginate<span class="token punctuation">(</span>
-            page<span class="token operator">=</span>curPageNum<span class="token punctuation">,</span>
-            per_page<span class="token operator">=</span>numPerPage<span class="token punctuation">,</span>
-            error_out<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-    <span class="token keyword">elif</span> curRole <span class="token operator">==</span> UserRole<span class="token punctuation">.</span>Errandor<span class="token punctuation">:</span>
-        taskPagination <span class="token operator">=</span> Task<span class="token punctuation">.</span>query<span class="token punctuation">.</span>filter_by<span class="token punctuation">(</span>errandorId<span class="token operator">=</span>userId<span class="token punctuation">)</span><span class="token punctuation">.</span>paginate<span class="token punctuation">(</span>
-            page<span class="token operator">=</span>curPageNum<span class="token punctuation">,</span>
-            per_page<span class="token operator">=</span>numPerPage<span class="token punctuation">,</span>
-            error_out<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-
-    paginatedTaskList <span class="token operator">=</span> taskPagination<span class="token punctuation">.</span>items
-
-    paginatedTaskDict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token keyword">for</span> curIdx<span class="token punctuation">,</span> eachTask <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>paginatedTaskList<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        paginatedTaskDict<span class="token punctuation">[</span>eachTask<span class="token punctuation">.</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> marshal<span class="token punctuation">(</span>eachTask<span class="token punctuation">,</span> task_fields<span class="token punctuation">)</span>
-
-    respPaginatedTaskInfoDict <span class="token operator">=</span> <span class="token punctuation">{</span>
-        <span class="token string">&quot;curPageNum&quot;</span>    <span class="token punctuation">:</span> taskPagination<span class="token punctuation">.</span>page<span class="token punctuation">,</span>
-        <span class="token string">&quot;totalPageNum&quot;</span>  <span class="token punctuation">:</span> taskPagination<span class="token punctuation">.</span>pages<span class="token punctuation">,</span>
-        <span class="token string">&quot;numPerPage&quot;</span>    <span class="token punctuation">:</span> taskPagination<span class="token punctuation">.</span>per_page<span class="token punctuation">,</span>
-        <span class="token string">&quot;hasPrev&quot;</span>       <span class="token punctuation">:</span> taskPagination<span class="token punctuation">.</span>has_prev<span class="token punctuation">,</span>
-        <span class="token string">&quot;hasNext&quot;</span>       <span class="token punctuation">:</span> taskPagination<span class="token punctuation">.</span>has_next<span class="token punctuation">,</span>
-        <span class="token string">&quot;totalTaskNum&quot;</span>  <span class="token punctuation">:</span> taskPagination<span class="token punctuation">.</span>total<span class="token punctuation">,</span>
-        <span class="token string">&apos;tasks&apos;</span>         <span class="token punctuation">:</span> paginatedTaskDict
-    <span class="token punctuation">}</span>
-</code></pre>
-<p>&#x8BE6;&#x89C1;&#xFF1A;<a href="http://www.crifan.com/flask_restful_how_design_paging_api" target="_blank">&#x3010;&#x5DF2;&#x89E3;&#x51B3;&#x3011;Flask-Restful&#x4E2D;&#x5982;&#x4F55;&#x8BBE;&#x8BA1;&#x5206;&#x9875;&#x7684;API</a></p>
 <h2 id="&#x662F;&#x5426;&#x4E00;&#x5B9A;&#x8981;&#x4E25;&#x683C;&#x6309;&#x7167;restful&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x7528;&#x5BF9;&#x5E94;&#x7684;http&#x7684;method&#x5B9E;&#x73B0;&#x5BF9;&#x5E94;&#x7684;&#x529F;&#x80FD;&#xFF1F;"><a name="&#x662F;&#x5426;&#x4E00;&#x5B9A;&#x8981;&#x4E25;&#x683C;&#x6309;&#x7167;restful&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x7528;&#x5BF9;&#x5E94;&#x7684;http&#x7684;method&#x5B9E;&#x73B0;&#x5BF9;&#x5E94;&#x7684;&#x529F;&#x80FD;&#xFF1F;" class="plugin-anchor" href="#&#x662F;&#x5426;&#x4E00;&#x5B9A;&#x8981;&#x4E25;&#x683C;&#x6309;&#x7167;restful&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x7528;&#x5BF9;&#x5E94;&#x7684;http&#x7684;method&#x5B9E;&#x73B0;&#x5BF9;&#x5E94;&#x7684;&#x529F;&#x80FD;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x662F;&#x5426;&#x4E00;&#x5B9A;&#x8981;&#x4E25;&#x683C;&#x6309;&#x7167;Restful&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x7528;&#x5BF9;&#x5E94;&#x7684;http&#x7684;method&#x5B9E;&#x73B0;&#x5BF9;&#x5E94;&#x7684;&#x529F;&#x80FD;&#xFF1F;</h2>
 <p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x4E0D;&#x7528;&#x975E;&#x5E38;&#x4E25;&#x683C;&#x7684;&#x4F9D;&#x7167;&#x89C4;&#x5219;&#xFF0C;&#x5C24;&#x5176;&#x662F;</p>
 <ul>
@@ -613,13 +559,13 @@ Pagination&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x523
 <p>&#x4E0D;&#x8FC7;&#xFF0C;&#x6709;&#x4E9B;&#x9879;&#x76EE;&#xFF0C;&#x5BF9;&#x65B9;&#x672C;&#x8EAB;&#x5C31;&#x8981;&#x6C42;&#x8BBE;&#x8BA1;&#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x4E25;&#x683C;&#x6309;&#x7167;Restful&#x7684;&#x89C4;&#x5219;&#x6765;&#x8BBE;&#x8BA1;&#xFF0C;&#x8FD9;&#x65F6;&#x6700;&#x597D;&#x7528;UPDATE/PATCH&#x53BB;&#x66F4;&#x65B0;&#x4FEE;&#x6539;&#x8D44;&#x6E90;&#x3002;</p>
 <p>&#x5176;&#x4ED6;&#x7684;&#xFF0C;&#x89C1;&#x4E0A;&#x9762;&#x7684;&#x8868;&#x683C;&#x603B;&#x7ED3;&#xFF0C;&#x5178;&#x578B;&#x7684;&#x662F;&#xFF1A;</p>
 <ul>
-<li>GET &#x83B7;&#x53D6;&#x8D44;&#x6E90;</li>
-<li>POST &#x65B0;&#x5EFA;&#x8D44;&#x6E90;</li>
-<li>PUT &#x66F4;&#x65B0;/&#x4FEE;&#x6539; &#x8D44;&#x6E90;</li>
-<li>DELETE &#x5220;&#x9664;&#x8D44;&#x6E90;</li>
+<li><code>GET</code> &#x83B7;&#x53D6;&#x8D44;&#x6E90;</li>
+<li><code>POST</code> &#x65B0;&#x5EFA;&#x8D44;&#x6E90;</li>
+<li><code>PUT</code> &#x66F4;&#x65B0;/&#x4FEE;&#x6539; &#x8D44;&#x6E90;</li>
+<li><code>DELETE</code> &#x5220;&#x9664;&#x8D44;&#x6E90;</li>
 </ul>
 <h2 id="post&#x65F6;body&#x4E2D;&#x65E0;&#x53C2;&#x6570;&#x65F6;&#x4E0D;&#x5E94;&#x8BE5;&#x6DFB;&#x52A0;content-typeapplicationjson&#x7684;header"><a name="post&#x65F6;body&#x4E2D;&#x65E0;&#x53C2;&#x6570;&#x65F6;&#x4E0D;&#x5E94;&#x8BE5;&#x6DFB;&#x52A0;content-typeapplicationjson&#x7684;header" class="plugin-anchor" href="#post&#x65F6;body&#x4E2D;&#x65E0;&#x53C2;&#x6570;&#x65F6;&#x4E0D;&#x5E94;&#x8BE5;&#x6DFB;&#x52A0;content-typeapplicationjson&#x7684;header"><i class="fa fa-link" aria-hidden="true"></i></a>POST&#x65F6;body&#x4E2D;&#x65E0;&#x53C2;&#x6570;&#x65F6;&#x4E0D;&#x5E94;&#x8BE5;&#x6DFB;&#x52A0;<code>Content-Type:application/json</code>&#x7684;Header</h2>
-<p>&#x6BD4;&#x5982;POST&#x65F6;,&#x5982;&#x679C;&#x6CA1;&#x6709;Body&#x5185;&#x5BB9;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x65F6;&#xFF0C;Header&#x4E2D;&#x5C31;&#x4E0D;&#x8981;&#x5305;&#x542B; <code>Content-Type:application/json</code></p>
+<p>&#x6BD4;&#x5982;<code>POST</code>&#x65F6;,&#x5982;&#x679C;&#x6CA1;&#x6709;Body&#x5185;&#x5BB9;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x65F6;&#xFF0C;Header&#x4E2D;&#x5C31;&#x4E0D;&#x8981;&#x5305;&#x542B; <code>Content-Type:application/json</code></p>
 <p>&#x5426;&#x5219;&#xFF0C;&#x67D0;&#x4E9B;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x3002;</p>
 <p>&#x6BD4;&#x5982;Flask&#x7684;Flask-Restful&#x7684;&#x63A5;&#x53E3;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x8FD4;&#x56DE;&#xFF1A;</p>
 <p><code>code = 0 message = Failed to decode JSON object: No JSON object could be decoded</code></p>
@@ -628,7 +574,7 @@ Pagination&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x523
 <p>&#x6240;&#x4EE5;&#x6846;&#x67B6;&#x5C31;&#x4F1A;&#x53BB;&#x5C1D;&#x8BD5;&#x4ECE;Body&#x4E2D;&#x627E;JSON&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53BB;&#x89E3;&#x6790;&#x53C2;&#x6570;</p>
 <p>&#x4F46;&#x662F;&#x53D1;&#x73B0;Body&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x7684;JSON&#x5B57;&#x7B26;&#x4E32;&#x5F85;&#x89E3;&#x6790;&#xFF0C;&#x6240;&#x4EE5;&#x62A5;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
 <footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank">&#x77E5;&#x8BC6;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-06-19 21:49:55
+2019-03-05 17:39:17
 </span></footer>
                                 
                                 </section>
@@ -656,7 +602,7 @@ Pagination&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x523
 
             
                 
-                <a href="resp_data_style.html" class="navigation navigation-prev " aria-label="Previous page: 返回数据的格式和风格">
+                <a href="pagination.html" class="navigation navigation-prev " aria-label="Previous page: 分页设计">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -672,7 +618,7 @@ Pagination&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x523
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"其他心得","level":"1.6.3","depth":2,"next":{"title":"附录","level":"1.7","depth":1,"path":"appendix/README.md","ref":"appendix/README.md","articles":[{"title":"参考资料","level":"1.7.1","depth":2,"path":"appendix/reference.md","ref":"appendix/reference.md","articles":[]}]},"previous":{"title":"返回数据的格式和风格","level":"1.6.2","depth":2,"path":"restful_experience/resp_data_style.md","ref":"restful_experience/resp_data_style.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"该文件修订时间：","copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/http_restful_api/pdf/http_restful_api.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/http_restful_api/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"http_restful_api","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTTP后台端：RESTful API接口设计","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结HTTP后台方面的RESTful API方面的知识"},"file":{"path":"restful_experience/experience_other.md","mtime":"2018-06-19T13:49:55.982Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-03T06:24:15.069Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"其他心得","level":"1.6.4","depth":2,"next":{"title":"附录","level":"1.7","depth":1,"path":"appendix/README.md","ref":"appendix/README.md","articles":[{"title":"参考资料","level":"1.7.1","depth":2,"path":"appendix/reference.md","ref":"appendix/reference.md","articles":[]}]},"previous":{"title":"分页设计","level":"1.6.3","depth":2,"path":"restful_experience/pagination.md","ref":"restful_experience/pagination.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"该文件修订时间：","copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/http_restful_api/pdf/http_restful_api.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/http_restful_api/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"http_restful_api","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTTP后台端：RESTful API接口设计","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结HTTP后台方面的RESTful API方面的知识"},"file":{"path":"restful_experience/experience_other.md","mtime":"2019-03-05T09:39:17.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T12:39:21.301Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

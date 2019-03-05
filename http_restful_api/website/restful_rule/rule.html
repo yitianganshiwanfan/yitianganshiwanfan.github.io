@@ -407,12 +407,27 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../restful_experience/experience_other.html">
+        <li class="chapter " data-level="1.6.3" data-path="../restful_experience/pagination.html">
+            
+                <a href="../restful_experience/pagination.html">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    分页设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../restful_experience/experience_other.html">
             
                 <a href="../restful_experience/experience_other.html">
             
                     
-                        <b>1.6.3.</b>
+                        <b>1.6.4.</b>
                     
                     其他心得
             
@@ -514,36 +529,62 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:left">HTTP Verb=HTTP&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">HTTP Verb=HTTP Method=HTTP&#x65B9;&#x6CD5;</th>
 <th style="text-align:left">&#x64CD;&#x4F5C;&#x7C7B;&#x578B;=CRUD</th>
-<th style="text-align:left">&#x8FD4;&#x56DE;&#x503C;</th>
+<th style="text-align:left">&#x53EF;&#x80FD;&#x8FD4;&#x56DE;&#x7684;&#x72B6;&#x6001;&#x7801;</th>
+<th style="text-align:left">&#x662F;&#x5426;&#x5E42;&#x7B49;Idempotent</th>
+<th style="text-align:left">&#x662F;&#x5426;&#x5B89;&#x5168;Safe</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left">OPTIONS</td>
+<td style="text-align:left">&#x8BE2;&#x95EE;&#x8BE5;&#x63A5;&#x53E3;/&#x7AEF;&#x70B9;&#x652F;&#x6301;&#x54EA;&#x4E9B;&#x65B9;&#x6CD5;</td>
+<td style="text-align:left">200 OK</td>
+<td style="text-align:left">&#x662F;</td>
+<td style="text-align:left">&#x662F;</td>
+</tr>
+<tr>
 <td style="text-align:left">POST</td>
 <td style="text-align:left">Create&#x521B;&#x5EFA;</td>
 <td style="text-align:left"><ul><li>&#x6B63;&#x5E38;</li><ul><li>201 (Created)</li></ul><li>&#x5F02;&#x5E38;</li><ul><li>404 (Not Found)</li><li>409 (Conflict)</li></ul></ul></td>
+<td style="text-align:left">&#x5426;</td>
+<td style="text-align:left">&#x5426;</td>
 </tr>
 <tr>
 <td style="text-align:left">GET</td>
 <td style="text-align:left">Read&#x8BFB;&#x53D6;</td>
 <td style="text-align:left"><ul><li>&#x6B63;&#x5E38;&#xFF1A;</li><ul><li>200 (OK)</li></ul><li>&#x5F02;&#x5E38;&#xFF1A;</li><ul><li>404 (Not Found)</li></ul></ul></td>
+<td style="text-align:left">&#x662F;</td>
+<td style="text-align:left">&#x662F;</td>
+</tr>
+<tr>
+<td style="text-align:left">HEAD</td>
+<td style="text-align:left">&#x540C;GET&#x4F46;&#x662F;&#x8FD4;&#x56DE;BODY&#x4E3A;&#x7A7A;</td>
+<td style="text-align:left">&#x540C;GET</td>
+<td style="text-align:left">&#x662F;</td>
+<td style="text-align:left">&#x662F;</td>
 </tr>
 <tr>
 <td style="text-align:left">PUT</td>
 <td style="text-align:left">Replace&#x66FF;&#x6362;</td>
 <td style="text-align:left"><ul><li>&#x6B63;&#x5E38;&#xFF1A;</li><ul><li>200 (OK)</li></ul><li>&#x5F02;&#x5E38;</li><ul><li>405 (Method Not Allowed)</li><li>204 (No Content)</li><li>404 (Not Found)</li></ul></ul></td>
+<td style="text-align:left">&#x662F;</td>
+<td style="text-align:left">&#x5426;</td>
 </tr>
 <tr>
 <td style="text-align:left">PATCH</td>
 <td style="text-align:left">Update/Modify&#x66F4;&#x65B0;</td>
 <td style="text-align:left"><ul><li>&#x6B63;&#x5E38;&#xFF1A;</li><ul><li>200 (OK)</li></ul><li>&#x5F02;&#x5E38;</li><ul><li>405 (Method Not Allowed)</li><li>204 (No Content)</li><li>404 (Not Found)</li></ul></ul></td>
+<td style="text-align:left">&#x5426;</td>
+<td style="text-align:left">&#x5426;</td>
 </tr>
 <tr>
 <td style="text-align:left">DELETE</td>
 <td style="text-align:left">Delete&#x5220;&#x9664;</td>
 <td style="text-align:left"><ul><li>&#x6B63;&#x5E38;&#xFF1A;</li><ul><li>200 (OK)</li><li>204 (No Content)</li></ul><li>&#x5F02;&#x5E38;&#xFF1A;</li><ul><li>404 (Not Found)</li><li>405 (Method Not Allowed)</li></ul></ul></td>
+<td style="text-align:left">&#x662F;</td>
+<td style="text-align:left">&#x5426;</td>
 </tr>
 </tbody>
 </table>
@@ -617,7 +658,7 @@
 </tr>
 </tbody>
 </table>
-<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="-&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x5927;&#x5BB6;&#x7684;&#x5B9E;&#x9645;&#x505A;&#x6CD5;"><i class="fa fa-exclamation-triangle"></i>  &#x6700;&#x4F73;&#x5B9E;&#x8DF5;==&#x5927;&#x5BB6;&#x7684;&#x5B9E;&#x9645;&#x505A;&#x6CD5;</h3></div><div class="panel-body"><p>&#x53EA;&#x4E0D;&#x8FC7;&#xFF0C;&#x73B0;&#x5728;&#x5927;&#x5BB6;&#x7684;&#x5E38;&#x89C1;&#x7684;&#xFF0C;&#x5B9E;&#x9645;&#x7684;&#x505A;&#x6CD5;&#x5F80;&#x5F80;&#x662F;&#xFF1A;</p><p>&#x7528;<code>PUT</code>&#x5B9E;&#x73B0;&#x4E86;<code>PATCH</code>&#x7684;&#x6548;&#x679C;&#xFF1A;</p><p><strong>&#x4F7F;&#x7528;<code>PUT</code>&#xFF0C;&#x4F46;&#x53EA;&#x4F20;&#x9012;<code>&#x90E8;&#x5206;</code>&#x5B57;&#x6BB5;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x6BB5;</strong></p></div></div>
+<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="-&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x5927;&#x5BB6;&#x7684;&#x5B9E;&#x9645;&#x505A;&#x6CD5;"><i class="fa fa-info"></i>  &#x6700;&#x4F73;&#x5B9E;&#x8DF5;==&#x5927;&#x5BB6;&#x7684;&#x5B9E;&#x9645;&#x505A;&#x6CD5;</h3></div><div class="panel-body"><p>&#x53EA;&#x4E0D;&#x8FC7;&#xFF0C;&#x73B0;&#x5728;&#x5927;&#x5BB6;&#x7684;&#x5E38;&#x89C1;&#x7684;&#xFF0C;&#x5B9E;&#x9645;&#x7684;&#x505A;&#x6CD5;&#x5F80;&#x5F80;&#x662F;&#xFF1A;</p><p>&#x7528;<code>PUT</code>&#x5B9E;&#x73B0;&#x4E86;<code>PATCH</code>&#x7684;&#x6548;&#x679C;&#xFF1A;</p><p><strong>&#x4F7F;&#x7528;<code>PUT</code>&#xFF0C;&#x4F46;&#x53EA;&#x4F20;&#x9012;<code>&#x90E8;&#x5206;</code>&#x5B57;&#x6BB5;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x6BB5;</strong></p></div></div>
 <h4 id="&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;"><a name="&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;</h4>
 <p>&#x6709;&#x4E00;&#x4E2A;user&#x7528;&#x6237;&#xFF0C;&#x4FE1;&#x606F;&#x662F;&#xFF1A;</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
@@ -672,10 +713,60 @@
 <li>&#x7528;&#x6237;&#x518D;&#x901A;&#x8FC7;&#x65B0;&#x5EFA;&#x8D44;&#x6E90;&#x7684;<code>id</code>&#xFF0C;&#x53BB;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x8BE6;&#x60C5;</li>
 </ul>
 </li>
-<li><strong>&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</strong>&#xFF1A;&#x5927;&#x5BB6;&#x5B9E;&#x9645;&#x7684;&#x5E38;&#x89C1;&#x505A;&#x6CD5;&#x5219;&#x662F;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x65B0;&#x5EFA;&#x8D44;&#x6E90;&#x7684;&#x6240;&#x6709;&#x7684;&#x8BE6;&#x60C5;&#x7684;<code>json</code>&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;<code>id</code> </li>
+<li><strong>&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</strong>&#xFF1A;&#x5927;&#x5BB6;&#x5B9E;&#x9645;&#x7684;&#x5E38;&#x89C1;&#x505A;&#x6CD5;&#x5219;&#x662F;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x65B0;&#x5EFA;&#x8D44;&#x6E90;&#x7684;&#x6240;&#x6709;&#x7684;&#x8BE6;&#x60C5;&#x7684;<code>json</code>&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;<code>id</code></li>
 </ul>
+<h3 id="delete&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#xFF1F;"><a name="delete&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#xFF1F;" class="plugin-anchor" href="#delete&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a><code>DELETE</code>&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#xFF1F;</h3>
+<p>&#x7EFC;&#x5408;<a href="https://tools.ietf.org/html/rfc7231#section-4.3" target="_blank">&#x5B98;&#x7F51;</a>&#x548C;&#x5176;&#x4ED6;&#x6587;&#x6863;&#x540E;&#xFF0C;<code>REST</code>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5BF9;&#x4E8E;<code>DELETE</code>&#x8BF7;&#x6C42;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;<code>&#x72B6;&#x6001;&#x7801;</code>&#xFF0C;&#x4EE5;&#x53CA;&#x5177;&#x4F53;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#x503C;&#xFF0C;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><code>202</code>=<code>Accepted</code>&#xFF1A;&#x8868;&#x793A;&#x63A5;&#x53D7;&#x4E86;&#x6B64;&#x5220;&#x9664;&#x8BF7;&#x6C42;<ul>
+<li>&#x4F46;&#x662F;&#x6682;&#x65F6;&#x8FD8;&#x6CA1;&#x6267;&#x884C;</li>
+<li>&#x6216;&#x8005;&#x76EE;&#x524D;&#x6267;&#x884C;&#x5220;&#x9664;&#x52A8;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x6210;<ul>
+<li>&#x4E4B;&#x540E;&#xFF08;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#xFF09;&#x4F1A;&#x5B8C;&#x6210;&#x5220;&#x9664;&#x52A8;&#x4F5C;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>204</code>=<code>No Content</code>&#xFF1A;&#x5DF2;&#x7ECF;&#x6267;&#x884C;&#x4E86;&#x5220;&#x9664;&#x52A8;&#x4F5C;&#xFF0C;&#x5185;&#x5BB9;&#x88AB;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x6CA1;&#x6709;&#x5185;&#x5BB9;&#x4E86;<ul>
+<li>response&#x7684;body&#x4E2D;&#x662F;&#x7A7A;&#x7684;</li>
+<li>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x8981;&#x5B9E;&#x73B0;<code>HATEOAS</code>&#x7684;REST&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5219;&#x5C3D;&#x91CF;&#x907F;&#x514D;DELETE&#x8FD4;&#x56DE;<code>204</code><ul>
+<li>&#x8BE6;&#x89C1;&#xFF1A;<a href="https://stackoverflow.com/questions/50792505/restful-api-delete-entity-what-should-i-return-as-result" target="_blank">rest - RESTful API: Delete Entity - What should I return as result? - Stack Overflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>200</code>=<code>OK</code>&#xFF1A;&#x5185;&#x5BB9;&#x5DF2;&#x5220;&#x9664;&#xFF0C;&#x540C;&#x65F6;&#x8FD4;&#x56DE;body&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x542B;&#x5177;&#x4F53;&#x7684;&#x5220;&#x9664;&#x7684;&#x8BE6;&#x60C5;<ul>
+<li>response&#x7684;body&#x4E2D;&#x5305;&#x542B;&#x989D;&#x5916;&#x5173;&#x4E8E;&#x5220;&#x9664;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;<ul>
+<li>&#x6BD4;&#x5982;&#x4E4B;&#x524D;&#x5E16;&#x5B50;&#x4E2D;&#x63D0;&#x5230;&#x7684;&#xFF0C;&#x5220;&#x9664;&#x4E86;&#x5177;&#x4F53;&#x54EA;&#x4E2A;&#x5185;&#x5BB9;&#xFF0C;&#x5DF2;&#x5220;&#x9664;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x751A;&#x81F3;&#x5220;&#x9664;&#x4E86;&#x7B26;&#x5408;&#x5BF9;&#x5E94;&#x6761;&#x4EF6;&#x7684;&#x591A;&#x4E2A;&#x5185;&#x5BB9;&#x7B49;&#x7B49;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#x76EE;&#x524D;&#x81EA;&#x5DF1;&#x6240;&#x7406;&#x89E3;&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x662F;&#x7B2C;&#x4E09;&#x79CD;&#xFF1A;</p>
+<ul>
+<li><strong>&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x7801;</strong>&#xFF1A;<code>200</code>=<code>OK</code></li>
+<li><strong>&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#x503C;</strong>&#xFF1A;&#x6839;&#x636E;&#x4E4B;&#x524D;&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF1A;code&#x3001;message&#x3001;data&#xFF0C;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Question deleted for id 5c1777e1cc6df4563adf4a50&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;deletedCount&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E14;&#x66F4;&#x52A0;&#x7EC6;&#x8282;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF1A;&#x5F53;&#x68C0;&#x6D4B;&#x5230;&#x60F3;&#x8981;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5220;&#x9664;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5219;&#x63D0;&#x793A;&#x5DF2;&#x7ECF;&#x5220;&#x9664;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Question already deleted for id 5c1777e1cc6df4563adf4a50&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;deletedCount&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title" id="-&#x8BE6;&#x89C1;&#x5E16;&#x5B50;"><i class="fa fa-edit"></i>  &#x8BE6;&#x89C1;&#x5E16;&#x5B50;</h3></div><div class="panel-body"><p><a href="http://www.crifan.com/flask_rest_api_best_practice_of_delete_should_response" target="_blank">&#x3010;&#x5DF2;&#x89E3;&#x51B3;&#x3011;Flask&#x7684;REST&#x63A5;&#x53E3;&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x4E2D;DELETE&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;</a> </p></div></div>
 <footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank">&#x77E5;&#x8BC6;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2018-06-19 22:34:46
+2019-03-05 20:32:21
 </span></footer>
                                 
                                 </section>
@@ -719,7 +810,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"通用设计规则","level":"1.3.1","depth":2,"next":{"title":"HATEOAS","level":"1.3.2","depth":2,"path":"restful_rule/hateoas.md","ref":"restful_rule/hateoas.md","articles":[]},"previous":{"title":"RESTful API通用设计规则","level":"1.3","depth":1,"path":"restful_rule/README.md","ref":"restful_rule/README.md","articles":[{"title":"通用设计规则","level":"1.3.1","depth":2,"path":"restful_rule/rule.md","ref":"restful_rule/rule.md","articles":[]},{"title":"HATEOAS","level":"1.3.2","depth":2,"path":"restful_rule/hateoas.md","ref":"restful_rule/hateoas.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"该文件修订时间：","copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/http_restful_api/pdf/http_restful_api.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/http_restful_api/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"http_restful_api","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTTP后台端：RESTful API接口设计","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结HTTP后台方面的RESTful API方面的知识"},"file":{"path":"restful_rule/rule.md","mtime":"2018-06-19T14:34:46.127Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-03T06:24:15.069Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"通用设计规则","level":"1.3.1","depth":2,"next":{"title":"HATEOAS","level":"1.3.2","depth":2,"path":"restful_rule/hateoas.md","ref":"restful_rule/hateoas.md","articles":[]},"previous":{"title":"RESTful API通用设计规则","level":"1.3","depth":1,"path":"restful_rule/README.md","ref":"restful_rule/README.md","articles":[{"title":"通用设计规则","level":"1.3.1","depth":2,"path":"restful_rule/rule.md","ref":"restful_rule/rule.md","articles":[]},{"title":"HATEOAS","level":"1.3.2","depth":2,"path":"restful_rule/hateoas.md","ref":"restful_rule/hateoas.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"该文件修订时间：","copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/http_restful_api/pdf/http_restful_api.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/http_restful_api/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"http_restful_api","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTTP后台端：RESTful API接口设计","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结HTTP后台方面的RESTful API方面的知识"},"file":{"path":"restful_rule/rule.md","mtime":"2019-03-05T12:32:21.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T12:39:21.301Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
