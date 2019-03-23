@@ -1,6 +1,6 @@
 # 说明
 
-最后更新：`20181213`
+最后更新：`20190323`
 
 这个代码仓库
 
@@ -14,11 +14,14 @@
 
 目前已存放的Gitbook电子书有：
 
+- [老少皆宜的运动：羽毛球](https://crifan.github.io/all_age_sports_badminton/website)
 - [API开发利器：Postman](https://crifan.github.io/api_tool_postman/website)
 - [汽车销售领域知识总结](https://crifan.github.io/automobile_sales_summary/website)
+- [史上最好用的编辑器：VSCode](https://crifan.github.io/best_editor_vscode/website)
 - [最流行的文档格式：Markdown](https://crifan.github.io/doc_format_markdown/website)
 - [电子书制作利器：GitBook](https://crifan.github.io/ebook_system_gitbook/website)
 - [Gitbook演示](https://crifan.github.io/gitbook_demo/website)
+- [自动化利器：Makefile](https://crifan.github.io/good_automation_tool_makefile/website)
 - [HTTP后台端：RESTful API接口设计](https://crifan.github.io/http_restful_api/website)
 - [HTTP知识总结](https://crifan.github.io/http_summary/website)
 - [如何提高工作效率](https://crifan.github.io/improve_work_efficiency/website)
