@@ -16,7 +16,7 @@
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/shuttlecock.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/racket_related/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/racket_related/racket.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/racket_related/badminton_racket.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/racket_related/badminton_string.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/racket_related/badminton_grip.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/racket_related/badminton_bag.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -24,13 +24,17 @@
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_uniform.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_towel.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_shoe.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_socks.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_insole.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_knee_pads.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_wristband.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_equipment/person_related/badminton_waist_support.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/injury_prevention_treat/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_competitions/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_competitions/watch_live_competition.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_org_competitions/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_org_competitions/watch_live/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_org_competitions/watch_live/zhangyu_tv.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/professional_org_competitions/watch_live/youtube_bwf.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/common_brand/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -41,9 +45,11 @@
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/ivt_jiubang.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/biobay_biogym.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/suzhouexpo.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/international_science_park_phase_ii.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/kangyu.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/suda_second_public_gym_building.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/xinghai.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/suhong.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/dongfu_tfs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/fenghuangcheng.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/sip/loufeng_cultural_sports_center.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -58,5 +64,7 @@
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/gusu/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/court/suzhou/gusu/suda_east_district.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/appendix/related_material.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/appendix/some_fun.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/all_age_sports_badminton/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
