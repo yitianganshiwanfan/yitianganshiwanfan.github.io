@@ -1,0 +1,875 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>安装ssl证书心得 · app抓包利器：Charles</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../summary_capture_https.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"repo":"app_capture_package_tool_charles","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.crifan.com" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../intro_charles/">
+            
+                <a href="../../../intro_charles/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    如何抓包app
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../simple_http/">
+            
+                <a href="../../simple_http/">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    普通http请求
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../simple_http/mobile_set_wifi_proxy.html">
+            
+                <a href="../../simple_http/mobile_set_wifi_proxy.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    移动端设置Wifi代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../simple_http/common_question.html">
+            
+                <a href="../../simple_http/common_question.html">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    复杂的https请求
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    移动端安装ssl证书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.2.1.1" data-path="install_ssl_summary.html">
+            
+                <a href="install_ssl_summary.html">
+            
+                    
+                        <b>1.3.2.1.1.</b>
+                    
+                    安装ssl证书心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../summary_capture_https.html">
+            
+                <a href="../summary_capture_https.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    抓包https心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../https_ssl_pinning/">
+            
+                <a href="../https_ssl_pinning/">
+            
+                    
+                        <b>1.3.2.3.</b>
+                    
+                    破解https的SSL Pinning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../https_ssl_pinning/root_android_xposed_justtrustme.html">
+            
+                <a href="../https_ssl_pinning/root_android_xposed_justtrustme.html">
+            
+                    
+                        <b>1.3.2.3.1.</b>
+                    
+                    Xposed+JustTrustMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../https_ssl_pinning/crack_https_summary.html">
+            
+                <a href="../https_ssl_pinning/crack_https_summary.html">
+            
+                    
+                        <b>1.3.2.3.2.</b>
+                    
+                    破解https心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../capture_related_summary/">
+            
+                <a href="../../../capture_related_summary/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    抓包相关心得
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../capture_related_summary/related_capture_tool.html">
+            
+                <a href="../../../capture_related_summary/related_capture_tool.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    相关抓包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../function_related_summary/">
+            
+                <a href="../../../function_related_summary/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    功能相关心得
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../function_related_summary/filter_request.html">
+            
+                <a href="../../../function_related_summary/filter_request.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    过滤请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../function_related_summary/display_mode_exchange.html">
+            
+                <a href="../../../function_related_summary/display_mode_exchange.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    显示模式切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../other_summary/">
+            
+                <a href="../../../other_summary/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    其他心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../appendix/">
+            
+                <a href="../../../appendix/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../appendix/reference.html">
+            
+                <a href="../../../appendix/reference.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >安装ssl证书心得</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x79FB;&#x52A8;&#x7AEF;&#x5B89;&#x88C5;charles&#x7684;ssl&#x8BC1;&#x4E66;&#x7684;&#x5FC3;&#x5F97;"><a name="&#x79FB;&#x52A8;&#x7AEF;&#x5B89;&#x88C5;charles&#x7684;ssl&#x8BC1;&#x4E66;&#x7684;&#x5FC3;&#x5F97;" class="plugin-anchor" href="#&#x79FB;&#x52A8;&#x7AEF;&#x5B89;&#x88C5;charles&#x7684;ssl&#x8BC1;&#x4E66;&#x7684;&#x5FC3;&#x5F97;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79FB;&#x52A8;&#x7AEF;&#x5B89;&#x88C5;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#x7684;&#x5FC3;&#x5F97;</h1>
+<h2 id="&#x624B;&#x673A;&#x4E2D;&#x5B89;&#x88C5;&#x4E86;ssl&#x8BC1;&#x4E66;&#x540E;"><a name="&#x624B;&#x673A;&#x4E2D;&#x5B89;&#x88C5;&#x4E86;ssl&#x8BC1;&#x4E66;&#x540E;" class="plugin-anchor" href="#&#x624B;&#x673A;&#x4E2D;&#x5B89;&#x88C5;&#x4E86;ssl&#x8BC1;&#x4E66;&#x540E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x624B;&#x673A;&#x4E2D;&#x5B89;&#x88C5;&#x4E86;ssl&#x8BC1;&#x4E66;&#x540E;</h2>
+<h3 id="&#x4F1A;&#x5BFC;&#x81F4;&#x624B;&#x673A;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6709;&#x5B89;&#x5168;&#x8B66;&#x544A;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x7EED;&#x4E0D;&#x7528;&#xFF0C;&#x8BB0;&#x5F97;&#x5220;&#x9664;&#x6389;"><a name="&#x4F1A;&#x5BFC;&#x81F4;&#x624B;&#x673A;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6709;&#x5B89;&#x5168;&#x8B66;&#x544A;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x7EED;&#x4E0D;&#x7528;&#xFF0C;&#x8BB0;&#x5F97;&#x5220;&#x9664;&#x6389;" class="plugin-anchor" href="#&#x4F1A;&#x5BFC;&#x81F4;&#x624B;&#x673A;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6709;&#x5B89;&#x5168;&#x8B66;&#x544A;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x7EED;&#x4E0D;&#x7528;&#xFF0C;&#x8BB0;&#x5F97;&#x5220;&#x9664;&#x6389;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F1A;&#x5BFC;&#x81F4;&#x624B;&#x673A;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6709;&#x5B89;&#x5168;&#x8B66;&#x544A;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x7EED;&#x4E0D;&#x7528;&#xFF0C;&#x8BB0;&#x5F97;&#x5220;&#x9664;&#x6389;</h3>
+<p>&#x6210;&#x529F;&#x5B89;&#x88C5;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#x540E;&#xFF0C;&#x5BFC;&#x81F4;&#x589E;&#x52A0;&#x4E86;<code>&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;</code>&#x7684;&#x98CE;&#x9669;&#xFF0C;&#x624B;&#x673A;&#x53D8;&#x5F97;&#x4E0D;&#x591F;&#x5B89;&#x5168;&#xFF0C;&#x6240;&#x4EE5;&#x7CFB;&#x7EDF;&#x4F1A;&#x6709;&#x5B89;&#x5168;&#x63D0;&#x793A;&#xFF1A;</p>
+<p><code>&#x7F51;&#x7EDC;&#x53EF;&#x80FD;&#x4F1A;&#x53D7;&#x5230;&#x76D1;&#x63A7; &#x53D7;&#x5230;&#x4E0D;&#x660E;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x76D1;&#x63A7;</code></p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x5C0F;&#x7C73;4<ul>
+<li><img src="../../../assets/img/xiaomi_4_network_monitored_by_third_party.png" alt=""></li>
+</ul>
+</li>
+<li>&#x67D0;&#x5B89;&#x5353;&#x771F;&#x673A;<ul>
+<li><img src="../../../assets/img/android_system_notice_network_not_safe.png" alt=""></li>
+<li>&#x70B9;&#x51FB;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8BC1;&#x4E66;&#xFF0C;&#x5373;&#x6B64;&#x5904;&#x7684;Charles&#x8BC1;&#x4E66;<ul>
+<li><img src="../../../assets/img/click_notice_network_monitored.png" alt=""></li>
+<li><img src="../../../assets/img/click_show_charles_proxy_ca.png" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x7F51;&#x6613;MuMu&#x5B89;&#x5353;&#x6A21;&#x62DF;&#x5668;<ul>
+<li><img src="../../../assets/img/mumu_notice_network_monitored.png" alt=""></li>
+<li><img src="../../../assets/img/mumu_click_show_credential.png" alt=""></li>
+<li><img src="../../../assets/img/mumu_charles_proxy_ca.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#xFF1A;&#x5982;&#x679C;&#x5728;&#x4F60;&#x8C03;&#x8BD5;&#x6293;&#x5305;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x518D;&#x6293;&#x5305;&#x65F6;&#xFF0C;&#x8BB0;&#x5F97;&#x5378;&#x8F7D;&#x6389;&#x624B;&#x673A;&#x4E2D;&#x7684;CA&#x8BC1;&#x4E66;&#xFF1A;</p>
+<p><img src="../../../assets/img/charles_ca_click_delete.png" alt=""></p>
+<p><img src="../../../assets/img/sure_permenent_delete_ca.png" alt=""></p>
+<p>&#x8BA9;&#x624B;&#x673A;&#x6062;&#x590D;&#x5B89;&#x5168;&#x3002;</p>
+<h3 id="&#x90E8;&#x5206;&#x5E94;&#x7528;&#x7684;h5&#x9875;&#x9762;&#x4F1A;&#x6709;&#x8B66;&#x544A;&#x548C;&#x63D0;&#x793A;"><a name="&#x90E8;&#x5206;&#x5E94;&#x7528;&#x7684;h5&#x9875;&#x9762;&#x4F1A;&#x6709;&#x8B66;&#x544A;&#x548C;&#x63D0;&#x793A;" class="plugin-anchor" href="#&#x90E8;&#x5206;&#x5E94;&#x7528;&#x7684;h5&#x9875;&#x9762;&#x4F1A;&#x6709;&#x8B66;&#x544A;&#x548C;&#x63D0;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x5206;&#x5E94;&#x7528;&#x7684;H5&#x9875;&#x9762;&#x4F1A;&#x6709;&#x8B66;&#x544A;&#x548C;&#x63D0;&#x793A;</h3>
+<p>&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x53D1;&#x73B0;&#x7684;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x5C0F;&#x7C73;9 &#x5B89;&#x5353;9.0<ul>
+<li>&#x5B89;&#x88C5;&#x4E86;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#x540E;<ul>
+<li>&#x4EAC;&#x4E1C;app<ul>
+<li>&#x6253;&#x5F00;H5&#x9875;&#x9762;&#x4F1A;&#x63D0;&#x793A;<ul>
+<li><code>&#x5F53;&#x524D;&#x7F51;&#x7AD9;&#x8BC1;&#x4E66;&#x4E0D;&#x53EF;&#x4FE1;&#x4E14;&#x8BC1;&#x4E66;&#x94FE;&#x957F;&#x5EA6;&#x4E3A;1&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x670D;&#x52A1;&#x5668;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x5B8C;&#x6574;&#x8BC1;&#x4E66;&#x94FE;&#xFF0C;&#x662F;&#x5426;&#x4FE1;&#x4EFB;&#x5E76;&#x7EE7;&#x7EED;&#x8BBF;&#x95EE;&#xFF1F;</code></li>
+<li><img src="../../../assets/img/jd_warn_charles_cert_not_trusted.png" alt=""><ul>
+<li>&#x70B9;&#x51FB;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7684;&#x786E;&#x662F;Charles&#x7684;&#x8BC1;&#x4E66;<ul>
+<li><img src="../../../assets/img/click_show_charles_cert_detail_for_jd.png" alt=""></li>
+</ul>
+</li>
+<li>&#x6709;&#x65F6;&#x5019;&#x6B64;&#x8B66;&#x544A;&#x4F1A;&#x9891;&#x7E41;&#x8DF3;&#x51FA;&#xFF0C;&#x70B9;&#x51FB;&#x5173;&#x95ED;&#x7684;&#x901F;&#x5EA6;&#x90FD;&#x8D76;&#x4E0D;&#x4E0A;&#x8DF3;&#x51FA;&#x8B66;&#x544A;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x7EE7;&#x7EED;&#x67E5;&#x770B;&#x9875;&#x9762;&#x5185;&#x5BB9;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x652F;&#x4ED8;&#x5B9D;app<ul>
+<li>&#x5728;&#x7528;&#x652F;&#x4ED8;&#x5B9D;&#x652F;&#x4ED8;&#x65F6;&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x5F53;&#x524D;&#x652F;&#x4ED8;&#x73AF;&#x5883;&#x4E0D;&#x53EF;&#x4FE1;&#xFF0C;&#x662F;&#x5426;&#x7EE7;&#x7EED;&#x652F;&#x4ED8; &#x4E4B;&#x7C7B;&#x7684;&#x63D0;&#x793A;<ul>
+<li><img src="../../../assets/img/alipay_notice_payment_environment_risk.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x8981;&#x5148;&#x8BBE;&#x7F6E;&#x624B;&#x673A;&#x4E2D;wifi&#x4EE3;&#x7406;&#x4E3A;charles&#x540E;&#x624D;&#x80FD;&#x4E0B;&#x8F7D;&#x5230;ssl&#x8BC1;&#x4E66;"><a name="&#x8981;&#x5148;&#x8BBE;&#x7F6E;&#x624B;&#x673A;&#x4E2D;wifi&#x4EE3;&#x7406;&#x4E3A;charles&#x540E;&#x624D;&#x80FD;&#x4E0B;&#x8F7D;&#x5230;ssl&#x8BC1;&#x4E66;" class="plugin-anchor" href="#&#x8981;&#x5148;&#x8BBE;&#x7F6E;&#x624B;&#x673A;&#x4E2D;wifi&#x4EE3;&#x7406;&#x4E3A;charles&#x540E;&#x624D;&#x80FD;&#x4E0B;&#x8F7D;&#x5230;ssl&#x8BC1;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8981;&#x5148;&#x8BBE;&#x7F6E;&#x624B;&#x673A;&#x4E2D;Wifi&#x4EE3;&#x7406;&#x4E3A;Charles&#x540E;&#x624D;&#x80FD;&#x4E0B;&#x8F7D;&#x5230;ssl&#x8BC1;&#x4E66;</h2>
+<p>&#x5728;&#x624B;&#x673A;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;&#xFF1A;</p>
+<p><a href="http://chls.pro/ssl" target="_blank">http://chls.pro/ssl</a></p>
+<p>&#x53BB;&#x4E0B;&#x8F7D;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x4E4B;&#x524D;&#xFF0C;&#x5343;&#x4E07;&#x8BB0;&#x5F97;&#x8981;&#x53BB;&#x624B;&#x673A;&#x7AEF;&#x7ED9;Wifi&#x8BBE;&#x7F6E;Charles&#x7684;&#x4EE3;&#x7406;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x3002;</p>
+<p>&#x5426;&#x5219;&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x51FA;&#x666E;&#x901A;&#x7684;&#x7F51;&#x9875;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5F39;&#x6846;&#x548C;&#x4E0B;&#x8F7D;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x800C;&#x65E0;&#x6CD5;&#x770B;&#x5230;&#xFF0C;&#x5F39;&#x51FA;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x5F39;&#x6846;&#x7684;&#xFF0C;&#x65E0;&#x6CD5;&#x4E0B;&#x8F7D;&#x5230;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="../../../assets/img/charles_getssl_only_show_normal_html.png" alt=""></p>
+<h2 id="&#x4E0D;&#x540C;&#x79FB;&#x52A8;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x7684;&#x8BC1;&#x4E66;&#x540D;&#x548C;&#x683C;&#x5F0F;&#x4E0D;&#x592A;&#x76F8;&#x540C;"><a name="&#x4E0D;&#x540C;&#x79FB;&#x52A8;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x7684;&#x8BC1;&#x4E66;&#x540D;&#x548C;&#x683C;&#x5F0F;&#x4E0D;&#x592A;&#x76F8;&#x540C;" class="plugin-anchor" href="#&#x4E0D;&#x540C;&#x79FB;&#x52A8;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x7684;&#x8BC1;&#x4E66;&#x540D;&#x548C;&#x683C;&#x5F0F;&#x4E0D;&#x592A;&#x76F8;&#x540C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0D;&#x540C;&#x79FB;&#x52A8;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x7684;&#x8BC1;&#x4E66;&#x540D;&#x548C;&#x683C;&#x5F0F;&#x4E0D;&#x592A;&#x76F8;&#x540C;</h2>
+<p>&#x7ECF;&#x8FC7;&#x591A;&#x6B21;&#x7684;&#x6298;&#x817E;&#x800C;&#x4E86;&#x89E3;&#x5230;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x79FB;&#x52A8;&#x7AEF;</p>
+<ul>
+<li>&#x771F;&#x673A;&#xFF1A;&#x5C0F;&#x7C73;4</li>
+<li>&#x771F;&#x673A;&#xFF1A;&#x5C0F;&#x7C73;5&#xFF0C;&#x7EA2;&#x7C73;5A</li>
+<li>&#x6A21;&#x62DF;&#x5668;&#xFF1A;&#x7F51;&#x6613;MuMu Mac&#x7248;</li>
+<li>&#x6A21;&#x62DF;&#x5668;&#xFF1A;&#x591C;&#x795E; Mac&#x7248;</li>
+</ul>
+<p>&#x7B49;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;</p>
+<p><a href="http://chls.pro/ssl" target="_blank">http://chls.pro/ssl</a></p>
+<p>&#x4F1A;&#x81EA;&#x52A8;&#x5F39;&#x6846;&#xFF0C;&#x53BB;&#x4E0B;&#x8F7D;&#x5230;&#x7684;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#xFF0C;&#x4E0D;&#x540C;&#x624B;&#x673A;&#x7AEF;&#x5F80;&#x5F80;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x540E;&#x7F00;&#x3002;</p>
+<p>&#x5178;&#x578B;&#x7684;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x771F;&#x673A;&#xFF1A;<code>&#x9524;&#x5B50;M1L Android 6.0.1</code><ul>
+<li>pem&#x6587;&#x4EF6;&#xFF1A;<code>charles-ssl-proxying-certificate.pem</code><ul>
+<li><img src="../../../assets/img/smartisan_m1l_charles_ssl_download_pem.png" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x771F;&#x673A;&#xFF1A;<code>&#x5C0F;&#x7C73;9 Android 9.0</code><ul>
+<li>pem&#x6587;&#x4EF6;&#xFF1A;<code>charles-ssl-proxying-certificate.pem</code><ul>
+<li><img src="../../../assets/img/xiaomi_9_charles_ssl_download_pem.png" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x771F;&#x673A;&#xFF1A;<code>&#x5C0F;&#x7C73;5</code>&#xFF0C;<code>&#x7EA2;&#x7C73;5A</code>&#xFF0C;<code>&#x5C0F;&#x7C73;4</code><ul>
+<li><img src="../../../assets/img/xiaomi_4_charles_getssl_crt.png" alt=""></li>
+<li>crt&#x6587;&#x4EF6;&#xFF1A;<code>getssl.crt</code><ul>
+<li>&#x6CE8;&#xFF1A;<ul>
+<li>&#x540E;&#x6765;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x6B64;<code>getssl.crt</code>&#x8BC1;&#x4E66;</li>
+<li>&#x800C;&#x6539;&#x7528;&#x4E4B;&#x524D;&#x5DF2;&#x4E0B;&#x8F7D;&#x7684;<code>charles-ssl-proxying-certificate.pem</code>&#x624D;&#x6210;&#x529F;&#x5B89;&#x88C5;&#x5230;&#x5C0F;&#x7C73;4&#x4E2D;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x6A21;&#x62DF;&#x5668;&#xFF1A;<code>&#x7F51;&#x6613;MuMu</code><ul>
+<li>crt&#x6587;&#x4EF6;&#xFF1A;<code>downloadfile.crt</code></li>
+</ul>
+</li>
+<li>&#x6A21;&#x62DF;&#x5668;&#xFF1A;<code>&#x591C;&#x795E;</code> Mac&#x7248;<ul>
+<li>&#x76F4;&#x63A5;&#x8DF3;&#x51FA;&#x8BC1;&#x4E66;&#x5B89;&#x88C5;&#x754C;&#x9762;<ul>
+<li>&#x4E0D;&#x77E5;&#x9053;&#xFF0C;&#x4E5F;&#x65E0;&#x9700;&#x77E5;&#x9053;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x540D;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#x76EE;&#x524D;&#x7684;&#x7406;&#x89E3;&#x662F;&#xFF1A;</p>
+<p>-&#x300B;&#x597D;&#x50CF;&#x662F;crt&#x548C;pem&#x7684;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x5185;&#x90E8;&#x683C;&#x5F0F;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;</p>
+<p>-&#x300B;&#x4E0D;&#x8FC7;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;crt&#x8FD8;&#x662F;pem&#xFF0C;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x7684;&#x3002;</p>
+<h2 id="&#x53EF;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x800C;&#x5E76;&#x975E;&#x4E00;&#x5B9A;&#x8981;&#x53BB;&#x4E0B;&#x8F7D;"><a name="&#x53EF;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x800C;&#x5E76;&#x975E;&#x4E00;&#x5B9A;&#x8981;&#x53BB;&#x4E0B;&#x8F7D;" class="plugin-anchor" href="#&#x53EF;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x800C;&#x5E76;&#x975E;&#x4E00;&#x5B9A;&#x8981;&#x53BB;&#x4E0B;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EF;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x800C;&#x5E76;&#x975E;&#x4E00;&#x5B9A;&#x8981;&#x53BB;&#x4E0B;&#x8F7D;</h2>
+<p>&#x5BF9;&#x4E8E;&#x624B;&#x673A;&#x7AEF;&#x53BB;&#x5B89;&#x88C5;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#x6765;&#x8BF4;</p>
+<p>&#x5176;&#x5B9E;&#x4E0D;&#x4E00;&#x5B9A;&#x975E;&#x8981;&#x6839;&#x636E;&#x5B98;&#x7F51;&#x8BF4;&#x7684;&#xFF0C;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;</p>
+<p><a href="http://chls.pro/ssl" target="_blank">http://chls.pro/ssl</a></p>
+<p>&#x53BB;&#x5F39;&#x6846;&#x4E0B;&#x8F7D;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF0C;&#x518D;&#x53BB;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x800C;&#x53EA;&#x8981;&#x5F97;&#x5230;&#x4E86;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x53EF;&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x53BB;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x800C;&#x5F97;&#x5230;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#xFF1A;</p>
+<ul>
+<li>&#x76F4;&#x63A5;&#x628A;&#x4E4B;&#x524D;&#x4E0B;&#x8F7D;&#x8FC7;&#x7684;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;</li>
+<li>PC&#x7AEF;Charles&#x5BFC;&#x51FA;&#x7684;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;</li>
+</ul>
+<p>&#x53D1;&#x9001;&#x5230;&#x624B;&#x673A;&#x7AEF;&#x5373;&#x53EF;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5B89;&#x88C5;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;&#x628A;&#x4E4B;&#x524D;&#x5C0F;&#x7C73;9&#x4E2D;&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x8F7D;&#x5230;&#x7684;pem&#x8BC1;&#x4E66;&#xFF1A;</p>
+<p><img src="../../../assets/img/previous_downloaded_charles_ssl_pem_file.png" alt=""></p>
+<p>&#xFF08;&#x6B64;&#x5904;&#x901A;&#x8FC7;&#x5FAE;&#x4FE1;&#x6216;QQ&#x53BB;&#xFF09;&#x53D1;&#x9001;&#x5230;&#x624B;&#x673A;&#xFF0C;&#x6BD4;&#x5982;&#x9524;&#x5B50;M1L&#xFF0C;&#x4E2D;&#xFF1A;</p>
+<p><img src="../../../assets/img/charles_ssl_pem_file_in_qq.png" alt=""></p>
+<p>&#x7136;&#x540E;&#x70B9;&#x51FB;&#x53BB;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#xFF0C;&#x540E;&#x7EED;&#x6D41;&#x7A0B;&#x548C;&#x524D;&#x9762;&#x6807;&#x51C6;&#x8FC7;&#x7A0B;&#x4E2D;&#x5C31;&#x662F;&#x4E00;&#x6837;&#x7684;&#x4E86;&#x3002;</p>
+<h3 id="pc&#x7AEF;&#x7528;charles&#x5BFC;&#x51FA;&#x7684;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;"><a name="pc&#x7AEF;&#x7528;charles&#x5BFC;&#x51FA;&#x7684;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;" class="plugin-anchor" href="#pc&#x7AEF;&#x7528;charles&#x5BFC;&#x51FA;&#x7684;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>PC&#x7AEF;&#x7528;Charles&#x5BFC;&#x51FA;&#x7684;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;PC&#x7AEF;&#x7684;Charles&#x53BB;&#x5BFC;&#x51FA;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p><code>Help -&gt; SSL Proxying -&gt; Save Charles Root Certificate</code></p>
+<p><img src="../../../assets/img/charles_save_root_certificate.png" alt=""></p>
+<p>&#x5BFC;&#x51FA;&#x5F97;&#x5230;<code>pem</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<p><code>charles-ssl-proxying-certificate.pem</code></p>
+<p><img src="../../../assets/img/exported_charles_ssl_proxying_certificate_pem.png" alt=""></p>
+<p>&#x4ECE;&#x56FE;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5BFC;&#x51FA;<code>cer</code>&#x683C;&#x5F0F;&#x7684;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#x7684;&#x3002;</p>
+<h2 id="&#x7528;&#x67D0;&#x4E9B;&#x65B9;&#x5F0F;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;"><a name="&#x7528;&#x67D0;&#x4E9B;&#x65B9;&#x5F0F;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;" class="plugin-anchor" href="#&#x7528;&#x67D0;&#x4E9B;&#x65B9;&#x5F0F;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x67D0;&#x4E9B;&#x65B9;&#x5F0F;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x9047;&#x5230;&#x8BC1;&#x4E66;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5B89;&#x88C5;</p>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#x5C31;&#x6CA1;&#x6709;&#x8BC1;&#x4E66;&#xFF1A;</p>
+<p><code>&#x53D7;&#x4FE1;&#x4EFB;&#x7684;&#x51ED;&#x636E; -&gt; &#x7528;&#x6237;</code> &#x662F;&#x7A7A;&#x7684;&#xFF1A;</p>
+<p><img src="../../../assets/img/trusted_credential_user_empty.png" alt=""></p>
+<p><code>&#x7528;&#x6237;&#x51ED;&#x636E;</code>&#x4E2D;&#x4E5F;&#x662F;&#x7A7A;&#x7684;&#xFF1A;</p>
+<p><img src="../../../assets/img/user_credential_also_empty.png" alt=""></p>
+<p>&#x4E0B;&#x9762;&#x6574;&#x7406;&#x4E00;&#x4E9B;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
+<h3 id="&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x5374;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x548C;&#x5B89;&#x88C5;"><a name="&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x5374;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x548C;&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x5374;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x548C;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x5374;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x548C;&#x5B89;&#x88C5;</h3>
+<p>&#x6709;&#x4E9B;&#x624B;&#x673A;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x76F4;&#x63A5;&#x70B9;&#x51FB;Charles&#x7684;ssl&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF0C;&#x5374;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x548C;&#x5B89;&#x88C5;</p>
+<p>&#x6BD4;&#x5982;&#x5C0F;&#x7C73;9&#x4E2D;QQ&#x6D4F;&#x89C8;&#x5668;&#x70B9;&#x51FB;<code>pem</code>&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF0C;&#x7ED3;&#x679C;&#x53EA;&#x5F39;&#x51FA;&#x4E86;&#x7231;&#x5947;&#x827A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5F00;&#x59CB;&#x5B89;&#x88C5;&#x7684;&#x754C;&#x9762;&#xFF1A;</p>
+<p><img src="../../../assets/img/xiaomi_9_qq_browser_click_pem_show_aiqiyi.png" alt=""></p>
+<h3 id="&#x76F4;&#x63A5;&#x4ECE;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x4E2D;&#x641C;&#x7D22;&#x5230;&#x7684;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x5B89;&#x88C5;&#x7684;"><a name="&#x76F4;&#x63A5;&#x4ECE;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x4E2D;&#x641C;&#x7D22;&#x5230;&#x7684;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x5B89;&#x88C5;&#x7684;" class="plugin-anchor" href="#&#x76F4;&#x63A5;&#x4ECE;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x4E2D;&#x641C;&#x7D22;&#x5230;&#x7684;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x5B89;&#x88C5;&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76F4;&#x63A5;&#x4ECE;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x4E2D;&#x641C;&#x7D22;&#x5230;&#x7684;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x5B89;&#x88C5;&#x7684;</h3>
+<p>&#x4E4B;&#x524D;&#x5728;&#x5DF2;&#x4E0B;&#x8F7D;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF08;&#x4F46;&#x662F;&#x5E94;&#x8BE5;&#x662F;&#x6CA1;&#x6709;&#x628A;&#x8BC1;&#x4E66;&#x653E;&#x5230;&#x7279;&#x6B8A;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x53EA;&#x662F;&#x901A;&#x8FC7;&#x5B89;&#x5353;&#x7CFB;&#x7EDF;&#x7684;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x641C;&#x7D22;&#x51FA;&#x76F8;&#x5173;&#x8BC1;&#x4E66;&#x9009;&#x9879;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x53BB;&#x70B9;&#x51FB;&#x5B89;&#x88C5;&#x65F6;&#xFF0C;&#x90FD;&#x662F;&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x5E76;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x7684;&#xFF1A;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x5C0F;&#x7C73;9&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>&#x641C;<code>&#x5B89;&#x88C5;&#x8BC1;&#x4E66;</code>&#xFF0C;&#x70B9;&#x51FB;<code>&#x5B89;&#x88C5;&#x8BC1;&#x4E66;</code>&#xFF0C;&#x63D0;&#x793A;<code>&#x6CA1;&#x6709;&#x53EF;&#x5B89;&#x88C5;&#x7684;&#x8BC1;&#x4E66;</code><ul>
+<li><img src="../../../assets/img/xiaomi_9_setting_search_install_cert_click_fail.png" alt=""></li>
+</ul>
+</li>
+<li>&#x641C;<code>&#x5B89;&#x88C5;</code>&#xFF0C;&#x70B9;&#x51FB;<code>&#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;</code>&#xFF0C;&#x63D0;&#x793A;<code>&#x6CA1;&#x6709;&#x53EF;&#x5B89;&#x88C5;&#x7684;&#x8BC1;&#x4E66;</code><ul>
+<li><img src="../../../assets/img/xiaomi_9_setting_click_install_from_device_fail.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x6709;&#x65F6;&#x5019;&#x4ECE;es&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x9009;&#x62E9;&#x8BC1;&#x4E66;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x53BB;&#x5B89;&#x88C5;&#x90FD;&#x65E0;&#x6548;"><a name="&#x6709;&#x65F6;&#x5019;&#x4ECE;es&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x9009;&#x62E9;&#x8BC1;&#x4E66;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x53BB;&#x5B89;&#x88C5;&#x90FD;&#x65E0;&#x6548;" class="plugin-anchor" href="#&#x6709;&#x65F6;&#x5019;&#x4ECE;es&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x9009;&#x62E9;&#x8BC1;&#x4E66;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x53BB;&#x5B89;&#x88C5;&#x90FD;&#x65E0;&#x6548;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6709;&#x65F6;&#x5019;&#x4ECE;ES&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x70B9;&#x51FB;&#x8BC1;&#x4E66;&#x9009;&#x62E9;&#x8BC1;&#x4E66;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x53BB;&#x5B89;&#x88C5;&#x90FD;&#x65E0;&#x6548;</h3>
+<p>&#x6B64;&#x5904;&#x8FD8;&#x9047;&#x5230;&#x5F88;&#x5947;&#x602A;&#x7684;&#xFF0C;&#x5C0F;&#x7C73;9&#x4E2D;&#xFF0C;&#x7528;ES&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x627E;&#x5230;&#x5DF2;&#x4E0B;&#x8F7D;&#x7684;&#x8BC1;&#x4E66;&#x4E86;&#x3002;</p>
+<p>&#x9009;&#x62E9;<code>&#x5176;&#x4ED6;</code>&#x65B9;&#x5F0F;&#x53BB;&#x6253;&#x5F00;&#xFF1A;</p>
+<p><img src="../../../assets/img/xiaomi_9_es_pem_open_by_other.png" alt=""></p>
+<p>&#x518D;&#x53BB;&#x9009;&#xFF0C;&#x89C9;&#x5F97;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;<code>&#x8BC1;&#x4E66;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;</code>&#xFF1A;</p>
+<p><img src="../../../assets/img/xiaomi_9_cert_install_tool_to_install.png" alt=""></p>
+<p>&#x7ED3;&#x679C;&#x90FD;&#x6CA1;&#x4EFB;&#x4F55;&#x53CD;&#x5E94;&#xFF0C;&#x8BC1;&#x4E66;&#x6700;&#x7EC8;&#x90FD;&#x6CA1;&#x6709;&#x6B63;&#x786E;&#x5B89;&#x88C5;&#x3002;</p>
+<h2 id="&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;&#x53BB;&#x5B89;&#x88C5;"><a name="&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;&#x53BB;&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;&#x53BB;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;</code>&#x53BB;&#x5B89;&#x88C5;</h2>
+<p>&#x5982;&#x679C;&#x9047;&#x5230;&#xFF08;&#x524D;&#x9762;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#xFF09;&#x65E0;&#x6CD5;&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x4E2D;&#x7684;<code>&#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;</code>&#x53BB;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x5C0F;&#x7C73;9&#x4E2D;&#x662F;&#xFF1A;<code>&#x8BBE;&#x7F6E; -&gt; &#x66F4;&#x591A;&#x8BBE;&#x7F6E; -&gt; &#x7CFB;&#x7EDF;&#x5B89;&#x5168; -&gt; &#x52A0;&#x5BC6;&#x4E0E;&#x51ED;&#x636E; -&gt; &#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;</code><ul>
+<li><img src="../../../assets/img/xiaomi_9_setting_system_and_security.png" alt=""></li>
+<li><img src="../../../assets/img/xiaomi_9_setting_encrypt_and_credential.png" alt=""></li>
+</ul>
+</li>
+<li>&#x5C0F;&#x7C73;4&#x4E2D;&#x662F;&#xFF1A;<code>&#x8BBE;&#x7F6E; -&gt; &#x5176;&#x4ED6;&#x9AD8;&#x7EA7;&#x8BBE;&#x7F6E; -&gt; &#x5B89;&#x5168;&#x548C;&#x9690;&#x79C1; -&gt; &#x51ED;&#x636E;&#x5B58;&#x50A8; -&gt; &#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;</code><ul>
+<li><img src="../../../assets/img/xiaomi_4_setting.png" alt=""></li>
+<li><img src="../../../assets/img/xiaomi_4_other_advanced_setting.png" alt=""></li>
+<li><img src="../../../assets/img/xiaomi_4_security_and_privacy.png" alt=""></li>
+<li><img src="../../../assets/img/xiaomi_4_credential_storage.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<p>&#x70B9;&#x51FB;<code>&#x4ECE;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x5B89;&#x88C5;</code>&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x9009;&#x62E9;&#x754C;&#x9762;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x521A;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x9009;&#x62E9;&#x754C;&#x9762;&#x65F6;&#xFF0C;&#x4F1A;&#x9ED8;&#x8BA4;&#x663E;&#x793A;&#x7684;<code>&#x6700;&#x8FD1;</code>&#x91CC;&#x5F80;&#x5F80;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x770B;&#x4E0D;&#x5230;&#x6211;&#x4EEC;&#x8981;&#x7684;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p><img src="../../../assets/img/choose_file_default_recent_empty.png" alt=""></p>
+<p>&#x6240;&#x4EE5;&#x8981;&#x53BB;&#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x4E09;&#x4E2A;&#x6A2A;&#x7EBF;&#xFF0C;&#x53BB;&#x5207;&#x6362;&#x5230;&#x624B;&#x673A;&#x7684;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x4E2D;&#xFF1A;</p>
+<p>&#x6B64;&#x5904;&#x662F;<code>MI 9</code>&#xFF1A;</p>
+<p><img src="../../../assets/img/xiaomi_9_open_doc_choose_mi_9.png" alt=""></p>
+<p>&#x7136;&#x540E;&#x627E;&#x5230;&#x521A;&#x624D;&#x4E0B;&#x8F7D;&#x5230;&#x7684;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p><img src="../../../assets/img/xiaomi_9_mi_9_download_folder.png" alt=""></p>
+<p><img src="../../../assets/img/xiaomi_9_mi_9_downloaded_pem_file.png" alt=""></p>
+<p>&#x70B9;&#x51FB;&#x5BF9;&#x5E94;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;&#xFF0C;&#x6B64;&#x5904;&#x7684;<code>pem</code>&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x53EF;&#x6B63;&#x5E38;&#x7EE7;&#x7EED;&#x5B89;&#x88C5;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank">&#x77E5;&#x8BC6;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB;4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-05-25 14:22:58
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 移动端安装ssl证书">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../summary_capture_https.html" class="navigation navigation-next " aria-label="Next page: 抓包https心得">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"安装ssl证书心得","level":"1.3.2.1.1","depth":4,"next":{"title":"抓包https心得","level":"1.3.2.2","depth":3,"path":"how_capture_app/complex_https/summary_capture_https.md","ref":"how_capture_app/complex_https/summary_capture_https.md","articles":[]},"previous":{"title":"移动端安装ssl证书","level":"1.3.2.1","depth":3,"path":"how_capture_app/complex_https/mobile_install_ssl_ca/README.md","ref":"how_capture_app/complex_https/mobile_install_ssl_ca/README.md","articles":[{"title":"安装ssl证书心得","level":"1.3.2.1.1","depth":4,"path":"how_capture_app/complex_https/mobile_install_ssl_ca/install_ssl_summary.md","ref":"how_capture_app/complex_https/mobile_install_ssl_ca/install_ssl_summary.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"该文件修订时间：","copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/app_capture_package_tool_charles/pdf/app_capture_package_tool_charles.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/app_capture_package_tool_charles/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"app_capture_package_tool_charles","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"app抓包利器：Charles","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"介绍移动端app抓包主流工具Charles，以及具体使用心得，如何抓包普通的http的请求，和更高级的加密的https的请求以看到明文数据。再介绍Charles使用期间的注意事项，常见的坑等。期间涉及到如何给手机端安装Charles的ssl的CA证书，如何配合XPosed，JustTrustMe等框架、工具，插件等去实现绕过ssl证书绑定从而破解https，如何选择合适的可以用上JustTrustMe的安卓模拟器或者安卓真机。"},"file":{"path":"how_capture_app/complex_https/mobile_install_ssl_ca/install_ssl_summary.md","mtime":"2019-05-25T06:22:58.937Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-25T06:28:49.053Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
