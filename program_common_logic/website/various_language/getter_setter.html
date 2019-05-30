@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
@@ -45,7 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
                 
             
                 
@@ -100,7 +104,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"crifan","repo":"program_common_logic","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"repo":"program_common_logic","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]};
     </script>
 
     </head>
@@ -294,14 +298,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../embedded/">
+        <li class="chapter " data-level="1.3" data-path="../hardware_embedded/">
             
-                <a href="../embedded/">
+                <a href="../hardware_embedded/">
             
                     
                         <b>1.3.</b>
                     
-                    嵌入式领域
+                    硬件和嵌入式领域
             
                 </a>
             
@@ -639,7 +643,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x7684;getter&#x548C;setter">&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x7684;<code>getter</code>&#x548C;<code>setter</code></h1>
+                                <h1 id="&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x7684;getter&#x548C;setter"><a name="&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x7684;getter&#x548C;setter" class="plugin-anchor" href="#&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x7684;getter&#x548C;setter"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x7684;<code>getter</code>&#x548C;<code>setter</code></h1>
 <p>&#x4E4B;&#x524D;&#x63A5;&#x89E6;&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#xFF0C;&#x6BD4;&#x5982;<code>C</code>&#x3001;<code>C++</code>&#x7B49;&#xFF0C;&#x90FD;&#x6CA1;&#x6709;<code>getter</code>&#x548C;<code>setter</code>&#x7684;</p>
 <p>&#x540E;&#x6765;&#x63A5;&#x89E6;&#x5230;&#x4E86;&#x4E00;&#x4E9B;&#x8BED;&#x8A00;&#xFF1A;</p>
 <ul>
@@ -653,16 +657,16 @@
 <li><code>setter</code>&#xFF1A;&#x8BBE;&#x7F6E;&#xFF08;&#x5199;&#x5165;&#xFF09;&#x5C5E;&#x6027;&#x7684;&#x503C;</li>
 </ul>
 <p>&#x6BD4;&#x5982;&#xFF1A;</p>
-<h2 id="python">Python</h2>
+<h2 id="python"><a name="python" class="plugin-anchor" href="#python"><i class="fa fa-link" aria-hidden="true"></i></a>Python</h2>
 <p>Python&#x7684;<a href="https://segmentfault.com/q/1010000002881544" target="_blank">python - &#x65B0;&#x624B;&#x5B66;&#x4E60;Flask&#x5F15;&#x7528;flask-login&#x540E;&#x767B;&#x5165;&#x9519;&#x8BEF;&#x539F;&#x56E0;&#x4E0D;&#x6E05; - SegmentFault</a>
 &#x4E2D;&#x7684;&#xFF1A;</p>
 <pre class="language-"><code class="lang-python"><span class="token keyword">class</span> <span class="token class-name">Admin</span><span class="token punctuation">(</span>UserMixin<span class="token punctuation">,</span> db<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
     __tablename__ <span class="token operator">=</span> <span class="token string">&apos;admin&apos;</span>
-    id <span class="token operator">=</span> db<span class="token punctuation">.</span>Column<span class="token punctuation">(</span>db<span class="token punctuation">.</span>Integer<span class="token punctuation">,</span> primary_key<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token builtin">id</span> <span class="token operator">=</span> db<span class="token punctuation">.</span>Column<span class="token punctuation">(</span>db<span class="token punctuation">.</span>Integer<span class="token punctuation">,</span> primary_key<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
     username <span class="token operator">=</span> db<span class="token punctuation">.</span>Column<span class="token punctuation">(</span>db<span class="token punctuation">.</span>String<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
     password_hash <span class="token operator">=</span> db<span class="token punctuation">.</span>Column<span class="token punctuation">(</span>db<span class="token punctuation">.</span>String<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">)</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
 
-    @property
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">password</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">raise</span> AttributeError<span class="token punctuation">(</span><span class="token string">&apos;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x660E;&#x6587;&#x5BC6;&#x7801;&#xFF01;&apos;</span><span class="token punctuation">)</span>
 
@@ -715,7 +719,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"getter和setter","level":"1.5.4","depth":2,"next":{"title":"编程语言 - Python","level":"1.5.5","depth":2,"path":"various_language/python/README.md","ref":"various_language/python/README.md","articles":[{"title":"adapter适配器","level":"1.5.5.1","depth":3,"path":"various_language/python/adapter.md","ref":"various_language/python/adapter.md","articles":[]}]},"previous":{"title":"async和wait","level":"1.5.3","depth":2,"path":"various_language/async_wait.md","ref":"various_language/async_wait.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","alerts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"toolbar-button":{"label":"下载PDF","icon":"fa-file-pdf-o","url":"http://book.crifan.com/books/program_common_logic/pdf/program_common_logic.pdf"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/program_common_logic/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"alerts":{},"github-buttons":{"buttons":[{"user":"crifan","repo":"program_common_logic","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"计算机编程通用逻辑知识概念","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结计算机编程通用逻辑知识概念"},"file":{"path":"various_language/getter_setter.md","mtime":"2018-01-10T03:40:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-18T06:59:38.335Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"getter和setter","level":"1.5.4","depth":2,"next":{"title":"编程语言 - Python","level":"1.5.5","depth":2,"path":"various_language/python/README.md","ref":"various_language/python/README.md","articles":[{"title":"adapter适配器","level":"1.5.5.1","depth":3,"path":"various_language/python/adapter.md","ref":"various_language/python/adapter.md","articles":[]}]},"previous":{"title":"async和wait","level":"1.5.3","depth":2,"path":"various_language/async_wait.md","ref":"various_language/async_wait.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"该文件修订时间：","copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh'>知识署名-相同方式共享4.0协议</a>发布"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/program_common_logic/pdf/program_common_logic.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/program_common_logic/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"program_common_logic","count":true,"type":"star","user":"crifan","size":"small"},{"count":false,"width":"120","type":"follow","user":"crifan","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"计算机编程通用逻辑知识概念","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结计算机编程通用逻辑知识概念"},"file":{"path":"various_language/getter_setter.md","mtime":"2018-01-10T03:40:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-30T12:57:58.079Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -766,10 +770,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
         
     
         
