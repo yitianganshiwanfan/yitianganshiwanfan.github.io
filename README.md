@@ -1,12 +1,12 @@
 # `Crifan`的Github静态页面
 
-最后更新：`20190525`
+最后更新：`20190614`
 
-这个代码仓库
+此代码仓库
 
 [https://github.com/crifan/crifan.github.io](https://github.com/crifan/crifan.github.io)
 
-是`github`中用来存放我[Crifan](https://github.com/crifan)个人的`github`静态页面的。
+是用来存放我[Crifan](https://github.com/crifan)个人的`Github Pages`静态页面的。
 
 ## github静态页面入口首页地址
 
@@ -21,6 +21,7 @@
     * [Crifan的电子书的使用说明](https://github.com/crifan/crifan_ebook_readme)
   * 目前已有的电子书：
     * [老少皆宜的运动：羽毛球](https://crifan.github.io/all_age_sports_badminton/website)
+    * [app抓包利器：Charles](https://crifan.github.io/app_capture_package_tool_charles/website)
     * [安卓应用的安全和破解](https://crifan.github.io/android_app_security_crack/website)
     * [API开发利器：Postman](https://crifan.github.io/api_tool_postman/website)
     * [汽车销售领域知识总结](https://crifan.github.io/automobile_sales_summary/website)
