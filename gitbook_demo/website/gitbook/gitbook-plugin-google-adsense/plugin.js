@@ -12,7 +12,7 @@ require(["gitbook"], function(gitbook) {
         // adConfig.style && adElement.setAttribute('style', adConfig.style);
         adElement.setAttribute('data-full-width-responsive', "true");
 
-        console.log("adElement=%o", adElement);
+        // console.log("adElement=%o", adElement);
         return adElement;
     }
 
@@ -23,33 +23,33 @@ require(["gitbook"], function(gitbook) {
                 (adsbygoogle = window.adsbygoogle || []).push({});
             });
 
-            configs.forEach(function(c) {
-                console.log("after injectAds, related html=%s", document.querySelector(c.location));
-                console.log(document.querySelector(c.location));
-            });
+            // configs.forEach(function(c) {
+            //     console.log("after injectAds, related html=%s", document.querySelector(c.location));
+            //     console.log(document.querySelector(c.location));
+            // });
         }
     }
 
     gitbook.events.bind("start", function(e, pluginConfig) {
-        console.log("=================== google-adsense start: pluginConfig=%s", pluginConfig);
+        // console.log("=================== google-adsense start: pluginConfig=%s", pluginConfig);
         config = pluginConfig['google-adsense'].ads;
 
-        console.log("config=%o", config);
+        // console.log("config=%o", config);
         // init script
         var adScript = document.createElement('script');
         // adScript.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
         adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
         adScript.setAttribute('async', true);
-        console.log("adScript=%o", adScript);
+        // console.log("adScript=%o", adScript);
         document.body.appendChild(adScript);
     });
 
     gitbook.events.bind("page.change", function() {
-        console.log("=================== google-adsense page.change");
-        console.log("config=%o", config);
+        // console.log("=================== google-adsense page.change");
+        // console.log("config=%o", config);
         if (config) {
             injectAds(config);
-            console.log("injectAds done");
+            // console.log("injectAds done");
         }
     });
 });
