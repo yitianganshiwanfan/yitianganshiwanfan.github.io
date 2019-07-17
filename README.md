@@ -1,25 +1,21 @@
-# `Crifan`的Github静态页面
+# Crifan的电子书大全
 
-最后更新：`20190614`
+最后更新：`20190717`
 
-此代码仓库
+* 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
+* 入口地址：[https://crifan.github.io](https://crifan.github.io)
+* 代码仓库：[https://github.com/crifan/crifan.github.io](https://github.com/crifan/crifan.github.io)
 
-[https://github.com/crifan/crifan.github.io](https://github.com/crifan/crifan.github.io)
+## 包含内容
 
-是用来存放我[Crifan](https://github.com/crifan)个人的`Github Pages`静态页面的。
-
-## github静态页面入口首页地址
-
-[https://crifan.github.io](https://crifan.github.io)
-
-## github静态页面包含内容
-
-目前所包含的内容，主要有如下几类：
-
-* `Gitbook`的ebook电子书
-  * 关于这些电子书（和其他更多电子书）的关系，详见：
+* 各种电子书教程
+  * 是什么
+    * 基于Gitbook制作的电子书
+    * 大多数都是某个技术的教程
+    * 少数是非技术类、生活类等方面的教程
+  * 这些电子书之间的关系
     * [Crifan的电子书的使用说明](https://github.com/crifan/crifan_ebook_readme)
-  * 目前已有的电子书：
+  * 现有哪些电子书
     * [老少皆宜的运动：羽毛球](https://crifan.github.io/all_age_sports_badminton/website)
     * [app抓包利器：Charles](https://crifan.github.io/app_capture_package_tool_charles/website)
     * [安卓应用的安全和破解](https://crifan.github.io/android_app_security_crack/website)
