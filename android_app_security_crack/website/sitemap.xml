@@ -24,10 +24,11 @@
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/crack_apk_intro.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/1_step_apk_to_java.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/3_steps/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/3_steps/1_app_dump_dex.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/3_steps/2_dex_to_jar.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/3_steps/3_jar_to_java.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/2_or_3_steps/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/2_or_3_steps/1_app_dump_dex.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/2_or_3_steps/2_1_dex_to_java.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/2_or_3_steps/2_2_1_dex_to_jar.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/2_or_3_steps/2_2_2_jar_to_java.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/app_to_dex/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/app_to_dex/fdex2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
