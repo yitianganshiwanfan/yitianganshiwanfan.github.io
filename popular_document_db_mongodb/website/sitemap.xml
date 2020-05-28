@@ -11,8 +11,7 @@
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/basic_usage/client/gui/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/basic_usage/client/gui/mongodb_compass.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/basic_usage/client/api/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/basic_usage/client/api/python.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/basic_usage/basic_operation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/basic_usage/client/api/pymongo.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/advance_usage/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/advance_usage/ip_restrict.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/advance_usage/user_permission.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -34,6 +33,7 @@
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/pitfall/stop_mongodb.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/pitfall/cursor_not_found.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/pitfall/para_is_objectid.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/pitfall/not_create_user_in_admin.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/appendix/doc_tutorial.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_document_db_mongodb/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
