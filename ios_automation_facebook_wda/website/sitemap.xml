@@ -16,6 +16,7 @@
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/common_code/app/manage_app.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/common_code/app/first_run_guide.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/common_code/app/weixin/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/common_code/app/weixin/safe_mode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/common_code/app/weixin/public_account.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/common_code/app/settings/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/common_code/app/settings/update_wifi_proxy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
