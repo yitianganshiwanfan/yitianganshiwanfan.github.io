@@ -1,0 +1,729 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>idevice_id · 苹果相关开发总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="system_profiler.html" />
+    
+    
+    <link rel="prev" href="port_forward.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"repo":"apple_develop_summary","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.crifan.com" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../overview/">
+            
+                <a href="../overview/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../common/">
+            
+                <a href="../common/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    通用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    桌面端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="xcode/">
+            
+                <a href="xcode/">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    XCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="xcode/xcodebuild.html">
+            
+                <a href="xcode/xcodebuild.html">
+            
+                    
+                        <b>1.4.1.1.</b>
+                    
+                    xcodebuild
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="xcode/xcrun.html">
+            
+                <a href="xcode/xcrun.html">
+            
+                    
+                        <b>1.4.1.2.</b>
+                    
+                    xcrun
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ideviceinstaller.html">
+            
+                <a href="ideviceinstaller.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    ideviceinstaller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="port_forward.html">
+            
+                <a href="port_forward.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    端口转发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="idevice_id.html">
+            
+                <a href="idevice_id.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    idevice_id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="system_profiler.html">
+            
+                <a href="system_profiler.html">
+            
+                    
+                        <b>1.4.5.</b>
+                    
+                    system_profiler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="instruments.html">
+            
+                <a href="instruments.html">
+            
+                    
+                        <b>1.4.6.</b>
+                    
+                    instruments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                        <b>1.4.7.</b>
+                    
+                    security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile/">
+            
+                <a href="../mobile/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    移动端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile/ios/">
+            
+                <a href="../mobile/ios/">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../mobile/ios/iphone.html">
+            
+                <a href="../mobile/ios/iphone.html">
+            
+                    
+                        <b>1.5.1.1.</b>
+                    
+                    iPhone
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix/">
+            
+                <a href="../appendix/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix/doc.html">
+            
+                <a href="../appendix/doc.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix/reference.html">
+            
+                <a href="../appendix/reference.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >idevice_id</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ideviceid"><a name="ideviceid" class="plugin-anchor" href="#ideviceid"><i class="fa fa-link" aria-hidden="true"></i></a>idevice_id</h1>
+<p>&#x53EF;&#x4EE5;&#x7528;<code>idevice_id</code>&#x5217;&#x51FA;&#x5F53;&#x524D;&#xFF08;Mac&#x4E2D;&#x5DF2;&#xFF09;&#x8FDE;&#x63A5;&#x7684;&#xFF08;iOS&#xFF09;&#x7684;<code>&#x8BBE;&#x5907;ID</code>=<code>UDID</code></p>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h2>
+<pre class="language-"><code class="lang-bash">brew <span class="token function">install</span> libimobiledevice
+</code></pre>
+<p>&#x5B89;&#x88C5;<code>libimobiledevice</code>&#x540E;&#xFF0C;&#x6839;&#x636E;<a href="https://github.com/libimobiledevice/libimobiledevice" target="_blank">GitHub&#x5B98;&#x7F51;</a>&#x4ECB;&#x7ECD;&#xFF0C;&#x5176;&#x4F1A;&#x5305;&#x542B;&#x5F88;&#x591A;&#x5DE5;&#x5177;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idevice_id</td>
+<td>List attached devices or print device name of given device</td>
+</tr>
+<tr>
+<td>idevicebackup</td>
+<td>Create or restore backup for devices (legacy)</td>
+</tr>
+<tr>
+<td>idevicebackup2</td>
+<td>Create or restore backups for devices running iOS 4 or later</td>
+</tr>
+<tr>
+<td>idevicecrashreport</td>
+<td>Retrieve crash reports from a device</td>
+</tr>
+<tr>
+<td>idevicedate</td>
+<td>Display the current date or set it on a device</td>
+</tr>
+<tr>
+<td>idevicedebug</td>
+<td>Interact with the debugserver service of a device</td>
+</tr>
+<tr>
+<td>idevicedebugserverproxy</td>
+<td>Proxy a debugserver connection from a device for remote debugging</td>
+</tr>
+<tr>
+<td>idevicediagnostics</td>
+<td>Interact with the diagnostics interface of a device</td>
+</tr>
+<tr>
+<td>ideviceenterrecovery</td>
+<td>Make a device enter recovery mode</td>
+</tr>
+<tr>
+<td>ideviceimagemounter</td>
+<td>Mount disk images on the device</td>
+</tr>
+<tr>
+<td>ideviceinfo</td>
+<td>Show information about a connected device</td>
+</tr>
+<tr>
+<td>idevicename</td>
+<td>Display or set the device name</td>
+</tr>
+<tr>
+<td>idevicenotificationproxy</td>
+<td>Post or observe notifications on a device</td>
+</tr>
+<tr>
+<td>idevicepair</td>
+<td>Manage host pairings with devices and usbmuxd</td>
+</tr>
+<tr>
+<td>ideviceprovision</td>
+<td>Manage provisioning profiles on a device</td>
+</tr>
+<tr>
+<td>idevicescreenshot</td>
+<td>Gets a screenshot from the connected device</td>
+</tr>
+<tr>
+<td>idevicesetlocation</td>
+<td>Simulate location on device</td>
+</tr>
+<tr>
+<td>idevicesyslog</td>
+<td>Relay syslog of a connected device</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x4F7F;&#x7528;"><a name="&#x4F7F;&#x7528;" class="plugin-anchor" href="#&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;</h2>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token operator">&gt;</span> idevice_id -l
+ed94089f3e34d5538065a695bfdf03dfbb3c5579
+</code></pre>
+<p>&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x8BBE;&#x5907;&#xFF0C;&#x60F3;&#x8981;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x501F;&#x52A9;<code>head</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token operator">&gt;</span> idevice_id -l <span class="token operator">|</span> <span class="token function">head</span> -n1
+ed94089f3e34d5538065a695bfdf03dfbb3c5579
+</code></pre>
+<h2 id="&#x5E2E;&#x52A9;&#x548C;&#x8BED;&#x6CD5;"><a name="&#x5E2E;&#x52A9;&#x548C;&#x8BED;&#x6CD5;" class="plugin-anchor" href="#&#x5E2E;&#x52A9;&#x548C;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E2E;&#x52A9;&#x548C;&#x8BED;&#x6CD5;</h2>
+<pre class="language-"><code class="lang-bash">~ &#xE0B0; idevice_id --help
+Usage: idevice_id <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> <span class="token punctuation">[</span>UDID<span class="token punctuation">]</span>
+Prints device name or a list of attached devices.
+
+  If UDID is given, the name of the connected device with that UDID  will be retrieved.
+
+  -l, --list      list UDIDs of all devices attached via USB
+  -n, --network   list UDIDs of all devices available via network
+  -d, --debug     <span class="token builtin class-name">enable</span> communication debugging
+  -h, --help      prints usage information
+
+Homepage: <span class="token operator">&lt;</span>http://libimobiledevice.org<span class="token operator">&gt;</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2020-06-25 10:48:58
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="port_forward.html" class="navigation navigation-prev " aria-label="Previous page: 端口转发">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="system_profiler.html" class="navigation navigation-next " aria-label="Next page: system_profiler">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"idevice_id","level":"1.4.4","depth":2,"next":{"title":"system_profiler","level":"1.4.5","depth":2,"path":"desktop/system_profiler.md","ref":"desktop/system_profiler.md","articles":[]},"previous":{"title":"端口转发","level":"1.4.3","depth":2,"path":"desktop/port_forward.md","ref":"desktop/port_forward.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/apple_develop_summary/pdf/apple_develop_summary.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/apple_develop_summary/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"apple_develop_summary","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"苹果相关开发总结","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结Apple苹果相关领域的开发经验和心得，包括常见的开发工具，比如XCode、xcodebuild、xcrun、ideviceinstaller、iproxy或mobiledevice的端口转发、libimobiledevice的idevice_id、system_profiler、instruments、security；以及移动端的iOS系统，比如自动化框架XCTest、官网文档简介、微信使用心得、真机iPhone开发心得；最后给出相关文档和参考资料。"},"file":{"path":"desktop/idevice_id.md","mtime":"2020-06-25T02:48:58.379Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-25T07:30:48.525Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
