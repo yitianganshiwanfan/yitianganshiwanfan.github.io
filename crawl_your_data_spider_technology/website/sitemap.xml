@@ -19,9 +19,12 @@
 <url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/spider_framework/common_framework.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_python.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_csharp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_go.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_java.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_csharp/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_csharp/cs_emulate_login_baidu.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_go/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_go/go_emulate_login_baidu.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_java/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_java/java_emulate_login_baidu.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/how_write_spider/use_php.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawl_your_data_spider_technology/website/appendix/terminology_concept.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
