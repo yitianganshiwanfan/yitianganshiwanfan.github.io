@@ -1,0 +1,2244 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CTF比赛 · 信息安全概览</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../enhance_security/" />
+    
+    
+    <link rel="prev" href="../reverse_engine_tool/miasm.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"repo":"information_security_overview","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.crifan.com" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../security_overview/">
+            
+                <a href="../../security_overview/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    安全概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../background_knowledge/">
+            
+                <a href="../../background_knowledge/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    安全背景知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../background_knowledge/program_language.html">
+            
+                <a href="../../background_knowledge/program_language.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    编程语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../background_knowledge/assembly_language/">
+            
+                <a href="../../background_knowledge/assembly_language/">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    汇编语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" data-path="../../background_knowledge/assembly_language/x86.html">
+            
+                <a href="../../background_knowledge/assembly_language/x86.html">
+            
+                    
+                        <b>1.3.1.1.1.</b>
+                    
+                    X86
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2" data-path="../../background_knowledge/assembly_language/arm.html">
+            
+                <a href="../../background_knowledge/assembly_language/arm.html">
+            
+                    
+                        <b>1.3.1.1.2.</b>
+                    
+                    ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../background_knowledge/system_arch/">
+            
+                <a href="../../background_knowledge/system_arch/">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    体系架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../background_knowledge/system_arch/register.html">
+            
+                <a href="../../background_knowledge/system_arch/register.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    寄存器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../background_knowledge/system_arch/x86.html">
+            
+                <a href="../../background_knowledge/system_arch/x86.html">
+            
+                    
+                        <b>1.3.2.1.1.</b>
+                    
+                    X86
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../background_knowledge/system_arch/arm.html">
+            
+                <a href="../../background_knowledge/system_arch/arm.html">
+            
+                    
+                        <b>1.3.2.1.2.</b>
+                    
+                    ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../background_knowledge/system_arch/heap_stack.html">
+            
+                <a href="../../background_knowledge/system_arch/heap_stack.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    堆栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../background_knowledge/executable_file/">
+            
+                <a href="../../background_knowledge/executable_file/">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    可执行文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    安全通用知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../reverse_engine_tool/">
+            
+                <a href="../reverse_engine_tool/">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    逆向工程工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../reverse_engine_tool/miasm.html">
+            
+                <a href="../reverse_engine_tool/miasm.html">
+            
+                    
+                        <b>1.4.1.1.</b>
+                    
+                    Miasm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    CTF比赛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../enhance_security/">
+            
+                <a href="../enhance_security/">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    正向安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../web_security/">
+            
+                <a href="../../web_security/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Web端安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../web_security/term_explanation/">
+            
+                <a href="../../web_security/term_explanation/">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    术语解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../web_security/common_tools/">
+            
+                <a href="../../web_security/common_tools/">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    常用工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../web_security/common_tools/os/">
+            
+                <a href="../../web_security/common_tools/os/">
+            
+                    
+                        <b>1.5.2.1.</b>
+                    
+                    安全操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1.1" data-path="../../web_security/common_tools/os/kali_linux.html">
+            
+                <a href="../../web_security/common_tools/os/kali_linux.html">
+            
+                    
+                        <b>1.5.2.1.1.</b>
+                    
+                    Kali Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../web_security/common_tools/vulnerability_scan/">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/">
+            
+                    
+                        <b>1.5.2.2.</b>
+                    
+                    漏洞扫描类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.2.1" data-path="../../web_security/common_tools/vulnerability_scan/appscan.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/appscan.html">
+            
+                    
+                        <b>1.5.2.2.1.</b>
+                    
+                    AppScan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.2" data-path="../../web_security/common_tools/vulnerability_scan/awvs.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/awvs.html">
+            
+                    
+                        <b>1.5.2.2.2.</b>
+                    
+                    AWVS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.3" data-path="../../web_security/common_tools/vulnerability_scan/burp_suite.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/burp_suite.html">
+            
+                    
+                        <b>1.5.2.2.3.</b>
+                    
+                    Burp Suite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.4" data-path="../../web_security/common_tools/vulnerability_scan/cobalt_strike.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/cobalt_strike.html">
+            
+                    
+                        <b>1.5.2.2.4.</b>
+                    
+                    Cobalt Strike
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.5" data-path="../../web_security/common_tools/vulnerability_scan/layer.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/layer.html">
+            
+                    
+                        <b>1.5.2.2.5.</b>
+                    
+                    Layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.6" data-path="../../web_security/common_tools/vulnerability_scan/nessus.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/nessus.html">
+            
+                    
+                        <b>1.5.2.2.6.</b>
+                    
+                    Nessus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.7" data-path="../../web_security/common_tools/vulnerability_scan/netsparker.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/netsparker.html">
+            
+                    
+                        <b>1.5.2.2.7.</b>
+                    
+                    NetSparker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.8" data-path="../../web_security/common_tools/vulnerability_scan/nikto.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/nikto.html">
+            
+                    
+                        <b>1.5.2.2.8.</b>
+                    
+                    Nikto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.9" data-path="../../web_security/common_tools/vulnerability_scan/n_stalker.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/n_stalker.html">
+            
+                    
+                        <b>1.5.2.2.9.</b>
+                    
+                    N-Stalker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.10" data-path="../../web_security/common_tools/vulnerability_scan/whisker.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/whisker.html">
+            
+                    
+                        <b>1.5.2.2.10.</b>
+                    
+                    Whisker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.11" data-path="../../web_security/common_tools/vulnerability_scan/sn1per.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/sn1per.html">
+            
+                    
+                        <b>1.5.2.2.11.</b>
+                    
+                    Sn1per
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.12" data-path="../../web_security/common_tools/vulnerability_scan/webscarab.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/webscarab.html">
+            
+                    
+                        <b>1.5.2.2.12.</b>
+                    
+                    WebScarab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.13" data-path="../../web_security/common_tools/vulnerability_scan/webinspect.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/webinspect.html">
+            
+                    
+                        <b>1.5.2.2.13.</b>
+                    
+                    Webinspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.14" data-path="../../web_security/common_tools/vulnerability_scan/wikto.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/wikto.html">
+            
+                    
+                        <b>1.5.2.2.14.</b>
+                    
+                    Wikto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2.15" data-path="../../web_security/common_tools/vulnerability_scan/zap.html">
+            
+                <a href="../../web_security/common_tools/vulnerability_scan/zap.html">
+            
+                    
+                        <b>1.5.2.2.15.</b>
+                    
+                    ZAP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../web_security/common_tools/port_scan/">
+            
+                <a href="../../web_security/common_tools/port_scan/">
+            
+                    
+                        <b>1.5.2.3.</b>
+                    
+                    端口扫描类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.3.1" data-path="../../web_security/common_tools/port_scan/nmap.html">
+            
+                <a href="../../web_security/common_tools/port_scan/nmap.html">
+            
+                    
+                        <b>1.5.2.3.1.</b>
+                    
+                    nmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../web_security/common_tools/penetration_test/">
+            
+                <a href="../../web_security/common_tools/penetration_test/">
+            
+                    
+                        <b>1.5.2.4.</b>
+                    
+                    渗透测试类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.4.1" data-path="../../web_security/common_tools/penetration_test/metasploit.html">
+            
+                <a href="../../web_security/common_tools/penetration_test/metasploit.html">
+            
+                    
+                        <b>1.5.2.4.1.</b>
+                    
+                    Metasploit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="../../web_security/common_tools/fuzz_testing/">
+            
+                <a href="../../web_security/common_tools/fuzz_testing/">
+            
+                    
+                        <b>1.5.2.5.</b>
+                    
+                    模糊测试类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="../../web_security/common_tools/code_audit/">
+            
+                <a href="../../web_security/common_tools/code_audit/">
+            
+                    
+                        <b>1.5.2.6.</b>
+                    
+                    代码审计类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.7" data-path="../../web_security/common_tools/injection/">
+            
+                <a href="../../web_security/common_tools/injection/">
+            
+                    
+                        <b>1.5.2.7.</b>
+                    
+                    注入类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.7.1" data-path="../../web_security/common_tools/injection/sqlmap.html">
+            
+                <a href="../../web_security/common_tools/injection/sqlmap.html">
+            
+                    
+                        <b>1.5.2.7.1.</b>
+                    
+                    Sqlmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../web_security/organization_standard/">
+            
+                <a href="../../web_security/organization_standard/">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    组织和标准
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../web_security/organization_standard/owasp.html">
+            
+                <a href="../../web_security/organization_standard/owasp.html">
+            
+                    
+                        <b>1.5.3.1.</b>
+                    
+                    OWASP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../device_security/">
+            
+                <a href="../../device_security/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    设备端安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../device_security/pc_security/">
+            
+                <a href="../../device_security/pc_security/">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    计算机安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../device_security/pc_security/windows.html">
+            
+                <a href="../../device_security/pc_security/windows.html">
+            
+                    
+                        <b>1.6.1.1.</b>
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1.1" data-path="../../device_security/pc_security/soft_reverse.html">
+            
+                <a href="../../device_security/pc_security/soft_reverse.html">
+            
+                    
+                        <b>1.6.1.1.1.</b>
+                    
+                    软件逆向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../device_security/pc_security/mac.html">
+            
+                <a href="../../device_security/pc_security/mac.html">
+            
+                    
+                        <b>1.6.1.2.</b>
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../device_security/pc_security/linux.html">
+            
+                <a href="../../device_security/pc_security/linux.html">
+            
+                    
+                        <b>1.6.1.3.</b>
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../device_security/mobile/">
+            
+                <a href="../../device_security/mobile/">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    移动安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../device_security/mobile/android/">
+            
+                <a href="../../device_security/mobile/android/">
+            
+                    
+                        <b>1.6.2.1.</b>
+                    
+                    Android安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../device_security/mobile/ios/">
+            
+                <a href="../../device_security/mobile/ios/">
+            
+                    
+                        <b>1.6.2.2.</b>
+                    
+                    iOS安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.1" data-path="../../device_security/mobile/ios/enhance_security_tools/">
+            
+                <a href="../../device_security/mobile/ios/enhance_security_tools/">
+            
+                    
+                        <b>1.6.2.2.1.</b>
+                    
+                    正向工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.1.1" data-path="../../device_security/mobile/ios/enhance_security_tools/code_obfuscation/">
+            
+                <a href="../../device_security/mobile/ios/enhance_security_tools/code_obfuscation/">
+            
+                    
+                        <b>1.6.2.2.1.1.</b>
+                    
+                    混淆
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.1.1.1" data-path="../../device_security/mobile/ios/enhance_security_tools/code_obfuscation/ios_class_guard.html">
+            
+                <a href="../../device_security/mobile/ios/enhance_security_tools/code_obfuscation/ios_class_guard.html">
+            
+                    
+                        <b>1.6.2.2.1.1.1.</b>
+                    
+                    ios-class-guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2" data-path="../../device_security/mobile/ios/crack_tools/">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/">
+            
+                    
+                        <b>1.6.2.2.2.</b>
+                    
+                    破解工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.2.1" data-path="../../device_security/mobile/ios/crack_tools/develop_plugin/">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/develop_plugin/">
+            
+                    
+                        <b>1.6.2.2.2.1.</b>
+                    
+                    插件开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.2.1.1" data-path="../../device_security/mobile/ios/crack_tools/develop_plugin/monkeydev.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/develop_plugin/monkeydev.html">
+            
+                    
+                        <b>1.6.2.2.2.1.1.</b>
+                    
+                    MonkeyDev
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2.2" data-path="../../device_security/mobile/ios/crack_tools/mach_o_process/">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/mach_o_process/">
+            
+                    
+                        <b>1.6.2.2.2.2.</b>
+                    
+                    Mach-O处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.2.2.1" data-path="../../device_security/mobile/ios/crack_tools/mach_o_process/class_dump.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/mach_o_process/class_dump.html">
+            
+                    
+                        <b>1.6.2.2.2.2.1.</b>
+                    
+                    class-dump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2.2.2" data-path="../../device_security/mobile/ios/crack_tools/mach_o_process/jtool.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/mach_o_process/jtool.html">
+            
+                    
+                        <b>1.6.2.2.2.2.2.</b>
+                    
+                    jtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2.2.3" data-path="../../device_security/mobile/ios/crack_tools/mach_o_process/otool.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/mach_o_process/otool.html">
+            
+                    
+                        <b>1.6.2.2.2.2.3.</b>
+                    
+                    otool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2.3" data-path="../../device_security/mobile/ios/crack_tools/smash_shell/">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/smash_shell/">
+            
+                    
+                        <b>1.6.2.2.2.3.</b>
+                    
+                    砸壳
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.2.3.1" data-path="../../device_security/mobile/ios/crack_tools/smash_shell/bfinject.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/smash_shell/bfinject.html">
+            
+                    
+                        <b>1.6.2.2.2.3.1.</b>
+                    
+                    bfinject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2.3.2" data-path="../../device_security/mobile/ios/crack_tools/smash_shell/clutch.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/smash_shell/clutch.html">
+            
+                    
+                        <b>1.6.2.2.2.3.2.</b>
+                    
+                    Clutch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2.3.3" data-path="../../device_security/mobile/ios/crack_tools/smash_shell/dumpdecrypted.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/smash_shell/dumpdecrypted.html">
+            
+                    
+                        <b>1.6.2.2.2.3.3.</b>
+                    
+                    Dumpdecrypted
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2.3.4" data-path="../../device_security/mobile/ios/crack_tools/smash_shell/frida_ios_dump.html">
+            
+                <a href="../../device_security/mobile/ios/crack_tools/smash_shell/frida_ios_dump.html">
+            
+                    
+                        <b>1.6.2.2.2.3.4.</b>
+                    
+                    frida-ios-dump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.3" data-path="../../device_security/mobile/ios/jailbreak_tools/">
+            
+                <a href="../../device_security/mobile/ios/jailbreak_tools/">
+            
+                    
+                        <b>1.6.2.2.3.</b>
+                    
+                    越狱工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.3.1" data-path="../../device_security/mobile/ios/jailbreak_tools/cydia_substrate.html">
+            
+                <a href="../../device_security/mobile/ios/jailbreak_tools/cydia_substrate.html">
+            
+                    
+                        <b>1.6.2.2.3.1.</b>
+                    
+                    Cydia Substrate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.3.2" data-path="../../device_security/mobile/ios/jailbreak_tools/frida.html">
+            
+                <a href="../../device_security/mobile/ios/jailbreak_tools/frida.html">
+            
+                    
+                        <b>1.6.2.2.3.2.</b>
+                    
+                    frida
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.3.3" data-path="../../device_security/mobile/ios/jailbreak_tools/electra.html">
+            
+                <a href="../../device_security/mobile/ios/jailbreak_tools/electra.html">
+            
+                    
+                        <b>1.6.2.2.3.3.</b>
+                    
+                    Electra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.3.4" data-path="../../device_security/mobile/ios/jailbreak_tools/unc0ver.html">
+            
+                <a href="../../device_security/mobile/ios/jailbreak_tools/unc0ver.html">
+            
+                    
+                        <b>1.6.2.2.3.4.</b>
+                    
+                    unc0ver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../device_security/iot/">
+            
+                <a href="../../device_security/iot/">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    物联网安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../device_security/specific_device/">
+            
+                <a href="../../device_security/specific_device/">
+            
+                    
+                        <b>1.6.4.</b>
+                    
+                    特定设备安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="../../device_security/specific_device/wifi/">
+            
+                <a href="../../device_security/specific_device/wifi/">
+            
+                    
+                        <b>1.6.4.1.</b>
+                    
+                    WiFi安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1.1" data-path="../../device_security/specific_device/wifi/aircrack_ng.html">
+            
+                <a href="../../device_security/specific_device/wifi/aircrack_ng.html">
+            
+                    
+                        <b>1.6.4.1.1.</b>
+                    
+                    Aircrack-ng
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.1.2" data-path="../../device_security/specific_device/wifi/wifiphisher.html">
+            
+                <a href="../../device_security/specific_device/wifi/wifiphisher.html">
+            
+                    
+                        <b>1.6.4.1.2.</b>
+                    
+                    Wifiphisher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../info_storage_security/">
+            
+                <a href="../../info_storage_security/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    信息存储安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../info_storage_security/hardware/">
+            
+                <a href="../../info_storage_security/hardware/">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    硬件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../info_storage_security/hardware/trustzone.html">
+            
+                <a href="../../info_storage_security/hardware/trustzone.html">
+            
+                    
+                        <b>1.7.1.1.</b>
+                    
+                    TrustZone
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../info_storage_security/software/">
+            
+                <a href="../../info_storage_security/software/">
+            
+                    
+                        <b>1.7.2.</b>
+                    
+                    软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../info_storage_security/software/tee.html">
+            
+                <a href="../../info_storage_security/software/tee.html">
+            
+                    
+                        <b>1.7.2.1.</b>
+                    
+                    TEE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../other_related/">
+            
+                <a href="../../other_related/">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    其他安全相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../other_related/tool/">
+            
+                <a href="../../other_related/tool/">
+            
+                    
+                        <b>1.8.1.</b>
+                    
+                    相关工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../other_related/tool/capture_package/">
+            
+                <a href="../../other_related/tool/capture_package/">
+            
+                    
+                        <b>1.8.1.1.</b>
+                    
+                    抓包工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1.1" data-path="../../other_related/tool/capture_package/wireshark.html">
+            
+                <a href="../../other_related/tool/capture_package/wireshark.html">
+            
+                    
+                        <b>1.8.1.1.1.</b>
+                    
+                    Wireshark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../other_related/tool/crack_password/">
+            
+                <a href="../../other_related/tool/crack_password/">
+            
+                    
+                        <b>1.8.1.2.</b>
+                    
+                    破解密码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.2.1" data-path="../../other_related/tool/crack_password/john_the_ripper.html">
+            
+                <a href="../../other_related/tool/crack_password/john_the_ripper.html">
+            
+                    
+                        <b>1.8.1.2.1.</b>
+                    
+                    John the Ripper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2.2" data-path="../../other_related/tool/crack_password/hashcat.html">
+            
+                <a href="../../other_related/tool/crack_password/hashcat.html">
+            
+                    
+                        <b>1.8.1.2.2.</b>
+                    
+                    Hashcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2.3" data-path="../../other_related/tool/crack_password/hydra.html">
+            
+                <a href="../../other_related/tool/crack_password/hydra.html">
+            
+                    
+                        <b>1.8.1.2.3.</b>
+                    
+                    Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../other_related/tool/proxy_tool.html">
+            
+                <a href="../../other_related/tool/proxy_tool.html">
+            
+                    
+                        <b>1.8.1.3.</b>
+                    
+                    代理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="../../other_related/tool/remote_tool.html">
+            
+                <a href="../../other_related/tool/remote_tool.html">
+            
+                    
+                        <b>1.8.1.4.</b>
+                    
+                    远程操作工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../appendix/">
+            
+                <a href="../../appendix/">
+            
+                    
+                        <b>1.9.</b>
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../appendix/docs.html">
+            
+                <a href="../../appendix/docs.html">
+            
+                    
+                        <b>1.9.1.</b>
+                    
+                    资料和文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../appendix/reference.html">
+            
+                <a href="../../appendix/reference.html">
+            
+                    
+                        <b>1.9.2.</b>
+                    
+                    参考资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >CTF比赛</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ctf&#x6BD4;&#x8D5B;"><a name="ctf&#x6BD4;&#x8D5B;" class="plugin-anchor" href="#ctf&#x6BD4;&#x8D5B;"><i class="fa fa-link" aria-hidden="true"></i></a>CTF&#x6BD4;&#x8D5B;</h1>
+<p>TODO&#xFF1A;</p>
+<p>&#x7EE7;&#x7EED;&#x770B;&#x5B8C;&#xFF1A;</p>
+<p>Getting Started - CTF Wiki</p>
+<p><a href="https://ctf-wiki.github.io/ctf-wiki/" target="_blank">https://ctf-wiki.github.io/ctf-wiki/</a></p>
+<p>&#x5E76;&#x6574;&#x7406;&#x8FC7;&#x6765;&#x3002;</p>
+<ul>
+<li>CTF&#x6BD4;&#x8D5B;<ul>
+<li>=&#x593A;&#x65D7;&#x8D5B;<ul>
+<li>=CTF=<code>Capture The Flag</code></li>
+</ul>
+</li>
+<li>&#x662F;&#x4EC0;&#x4E48;&#xFF1A;&#x4E00;&#x4E2A;&#x6BD4;&#x8D5B;<ul>
+<li>&#x5728;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x9886;&#x57DF;&#x4E2D;&#x6307;&#x7684;&#x662F;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x6280;&#x672F;&#x4EBA;&#x5458;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x6280;&#x672F;&#x7ADE;&#x6280;&#x7684;&#x4E00;&#x79CD;&#x6BD4;&#x8D5B;&#x5F62;&#x5F0F;</li>
+</ul>
+</li>
+<li>&#x8D77;&#x6E90;&#xFF1A;<ul>
+<li>1996&#x5E74;DEFCON&#x5168;&#x7403;&#x9ED1;&#x5BA2;&#x5927;&#x4F1A;&#xFF0C;&#x4EE5;&#x4EE3;&#x66FF;&#x4E4B;&#x524D;&#x9ED1;&#x5BA2;&#x4EEC;&#x901A;&#x8FC7;&#x4E92;&#x76F8;&#x53D1;&#x8D77;&#x771F;&#x5B9E;&#x653B;&#x51FB;&#x8FDB;&#x884C;&#x6280;&#x672F;&#x6BD4;&#x62FC;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x53D1;&#x5C55;&#x81F3;&#x4ECA;&#xFF0C;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x5168;&#x7403;&#x8303;&#x56F4;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x5708;&#x6D41;&#x884C;&#x7684;&#x7ADE;&#x8D5B;&#x5F62;&#x5F0F;</li>
+<li>2013&#x5E74;&#x5168;&#x7403;&#x4E3E;&#x529E;&#x4E86;&#x8D85;&#x8FC7;&#x4E94;&#x5341;&#x573A;&#x56FD;&#x9645;&#x6027;CTF&#x8D5B;&#x4E8B;&#x3002;&#x800C;DEFCON&#x4F5C;&#x4E3A;CTF&#x8D5B;&#x5236;&#x7684;&#x53D1;&#x6E90;&#x5730;&#xFF0C;DEFCON CTF&#x4E5F;&#x6210;&#x4E3A;&#x4E86;&#x76EE;&#x524D;&#x5168;&#x7403;&#x6700;&#x9AD8;&#x6280;&#x672F;&#x6C34;&#x5E73;&#x548C;&#x5F71;&#x54CD;&#x529B;&#x7684;CTF&#x7ADE;&#x8D5B;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;CTF&#x8D5B;&#x573A;&#x4E2D;&#x7684;&quot;&#x4E16;&#x754C;&#x676F;&quot;</li>
+</ul>
+</li>
+<li>&#x7ADE;&#x8D5B;&#x6A21;&#x5F0F;<ul>
+<li>&#x89E3;&#x9898;&#x6A21;&#x5F0F;<ul>
+<li>&#x5728;&#x89E3;&#x9898;&#x6A21;&#x5F0F;CTF&#x8D5B;&#x5236;&#x4E2D;&#xFF0C;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E92;&#x8054;&#x7F51;&#x6216;&#x8005;&#x73B0;&#x573A;&#x7F51;&#x7EDC;&#x53C2;&#x4E0E;&#xFF0C;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x7684;CTF&#x7ADE;&#x8D5B;&#x4E0E;ACM&#x7F16;&#x7A0B;&#x7ADE;&#x8D5B;&#x3001;&#x4FE1;&#x606F;&#x5B66;&#x5965;&#x8D5B;&#x6BD4;&#x8F83;&#x7C7B;&#x4F3C;&#xFF0C;&#x4EE5;&#x89E3;&#x51B3;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x6280;&#x672F;&#x6311;&#x6218;&#x9898;&#x76EE;&#x7684;&#x5206;&#x503C;&#x548C;&#x65F6;&#x95F4;&#x6765;&#x6392;&#x540D;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x5728;&#x7EBF;&#x9009;&#x62D4;&#x8D5B;&#x3002;&#x9898;&#x76EE;&#x4E3B;&#x8981;&#x5305;&#x542B;&#x9006;&#x5411;&#x3001;&#x6F0F;&#x6D1E;&#x6316;&#x6398;&#x4E0E;&#x5229;&#x7528;&#x3001;Web&#x6E17;&#x900F;&#x3001;&#x5BC6;&#x7801;&#x3001;&#x53D6;&#x8BC1;&#x3001;&#x9690;&#x5199;&#x3001;&#x5B89;&#x5168;&#x7F16;&#x7A0B;&#x7B49;&#x7C7B;&#x522B;</li>
+<li>&#x5927;&#x591A;&#x6570;&#x4E3A;&#x7EBF;&#x4E0A;&#x6BD4;&#x8D5B;&#xFF0C;&#x9009;&#x624B;&#x81EA;&#x7531;&#x7EC4;&#x961F;&#xFF08;&#x4EBA;&#x6570;&#x4E0D;&#x53D7;&#x9650;&#x5236;&#xFF09;&#xFF0C;&#x51FA;&#x9898;&#x8005;&#x628A;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x5B9E;&#x6218;&#x4E2D;&#x53EF;&#x80FD;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x9898;&#x76EE;&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x5B58;&#x5728;&#x6F0F;&#x6D1E;&#x7684;&#x7F51;&#x7AD9;&#x8BA9;&#x9009;&#x624B;&#x5165;&#x4FB5;&#xFF0C;&#x4E00;&#x4E2A;&#x6709;&#x6F0F;&#x6D1E;&#x7684;&#x7A0B;&#x5E8F;&#x8BA9;&#x9009;&#x624B;&#x5206;&#x6790;&#x6765;&#x5199;&#x51FA;&#x6F0F;&#x6D1E;&#x5229;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E00;&#x6BB5;&#x5BC6;&#x6587;&#x8BA9;&#x9009;&#x624B;&#x89E3;&#x5BC6;&#xFF0C;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x9009;&#x624B;&#x4F60;&#x4ECE;&#x91CC;&#x9762;&#x627E;&#x51FA;&#x9690;&#x85CF;&#x7684;&#x7EBF;&#x7D22;&#x7B49;&#x7B49;&#x3002;&#x5728;&#x5B8C;&#x6210;&#x8FD9;&#x4E9B;&#x51FA;&#x9898;&#x7684;&#x9898;&#x76EE;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x4E00;&#x4E32;&#x5947;&#x602A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;flag&#xFF0C;&#x63D0;&#x4EA4;&#x5B83;&#xFF0C;&#x5C31;&#x80FD;&#x83B7;&#x5F97;&#x8FD9;&#x9053;&#x9898;&#x76EE;&#x7684;&#x5206;&#x6570;</li>
+</ul>
+</li>
+<li>&#x653B;&#x9632;&#x6A21;&#x5F0F;=Attack-Defense<ul>
+<li>&#x5728;&#x653B;&#x9632;&#x6A21;&#x5F0F;CTF&#x8D5B;&#x5236;&#x4E2D;&#xFF0C;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x5728;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x4E92;&#x76F8;&#x8FDB;&#x884C;&#x653B;&#x51FB;&#x548C;&#x9632;&#x5B88;&#xFF0C;&#x6316;&#x6398;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x6F0F;&#x6D1E;&#x5E76;&#x653B;&#x51FB;&#x5BF9;&#x624B;&#x670D;&#x52A1;&#x6765;&#x5F97;&#x5206;&#xFF0C;&#x4FEE;&#x8865;&#x81EA;&#x8EAB;&#x670D;&#x52A1;&#x6F0F;&#x6D1E;&#x8FDB;&#x884C;&#x9632;&#x5FA1;&#x6765;&#x907F;&#x514D;&#x4E22;&#x5206;&#x3002;&#x653B;&#x9632;&#x6A21;&#x5F0F;CTF&#x8D5B;&#x5236;&#x53EF;&#x4EE5;&#x5B9E;&#x65F6;&#x901A;&#x8FC7;&#x5F97;&#x5206;&#x53CD;&#x6620;&#x51FA;&#x6BD4;&#x8D5B;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x7EC8;&#x4E5F;&#x4EE5;&#x5F97;&#x5206;&#x76F4;&#x63A5;&#x5206;&#x51FA;&#x80DC;&#x8D1F;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7ADE;&#x4E89;&#x6FC0;&#x70C8;&#xFF0C;&#x5177;&#x6709;&#x5F88;&#x5F3A;&#x89C2;&#x8D4F;&#x6027;&#x548C;&#x9AD8;&#x5EA6;&#x900F;&#x660E;&#x6027;&#x7684;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x8D5B;&#x5236;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x8D5B;&#x5236;&#x4E2D;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x6BD4;&#x53C2;&#x8D5B;&#x961F;&#x5458;&#x7684;&#x667A;&#x529B;&#x548C;&#x6280;&#x672F;&#xFF0C;&#x4E5F;&#x6BD4;&#x4F53;&#x529B;&#xFF08;&#x56E0;&#x4E3A;&#x6BD4;&#x8D5B;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x6301;&#x7EED;48&#x5C0F;&#x65F6;&#x53CA;&#x4EE5;&#x4E0A;&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x6BD4;&#x56E2;&#x961F;&#x4E4B;&#x95F4;&#x7684;&#x5206;&#x5DE5;&#x914D;&#x5408;&#x4E0E;&#x5408;&#x4F5C;&#x3002;</li>
+<li>&#x5927;&#x591A;&#x6570;&#x4E3A;&#x7EBF;&#x4E0B;&#x6BD4;&#x8D5B;&#xFF0C;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x4EBA;&#x6570;&#x6709;&#x9650;&#x5236;&#xFF08;&#x901A;&#x5E38;&#x4E3A;3&#x5230;5&#x4EBA;&#x4E0D;&#x7B49;&#xFF09;&#xFF0C;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x4FDD;&#x62A4;&#x81EA;&#x5DF1;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x653B;&#x51FB;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6BCF;&#x4E2A;&#x961F;&#x4F0D;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5F00;&#x59CB;&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x7F3A;&#x9677;&#xFF0C;&#x6BD4;&#x5982;&#x51E0;&#x4E2A;&#x6709;&#x6F0F;&#x6D1E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x7A0B;&#x5E8F;&#x3001;&#x6709;&#x6F0F;&#x6D1E;&#x7684;Web&#x5E94;&#x7528;&#x3001;&#x67D0;&#x4E9B;&#x6743;&#x9650;&#x8D26;&#x6237;&#x5F31;&#x53E3;&#x4EE4;&#x7B49;&#x7B49;&#xFF0C;&#x7136;&#x540E;&#x961F;&#x5458;&#x9700;&#x8981;&#x627E;&#x51FA;&#x8FD9;&#x4E9B;&#x6F0F;&#x6D1E;&#x5E76;&#x8FDB;&#x884C;&#x52A0;&#x56FA;&#xFF0C;&#x540C;&#x65F6;&#x5229;&#x7528;&#x8FD9;&#x4E9B;&#x6F0F;&#x6D1E;&#x6765;&#x653B;&#x51FB;&#x522B;&#x4EBA;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x62FF;&#x5230;&#x5176;&#x4ED6;&#x961F;&#x4F0D;&#x7684;&#x6743;&#x9650;&#x540E;&#xFF0C;&#x4F1A;&#x83B7;&#x53D6;&#x5230;&#x76F8;&#x5E94;flag&#x540E;&#x63D0;&#x4EA4;&#xFF0C;&#x4ECE;&#x5BF9;&#x65B9;&#x8EAB;&#x4E0A;&#x8D5A;&#x53D6;&#x76F8;&#x5E94;&#x7684;&#x5206;&#x6570;&#xFF0C;&#x6BCF;&#x9694;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x653B;&#x51FB;&#x5E76;&#x5229;&#x7528;&#x672A;&#x52A0;&#x56FA;&#x7684;&#x6F0F;&#x6D1E;&#x83B7;&#x53D6;flag&#x5E76;&#x8D5A;&#x53D6;&#x5206;&#x6570;</li>
+</ul>
+</li>
+<li>&#x6DF7;&#x5408;&#x6A21;&#x5F0F;=mix<ul>
+<li>&#x7ED3;&#x5408;&#x4E86;&#x89E3;&#x9898;&#x6A21;&#x5F0F;&#x4E0E;&#x653B;&#x9632;&#x6A21;&#x5F0F;&#x7684;CTF&#x8D5B;&#x5236;&#xFF0C;&#x6BD4;&#x5982;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x901A;&#x8FC7;&#x89E3;&#x9898;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4E00;&#x4E9B;&#x521D;&#x59CB;&#x5206;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x653B;&#x9632;&#x5BF9;&#x6297;&#x8FDB;&#x884C;&#x5F97;&#x5206;&#x589E;&#x51CF;&#x7684;&#x96F6;&#x548C;&#x6E38;&#x620F;&#xFF0C;&#x6700;&#x7EC8;&#x4EE5;&#x5F97;&#x5206;&#x9AD8;&#x4F4E;&#x5206;&#x51FA;&#x80DC;&#x8D1F;&#x3002;&#x91C7;&#x7528;&#x6DF7;&#x5408;&#x6A21;&#x5F0F;CTF&#x8D5B;&#x5236;&#x7684;&#x5178;&#x578B;&#x4EE3;&#x8868;&#x5982;iCTF&#x56FD;&#x9645;CTF&#x7ADE;&#x8D5B;&#x3002;</li>
+<li>&#x89E3;&#x9898;&#x6A21;&#x5F0F;&#x548C;&#x653B;&#x9632;&#x6A21;&#x5F0F;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#xFF0C;&#x89E3;&#x9898;&#x6A21;&#x5F0F;&#x53EF;&#x80FD;&#x4F1A;&#x6839;&#x636E;&#x6BD4;&#x8D5B;&#x7684;&#x65F6;&#x95F4;&#x3001;&#x8FDB;&#x5EA6;&#x7B49;&#x56E0;&#x7D20;&#x6765;&#x91CA;&#x653E;&#x9700;&#x89E3;&#x7B54;&#x7684;&#x9898;&#x76EE;&#xFF0C;&#x9898;&#x76EE;&#x7684;&#x96BE;&#x5EA6;&#x8D8A;&#x5927;&#xFF0C;&#x89E3;&#x7B54;&#x5B8C;&#x6210;&#x540E;&#x83B7;&#x53D6;&#x7684;&#x5206;&#x6570;&#x8D8A;&#x9AD8;&#xFF1B;&#x653B;&#x9632;&#x6A21;&#x5F0F;&#x4F1A;&#x8D2F;&#x7A7F;&#x6574;&#x4E2A;CTF&#x6BD4;&#x8D5B;&#x7684;&#x59CB;&#x7EC8;&#xFF0C;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x9700;&#x4E0D;&#x65AD;&#x79EF;&#x7D2F;&#x5206;&#x6570;&#xFF0C;&#x6700;&#x7EC8;&#x53C2;&#x6570;&#x961F;&#x4F0D;&#x7684;&#x540D;&#x6B21;&#x7531;&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#x7D2F;&#x79EF;&#x7684;&#x5206;&#x6570;&#x603B;&#x548C;&#x51B3;&#x5B9A;&#x3002;&#x6709;&#x4E9B;&#x6709;&#x8DA3;&#x7684;CTF&#x6BD4;&#x8D5B;&#xFF0C;&#x8FD8;&#x4F1A;&#x5F15;&#x5165;&#x4E00;&#x4E9B;&#x60C5;&#x666F;&#x5267;&#x60C5;&#x548C;&#x73B0;&#x573A;&#x89C2;&#x4F17;&#x7684;&#x4E92;&#x52A8;&#xFF0C;&#x6765;&#x589E;&#x52A0;&#x6BD4;&#x8D5B;&#x7684;&#x8DA3;&#x5473;&#x6027;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x9898;&#x76EE;&#x7C7B;&#x522B;<ul>
+<li>WEB=&#x7F51;&#x7EDC;&#x5B89;&#x5168;<ul>
+<li>WEB&#x662F;CTF&#x7ADE;&#x8D5B;&#x7684;&#x4E3B;&#x8981;&#x9898;&#x578B;&#xFF0C;&#x9898;&#x76EE;&#x6D89;&#x53CA;&#x5230;&#x8BB8;&#x591A;&#x5E38;&#x89C1;&#x7684;WEB&#x6F0F;&#x6D1E;&#xFF0C;&#x8BF8;&#x5982;XSS&#x3001;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x3001;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x3001;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x3001;SQL&#x6CE8;&#x5165;&#x3002;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x5173;&#x4E8E;&#x7F51;&#x7EDC;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x7684;&#x8003;&#x5BDF;&#xFF0C;&#x4F8B;&#x5982;&#x8FD4;&#x56DE;&#x5305;&#x3001;TCP-IP&#x3001;&#x6570;&#x636E;&#x5305;&#x5185;&#x5BB9;&#x548C;&#x6784;&#x9020;&#x3002;&#x53EF;&#x4EE5;&#x8BF4;&#x9898;&#x76EE;&#x73AF;&#x5883;&#x6BD4;&#x8F83;&#x63A5;&#x8FD1;&#x771F;&#x5B9E;&#x73AF;&#x5883;&#x3002;</li>
+<li>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;PHP&#x3001;python&#x3001;TCP-IP&#x3001;SQL</li>
+</ul>
+</li>
+<li>MISC=&#x5B89;&#x5168;&#x6742;&#x9879;<ul>
+<li>MISC&#x5373;&#x5B89;&#x5168;&#x6742;&#x9879;&#xFF0C;&#x9898;&#x76EE;&#x6D89;&#x53CA;&#x9690;&#x5199;&#x672F;&#x3001;&#x6D41;&#x91CF;&#x5206;&#x6790;&#x3001;&#x7535;&#x5B50;&#x53D6;&#x8BC1;&#x3001;&#x4EBA;&#x8089;&#x641C;&#x7D22;&#x3001;&#x6570;&#x636E;&#x5206;&#x6790;&#x3001;&#x5927;&#x6570;&#x636E;&#x7EDF;&#x8BA1;&#x7B49;&#x7B49;&#xFF0C;&#x8986;&#x76D6;&#x9762;&#x6BD4;&#x8F83;&#x5E7F;&#xFF0C;&#x4E3B;&#x8981;&#x8003;&#x67E5;&#x53C2;&#x8D5B;&#x9009;&#x624B;&#x7684;&#x5404;&#x79CD;&#x57FA;&#x7840;&#x7EFC;&#x5408;&#x77E5;&#x8BC6;&#x3002;</li>
+<li>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;&#x5E38;&#x89C1;&#x9690;&#x5199;&#x672F;&#x5DE5;&#x5177;&#x3001;wireshark&#x7B49;&#x6D41;&#x91CF;&#x5BA1;&#x67E5;&#x5DE5;&#x5177;&#x3001;&#x7F16;&#x7801;&#x77E5;&#x8BC6;&#x3002;</li>
+</ul>
+</li>
+<li>Crypto=&#x5BC6;&#x7801;&#x5B66;<ul>
+<li>&#x9898;&#x76EE;&#x8003;&#x5BDF;&#x5404;&#x79CD;&#x52A0;&#x89E3;&#x5BC6;&#x6280;&#x672F;&#xFF0C;&#x5305;&#x62EC;&#x53E4;&#x5178;&#x52A0;&#x5BC6;&#x6280;&#x672F;&#x3001;&#x73B0;&#x4EE3;&#x52A0;&#x5BC6;&#x6280;&#x672F;&#x751A;&#x81F3;&#x51FA;&#x9898;&#x8005;&#x81EA;&#x521B;&#x52A0;&#x5BC6;&#x6280;&#x672F;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7F16;&#x7801;&#x89E3;&#x7801;&#xFF0C;&#x4E3B;&#x8981;&#x8003;&#x67E5;&#x53C2;&#x8D5B;&#x9009;&#x624B;&#x5BC6;&#x7801;&#x5B66;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x70B9;&#x3002;&#x901A;&#x5E38;&#x4E5F;&#x4F1A;&#x548C;&#x5176;&#x4ED6;&#x9898;&#x76EE;&#x76F8;&#x7ED3;&#x5408;&#x3002;</li>
+<li>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;&#x77E9;&#x9635;&#x3001;&#x6570;&#x8BBA;&#x3001;&#x53E4;&#x5178;&#x5BC6;&#x7801;&#x5B66;</li>
+</ul>
+</li>
+<li>Reverse=&#x9006;&#x5411;&#x5DE5;&#x7A0B;<ul>
+<li>&#x9898;&#x76EE;&#x6D89;&#x53CA;&#x5230;&#x8F6F;&#x4EF6;&#x9006;&#x5411;&#x3001;&#x7834;&#x89E3;&#x6280;&#x672F;&#x7B49;&#xFF0C;&#x8981;&#x6C42;&#x6709;&#x8F83;&#x5F3A;&#x7684;&#x53CD;&#x6C47;&#x7F16;&#x3001;&#x53CD;&#x7F16;&#x8BD1;&#x624E;&#x5B9E;&#x529F;&#x5E95;&#x3002;&#x4E3B;&#x8981;&#x8003;&#x67E5;&#x53C2;&#x8D5B;&#x9009;&#x624B;&#x7684;&#x9006;&#x5411;&#x5206;&#x6790;&#x80FD;&#x529B;&#x3002;</li>
+<li>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;&#x6C47;&#x7F16;&#x8BED;&#x8A00;&#x3001;&#x52A0;&#x5BC6;&#x4E0E;&#x89E3;&#x5BC6;&#x3001;&#x5E38;&#x89C1;&#x53CD;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;</li>
+</ul>
+</li>
+<li>PPC=&#x7F16;&#x7A0B;&#x7C7B;&#x9898;&#x76EE;<ul>
+<li>&#x9898;&#x76EE;&#x6D89;&#x53CA;&#x5230;&#x7A0B;&#x5E8F;&#x7F16;&#x5199;&#x3001;&#x7F16;&#x7A0B;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#xFF0C;&#x5F53;&#x7136;PPC&#x76F8;&#x6BD4;ACM&#x6765;&#x8BF4;&#xFF0C;&#x8FD8;&#x662F;&#x8F83;&#x4E3A;&#x5BB9;&#x6613;&#x7684;&#x3002;&#x81F3;&#x4E8E;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x561B;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;Python&#x6765;&#x5C1D;&#x8BD5;&#x3002;&#x9898;&#x76EE;&#x8F83;&#x5C11;&#xFF0C;&#x4E00;&#x822C;&#x4E0E;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x76F8;&#x7ED3;&#x5408;&#x3002;</li>
+<li>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;&#x57FA;&#x672C;&#x7F16;&#x7A0B;&#x601D;&#x8DEF;&#x3001;C,C++,Python,php&#x7686;&#x53EF;</li>
+</ul>
+</li>
+<li>PWN=&#x4E8C;&#x8FDB;&#x5236;&#x5B89;&#x5168;<ul>
+<li>PWN&#x5728;&#x9ED1;&#x5BA2;&#x4FDA;&#x8BED;&#x4E2D;&#x4EE3;&#x8868;&#x7740;&#x653B;&#x7834;&#xFF0C;&#x53D6;&#x5F97;&#x6743;&#x9650;&#xFF0C;&#x5728;CTF&#x6BD4;&#x8D5B;&#x4E2D;&#x5B83;&#x4EE3;&#x8868;&#x7740;&#x6EA2;&#x51FA;&#x7C7B;&#x7684;&#x9898;&#x76EE;&#xFF0C;&#x5176;&#x4E2D;&#x5E38;&#x89C1;&#x7C7B;&#x578B;&#x6EA2;&#x51FA;&#x6F0F;&#x6D1E;&#x6709;&#x6808;&#x6EA2;&#x51FA;&#x3001;&#x5806;&#x6EA2;&#x51FA;&#x3002;&#x4E3B;&#x8981;&#x8003;&#x5BDF;&#x53C2;&#x6570;&#x9009;&#x624B;&#x5BF9;&#x6F0F;&#x6D1E;&#x7684;&#x5229;&#x7528;&#x80FD;&#x529B;&#x3002;</li>
+<li>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;C&#xFF0C;OD+IDA&#xFF0C;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x57FA;&#x7840;&#x77E5;&#x8BC6;<ul>
+<li>&#x8BED;&#x8A00;&#x8FD0;&#x7528; <ul>
+<li>&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x53EF;&#x4EE5;&#x5927;&#x81F4;&#x5206;&#x4E3A;&#x673A;&#x5668;&#x8BED;&#x8A00;&#xFF0C;&#x6C47;&#x7F16;&#x8BED;&#x8A00;&#xFF0C;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x6BCF;&#x8FDB;&#x884C;&#x7684;&#x4E00;&#x6B21;&#x52A8;&#x4F5C;&#xFF0C;&#x4E00;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x90FD;&#x662F;&#x6309;&#x7167;&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x7F16;&#x597D;&#x7684;&#x7A0B;&#x5E8F;&#x6765;&#x6267;&#x884C;&#x3002;&#x800C;&#x5728;CTF&#x6BD4;&#x8D5B;&#x4E2D;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x7684;&#x4E86;&#x89E3;&#x4E0E;&#x638C;&#x63E1;&#x4F1A;&#x6709;&#x4E8B;&#x534A;&#x529F;&#x500D;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x8FDB;&#x7A0B;&#x7684;&#x52A8;&#x6001;&#x8C03;&#x8BD5;&#x3001;&#x9632;&#x62A4;&#x811A;&#x672C;&#x7684;&#x7F16;&#x5199;&#x3001;&#x6E90;&#x4EE3;&#x7801;&#x5BA1;&#x8BA1;&#x7B49;&#x5DE5;&#x4F5C;&#x90FD;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x5BF9;&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x6709;&#x6240;&#x638C;&#x63E1;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x7684;&#x3002;</li>
+<li>Web&#x5B89;&#x5168;<ul>
+<li>&#x76EE;&#x524D;&#x56FD;&#x5185;&#x5927;&#x591A;&#x6570;CTF&#x6BD4;&#x8D5B;&#x90FD;&#x4EE5;Web&#x5B89;&#x5168;&#x4E3A;&#x4E3B;&#xFF0C;&#x4F46;&#x662F;Web&#x5B89;&#x5168;&#x6D89;&#x53CA;&#x7684;&#x5185;&#x5BB9;&#x975E;&#x5E38;&#x5E7F;&#x6CDB;&#xFF0C;&#x5C31;&#x5178;&#x578B;&#x7684;Web&#x670D;&#x52A1;&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x53EF;&#x80FD;&#x6765;&#x81EA;&#x4E8E;Web&#x670D;&#x52A1;&#x5668;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;Web&#x7A0B;&#x5E8F;&#x672C;&#x8EAB;&#x4E0E;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#x7B49;&#x3002;&#x4E86;&#x89E3;&#x4E00;&#x4E2A;Web&#x5E94;&#x7528;&#x7684;&#x7EC4;&#x6210;&#x67B6;&#x6784;&#x3001;&#x88C5;&#x8F7D;&#x4E0E;&#x914D;&#x7F6E;&#x3001;&#x6307;&#x4EE4;&#x64CD;&#x4F5C;&#x53CA;&#x7EC4;&#x4EF6;&#x7F3A;&#x9677;&#xFF0C;&#x662F;&#x53C2;&#x8D5B;&#x8005;&#x77E5;&#x8BC6;&#x50A8;&#x5907;&#x73AF;&#x8282;&#x4E2D;&#x4E0D;&#x53EF;&#x6216;&#x7F3A;&#x7684;&#x90E8;&#x5206;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5B89;&#x5168;&#x52A0;&#x56FA;<ul>
+<li>&#x5B89;&#x5168;&#x9886;&#x57DF;&#x7684;&#x7CBE;&#x9AD3;&#x5728;&#x4E8E;&#x653B;&#x9632;&#xFF0C;&#x5728;CTF&#x6BD4;&#x8D5B;&#x4E5F;&#x662F;&#x540C;&#x6837;&#x7684;&#x9053;&#x7406;&#xFF0C;&#x6BD4;&#x8D5B;&#x6210;&#x7EE9;&#x4E0D;&#x4EC5;&#x53D6;&#x51B3;&#x4E8E;&#x5728;&#x6709;&#x6548;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x62FF;&#x4E0B;&#x591A;&#x5C11;flag&#xFF0C;&#x8FD8;&#x53D6;&#x51B3;&#x4E8E;&#x80FD;&#x62B5;&#x5FA1;&#x591A;&#x5C11;&#x6B21;&#x5916;&#x6765;&#x653B;&#x51FB;&#x3002;&#x6709;&#x4E00;&#x4E9B;&#x6BD4;&#x8D5B;&#x961F;&#x4F0D;&#x4E0D;&#x6CE8;&#x91CD;&#x6216;&#x8005;&#x4E0D;&#x5584;&#x4E8E;&#x6F0F;&#x6D1E;&#x52A0;&#x56FA;&#xFF0C;&#x5373;&#x4F7F;&#x5F97;&#x5230;&#x5F88;&#x591A;&#x5206;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x4F18;&#x52BF;&#x8FD8;&#x662F;&#x4F1A;&#x88AB;&#x6162;&#x6162;&#x7684;&#x8695;&#x98DF;&#x6389;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E86;&#x89E3;&#x6F0F;&#x6D1E;&#x7684;&#x4EA7;&#x751F;&#x539F;&#x56E0;&#x3001;&#x51CF;&#x5C0F;&#x6F0F;&#x6D1E;&#x7684;&#x5F71;&#x54CD;&#x8303;&#x56F4;&#x4EE5;&#x53CA;&#x884C;&#x4E4B;&#x6709;&#x6548;&#x7684;&#x5B89;&#x5168;&#x52A0;&#x56FA;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x961F;&#x4F0D;&#x7684;&#x91CD;&#x8981;&#x80FD;&#x529B;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5BC6;&#x7801;&#x7B97;&#x6CD5;<ul>
+<li>&#x53C2;&#x8D5B;&#x8005;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x4E3B;&#x6D41;&#x7684;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;&#xFF0C;&#x5982;&#x5BF9;&#x79F0;&#x5BC6;&#x7801;&#x3001;&#x516C;&#x94A5;&#x5BC6;&#x7801;&#x3001;&#x6D41;&#x5BC6;&#x7801;&#x3001;&#x54C8;&#x5E0C;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;&#x7B49;&#x3002;&#x5728;&#x4E0D;&#x65AD;&#x7684;&#x653B;&#x9632;&#x5BF9;&#x6297;&#x4E2D;&#xFF0C;&#x4E00;&#x4E9B;&#x5173;&#x952E;&#x4FE1;&#x606F;&#x6216;&#x8005;&#x7A81;&#x7834;&#x53E3;&#xFF0C;&#x5F80;&#x5F80;&#x4F1A;&#x901A;&#x8FC7;&#x7B97;&#x6CD5;&#x7684;&#x52A0;&#x89E3;&#x5BC6;&#x5C06;&#x5B83;&#x4EEC;&#x201C;&#x9690;&#x85CF;&#x201D;&#x8D77;&#x6765;&#x589E;&#x52A0;&#x89E3;&#x9898;&#x96BE;&#x5EA6;&#x3002;&#x6B64;&#x5916;&#x8FD8;&#x4F1A;&#x4F34;&#x968F;&#x7740;&#x5F31;&#x53E3;&#x4EE4;&#x5C1D;&#x8BD5;&#xFF0C;&#x5BC6;&#x7801;&#x5B57;&#x5178;&#x7684;&#x66B4;&#x529B;&#x731C;&#x89E3;&#x7B49;&#x3002;</li>
+</ul>
+</li>
+<li>&#x7F51;&#x7EDC;&#x53D6;&#x8BC1;<ul>
+<li>&#x5BF9;&#x4E8E;&#x7F51;&#x7EDC;&#x653B;&#x51FB;&#x884C;&#x4E3A;&#x7684;&#x6EAF;&#x6E90;&#x5206;&#x6790;&#x3001;&#x6F0F;&#x6D1E;&#x6316;&#x6398;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x6293;&#x5305;&#x5206;&#x6790;&#x5F80;&#x5F80;&#x662F;&#x5F88;&#x591A;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x5728;&#x653B;&#x9632;&#x5BF9;&#x6297;&#x4E2D;&#x5FFD;&#x7565;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x80FD;&#x591F;&#x5728;&#x6700;&#x77ED;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x6293;&#x5230;&#x7EBF;&#x7D22;&#x5E76;&#x505A;&#x51FA;&#x884C;&#x4E4B;&#x6709;&#x6548;&#x7684;&#x54CD;&#x5E94;&#xFF0C;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x80FD;&#x529B;&#x4E5F;&#x5C31;&#x6210;&#x4E3A;&#x4E86;&#x9AD8;&#x624B;&#x548C;&#x9876;&#x5C16;&#x9AD8;&#x624B;&#x4E4B;&#x95F4;&#x7684;&#x5206;&#x6C34;&#x5CAD;&#xFF0C;&#x53E4;&#x4EBA;&#x5E38;&#x8BF4;&#xFF1A;&#x201C;&#x5929;&#x4E0B;&#x5927;&#x4E8B;&#xFF0C;&#x5FC5;&#x4F5C;&#x4E8E;&#x7EC6;&#xFF1B;&#x5929;&#x4E0B;&#x96BE;&#x4E8B;&#xFF0C;&#x5FC5;&#x6210;&#x4E8E;&#x6613;&#x201D;&#xFF0C;&#x6211;&#x60F3;&#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x9053;&#x7406;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ctf&#x8D5B;&#x4E8B;"><a name="ctf&#x8D5B;&#x4E8B;" class="plugin-anchor" href="#ctf&#x8D5B;&#x4E8B;"><i class="fa fa-link" aria-hidden="true"></i></a>CTF&#x8D5B;&#x4E8B;</h2>
+<ul>
+<li>&#x56FD;&#x5916;<ul>
+<li>DEFCON CTF&#xFF1A;CTF&#x8D5B;&#x4E8B;&#x4E2D;&#x7684;&#x201C;&#x4E16;&#x754C;&#x676F;&#x201D;</li>
+<li>UCSB iCTF&#xFF1A;&#x6765;&#x81EA;UCSB&#x7684;&#x9762;&#x5411;&#x4E16;&#x754C;&#x9AD8;&#x6821;&#x7684;CTF</li>
+<li>Plaid CTF&#xFF1A;&#x5305;&#x63FD;&#x591A;&#x9879;&#x8D5B;&#x4E8B;&#x51A0;&#x519B;&#x7684;CMU&#x7684;PPP&#x56E2;&#x961F;&#x4E3E;&#x529E;&#x7684;&#x5728;&#x7EBF;&#x89E3;&#x9898;&#x8D5B;</li>
+<li>Boston Key Party&#xFF1A;&#x8FD1;&#x5E74;&#x6765;&#x5D1B;&#x8D77;&#x7684;&#x5728;&#x7EBF;&#x89E3;&#x9898;&#x8D5B;</li>
+<li>Codegate CTF&#xFF1A;&#x97E9;&#x56FD;&#x9996;&#x5C14;&#x201C;&#x5927;&#x5956;&#x8D5B;&#x201D;&#xFF0C;&#x51A0;&#x519B;&#x5956;&#x91D1;3000&#x4E07;&#x97E9;&#x5143;</li>
+<li>Secuinside CTF&#xFF1A;&#x97E9;&#x56FD;&#x9996;&#x5C14;&#x201C;&#x5927;&#x5956;&#x8D5B;&#x201D;&#xFF0C;&#x51A0;&#x519B;&#x5956;&#x91D1;3000&#x4E07;&#x97E9;&#x5143;</li>
+<li>XXC3 CTF&#xFF1A;&#x6B27;&#x6D32;&#x5386;&#x53F2;&#x6700;&#x60A0;&#x4E45;CCC&#x9ED1;&#x5BA2;&#x5927;&#x4F1A;&#x4E3E;&#x529E;&#x7684;CTF</li>
+<li>SIGINT CTF&#xFF1A;&#x5FB7;&#x56FD;CCCAC&#x534F;&#x4F1A;&#x53E6;&#x4E00;&#x573A;&#x89E3;&#x9898;&#x6A21;&#x5F0F;&#x7ADE;&#x8D5B;</li>
+<li>Hack.lu CTF&#xFF1A;&#x5362;&#x68EE;&#x5821;&#x9ED1;&#x5BA2;&#x4F1A;&#x8BAE;&#x540C;&#x671F;&#x4E3E;&#x529E;&#x7684;CTF</li>
+<li>EBCTF&#xFF1A;&#x8377;&#x5170;&#x8001;&#x724C;&#x5F3A;&#x961F;Eindbazen&#x7EC4;&#x7EC7;&#x7684;&#x5728;&#x7EBF;&#x89E3;&#x9898;&#x8D5B;</li>
+<li>Ghost in the Shellcode&#xFF1A;&#x7531;Marauders&#x548C;Men in Black Hats&#x5171;&#x540C;&#x7EC4;&#x7EC7;&#x7684;&#x5728;&#x7EBF;&#x89E3;&#x9898;&#x8D5B;</li>
+<li>RwthCTF&#xFF1A;&#x7531;&#x5FB7;&#x56FD;0ldEur0pe&#x7EC4;&#x7EC7;&#x7684;&#x5728;&#x7EBF;&#x653B;&#x9632;&#x8D5B;</li>
+<li>RuCTF&#xFF1A;&#x7531;&#x4FC4;&#x7F57;&#x65AF;Hackerdom&#x7EC4;&#x7EC7;&#xFF0C;&#x89E3;&#x9898;&#x6A21;&#x5F0F;&#x8D44;&#x683C;&#x8D5B;&#x9762;&#x5411;&#x5168;&#x7403;&#x53C2;&#x8D5B;&#xFF0C;&#x89E3;&#x9898;&#x653B;&#x9632;&#x6DF7;&#x5408;&#x6A21;&#x5F0F;&#x7684;&#x51B3;&#x8D5B;&#x9762;&#x5411;&#x4FC4;&#x7F57;&#x65AF;&#x961F;&#x4F0D;&#x7684;&#x56FD;&#x5BB6;&#x7EA7;&#x7ADE;&#x8D5B;</li>
+<li>RuCTFe&#xFF1A;&#x7531;&#x4FC4;&#x7F57;&#x65AF;Hackerdom&#x7EC4;&#x7EC7;&#x9762;&#x5411;&#x5168;&#x7403;&#x53C2;&#x8D5B;&#x961F;&#x4F0D;&#x7684;&#x5728;&#x7EBF;&#x653B;&#x9632;&#x8D5B;</li>
+<li>PHD CTF&#xFF1A;&#x4FC4;&#x7F57;&#x65AF;Positive Hacking Day&#x4F1A;&#x8BAE;&#x540C;&#x671F;&#x4E3E;&#x529E;&#x7684;CTF</li>
+</ul>
+</li>
+<li>&#x56FD;&#x5185;<ul>
+<li>XCTF&#x5168;&#x56FD;&#x8054;&#x8D5B;&#xFF1A;&#x4E2D;&#x56FD;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x5B89;&#x5168;&#x534F;&#x4F1A;&#x7ADE;&#x8BC4;&#x6F14;&#x7EC3;&#x5DE5;&#x4F5C;&#x7EC4;&#x4E3B;&#x529E;&#x3001;&#x5357;&#x4EAC;&#x8D5B;&#x5B81;&#x627F;&#x529E;&#x7684;&#x5168;&#x56FD;&#x6027;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x8D5B;&#x4E8B;&#x5E73;&#x53F0;&#xFF0C;2014-2015&#x8D5B;&#x5B63;&#x4E94;&#x7AD9;&#x9009;&#x62D4;&#x8D5B;&#x5206;&#x522B;&#x7531;&#x6E05;&#x534E;&#x3001;&#x4E0A;&#x4EA4;&#x3001;&#x6D59;&#x5927;&#x3001;&#x676D;&#x7535;&#x548C;&#x6210;&#x4FE1;&#x6280;&#x672F;&#x56E2;&#x961F;&#x7EC4;&#x7EC7;&#xFF08;&#x5305;&#x62EC;&#x676D;&#x7535;HCTF&#x3001;&#x6210;&#x4FE1;SCTF&#x3001;&#x6E05;&#x534E;BCTF&#x3001;&#x4E0A;&#x4EA4;0CTF&#x548C;&#x6D59;&#x5927;ACTF&#xFF09;&#xFF0C;XCTF&#x8054;&#x8D5B;&#x603B;&#x51B3;&#x8D5B;&#x7531;&#x84DD;&#x83B2;&#x82B1;&#x6218;&#x961F;&#x7EC4;&#x7EC7;&#x3002;XCTF&#x8054;&#x8D5B;&#x662F;&#x56FD;&#x5185;&#x6700;&#x6743;&#x5A01;&#x3001;&#x6700;&#x9AD8;&#x6280;&#x672F;&#x6C34;&#x5E73;&#x4E0E;&#x6700;&#x5927;&#x5F71;&#x54CD;&#x529B;&#x7684;&#x7F51;&#x7EDC;&#x5B89;&#x5168;CTF&#x8D5B;&#x4E8B;&#x5E73;&#x53F0;</li>
+<li>AliCTF&#xFF1A;&#x7531;&#x963F;&#x91CC;&#x5DF4;&#x5DF4;&#x516C;&#x53F8;&#x7EC4;&#x7EC7;&#xFF0C;&#x9762;&#x5411;&#x5728;&#x6821;&#x5B66;&#x751F;&#x7684;CTF&#x7ADE;&#x8D5B;&#xFF0C;&#x51A0;&#x519B;&#x5956;&#x91D1;10&#x4E07;&#x5143;&#x52A0;BlackHat&#x5168;&#x7A0B;&#x8D39;&#x7528;</li>
+<li>XDCTF&#xFF1A;&#x7531;&#x897F;&#x5B89;&#x7535;&#x5B50;&#x79D1;&#x6280;&#x5927;&#x5B66;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x534F;&#x4F1A;&#x7EC4;&#x7EC7;&#x7684;CTF&#x7ADE;&#x8D5B;&#xFF0C;&#x5176;&#x7279;&#x70B9;&#x662F;&#x504F;&#x5411;&#x4E8E;&#x6E17;&#x900F;&#x5B9E;&#x6218;&#x7ECF;&#x9A8C;</li>
+<li>HCTF&#xFF1A;&#x7531;&#x676D;&#x5DDE;&#x7535;&#x5B50;&#x79D1;&#x6280;&#x5927;&#x5B66;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x534F;&#x4F1A;&#x627F;&#x529E;&#x7EC4;&#x7EC7;&#x7684;CTF<ul>
+<li>&#x676D;&#x5DDE;&#x7535;&#x5B50;&#x79D1;&#x6280;&#x5927;&#x5B66;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x534F;&#x4F1A;&#x7531;&#x676D;&#x5DDE;&#x7535;&#x5B50;&#x79D1;&#x6280;&#x5927;&#x5B66;&#x901A;&#x4FE1;&#x5DE5;&#x7A0B;&#x5B66;&#x9662;&#x7EC4;&#x7EC7;&#x5EFA;&#x7ACB;&#xFF0C;&#x534F;&#x4F1A;&#x5DF2;&#x6709;&#x4E03;&#x5E74;&#x5386;&#x53F2;&#xFF0C;&#x66FE;&#x7ECF;&#x51FA;&#x5F81;DEFCON,BCTF&#x7B49;&#x5927;&#x578B;&#x6BD4;&#x8D5B;&#x5E76;&#x53D6;&#x5F97;&#x4F18;&#x5F02;&#x6210;&#x7EE9;&#xFF0C;&#x540C;&#x65F6;&#x534F;&#x4F1A;&#x8FD8;&#x6709;&#x5927;&#x91CF;&#x6709;&#x5F71;&#x54CD;&#x529B;&#x7684;&#x8F6F;&#x4EF6;&#x4F5C;&#x54C1;&#x3002;&#x534F;&#x4F1A;&#x5185;&#x90E8;&#x6210;&#x5458;&#x7531;&#x70ED;&#x7231;&#x9ED1;&#x5BA2;&#x6280;&#x672F;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x6280;&#x672F;&#x7684;&#x4E00;&#x4E9B;&#x5728;&#x6821;&#x5927;&#x5B66;&#x751F;&#x7EC4;&#x6210;&#xFF0C;&#x6709;&#x591A;&#x4E2A;&#x7814;&#x7A76;&#x65B9;&#x5411;&#xFF0C;&#x4E3B;&#x8981;&#x6709;&#x6E17;&#x900F;&#xFF0C;&#x9006;&#x5411;&#xFF0C;&#x5185;&#x6838;&#xFF0C;web&#x7B49;&#x591A;&#x4E2A;&#x7814;&#x7A76;&#x65B9;&#x5411;&#x3002;&#x81F3;&#x4ECA;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x4E3E;&#x529E;6&#x6B21;CTF&#x6BD4;&#x8D5B;</li>
+</ul>
+</li>
+<li>ISCC&#xFF1A;&#x7531;&#x5317;&#x7406;&#x5DE5;&#x7EC4;&#x7EC7;&#x7684;&#x4F20;&#x7EDF;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x7ADE;&#x8D5B;&#xFF0C;&#x6700;&#x8FD1;&#x4E24;&#x5E74;&#x9010;&#x6E10;&#x8F6C;&#x5411;CTF&#x8D5B;&#x5236;</li>
+<li>TCTF&#xFF1A;TCTF&#x7531;&#x4E2D;&#x56FD;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x5B89;&#x5168;&#x534F;&#x4F1A;&#x7ADE;&#x8BC4;&#x6F14;&#x7EC3;&#x5DE5;&#x4F5C;&#x59D4;&#x5458;&#x4F1A;&#x6307;&#x5BFC;&#x3001;&#x817E;&#x8BAF;&#x5B89;&#x5168;&#x53D1;&#x8D77;&#x3001;&#x817E;&#x8BAF;&#x5B89;&#x5168;&#x8054;&#x5408;&#x5B9E;&#x9A8C;&#x5BA4;&#x4E3B;&#x529E;&#xFF0C;0ops&#x6218;&#x961F;&#x548C;&#x5317;&#x4EAC;&#x90AE;&#x7535;&#x5927;&#x5B66;&#x534F;&#x529E;&#x7684;CTF&#x7ADE;&#x8D5B;</li>
+</ul>
+</li>
+</ul>
+<h2 id="ctf&#x5E73;&#x53F0;"><a name="ctf&#x5E73;&#x53F0;" class="plugin-anchor" href="#ctf&#x5E73;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>CTF&#x5E73;&#x53F0;</h2>
+<h3 id="fbctf"><a name="fbctf" class="plugin-anchor" href="#fbctf"><i class="fa fa-link" aria-hidden="true"></i></a>FBCTF</h3>
+<ul>
+<li>FBCTF<ul>
+<li>GitHub<ul>
+<li><a href="https://github.com/facebook/fbctf/" target="_blank">https://github.com/facebook/fbctf/</a></li>
+</ul>
+</li>
+<li>&#x7B80;&#x4ECB;<ul>
+<li>&#x4E00;&#x5957;&#x5F00;&#x6E90;&#x6BD4;&#x8D5B;&#x5E73;&#x53F0;&#xFF0C;&#x5305;&#x62EC;&#x6E38;&#x620F;&#x5730;&#x56FE;&#x3001;&#x56E2;&#x961F;&#x767B;&#x8BB0;&#x548C;&#x8BC4;&#x5206;&#x7CFB;&#x7EDF;&#x3002;&#x8FD8;&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x63D0;&#x4F9B;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x3001;Web&#x5E94;&#x7528;&#x5B89;&#x5168;&#x3001;&#x53D6;&#x8BC1;&#x3001;&#x4E8C;&#x8FDB;&#x5236;&#x5F00;&#x53D1;&#x548C;&#x52A0;&#x5BC6;&#x7B49;&#x6311;&#x6218;&#x3002;&#x7528;&#x6237;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Facebook CTF&#x5E73;&#x53F0;&#x5B9A;&#x5236;&#x6216;&#x81EA;&#x5B9A;&#x4E49;&#x6311;&#x6218;&#x9879;&#x76EE;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x7EFF;&#x76DF;&#x79D1;&#x6280;ctf&#x5E73;&#x53F0;"><a name="&#x7EFF;&#x76DF;&#x79D1;&#x6280;ctf&#x5E73;&#x53F0;" class="plugin-anchor" href="#&#x7EFF;&#x76DF;&#x79D1;&#x6280;ctf&#x5E73;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EFF;&#x76DF;&#x79D1;&#x6280;CTF&#x5E73;&#x53F0;</h3>
+<ul>
+<li>&#x7EFF;&#x76DF;&#x79D1;&#x6280;CTF&#x5E73;&#x53F0;<ul>
+<li>&#x67B6;&#x6784;&#xFF1A;<ul>
+<li><img src="../../assets/img/lvmeng_info_train_structure.png" alt="lvmeng_info_train_structure"></li>
+<li>&#x6574;&#x4F53;&#x65B9;&#x6848;&#x91C7;&#x7528;B/S&#x67B6;&#x6784;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x65B0;&#x5B89;&#x5168;&#x8BFE;&#x4EF6;&#x57F9;&#x8BAD;&#x3001;&#x5B9E;&#x9A8C;&#x8BAD;&#x7EC3;&#x548C;&#x653B;&#x9632;&#x4FDD;&#x969C;&#x670D;&#x52A1;&#x3002;&#x4F7F;&#x7528;&#x4EBA;&#x5458;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x81EA;&#x8EAB;&#x60C5;&#x51B5;&#xFF0C;&#x7075;&#x6D3B;&#x9009;&#x53D6;&#x8FDC;&#x7A0B;&#x5728;&#x7EBF;&#x548C;&#x7EBF;&#x4E0B;&#x9762;&#x5BF9;&#x9762;&#x7684;&#x5B9E;&#x65F6;&#x6559;&#x5B66;&#x5F62;&#x5F0F;&#x3002;</li>
+<li>&#x4E24;&#x4E2A;&#x5E73;&#x53F0;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x8FDB;&#x884C;&#x8BFE;&#x4EF6;&#x57F9;&#x8BAD;&#x3001;&#x5B9E;&#x9A8C;&#x8BAD;&#x7EC3;&#x548C;&#x653B;&#x9632;&#x4FDD;&#x969C;&#x4E09;&#x5927;&#x529F;&#x80FD;&#x3002;&#x8BFE;&#x4EF6;&#x57F9;&#x8BAD;&#x4E3B;&#x8981;&#x4EE5;&#x8BFE;&#x4EF6;&#x5BA3;&#x8BB2;&#x4E3A;&#x4E3B;&#xFF0C;&#x5B9E;&#x73B0;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x77E5;&#x8BC6;&#x7684;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#xFF1B;&#x5B9E;&#x9A8C;&#x8BAD;&#x7EC3;&#x4EE5;&#x5B89;&#x5168;&#x653B;&#x9632;&#x6A21;&#x62DF;&#x64CD;&#x4F5C;&#x5B9E;&#x9A8C;&#x4E3A;&#x4E3B;&#xFF0C;&#x4F7F;&#x5F97;&#x88AB;&#x57F9;&#x8BAD;&#x5BF9;&#x8C61;&#x5BF9;&#x5B89;&#x5168;&#x6280;&#x672F;&#x7684;&#x5EFA;&#x7ACB;&#x76F4;&#x89C2;&#x5370;&#x8C61;&#xFF1B;&#x653B;&#x9632;&#x4FDD;&#x5219;&#x4E3B;&#x8981;&#x4E3A;&#x88AB;&#x57F9;&#x8BAD;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x653B;&#x9632;&#x7684;&#x865A;&#x62DF;&#x73AF;&#x5883;&#xFF0C;&#x5B9E;&#x9645;&#x68C0;&#x9A8C;&#x88AB;&#x57F9;&#x8BAD;&#x5BF9;&#x8C61;&#x7684;&#x5B89;&#x5168;&#x6C34;&#x5E73;&#x3002;</li>
+<li>IT&#x652F;&#x6491;&#x57FA;&#x7840;&#x8D44;&#x6E90;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x5B89;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x4E2D;&#x95F4;&#x4EF6;&#x3001;&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#x548C;&#x5B89;&#x5168;&#x8BBE;&#x5907;&#x7B49;&#xFF0C;&#x901A;&#x8FC7;&#x4E0E;&#x865A;&#x62DF;&#x6280;&#x672F;&#x76F8;&#x7ED3;&#x5408;&#xFF0C;&#x7528;&#x4EE5;&#x4FDD;&#x969C;&#x4E0A;&#x5C42;&#x7684;&#x5B9E;&#x8BAD;&#x573A;&#x666F;&#x548C;&#x7ADE;&#x6280;&#x573A;&#x666F;&#x3002;</li>
+</ul>
+</li>
+<li>&#x7EFF;&#x76DF;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x5B9E;&#x8BAD;&#x7CFB;&#x7EDF;<ul>
+<li>ISTS -Information Security Trainning System<ul>
+<li>&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x57F9;&#x8BAD;&#x3001;&#x6559;&#x5B66;&#x53CA;&#x79D1;&#x7814;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x3001;&#x4E00;&#x4F53;&#x5316;&#x7684;&#x5B9E;&#x9A8C;&#x6559;&#x5B66;&#x73AF;&#x5883;<ul>
+<li><img src="../../assets/img/lvmeng_train_platform.png" alt="lvmeng_train_platform"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x7EFF;&#x76DF;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x7ADE;&#x6280;&#x7CFB;&#x7EDF;<ul>
+<li>ISCS -Information Security Competition System<ul>
+<li>&#x56F4;&#x7ED5;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x7406;&#x8BBA;&#x548C;&#x77E5;&#x8BC6;&#xFF0C;&#x7EC4;&#x5EFA;&#x7684;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x5BF9;&#x6297;&#x6280;&#x80FD;&#x5B9E;&#x6218;&#x8D5B;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x627F;&#x8F7D;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x5BF9;&#x6297;&#x653B;&#x9632;&#x6F14;&#x7EC3;&#x9879;&#x76EE;&#xFF0C;&#x8003;&#x5BDF;&#x653B;&#x9632;&#x6F14;&#x7EC3;&#x8005;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x7406;&#x8BBA;&#x77E5;&#x8BC6;&#x4E0E;&#x5B9E;&#x9645;&#x95EE;&#x9898;&#x5904;&#x7406;&#x80FD;&#x529B;&#xFF0C;&#x65E8;&#x5728;&#x501F;&#x52A9;&#x653B;&#x9632;&#x6F14;&#x7EC3;&#x57F9;&#x517B;&#x4E00;&#x6279;&#x5177;&#x5907;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x7D20;&#x517B;&#x7684;&#x4F18;&#x79C0;&#x5B9E;&#x6218;&#x4E13;&#x4E1A;&#x7684;&#x5B89;&#x5168;&#x4EBA;&#x5458;&#x3002;</li>
+</ul>
+</li>
+<li>&#x6A21;&#x5F0F;&#xFF1A;<ul>
+<li>&#x5B89;&#x5168;&#x653B;&#x9632;&#x7ADE;&#x8D5B;&#x5E73;&#x7684;&#x653B;&#x9632;&#x7ADE;&#x8D5B;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x79CD;&#x5F62;&#x5F0F;<ul>
+<li>&#x5355;&#x5175;&#x4F5C;&#x6218;&#x6311;&#x6218;&#x8D5B;=&#x4E2A;&#x4EBA;&#x6311;&#x6218;&#x6A21;&#x5F0F;<ul>
+<li>&#x4E2A;&#x4EBA;&#x6311;&#x6218;&#x6A21;&#x5F0F;&#x6BCF;&#x4E2A;&#x8D5B;&#x9898;&#xFF08;&#x5173;&#x5361;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x9776;&#x573A;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x4E03;&#x5927;&#x7C7B;&#x8D5B;&#x9898;&#xFF0C;WEB&#x3001;&#x5BC6;&#x7801;&#x5B66;&#x3001;&#x9690;&#x5199;&#x3001;&#x6EA2;&#x51FA;&#x3001;&#x9006;&#x5411;&#x3001;&#x7F16;&#x7A0B;&#x3001;&#x7EFC;&#x5408;&#xFF0C;&#x5168;&#x9762;&#x8003;&#x5BDF;&#x53C2;&#x8D5B;&#x9009;&#x624B;&#x7684;&#x5B89;&#x5168;&#x80FD;&#x529B;&#xFF0C;&#x9898;&#x76EE;&#x7531;&#x6613;&#x5230;&#x96BE;&#x3002;<ul>
+<li><img src="../../assets/img/single_person_challenge_plaftorm.png" alt="single_person_challenge_plaftorm"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x7EFC;&#x5408;&#x9776;&#x573A;</li>
+<li>&#x7F51;&#x7EDC;&#x6DF7;&#x6218;<ul>
+<li><img src="../../assets/img/lvmeng_mutiple_mode_plaftform.png" alt="lvmeng_mutiple_mode_plaftform"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x770B;&#x96EA;ctf"><a name="&#x770B;&#x96EA;ctf" class="plugin-anchor" href="#&#x770B;&#x96EA;ctf"><i class="fa fa-link" aria-hidden="true"></i></a>&#x770B;&#x96EA;CTF</h3>
+<ul>
+<li>&#x770B;&#x96EA;CTF<ul>
+<li><a href="https://ctf.pediy.com" target="_blank">https://ctf.pediy.com</a><ul>
+<li>&#x770B;&#x96EA;CTF&#xFF08;&#x7B80;&#x79F0;KCTF&#xFF09;&#x662F;&#x5708;&#x5185;&#x77E5;&#x540D;&#x5EA6;&#x6700;&#x9AD8;&#x7684;&#x6280;&#x672F;&#x7ADE;&#x6280;&#xFF0C;&#x4ECE;&#x539F;CrackMe&#x653B;&#x9632;&#x5927;&#x8D5B;&#x4E2D;&#x53D1;&#x5C55;&#x800C;&#x6765;&#xFF0C;&#x91C7;&#x53D6;&#x7EBF;&#x4E0A;PK&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x89C4;&#x5219;&#x8BBE;&#x7F6E;&#x4E25;&#x683C;&#x5468;&#x5168;&#xFF0C;&#x9898;&#x76EE;&#x6DB5;&#x76D6;Windows&#x3001;Android&#x3001;iOS&#x3001;Pwn&#x3001;&#x667A;&#x80FD;&#x8BBE;&#x5907;&#x3001;Web&#x7B49;&#x4F17;&#x591A;&#x9886;&#x57DF;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
+2020-08-04 22:36:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../reverse_engine_tool/miasm.html" class="navigation navigation-prev " aria-label="Previous page: Miasm">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../enhance_security/" class="navigation navigation-next " aria-label="Next page: 正向安全">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CTF比赛","level":"1.4.2","depth":2,"next":{"title":"正向安全","level":"1.4.3","depth":2,"path":"security_common/enhance_security/README.md","ref":"security_common/enhance_security/README.md","articles":[]},"previous":{"title":"Miasm","level":"1.4.1.1","depth":3,"path":"security_common/reverse_engine_tool/miasm.md","ref":"security_common/reverse_engine_tool/miasm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/information_security_overview/pdf/information_security_overview.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/information_security_overview/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"information_security_overview","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"信息安全概览","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"边学习信息安全技术，边总结技术教程。已整理出宏观的各个方面的安全的分类和概念。以及基本的计算机安全、移动端安全、物联网安全等细节内容。"},"file":{"path":"security_common/ctf_competition/README.md","mtime":"2020-08-04T14:36:40.216Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-04T15:10:01.571Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toolbar-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
