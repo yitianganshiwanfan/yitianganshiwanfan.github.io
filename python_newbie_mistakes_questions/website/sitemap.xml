@@ -13,7 +13,8 @@
 <url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/language_basic/function_parameter.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/language_basic/code_comment.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/python_related/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/python_related/sys_terminal_py_shell.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/python_related/py_shell_not_terminal/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/python_related/py_shell_not_terminal/sys_terminal_py_shell.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/python_related/str_encoding.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/python_related/head_comment.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_newbie_mistakes_questions/website/python_related/file_open.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
