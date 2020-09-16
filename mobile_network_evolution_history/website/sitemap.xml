@@ -19,8 +19,14 @@
 <url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/arch.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/element.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/etsi/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/etsi/tispan.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/sip.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/user_auth.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/user_auth/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/user_auth/sim_card.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/user_auth/user_identitiy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/user_auth/ims_registration.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/user_auth/sip_auth_reg.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims/related/sbc.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims_based/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_network_evolution_history/website/ims_based/volte.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
