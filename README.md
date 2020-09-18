@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20190717`
+最后更新：`20200918`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -44,5 +44,6 @@
     * [工作和职业相关知识](https://crifan.github.io/work_job_summary/website)
     * [XPath知识总结](https://crifan.github.io/xpath_summary/website)
     * [有道云笔记和云协作使用总结](https://crifan.github.io/youdao_note_summary/website)
+    * [移动网络演化史](https://crifan.github.io/mobile_network_evolution_history/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
