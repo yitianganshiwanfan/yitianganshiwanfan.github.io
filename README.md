@@ -45,5 +45,7 @@
     * [XPath知识总结](https://crifan.github.io/xpath_summary/website)
     * [有道云笔记和云协作使用总结](https://crifan.github.io/youdao_note_summary/website)
     * [移动网络演化史](https://crifan.github.io/mobile_network_evolution_history/website)
+    * [RCS技术开发总结](https://crifan.github.io/rcs_tech_dev_summary/website)
+    * [5G消息RCS技术总结](https://crifan.github.io/5g_message_rcs_tech_summary/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
