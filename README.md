@@ -48,5 +48,6 @@
     * [RCS技术开发总结](https://crifan.github.io/rcs_tech_dev_summary/website)
     * [5G消息RCS技术总结](https://crifan.github.io/5g_message_rcs_tech_summary/website)
     * [Python中正则表达式：re模块详解](https://crifan.github.io/python_regex_re_intro/website)
+    * [工控安全概览](https://crifan.github.io/industrial_control_security_overview/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
