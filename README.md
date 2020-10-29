@@ -50,5 +50,6 @@
     * [Python中正则表达式：re模块详解](https://crifan.github.io/python_regex_re_intro/website)
     * [工控安全概览](https://crifan.github.io/industrial_control_security_overview/website)
     * [中国宜居城市：苏州](https://crifan.github.io/china_suitable_living_suzhou/website)
+    * [信息安全概览](https://crifan.github.io/information_security_overview/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)

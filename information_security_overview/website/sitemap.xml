@@ -121,9 +121,7 @@
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/mobile/ios/jailbreak_tools/frida.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/mobile/ios/jailbreak_tools/electra.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/mobile/ios/jailbreak_tools/unc0ver.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/iot/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/iot/forensics/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/iot/forensics/binwalk.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/industrial_control_iot/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/specific_device/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/specific_device/wifi/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/specific_device/wifi/aircrack_ng.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
