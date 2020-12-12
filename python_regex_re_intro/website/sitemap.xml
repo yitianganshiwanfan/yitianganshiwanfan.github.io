@@ -11,8 +11,10 @@
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_match/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_findall/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_finditer/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_diff/match_findall_finditer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_examples/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_examples/re_search.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_examples/re_sub.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/re_examples/re_finditer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/learn_re_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_regex_re_intro/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
