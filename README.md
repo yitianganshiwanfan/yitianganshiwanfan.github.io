@@ -53,5 +53,6 @@
     * [信息安全概览](https://crifan.github.io/information_security_overview/website)
     * [网页解析利器：BeautifulSoup](https://crifan.github.io/html_parse_tool_beautifulsoup/website)
     * [Python新手小白常见错误和问题](https://crifan.github.io/python_newbie_mistakes_questions/website)
+    * [正则表达式应用举例](https://crifan.github.io/regex_usage_examples/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)

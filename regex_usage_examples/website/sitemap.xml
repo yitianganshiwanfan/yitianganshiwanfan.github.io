@@ -11,7 +11,9 @@
 <url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/regex_usage_examples/example_database/mongodb_compass.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/regex_usage_examples/example_editor_ide/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/regex_usage_examples/example_editor_ide/sublime.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/regex_usage_examples/example_editor_ide/vscode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/regex_usage_examples/example_editor_ide/vscode/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/regex_usage_examples/example_editor_ide/vscode/big.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/regex_usage_examples/example_editor_ide/vscode/small.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/regex_usage_examples/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
