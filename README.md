@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20201223`
+最后更新：`20201228`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -54,5 +54,6 @@
     * [网页解析利器：BeautifulSoup](https://crifan.github.io/html_parse_tool_beautifulsoup/website)
     * [Python新手小白常见错误和问题](https://crifan.github.io/python_newbie_mistakes_questions/website)
     * [正则表达式应用举例](https://crifan.github.io/regex_usage_examples/website)
+    * [网络中转站：代理技术](https://crifan.github.io/web_transfer_proxy_tech/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
