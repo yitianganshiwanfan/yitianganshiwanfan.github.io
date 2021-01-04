@@ -18,6 +18,13 @@
 <url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/no_yaml.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/traffic_not_passing_through.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/host_without_sni.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/sslv3_cert_unknown.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/script_py_version.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/detected_proxy_show_abnormal.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/suddenly_not_work.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/ssl3_get_record_wrong_version.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/common_issue/10054_wsaeconnreset.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/other/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/other/code_run.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/crawler_proxy_tool_mimproxy/website/other/package_exe.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
