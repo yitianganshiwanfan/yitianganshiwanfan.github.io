@@ -20,6 +20,11 @@
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/vmware_tools/macos/install_vmware_tools.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/vmware_tools/macos/support_functions.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/share_folder.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/network_settings.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/access_client_service.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/create_snapshot_fast.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/shortcut_key.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/usage_summary/screen_saver.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/into_iso_after_install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/win/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -29,6 +34,8 @@
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/win/install_macos/not_connected_internet.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/win/use_macos/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/win/use_macos/tab_black.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/win/use_macos/share_not_work.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/common_issue/win/use_macos/not_recognize_iphone.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/popular_virtual_machine_vmware/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
