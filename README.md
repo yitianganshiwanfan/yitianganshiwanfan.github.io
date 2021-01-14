@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210106`
+最后更新：`20210114`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -57,5 +57,6 @@
     * [网络中转站：代理技术](https://crifan.github.io/web_transfer_proxy_tech/website)
     * [抓包代理利器：mitmproxy](https://crifan.github.io/crawler_proxy_tool_mimproxy/website)
     * [主流虚拟机软件：VMWare](https://crifan.github.io/popular_virtual_machine_vmware/website)
+    * [好用的安卓模拟器：夜神Nox](https://crifan.github.io/good_android_emulator_nox/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
