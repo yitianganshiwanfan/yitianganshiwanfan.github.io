@@ -59,5 +59,6 @@
     * [主流虚拟机软件：VMWare](https://crifan.github.io/popular_virtual_machine_vmware/website)
     * [好用的安卓模拟器：夜神Nox](https://crifan.github.io/good_android_emulator_nox/website)
     * [Python常用代码段](https://crifan.github.io/python_common_code_snippet/website)
+    * [5G技术概述](https://crifan.github.io/5g_tech_summary/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
