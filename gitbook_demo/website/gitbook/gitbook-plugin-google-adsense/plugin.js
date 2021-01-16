@@ -24,16 +24,17 @@ require(["gitbook"], function(gitbook) {
     // }
 
     gitbook.events.bind("start", function(e, pluginConfig) {
-        console.log("=================== google-adsense start: pluginConfig=%o", pluginConfig);
+        // console.log("=================== google-adsense start: pluginConfig=%o", pluginConfig);
         configs = pluginConfig['google-adsense'].ads;
-        console.log("configs=%o", configs);
+        // console.log("configs=%o", configs);
         firstConfig = configs[0]
         firstClient = firstConfig.client
-        console.log("firstClient=%o", firstClient);
+        // console.log("firstClient=%o", firstClient);
 
         // init script
         var adScript = document.createElement('script');
-        adScript.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+        // adScript.src = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+        adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
         adScript.setAttribute('async', true);
         adScript.setAttribute('data-ad-client', firstClient); // add for Google Adsense Auto Ads
         console.log("adScript=%o", adScript);
