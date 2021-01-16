@@ -62,5 +62,6 @@
     * [5G技术概述](https://crifan.github.io/5g_tech_summary/website)
     * [安卓自动化测试利器：uiautomator2](https://crifan.github.io/android_automation_uiautomator2/website)
     * [苹果相关开发总结](https://crifan.github.io/apple_develop_summary/website)
+    * [计算机电脑知识总结](https://crifan.github.io/computer_tech_summary/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
