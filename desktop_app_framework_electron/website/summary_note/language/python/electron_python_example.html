@@ -748,10 +748,10 @@
 <pre class="language-"><code class="lang-js"><span class="token keyword">const</span> <span class="token function-variable function">createWindow</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   mainWindow <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span>
     <span class="token punctuation">{</span>
-      width<span class="token operator">:</span> <span class="token number">800</span><span class="token punctuation">,</span>
-      height<span class="token operator">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
-      webPreferences<span class="token operator">:</span> <span class="token punctuation">{</span>
-        nodeIntegration<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      width<span class="token punctuation">:</span> <span class="token number">800</span><span class="token punctuation">,</span>
+      height<span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
+      webPreferences<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        nodeIntegration<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">)</span>
@@ -775,22 +775,22 @@
 <ul>
 <li><strong>&#x65B9;&#x5F0F;1</strong>&#xFF1A;&#x7CFB;&#x7EDF;&#x4E2D;&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x5BF9;&#x5E94;python&#x8FDB;&#x7A0B;</li>
 </ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> <span class="token number">61737</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> 61737
 </code></pre>
 <p>&#x5176;&#x4E2D;&#x7684;61737&#x662F;python&#x8FDB;&#x7A0B;PID</p>
 <p>&#x662F;&#x901A;&#x8FC7;js&#x4E2D;&#x52A0;&#x4E86;&#x8C03;&#x8BD5;&#x4EE3;&#x7801;</p>
 <pre class="language-"><code class="lang-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;spawn: pyProc=%s&apos;</span><span class="token punctuation">,</span> pyProc<span class="token punctuation">)</span>
 </code></pre>
 <p>&#x540E;&#xFF0C;&#x542F;&#x52A8;</p>
-<pre class="language-"><code class="lang-bash">./node_modules/.bin/electron <span class="token builtin class-name">.</span>
+<pre class="language-"><code class="lang-bash">./node_modules/.bin/electron <span class="token keyword">.</span>
 </code></pre>
 <p>&#x65F6;&#xFF0C;&#x770B;&#x5230;console&#x7684;log&#x4E2D;&#x7684;</p>
 <pre class="language-"><code class="lang-bash">  spawnfile: <span class="token string">&apos;python&apos;</span>,
   _handle: 
    Process <span class="token punctuation">{</span>
      owner: <span class="token punctuation">[</span>Circular<span class="token punctuation">]</span>,
-     onexit: <span class="token punctuation">{</span> <span class="token punctuation">[</span>Function<span class="token punctuation">]</span> <span class="token punctuation">[</span>length<span class="token punctuation">]</span>: <span class="token number">2</span>, <span class="token punctuation">[</span>name<span class="token punctuation">]</span>: <span class="token string">&apos;&apos;</span> <span class="token punctuation">}</span>,
-     pid: <span class="token number">61737</span>
+     onexit: <span class="token punctuation">{</span> <span class="token punctuation">[</span>Function<span class="token punctuation">]</span> <span class="token punctuation">[</span>length<span class="token punctuation">]</span>: 2, <span class="token punctuation">[</span>name<span class="token punctuation">]</span>: <span class="token string">&apos;&apos;</span> <span class="token punctuation">}</span>,
+     pid: 61737
 </code></pre>
 <p>&#x6709;&#x5BF9;&#x5E94;python&#x7684;pid&#x7684;.&#x3002;</p>
 <p>&#x5982;&#x679C;&#x6709;&#x8FDB;&#x7A0B;&#xFF0C;&#x8BF4;&#x660E;python&#x8FDB;&#x7A0B;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x5426;&#x5219;&#x8BF4;&#x660E;&#x8FDB;&#x7A0B;&#x6CA1;&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x3002;</p>
@@ -815,15 +815,15 @@
 </code></pre>
 <p>&#x786E;&#x8BA4;&#x6CA1;&#x6709;error&#x7B49;&#x5F02;&#x5E38;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
 <p>&#x6B64;&#x5904;&#x81EA;&#x5DF1;&#x5C31;&#x662F;&#x770B;&#x5230;&#x6709;</p>
-<pre class="language-"><code class="lang-bash">pyProc <span class="token assign-left variable">error</span><span class="token operator">=</span>Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
-  File <span class="token string">&quot;/xxx/electron_python/electron-python-example/pycalc/api.py&quot;</span>, line <span class="token number">4</span>, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+<pre class="language-"><code class="lang-bash">pyProc error<span class="token operator">=</span>Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;/xxx/electron_python/electron-python-example/pycalc/api.py&quot;</span>, line 4, <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
     <span class="token function">import</span> zerorpc
 ModuleNotFoundError: No module named <span class="token string">&apos;zerorpc&apos;</span>
 </code></pre>
 <p>&#x4ECE;&#x800C;&#x53D1;&#x73B0;&#xFF1A;</p>
 <p>&#x662F;&#x6CA1;&#x6709;&#x8FDB;&#x5165;virtualenv&#x7684;venv&#x4E2D;&#xFF0C;&#x5BFC;&#x81F4;&#x6CA1;&#x6709;&#x627E;&#x5230;zerorpc</p>
 <p>&#x8BE5;&#x786E;&#x4FDD;&#x8FDB;&#x5165;&#x865A;&#x62DF;&#x73AF;&#x5883;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">source</span> venv/bin/activate
+<pre class="language-"><code class="lang-bash"><span class="token function">source</span> venv/bin/activate
 </code></pre>
 <p>&#x5373;&#x53EF;&#x627E;&#x5230;<code>zerorpc</code>&#xFF0C;&#x6B63;&#x5E38;&#x542F;&#x52A8;python&#x8FDB;&#x7A0B;&#x4E86;&#x3002;</p>
 <h2 id="zerorpcexceptionslostremote-lost-remote-after-10s-heartbeat"><a name="zerorpcexceptionslostremote-lost-remote-after-10s-heartbeat" class="plugin-anchor" href="#zerorpcexceptionslostremote-lost-remote-after-10s-heartbeat"><i class="fa fa-link" aria-hidden="true"></i></a>zerorpc.exceptions.LostRemote: Lost remote after 10s heartbeat</h2>
@@ -849,19 +849,19 @@ ModuleNotFoundError: No module named <span class="token string">&apos;zerorpc&ap
 <p>&#x6539;&#x4E3A;&#xFF1A;</p>
 <pre class="language-"><code class="lang-js"><span class="token keyword">const</span> constLargeEnoughHeartbeat <span class="token operator">=</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">30</span> <span class="token operator">*</span> <span class="token number">12</span>
 clientOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token string">&quot;heartbeatInterval&quot;</span><span class="token operator">:</span> constLargeEnoughHeartbeat<span class="token punctuation">,</span>
+  <span class="token string">&quot;heartbeatInterval&quot;</span><span class="token punctuation">:</span> constLargeEnoughHeartbeat<span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">let</span> client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">zerorpc<span class="token punctuation">.</span>Client</span><span class="token punctuation">(</span>clientOptions<span class="token punctuation">)</span>
 </code></pre>
 <p>&#x4EE5;&#x6B64;&#x89C4;&#x907F;&#x6B64;&#x95EE;&#x9898;&#x3002;</p>
 <h2 id="uncaught-error-the-module-zeromq-zmqnode-was-compiled-against-a-different-nodejs-version"><a name="uncaught-error-the-module-zeromq-zmqnode-was-compiled-against-a-different-nodejs-version" class="plugin-anchor" href="#uncaught-error-the-module-zeromq-zmqnode-was-compiled-against-a-different-nodejs-version"><i class="fa fa-link" aria-hidden="true"></i></a>Uncaught Error The module zeromq zmq.node was compiled against a different Node.js version</h2>
 <ul>
-<li><strong>&#x95EE;&#x9898;</strong>&#xFF1A;Electron&#x8FD0;&#x884C;<pre class="language-"><code class="lang-bash">./node_modules/.bin/electron <span class="token builtin class-name">.</span>
+<li><strong>&#x95EE;&#x9898;</strong>&#xFF1A;Electron&#x8FD0;&#x884C;<pre class="language-"><code class="lang-bash">./node_modules/.bin/electron <span class="token keyword">.</span>
 </code></pre>
 &#x62A5;&#x9519;&#xFF1A;<pre class="language-"><code class="lang-bash">Uncaught Error: The module node_modules/zeromq/build/Release/zmq.node
 was compiled against a different Node.js version using
-NODE_MODULE_VERSION <span class="token number">57</span>. This version of Node.js requires
-NODE_MODULE_VERSION <span class="token number">75</span>. Please try re-compiling or re-installing
+NODE_MODULE_VERSION 57. This version of Node.js requires
+NODE_MODULE_VERSION 75. Please try re-compiling or re-installing
 the module <span class="token punctuation">(</span>for instance, using <span class="token variable"><span class="token variable">`</span><span class="token function">npm</span> rebuild<span class="token variable">`</span></span> or <span class="token variable"><span class="token variable">`</span><span class="token function">npm</span> <span class="token function">install</span><span class="token variable">`</span></span><span class="token punctuation">)</span>.
 </code></pre>
 </li>
@@ -1084,21 +1084,21 @@ logging<span class="token punctuation">.</span>debug<span class="token punctuati
 <li><strong>&#x6253;&#x5305;&#x540E;</strong>&#xFF1A;bundle&#x7684;=<code>&#x662F;&#x4E8C;&#x8FDB;&#x5236;</code> &#x7684;&#x8DEF;&#x5F84;</li>
 </ul>
 <p>(PyInstaller)&#x6253;&#x5305;&#x540E;&#x7684;&#xFF08;&#x4E14;&#x540E;&#x6765;&#x518D;&#x7528;electron-builder&#x6253;&#x5305;&#x5728;&#x4E00;&#x8D77;&#x7684;&#xFF0C;&#x6240;&#x751F;&#x6210;&#x7684;&#xFF09;app&#x6587;&#x4EF6;&#xFF0C;&#x53CC;&#x51FB;&#x8FD0;&#x884C;&#x540E;&#x5BF9;&#x5E94;&#x8F93;&#x51FA;&#x662F;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash"><span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:23 DEBUG <span class="token assign-left variable">sysArgv0</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:24 DEBUG <span class="token assign-left variable">hasMeipass</span><span class="token operator">=</span>True
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:25 DEBUG <span class="token assign-left variable">sysMeipass</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:27 DEBUG <span class="token assign-left variable">logFilename</span><span class="token operator">=</span>mitmdumpStartApi.log
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:28 DEBUG <span class="token assign-left variable">logPath</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:29 DEBUG <span class="token assign-left variable">logFullPath</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi.log
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:32 DEBUG <span class="token assign-left variable">sysExecutable</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:34 DEBUG <span class="token assign-left variable">sysArgv</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi&apos;</span>, <span class="token string">&apos;4242&apos;</span><span class="token punctuation">]</span>
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:36 DEBUG <span class="token assign-left variable">hasFrozen</span><span class="token operator">=</span>True
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:39 DEBUG <span class="token assign-left variable">sysForzen</span><span class="token operator">=</span>True
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:41 DEBUG os.getcwd<span class="token operator">=</span>/
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:42 DEBUG os.curdir<span class="token operator">=</span>.
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:43 DEBUG <span class="token assign-left variable">__file__</span><span class="token operator">=</span>mitmdumpStartApi.py
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:44 DEBUG <span class="token assign-left variable">__name__</span><span class="token operator">=</span>__main__
-<span class="token number">2020</span>/01/13 06:05:51 mitmdumpStartApi.py:101 DEBUG mitmdumpStartApi.py
+<pre class="language-"><code class="lang-bash">2020/01/13 06:05:51 mitmdumpStartApi.py:23 DEBUG sysArgv0<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi
+2020/01/13 06:05:51 mitmdumpStartApi.py:24 DEBUG hasMeipass<span class="token operator">=</span>True
+2020/01/13 06:05:51 mitmdumpStartApi.py:25 DEBUG sysMeipass<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi
+2020/01/13 06:05:51 mitmdumpStartApi.py:27 DEBUG logFilename<span class="token operator">=</span>mitmdumpStartApi.log
+2020/01/13 06:05:51 mitmdumpStartApi.py:28 DEBUG logPath<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi
+2020/01/13 06:05:51 mitmdumpStartApi.py:29 DEBUG logFullPath<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi.log
+2020/01/13 06:05:51 mitmdumpStartApi.py:32 DEBUG sysExecutable<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi
+2020/01/13 06:05:51 mitmdumpStartApi.py:34 DEBUG sysArgv<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/builder_output/mac/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpStartApi&apos;</span>, <span class="token string">&apos;4242&apos;</span><span class="token punctuation">]</span>
+2020/01/13 06:05:51 mitmdumpStartApi.py:36 DEBUG hasFrozen<span class="token operator">=</span>True
+2020/01/13 06:05:51 mitmdumpStartApi.py:39 DEBUG sysForzen<span class="token operator">=</span>True
+2020/01/13 06:05:51 mitmdumpStartApi.py:41 DEBUG os.getcwd<span class="token operator">=</span>/
+2020/01/13 06:05:51 mitmdumpStartApi.py:42 DEBUG os.curdir<span class="token operator">=</span>.
+2020/01/13 06:05:51 mitmdumpStartApi.py:43 DEBUG __file__<span class="token operator">=</span>mitmdumpStartApi.py
+2020/01/13 06:05:51 mitmdumpStartApi.py:44 DEBUG __name__<span class="token operator">=</span>__main__
+2020/01/13 06:05:51 mitmdumpStartApi.py:101 DEBUG mitmdumpStartApi.py
 &#x3002;&#x3002;&#x3002;
 </code></pre>
 <p>&#x5176;&#x4E2D;&#x6B64;&#x5904;app&#x672C;&#x8EAB;&#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x662F;&#xFF1A;</p>
@@ -1122,23 +1122,23 @@ logging<span class="token punctuation">.</span>debug<span class="token punctuati
 </ul>
 <p>&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x5904;&#x5148;&#x8981;&#x5220;&#x9664;2&#x4E2A;dist&#x76EE;&#x5F55;&#xFF08;pymitmdumpstartdist&#x548C;pymitmdumpotherdist&#xFF09;</p>
 <p>&#x8FD0;&#x884C;</p>
-<pre class="language-"><code class="lang-bash">./node_modules/.bin/electron <span class="token builtin class-name">.</span>
+<pre class="language-"><code class="lang-bash">./node_modules/.bin/electron <span class="token keyword">.</span>
 </code></pre>
 <p>&#x8F93;&#x51FA;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash"><span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:23 DEBUG <span class="token assign-left variable">sysArgv0</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:24 DEBUG <span class="token assign-left variable">hasMeipass</span><span class="token operator">=</span>False
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:25 DEBUG <span class="token assign-left variable">sysMeipass</span><span class="token operator">=</span>None
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:27 DEBUG <span class="token assign-left variable">logFilename</span><span class="token operator">=</span>mitmdumpStartApi.log
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:28 DEBUG <span class="token assign-left variable">logPath</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:29 DEBUG <span class="token assign-left variable">logFullPath</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.log
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:32 DEBUG <span class="token assign-left variable">sysExecutable</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/venv/bin/python
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:34 DEBUG <span class="token assign-left variable">sysArgv</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py&apos;</span>, <span class="token string">&apos;4242&apos;</span><span class="token punctuation">]</span>
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:36 DEBUG <span class="token assign-left variable">hasFrozen</span><span class="token operator">=</span>False
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:41 DEBUG os.getcwd<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:42 DEBUG os.curdir<span class="token operator">=</span>.
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:43 DEBUG <span class="token assign-left variable">__file__</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:44 DEBUG <span class="token assign-left variable">__name__</span><span class="token operator">=</span>__main__
-<span class="token number">2020</span>/01/13 06:13:55 mitmdumpStartApi.py:101 DEBUG /Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
+<pre class="language-"><code class="lang-bash">2020/01/13 06:13:55 mitmdumpStartApi.py:23 DEBUG sysArgv0<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
+2020/01/13 06:13:55 mitmdumpStartApi.py:24 DEBUG hasMeipass<span class="token operator">=</span>False
+2020/01/13 06:13:55 mitmdumpStartApi.py:25 DEBUG sysMeipass<span class="token operator">=</span>None
+2020/01/13 06:13:55 mitmdumpStartApi.py:27 DEBUG logFilename<span class="token operator">=</span>mitmdumpStartApi.log
+2020/01/13 06:13:55 mitmdumpStartApi.py:28 DEBUG logPath<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump
+2020/01/13 06:13:55 mitmdumpStartApi.py:29 DEBUG logFullPath<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.log
+2020/01/13 06:13:55 mitmdumpStartApi.py:32 DEBUG sysExecutable<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/venv/bin/python
+2020/01/13 06:13:55 mitmdumpStartApi.py:34 DEBUG sysArgv<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py&apos;</span>, <span class="token string">&apos;4242&apos;</span><span class="token punctuation">]</span>
+2020/01/13 06:13:55 mitmdumpStartApi.py:36 DEBUG hasFrozen<span class="token operator">=</span>False
+2020/01/13 06:13:55 mitmdumpStartApi.py:41 DEBUG os.getcwd<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example
+2020/01/13 06:13:55 mitmdumpStartApi.py:42 DEBUG os.curdir<span class="token operator">=</span>.
+2020/01/13 06:13:55 mitmdumpStartApi.py:43 DEBUG __file__<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
+2020/01/13 06:13:55 mitmdumpStartApi.py:44 DEBUG __name__<span class="token operator">=</span>__main__
+2020/01/13 06:13:55 mitmdumpStartApi.py:101 DEBUG /Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
 &#x3002;&#x3002;&#x3002;
 </code></pre>
 <p>&#x53EF;&#x89C1;&#xFF1A;<code>sys</code>&#x6CA1;&#x6709;<code>frozen</code>&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;<code>_MEIPASS</code>&#x503C;&#x3002;</p>
@@ -1150,29 +1150,29 @@ logging<span class="token punctuation">.</span>debug<span class="token punctuati
 <li><strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;</strong>&#xFF1A;&#x52A0;&#x4E0A;&#x53C2;&#x6570;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF1A;</li>
 </ul>
 <p>&#x6700;&#x597D;&#x5148;&#x53BB;&#x5220;&#x9664;&#x4E4B;&#x524D;&#x65E7;&#x7684;python&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">pyenv uninstall <span class="token number">3.8</span>.0
+<pre class="language-"><code class="lang-bash">pyenv uninstall 3.8.0
 <span class="token function">rm</span> -rf /Users/limao/.pyenv/versions/3.8.0/
 </code></pre>
 <p>&#x7136;&#x540E;&#x518D;&#x53BB;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">env</span> <span class="token assign-left variable">PYTHON_CONFIGURE_OPTS</span><span class="token operator">=</span><span class="token string">&quot;--enable-framework&quot;</span> pyenv <span class="token function">install</span> <span class="token number">3.8</span>.0
+<pre class="language-"><code class="lang-bash"><span class="token function">env</span> PYTHON_CONFIGURE_OPTS<span class="token operator">=</span><span class="token string">&quot;--enable-framework&quot;</span> pyenv <span class="token function">install</span> 3.8.0
 </code></pre>
 <p>&#x5373;&#x53EF;&#x6B63;&#x5E38;&#x4F7F;&#x7528;<code>PyInstaller</code>&#x3002;</p>
 <p>&#x5176;&#x4ED6;&#x8BF4;&#x660E;&#xFF1A;</p>
 <p>&#xFF08;1&#xFF09;&#x6B64;&#x5904;&#x5B89;&#x88C5;&#x540E;&#x5BF9;&#x5E94;&#x7684;&#x52A8;&#x6001;&#x5E93;&#x662F;</p>
 <pre class="language-"><code class="lang-bash">limao@xxx &#xE0B0; ~ &#xE0B0; ll /Users/limao/.pyenv/versions/3.8.0/Python.framework/Versions/3.8/lib
-total <span class="token number">0</span>
-lrwxr-xr-x    <span class="token number">1</span> limao  CORP<span class="token punctuation">\</span>Domain Users     9B  <span class="token number">1</span>  <span class="token number">6</span> <span class="token number">10</span>:34 libpython3.8.dylib -<span class="token operator">&gt;</span> <span class="token punctuation">..</span>/Python
+total 0
+lrwxr-xr-x    1 limao  CORP\Domain Users     9B  1  6 10:34 libpython3.8.dylib -<span class="token operator">&gt;</span> <span class="token punctuation">..</span>/Python
 </code></pre>
 <p>&#x8F6F;&#x94FE;&#x63A5;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x662F;&#xFF1A;3.4MB&#x7684;<code>Python</code></p>
 <pre class="language-"><code class="lang-bash">~ &#xE0B0; ll /Users/limao/.pyenv/versions/3.8.0/Python.framework/Versions/3.8/Python
--rwxr-xr-x  <span class="token number">1</span> limao  CORP<span class="token punctuation">\</span>Domain Users   <span class="token number">3</span>.4M  <span class="token number">1</span>  <span class="token number">6</span> <span class="token number">10</span>:34 /Users/limao/.pyenv/versions/3.8.0/Python.framework/Versions/3.8/Python
+-rwxr-xr-x  1 limao  CORP\Domain Users   3.4M  1  6 10:34 /Users/limao/.pyenv/versions/3.8.0/Python.framework/Versions/3.8/Python
 </code></pre>
 <p>&#xFF08;2&#xFF09;&#x6B64;&#x5904;&#x5B89;&#x88C5;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x9879;&#x76EE;&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x4E00;&#x4E9B;&#x5E93;</p>
 <p>&#x6BD4;&#x5982;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash">pip <span class="token function">install</span> virtualenv
 
 virtualenv venv
-<span class="token builtin class-name">source</span> venv/bin/activate 
+<span class="token function">source</span> venv/bin/activate 
 
 pip <span class="token function">install</span> zerorpc
 </code></pre>
@@ -1349,12 +1349,12 @@ app<span class="token punctuation">.</span><span class="token function">on</span
 ****************************************/</span>
 <span class="token keyword">const</span> constLargeEnoughHeartbeat <span class="token operator">=</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">30</span> <span class="token operator">*</span> <span class="token number">12</span> <span class="token comment">// 1 Year</span>
 clientOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token string">&quot;heartbeatInterval&quot;</span><span class="token operator">:</span> constLargeEnoughHeartbeat<span class="token punctuation">,</span>
+  <span class="token string">&quot;heartbeatInterval&quot;</span><span class="token punctuation">:</span> constLargeEnoughHeartbeat<span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">let</span> clientStart <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">zerorpc<span class="token punctuation">.</span>Client</span><span class="token punctuation">(</span>clientOptions<span class="token punctuation">)</span>
 
-clientStart<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">tcp://127.0.0.1:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_START</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">clientStart </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_START</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> connected</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+clientStart<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`tcp://127.0.0.1:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_START</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`clientStart </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_START</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> connected`</span></span><span class="token punctuation">)</span>
 clientStart<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span><span class="token string">&quot;echo&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;server ready&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span><span class="token punctuation">(</span>error <span class="token operator">||</span> res <span class="token operator">!==</span> <span class="token string">&apos;server ready&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
@@ -1389,8 +1389,8 @@ startElement<span class="token punctuation">.</span><span class="token function"
 ****************************************/</span>
 <span class="token keyword">let</span> clientOther <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">zerorpc<span class="token punctuation">.</span>Client</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-clientOther<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">tcp://127.0.0.1:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_OTHER</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">clientOther </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_OTHER</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> connected</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+clientOther<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`tcp://127.0.0.1:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_OTHER</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`clientOther </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">PORT_OTHER</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> connected`</span></span><span class="token punctuation">)</span>
 clientOther<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span><span class="token string">&quot;echo&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;server ready&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span><span class="token punctuation">(</span>error <span class="token operator">||</span> res <span class="token operator">!==</span> <span class="token string">&apos;server ready&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
@@ -1443,7 +1443,7 @@ loggingInit<span class="token punctuation">(</span><span class="token string">&q
         logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">&quot;text=%s&quot;</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>
         <span class="token keyword">return</span> text
 
-    <span class="token decorator annotation punctuation">@zerorpc<span class="token punctuation">.</span>stream</span>
+    @zerorpc<span class="token punctuation">.</span>stream
     <span class="token keyword">def</span> <span class="token function">startProxy</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">&quot;&quot;&quot;Start mitmdump proxy&quot;&quot;&quot;</span>
         logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">&quot;startProxy&quot;</span><span class="token punctuation">)</span>
@@ -1724,23 +1724,23 @@ addons <span class="token operator">=</span> <span class="token punctuation">[</
 <p>&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x540E;&#xFF1A;</p>
 <p><img src="../../../assets/img/normal_run_mitmdump_proxy_electron.png" alt="normal_run_mitmdump_proxy_electron"></p>
 <p>&#x8F93;&#x51FA;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">&#xE0B0; ./node_modules/.bin/electron <span class="token builtin class-name">.</span>
+<pre class="language-"><code class="lang-bash">&#xE0B0; ./node_modules/.bin/electron <span class="token keyword">.</span>
 In createPyProc
-<span class="token assign-left variable">scriptStart</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
-createSinglePyProc: <span class="token assign-left variable">curScript</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py, <span class="token assign-left variable">curPort</span><span class="token operator">=</span><span class="token number">4242</span>
-<span class="token assign-left variable">curPyProc</span><span class="token operator">=</span><span class="token punctuation">[</span>object Object<span class="token punctuation">]</span>
+scriptStart<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py
+createSinglePyProc: curScript<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py, curPort<span class="token operator">=</span>4242
+curPyProc<span class="token operator">=</span><span class="token punctuation">[</span>object Object<span class="token punctuation">]</span>
 success create child proces
 curPyProc.spawnargs<span class="token operator">=</span>python,/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpStartApi.py,4242
-curPyProc.pid<span class="token operator">=</span><span class="token number">7941</span>
-<span class="token assign-left variable">scriptOther</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpOtherApi.py
-createSinglePyProc: <span class="token assign-left variable">curScript</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpOtherApi.py, <span class="token assign-left variable">curPort</span><span class="token operator">=</span><span class="token number">4243</span>
-<span class="token assign-left variable">curPyProc</span><span class="token operator">=</span><span class="token punctuation">[</span>object Object<span class="token punctuation">]</span>
+curPyProc.pid<span class="token operator">=</span>7941
+scriptOther<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpOtherApi.py
+createSinglePyProc: curScript<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpOtherApi.py, curPort<span class="token operator">=</span>4243
+curPyProc<span class="token operator">=</span><span class="token punctuation">[</span>object Object<span class="token punctuation">]</span>
 success create child proces
 curPyProc.spawnargs<span class="token operator">=</span>python,/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpOtherApi.py,4243
-curPyProc.pid<span class="token operator">=</span><span class="token number">7942</span>
-curPyProc stderr data: <span class="token assign-left variable">chunk</span><span class="token operator">=</span><span class="token number">20200103</span> 06:07:21 mitmdumpOtherApi.py:65   INFO    start zerorpc server running on tcp://127.0.0.1:4243
+curPyProc.pid<span class="token operator">=</span>7942
+curPyProc stderr data: chunk<span class="token operator">=</span>20200103 06:07:21 mitmdumpOtherApi.py:65   INFO    start zerorpc server running on tcp://127.0.0.1:4243
 
-curPyProc stderr data: <span class="token assign-left variable">chunk</span><span class="token operator">=</span><span class="token number">20200103</span> 06:07:21 mitmdumpStartApi.py:65   INFO    start zerorpc server running on tcp://127.0.0.1:4242
+curPyProc stderr data: chunk<span class="token operator">=</span>20200103 06:07:21 mitmdumpStartApi.py:65   INFO    start zerorpc server running on tcp://127.0.0.1:4242
 </code></pre>
 <p>&#x4EE5;&#x53CA;&#x4E24;&#x4E2A;log&#x6587;&#x4EF6;&#xFF1A;</p>
 <p>&#x6587;&#x4EF6;&#xFF1A;<code>electron-python-example/mitmdumpOtherApi.log</code></p>
@@ -1814,7 +1814,7 @@ curPyProc stderr data: <span class="token assign-left variable">chunk</span><spa
 <span class="token keyword">import</span> zerorpc
 
 <span class="token keyword">class</span> <span class="token class-name">MitmdumpSaverApi</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token decorator annotation punctuation">@zerorpc<span class="token punctuation">.</span>stream</span>
+    @zerorpc<span class="token punctuation">.</span>stream
     <span class="token keyword">def</span> <span class="token function">startSaver</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">&quot;&quot;&quot;Start mitmdump saver to save url to file&quot;&quot;&quot;</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;MitmdumpSaverApi startSaver&quot;</span><span class="token punctuation">)</span>
@@ -1829,7 +1829,7 @@ curPyProc stderr data: <span class="token assign-left variable">chunk</span><spa
 <span class="token comment">// let client = new zerorpc.Client()</span>
 <span class="token keyword">const</span> constLargeEnoughHeartbeat <span class="token operator">=</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">30</span> <span class="token operator">*</span> <span class="token number">12</span> <span class="token comment">// 1 Year</span>
 clientOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token string">&quot;heartbeatInterval&quot;</span><span class="token operator">:</span> constLargeEnoughHeartbeat<span class="token punctuation">,</span>
+  <span class="token string">&quot;heartbeatInterval&quot;</span><span class="token punctuation">:</span> constLargeEnoughHeartbeat<span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">let</span> client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">zerorpc<span class="token punctuation">.</span>Client</span><span class="token punctuation">(</span>clientOptions<span class="token punctuation">)</span>
 
@@ -1902,11 +1902,11 @@ appFolder <span class="token operator">=</span> extractAppFolderFromArgv<span cl
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;outputFoler=%s&quot;</span> <span class="token operator">%</span> outputFoler<span class="token punctuation">)</span>
 </code></pre>
 <p>&#x6253;&#x5305;&#x540E;&#x53CC;&#x51FB;app&#x8FD0;&#x884C;&#xFF0C;&#x5373;&#x53EF;&#x5F97;&#x5230;&#x6839;&#x76EE;&#x5F55;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">curScripPy</span><span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpUrlSaver.py
-<span class="token assign-left variable">appFolder</span><span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy
-<span class="token assign-left variable">appFolder</span><span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy
-<span class="token assign-left variable">outputFoler</span><span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy
-<span class="token assign-left variable">cfgSaveFileFullPath</span><span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy/mitmdump_saved_url.txt
+<pre class="language-"><code class="lang-bash">curScripPy<span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpUrlSaver.py
+appFolder<span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy
+appFolder<span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy
+outputFoler<span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy
+cfgSaveFileFullPath<span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy/mitmdump_saved_url.txt
 self.fileToSave<span class="token operator">=</span>/Users/limao/Downloads/electron_scripPy/mitmdump_saved_url_20200114_180412.txt
 Loading script  /Users/limao/Downloads/electron_scripPy/mitmdumpUrlSaver.app/Contents/Resources/app/pymitmdumpstartdist/mitmdumpStartApi/mitmdumpUrlSaver.py
 Proxy server listening at http://*:8081
@@ -1914,30 +1914,30 @@ Proxy server listening at http://*:8081
 <p><img src="../../../assets/img/mac_app_running_root_folder.png" alt="mac_app_running_root_folder"></p>
 <p>2&#x79CD;&#x60C5;&#x51B5;&#x5BF9;&#x5E94;&#x7684;&#x8F93;&#x51FA;&#xFF1A;</p>
 <p>&#xFF08;1&#xFF09;debug=&#x8C03;&#x8BD5;&#x65F6;</p>
-<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">curScripPy</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpUrlSaver.py
+<pre class="language-"><code class="lang-bash">curScripPy<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpUrlSaver.py
 not mac app: /Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpUrlSaver.py
-<span class="token assign-left variable">appFolder</span><span class="token operator">=</span>None
-<span class="token assign-left variable">outputFoler</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump
-<span class="token assign-left variable">cfgSaveFileFullPath</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdump_saved_url.txt
+appFolder<span class="token operator">=</span>None
+outputFoler<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump
+cfgSaveFileFullPath<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdump_saved_url.txt
 self.fileToSave<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdump_saved_url_20200114_181130.txt
 Loading script  /Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdumpUrlSaver.py
 Proxy server listening at http://*:8081
 </code></pre>
 <p><img src="../../../assets/img/debug_mode_root_path.png" alt="debug_mode_root_path"></p>
 <p>&#xFF08;2&#xFF09;&#x666E;&#x901A;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8C03;&#x7528;mitmdump&#x65F6;</p>
-<pre class="language-"><code class="lang-bash">&#x2718; limao@xxx &#xE0B0; ~/dev/xxx/electron-python-example/pymitmdump &#xE0B0; &#xE0A0; master &#x25CF; &#xE0B0; mitmdump -p <span class="token number">8081</span> -s mitmdumpUrlSaver.py
-<span class="token assign-left variable">__file__</span><span class="token operator">=</span>mitmdumpUrlSaver.py
-<span class="token assign-left variable">curScripPy</span><span class="token operator">=</span>mitmdumpUrlSaver.py
+<pre class="language-"><code class="lang-bash">&#x2718; limao@xxx &#xE0B0; ~/dev/xxx/electron-python-example/pymitmdump &#xE0B0; &#xE0A0; master &#x25CF; &#xE0B0; mitmdump -p 8081 -s mitmdumpUrlSaver.py
+__file__<span class="token operator">=</span>mitmdumpUrlSaver.py
+curScripPy<span class="token operator">=</span>mitmdumpUrlSaver.py
 not mac app: mitmdumpUrlSaver.py
-<span class="token assign-left variable">appFolder</span><span class="token operator">=</span>None
-<span class="token assign-left variable">outputFoler</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump
-<span class="token assign-left variable">cfgSaveFileFullPath</span><span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdump_saved_url.txt
+appFolder<span class="token operator">=</span>None
+outputFoler<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump
+cfgSaveFileFullPath<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdump_saved_url.txt
 self.fileToSave<span class="token operator">=</span>/Users/limao/dev/xxx/crawler/mitmdumpUrlSaver/electron-python-example/pymitmdump/mitmdump_saved_url_20200114_181553.txt
 Loading script mitmdumpUrlSaver.py
 Proxy server listening at http://*:8081
 </code></pre>
 <footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
-2020-06-18 17:03:49
+2020-08-09 10:12:44
 </span></footer>
                                 
                                 </section>
@@ -1981,7 +1981,7 @@ Proxy server listening at http://*:8081
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"electron-python-example","level":"1.7.4.1.1","depth":4,"next":{"title":"js","level":"1.7.4.2","depth":3,"path":"summary_note/language/js.md","ref":"summary_note/language/js.md","articles":[]},"previous":{"title":"Python","level":"1.7.4.1","depth":3,"path":"summary_note/language/python/README.md","ref":"summary_note/language/python/README.md","articles":[{"title":"electron-python-example","level":"1.7.4.1.1","depth":4,"path":"summary_note/language/python/electron_python_example.md","ref":"summary_note/language/python/electron_python_example.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/desktop_app_framework_electron/pdf/desktop_app_framework_electron.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/desktop_app_framework_electron/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"desktop_app_framework_electron","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"跨平台桌面应用框架：Electron","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"介绍跨平台桌面应用框架Electron的基本概念、基本原理、核心优势以及额外特性；介绍了用Electron开发出的常见应用有哪些；解释了如何安装Electron；以及如何快速上手使用；以及如何打包和部署；专门整理了如何让Electron支持Python以及其后的相关心得；总结了Electron的各种开发经验和心得，比如开发方面的Web技术、Log日志等；打包方面的如何制作app的logo、asar加密压缩、files参数、打包工具electron-builder、编译工具electron-rebuild等，以及常见的系统如Windows和Mac系统中常见问题和解决方案；以及不同语言，比如Python、js等的支持，整理了Node相关信息，最后附上相关文档和教程等资料。"},"file":{"path":"summary_note/language/python/electron_python_example.md","mtime":"2020-06-18T09:03:49.713Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-08T02:32:00.128Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"electron-python-example","level":"1.7.4.1.1","depth":4,"next":{"title":"js","level":"1.7.4.2","depth":3,"path":"summary_note/language/js.md","ref":"summary_note/language/js.md","articles":[]},"previous":{"title":"Python","level":"1.7.4.1","depth":3,"path":"summary_note/language/python/README.md","ref":"summary_note/language/python/README.md","articles":[{"title":"electron-python-example","level":"1.7.4.1.1","depth":4,"path":"summary_note/language/python/electron_python_example.md","ref":"summary_note/language/python/electron_python_example.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["google-adsense","theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/desktop_app_framework_electron/pdf/desktop_app_framework_electron.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/desktop_app_framework_electron/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"google-adsense":{"ads":[{"client":"ca-pub-6626240105039250"}]},"github-buttons":{"buttons":[{"repo":"desktop_app_framework_electron","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"跨平台桌面应用框架：Electron","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"介绍跨平台桌面应用框架Electron的基本概念、基本原理、核心优势以及额外特性；介绍了用Electron开发出的常见应用有哪些；解释了如何安装Electron；以及如何快速上手使用；以及如何打包和部署；专门整理了如何让Electron支持Python以及其后的相关心得；总结了Electron的各种开发经验和心得，比如开发方面的Web技术、Log日志等；打包方面的如何制作app的logo、asar加密压缩、files参数、打包工具electron-builder、编译工具electron-rebuild等，以及常见的系统如Windows和Mac系统中常见问题和解决方案；以及不同语言，比如Python、js等的支持，整理了Node相关信息，最后附上相关文档和教程等资料。"},"file":{"path":"summary_note/language/python/electron_python_example.md","mtime":"2020-08-09T02:12:44.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-16T07:18:58.310Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1989,6 +1989,10 @@ Proxy server listening at http://*:8081
         
     <script src="../../../gitbook/gitbook.js"></script>
     <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-google-adsense/plugin.js"></script>
+        
     
         
         <script src="../../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
