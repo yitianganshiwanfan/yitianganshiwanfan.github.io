@@ -842,31 +842,31 @@
 </code></pre>
 <p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@xxx-general-01 exercise<span class="token punctuation">]</span><span class="token comment"># mongodump --host dds-xxx.mongodb.rds.aliyuncs.com --port xxx --authenticationDatabase admin -u root -p xxx -d exercise -o .</span>
-<span class="token number">2019</span>-03-07T11:30:24.036+0800    writing exercise.storybook to 
-<span class="token number">2019</span>-03-07T11:30:24.037+0800    writing exercise.unit to 
-<span class="token number">2019</span>-03-07T11:30:24.037+0800    writing exercise.dialog to 
-<span class="token number">2019</span>-03-07T11:30:24.037+0800    writing exercise.audio.files to 
-<span class="token number">2019</span>-03-07T11:30:24.038+0800    <span class="token keyword">done</span> dumping exercise.storybook <span class="token punctuation">(</span><span class="token number">2</span> documents<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:30:24.038+0800    writing exercise.audio.chunks to 
-<span class="token number">2019</span>-03-07T11:30:24.038+0800    <span class="token keyword">done</span> dumping exercise.unit <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:30:24.039+0800    <span class="token keyword">done</span> dumping exercise.audio.chunks <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:30:24.047+0800    <span class="token keyword">done</span> dumping exercise.audio.files <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:30:24.048+0800    <span class="token keyword">done</span> dumping exercise.dialog <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
+2019-03-07T11:30:24.036+0800    writing exercise.storybook to 
+2019-03-07T11:30:24.037+0800    writing exercise.unit to 
+2019-03-07T11:30:24.037+0800    writing exercise.dialog to 
+2019-03-07T11:30:24.037+0800    writing exercise.audio.files to 
+2019-03-07T11:30:24.038+0800    <span class="token keyword">done</span> dumping exercise.storybook <span class="token punctuation">(</span>2 documents<span class="token punctuation">)</span>
+2019-03-07T11:30:24.038+0800    writing exercise.audio.chunks to 
+2019-03-07T11:30:24.038+0800    <span class="token keyword">done</span> dumping exercise.unit <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2019-03-07T11:30:24.039+0800    <span class="token keyword">done</span> dumping exercise.audio.chunks <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2019-03-07T11:30:24.047+0800    <span class="token keyword">done</span> dumping exercise.audio.files <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2019-03-07T11:30:24.048+0800    <span class="token keyword">done</span> dumping exercise.dialog <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
 <span class="token punctuation">[</span>root@xxx-general-01 exercise<span class="token punctuation">]</span><span class="token comment"># ll</span>
-total <span class="token number">4</span>
-drwxr-xr-x <span class="token number">2</span> root root <span class="token number">4096</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 exercise
+total 4
+drwxr-xr-x 2 root root 4096 Mar  7 11:30 exercise
 <span class="token punctuation">[</span>root@xxx-general-01 exercise<span class="token punctuation">]</span><span class="token comment"># ll exercise/</span>
-total <span class="token number">60</span>
--rw-r--r-- <span class="token number">1</span> root root <span class="token number">20737</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 audio.chunks.bson
--rw-r--r-- <span class="token number">1</span> root root   <span class="token number">195</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 audio.chunks.metadata.json
--rw-r--r-- <span class="token number">1</span> root root   <span class="token number">249</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 audio.files.bson
--rw-r--r-- <span class="token number">1</span> root root   <span class="token number">197</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 audio.files.metadata.json
--rw-r--r-- <span class="token number">1</span> root root   <span class="token number">554</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 dialog.bson
--rw-r--r-- <span class="token number">1</span> root root    <span class="token number">87</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 dialog.metadata.json
--rw-r--r-- <span class="token number">1</span> root root   <span class="token number">834</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 storybook.bson
--rw-r--r-- <span class="token number">1</span> root root    <span class="token number">90</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 storybook.metadata.json
--rw-r--r-- <span class="token number">1</span> root root   <span class="token number">309</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 unit.bson
--rw-r--r-- <span class="token number">1</span> root root    <span class="token number">85</span> Mar  <span class="token number">7</span> <span class="token number">11</span>:30 unit.metadata.json
+total 60
+-rw-r--r-- 1 root root 20737 Mar  7 11:30 audio.chunks.bson
+-rw-r--r-- 1 root root   195 Mar  7 11:30 audio.chunks.metadata.json
+-rw-r--r-- 1 root root   249 Mar  7 11:30 audio.files.bson
+-rw-r--r-- 1 root root   197 Mar  7 11:30 audio.files.metadata.json
+-rw-r--r-- 1 root root   554 Mar  7 11:30 dialog.bson
+-rw-r--r-- 1 root root    87 Mar  7 11:30 dialog.metadata.json
+-rw-r--r-- 1 root root   834 Mar  7 11:30 storybook.bson
+-rw-r--r-- 1 root root    90 Mar  7 11:30 storybook.metadata.json
+-rw-r--r-- 1 root root   309 Mar  7 11:30 unit.bson
+-rw-r--r-- 1 root root    85 Mar  7 11:30 unit.metadata.json
 </code></pre>
 <p>&#x53E6;&#x9644;&#x4E0A;&#xFF0C;&#x4E4B;&#x524D;&#x67D0;&#x6B21;&#x5BFC;&#x51FA;&#x7684;&#x6570;&#x636E;&#x7684;&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p><img src="../../assets/img/dump_mongodb_files.png" alt="dump_mongodb_files"></p>
@@ -883,10 +883,10 @@ See http://docs.mongodb.org/manual/reference/program/mongodump/ <span class="tok
 
 general options:
       --help                                                print usage
-      --version                                             print the tool version and <span class="token builtin class-name">exit</span>
+      --version                                             print the tool version and <span class="token keyword">exit</span>
 
 verbosity options:
-  -v, --verbose<span class="token operator">=</span><span class="token operator">&lt;</span>level<span class="token operator">&gt;</span>                                     <span class="token function">more</span> detailed log output <span class="token punctuation">(</span>include multiple <span class="token builtin class-name">times</span> <span class="token keyword">for</span> <span class="token function">more</span> verbosity, e.g. -vvvvv, or specify a
+  -v, --verbose<span class="token operator">=</span><span class="token operator">&lt;</span>level<span class="token operator">&gt;</span>                                     <span class="token function">more</span> detailed log output <span class="token punctuation">(</span>include multiple <span class="token function">times</span> <span class="token keyword">for</span> <span class="token function">more</span> verbosity, e.g. -vvvvv, or specify a
                                                             numeric value, e.g. --verbose<span class="token operator">=</span>N<span class="token punctuation">)</span>
       --quiet                                               hide all log output
 
@@ -931,11 +931,11 @@ output options:
       --archive<span class="token operator">=</span><span class="token operator">&lt;</span>file-path<span class="token operator">&gt;</span>                                 dump as an archive to the specified path. If flag is specified without a value, archive is written
                                                             to stdout
       --dumpDbUsersAndRoles                                 dump user and role definitions <span class="token keyword">for</span> the specified database
-      --excludeCollection<span class="token operator">=</span><span class="token operator">&lt;</span>collection-name<span class="token operator">&gt;</span>                 collection to exclude from the dump <span class="token punctuation">(</span>may be specified multiple <span class="token builtin class-name">times</span> to exclude additional
+      --excludeCollection<span class="token operator">=</span><span class="token operator">&lt;</span>collection-name<span class="token operator">&gt;</span>                 collection to exclude from the dump <span class="token punctuation">(</span>may be specified multiple <span class="token function">times</span> to exclude additional
                                                             collections<span class="token punctuation">)</span>
-      --excludeCollectionsWithPrefix<span class="token operator">=</span><span class="token operator">&lt;</span>collection-prefix<span class="token operator">&gt;</span>    exclude all collections from the dump that have the given prefix <span class="token punctuation">(</span>may be specified multiple <span class="token builtin class-name">times</span>
+      --excludeCollectionsWithPrefix<span class="token operator">=</span><span class="token operator">&lt;</span>collection-prefix<span class="token operator">&gt;</span>    exclude all collections from the dump that have the given prefix <span class="token punctuation">(</span>may be specified multiple <span class="token function">times</span>
                                                             to exclude additional prefixes<span class="token punctuation">)</span>
-  -j, --numParallelCollections<span class="token operator">=</span>                             number of collections to dump <span class="token keyword">in</span> parallel <span class="token punctuation">(</span><span class="token number">4</span> by default<span class="token punctuation">)</span> <span class="token punctuation">(</span>default: <span class="token number">4</span><span class="token punctuation">)</span>
+  -j, --numParallelCollections<span class="token operator">=</span>                             number of collections to dump <span class="token keyword">in</span> parallel <span class="token punctuation">(</span>4 by default<span class="token punctuation">)</span> <span class="token punctuation">(</span>default: 4<span class="token punctuation">)</span>
       --viewsAsCollections                                  dump views as normal collections with their produced data, omitting standard collections
 </code></pre>
 <h2 id="mongorestore&#x6062;&#x590D;"><a name="mongorestore&#x6062;&#x590D;" class="plugin-anchor" href="#mongorestore&#x6062;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>mongorestore&#x6062;&#x590D;</h2>
@@ -967,97 +967,97 @@ output options:
 <li>&#x4ECE;&#x67D0;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5BFC;&#x5165;&#x6574;&#x4E2A;database&#xFF1A;</li>
 </ul>
 <pre class="language-"><code class="lang-bash">&#x279C;  from_server ll
-total <span class="token number">48</span>
-drwxr-xr-x  <span class="token number">12</span> crifan  staff   384B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 exercise
--rw-r--r--@  <span class="token number">1</span> crifan  staff    20K  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:32 exercise_290307.zip
+total 48
+drwxr-xr-x  12 crifan  staff   384B  3  7 11:30 exercise
+-rw-r--r--@  1 crifan  staff    20K  3  7 11:32 exercise_290307.zip
 &#x279C;  from_server ll exercise
-total <span class="token number">120</span>
--rw-r--r--  <span class="token number">1</span> crifan  staff    20K  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 audio.chunks.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff   195B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 audio.chunks.metadata.json
--rw-r--r--  <span class="token number">1</span> crifan  staff   249B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 audio.files.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff   197B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 audio.files.metadata.json
--rw-r--r--  <span class="token number">1</span> crifan  staff   554B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 dialog.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff    87B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 dialog.metadata.json
--rw-r--r--  <span class="token number">1</span> crifan  staff   834B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 storybook.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff    90B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 storybook.metadata.json
--rw-r--r--  <span class="token number">1</span> crifan  staff   309B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 unit.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff    85B  <span class="token number">3</span>  <span class="token number">7</span> <span class="token number">11</span>:30 unit.metadata.json
+total 120
+-rw-r--r--  1 crifan  staff    20K  3  7 11:30 audio.chunks.bson
+-rw-r--r--  1 crifan  staff   195B  3  7 11:30 audio.chunks.metadata.json
+-rw-r--r--  1 crifan  staff   249B  3  7 11:30 audio.files.bson
+-rw-r--r--  1 crifan  staff   197B  3  7 11:30 audio.files.metadata.json
+-rw-r--r--  1 crifan  staff   554B  3  7 11:30 dialog.bson
+-rw-r--r--  1 crifan  staff    87B  3  7 11:30 dialog.metadata.json
+-rw-r--r--  1 crifan  staff   834B  3  7 11:30 storybook.bson
+-rw-r--r--  1 crifan  staff    90B  3  7 11:30 storybook.metadata.json
+-rw-r--r--  1 crifan  staff   309B  3  7 11:30 unit.bson
+-rw-r--r--  1 crifan  staff    85B  3  7 11:30 unit.metadata.json
 &#x279C;  from_server mongorestore -d exercise ./exercise
-<span class="token number">2019</span>-03-07T11:51:15.303+0800    the --db and --collection args should only be used when restoring from a BSON file. Other uses are deprecated and will not exist <span class="token keyword">in</span> the future<span class="token punctuation">;</span> use --nsInclude instead
-<span class="token number">2019</span>-03-07T11:51:15.305+0800    building a list of collections to restore from exercise <span class="token function">dir</span>
-<span class="token number">2019</span>-03-07T11:51:15.308+0800    reading metadata <span class="token keyword">for</span> exercise.audio.chunks from exercise/audio.chunks.metadata.json
-<span class="token number">2019</span>-03-07T11:51:15.309+0800    reading metadata <span class="token keyword">for</span> exercise.storybook from exercise/storybook.metadata.json
-<span class="token number">2019</span>-03-07T11:51:15.309+0800    reading metadata <span class="token keyword">for</span> exercise.dialog from exercise/dialog.metadata.json
-<span class="token number">2019</span>-03-07T11:51:15.310+0800    reading metadata <span class="token keyword">for</span> exercise.unit from exercise/unit.metadata.json
-<span class="token number">2019</span>-03-07T11:51:15.585+0800    restoring exercise.unit from exercise/unit.bson
-<span class="token number">2019</span>-03-07T11:51:15.678+0800    restoring exercise.storybook from exercise/storybook.bson
-<span class="token number">2019</span>-03-07T11:51:15.760+0800    restoring exercise.dialog from exercise/dialog.bson
-<span class="token number">2019</span>-03-07T11:51:15.846+0800    restoring exercise.audio.chunks from exercise/audio.chunks.bson
-<span class="token number">2019</span>-03-07T11:51:15.851+0800    no indexes to restore
-<span class="token number">2019</span>-03-07T11:51:15.851+0800    finished restoring exercise.dialog <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:51:15.851+0800    no indexes to restore
-<span class="token number">2019</span>-03-07T11:51:15.851+0800    finished restoring exercise.unit <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:51:15.858+0800    restoring indexes <span class="token keyword">for</span> collection exercise.audio.chunks from metadata
-<span class="token number">2019</span>-03-07T11:51:15.860+0800    no indexes to restore
-<span class="token number">2019</span>-03-07T11:51:15.860+0800    finished restoring exercise.storybook <span class="token punctuation">(</span><span class="token number">2</span> documents<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:51:15.864+0800    reading metadata <span class="token keyword">for</span> exercise.audio.files from exercise/audio.files.metadata.json
-<span class="token number">2019</span>-03-07T11:51:15.930+0800    finished restoring exercise.audio.chunks <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:51:16.029+0800    restoring exercise.audio.files from exercise/audio.files.bson
-<span class="token number">2019</span>-03-07T11:51:16.031+0800    restoring indexes <span class="token keyword">for</span> collection exercise.audio.files from metadata
-<span class="token number">2019</span>-03-07T11:51:16.077+0800    finished restoring exercise.audio.files <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2019</span>-03-07T11:51:16.077+0800    <span class="token keyword">done</span>
+2019-03-07T11:51:15.303+0800    the --db and --collection args should only be used when restoring from a BSON file. Other uses are deprecated and will not exist <span class="token keyword">in</span> the future<span class="token punctuation">;</span> use --nsInclude instead
+2019-03-07T11:51:15.305+0800    building a list of collections to restore from exercise <span class="token function">dir</span>
+2019-03-07T11:51:15.308+0800    reading metadata <span class="token keyword">for</span> exercise.audio.chunks from exercise/audio.chunks.metadata.json
+2019-03-07T11:51:15.309+0800    reading metadata <span class="token keyword">for</span> exercise.storybook from exercise/storybook.metadata.json
+2019-03-07T11:51:15.309+0800    reading metadata <span class="token keyword">for</span> exercise.dialog from exercise/dialog.metadata.json
+2019-03-07T11:51:15.310+0800    reading metadata <span class="token keyword">for</span> exercise.unit from exercise/unit.metadata.json
+2019-03-07T11:51:15.585+0800    restoring exercise.unit from exercise/unit.bson
+2019-03-07T11:51:15.678+0800    restoring exercise.storybook from exercise/storybook.bson
+2019-03-07T11:51:15.760+0800    restoring exercise.dialog from exercise/dialog.bson
+2019-03-07T11:51:15.846+0800    restoring exercise.audio.chunks from exercise/audio.chunks.bson
+2019-03-07T11:51:15.851+0800    no indexes to restore
+2019-03-07T11:51:15.851+0800    finished restoring exercise.dialog <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2019-03-07T11:51:15.851+0800    no indexes to restore
+2019-03-07T11:51:15.851+0800    finished restoring exercise.unit <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2019-03-07T11:51:15.858+0800    restoring indexes <span class="token keyword">for</span> collection exercise.audio.chunks from metadata
+2019-03-07T11:51:15.860+0800    no indexes to restore
+2019-03-07T11:51:15.860+0800    finished restoring exercise.storybook <span class="token punctuation">(</span>2 documents<span class="token punctuation">)</span>
+2019-03-07T11:51:15.864+0800    reading metadata <span class="token keyword">for</span> exercise.audio.files from exercise/audio.files.metadata.json
+2019-03-07T11:51:15.930+0800    finished restoring exercise.audio.chunks <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2019-03-07T11:51:16.029+0800    restoring exercise.audio.files from exercise/audio.files.bson
+2019-03-07T11:51:16.031+0800    restoring indexes <span class="token keyword">for</span> collection exercise.audio.files from metadata
+2019-03-07T11:51:16.077+0800    finished restoring exercise.audio.files <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2019-03-07T11:51:16.077+0800    <span class="token keyword">done</span>
 &#x279C;  from_server
 </code></pre>
 <ul>
 <li>&#x5BFC;&#x5165;&#x5355;&#x4E2A;collection&#xFF1A;</li>
 </ul>
-<pre class="language-"><code class="lang-bash">&#x279C;  mongodb_migration git:<span class="token punctuation">(</span>master<span class="token punctuation">)</span> <span class="token builtin class-name">pwd</span>
+<pre class="language-"><code class="lang-bash">&#x279C;  mongodb_migration git:<span class="token punctuation">(</span>master<span class="token punctuation">)</span> <span class="token function">pwd</span>
 /Users/crifan/xxx/pyspider_migration/mongodb_migration
 &#x279C;  mongodb_migration git:<span class="token punctuation">(</span>master<span class="token punctuation">)</span> ll storybook
-total <span class="token number">416536</span>
--rw-r--r--  <span class="token number">1</span> crifan  staff    34M <span class="token number">11</span> <span class="token number">26</span> <span class="token number">11</span>:58 lexile.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff   130B <span class="token number">11</span> <span class="token number">26</span> <span class="token number">11</span>:58 lexile.metadata.json
--rw-r--r--  <span class="token number">1</span> crifan  staff   106M <span class="token number">11</span> <span class="token number">26</span> <span class="token number">11</span>:58 main.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff   128B <span class="token number">11</span> <span class="token number">26</span> <span class="token number">11</span>:58 main.metadata.json
--rw-r--r--  <span class="token number">1</span> crifan  staff    62M <span class="token number">11</span> <span class="token number">26</span> <span class="token number">11</span>:58 scholastic.bson
--rw-r--r--  <span class="token number">1</span> crifan  staff   134B <span class="token number">11</span> <span class="token number">26</span> <span class="token number">11</span>:58 scholastic.metadata.json
+total 416536
+-rw-r--r--  1 crifan  staff    34M 11 26 11:58 lexile.bson
+-rw-r--r--  1 crifan  staff   130B 11 26 11:58 lexile.metadata.json
+-rw-r--r--  1 crifan  staff   106M 11 26 11:58 main.bson
+-rw-r--r--  1 crifan  staff   128B 11 26 11:58 main.metadata.json
+-rw-r--r--  1 crifan  staff    62M 11 26 11:58 scholastic.bson
+-rw-r--r--  1 crifan  staff   134B 11 26 11:58 scholastic.metadata.json
 &#x279C;  mongodb_migration git:<span class="token punctuation">(</span>master<span class="token punctuation">)</span> mongorestore -d storybook -c lexile ./storybook/lexile.bson
-<span class="token number">2019</span>-01-03T14:58:44.324+0800    checking <span class="token keyword">for</span> collection data <span class="token keyword">in</span> storybook/lexile.bson
-<span class="token number">2019</span>-01-03T14:58:44.328+0800    reading metadata <span class="token keyword">for</span> storybook.lexile from storybook/lexile.metadata.json
-<span class="token number">2019</span>-01-03T14:58:44.480+0800    restoring storybook.lexile from storybook/lexile.bson
-<span class="token number">2019</span>-01-03T14:58:45.166+0800    no indexes to restore
-<span class="token number">2019</span>-01-03T14:58:45.166+0800    finished restoring storybook.lexile <span class="token punctuation">(</span><span class="token number">29911</span> documents<span class="token punctuation">)</span>
-<span class="token number">2019</span>-01-03T14:58:45.166+0800    <span class="token keyword">done</span>
+2019-01-03T14:58:44.324+0800    checking <span class="token keyword">for</span> collection data <span class="token keyword">in</span> storybook/lexile.bson
+2019-01-03T14:58:44.328+0800    reading metadata <span class="token keyword">for</span> storybook.lexile from storybook/lexile.metadata.json
+2019-01-03T14:58:44.480+0800    restoring storybook.lexile from storybook/lexile.bson
+2019-01-03T14:58:45.166+0800    no indexes to restore
+2019-01-03T14:58:45.166+0800    finished restoring storybook.lexile <span class="token punctuation">(</span>29911 documents<span class="token punctuation">)</span>
+2019-01-03T14:58:45.166+0800    <span class="token keyword">done</span>
 </code></pre>
 <ul>
 <li>&#x5DF2;&#x6709;&#x4E00;&#x4E2A;&#x4E4B;&#x524D;&#x7528;mongodump&#x5907;&#x4EFD;&#x51FA;&#x6765;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF1A;evaluation&#xFF0C;&#x5176;&#x4E2D;&#x4FDD;&#x5B58;&#x4E86;&#x6574;&#x4E2A;evaluation&#x7684;database&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x5176;&#x6062;&#x590D;&#x5230;&#x6B64;&#x5904;&#x672C;&#x5730;&#x7684;mongodb&#x6570;&#x636E;&#x5E93;</li>
 </ul>
 <pre class="language-"><code class="lang-bash">&#x279C;  mongodb mongorestore -d evaluation ./evaluation
-<span class="token number">2018</span>-12-21T13:36:00.173+0800    the --db and --collection args should only be used when restoring from a BSON file. Other uses are deprecated and will not exist <span class="token keyword">in</span> the future<span class="token punctuation">;</span> use --nsInclude instead
-<span class="token number">2018</span>-12-21T13:36:00.175+0800    building a list of collections to restore from evaluation <span class="token function">dir</span>
-<span class="token number">2018</span>-12-21T13:36:00.176+0800    reading metadata <span class="token keyword">for</span> evaluation.image.chunks from evaluation/image.chunks.metadata.json
-<span class="token number">2018</span>-12-21T13:36:00.176+0800    reading metadata <span class="token keyword">for</span> evaluation.question from evaluation/question.metadata.json
-<span class="token number">2018</span>-12-21T13:36:00.176+0800    reading metadata <span class="token keyword">for</span> evaluation.audio.chunks from evaluation/audio.chunks.metadata.json
-<span class="token number">2018</span>-12-21T13:36:00.274+0800    restoring evaluation.image.chunks from evaluation/image.chunks.bson
-<span class="token number">2018</span>-12-21T13:36:00.277+0800    reading metadata <span class="token keyword">for</span> evaluation.image.files from evaluation/image.files.metadata.json
-<span class="token number">2018</span>-12-21T13:36:00.393+0800    restoring evaluation.audio.chunks from evaluation/audio.chunks.bson
-<span class="token number">2018</span>-12-21T13:36:00.475+0800    restoring evaluation.question from evaluation/question.bson
-<span class="token number">2018</span>-12-21T13:36:00.571+0800    restoring evaluation.image.files from evaluation/image.files.bson
-<span class="token number">2018</span>-12-21T13:36:00.579+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.audio.chunks from metadata
-<span class="token number">2018</span>-12-21T13:36:00.653+0800    finished restoring evaluation.audio.chunks <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2018</span>-12-21T13:36:00.654+0800    reading metadata <span class="token keyword">for</span> evaluation.audio.files from evaluation/audio.files.metadata.json
-<span class="token number">2018</span>-12-21T13:36:00.739+0800    restoring evaluation.audio.files from evaluation/audio.files.bson
-<span class="token number">2018</span>-12-21T13:36:00.747+0800    no indexes to restore
-<span class="token number">2018</span>-12-21T13:36:00.747+0800    finished restoring evaluation.question <span class="token punctuation">(</span><span class="token number">880</span> documents<span class="token punctuation">)</span>
-<span class="token number">2018</span>-12-21T13:36:00.747+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.audio.files from metadata
-<span class="token number">2018</span>-12-21T13:36:00.823+0800    finished restoring evaluation.audio.files <span class="token punctuation">(</span><span class="token number">1</span> document<span class="token punctuation">)</span>
-<span class="token number">2018</span>-12-21T13:36:00.825+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.image.files from metadata
-<span class="token number">2018</span>-12-21T13:36:00.932+0800    finished restoring evaluation.image.files <span class="token punctuation">(</span><span class="token number">663</span> documents<span class="token punctuation">)</span>
-<span class="token number">2018</span>-12-21T13:36:03.167+0800    <span class="token punctuation">[</span><span class="token comment">##############..........]  evaluation.image.chunks  222MB/357MB  (62.1%)</span>
-<span class="token number">2018</span>-12-21T13:36:04.849+0800    <span class="token punctuation">[</span><span class="token comment">########################]  evaluation.image.chunks  357MB/357MB  (100.0%)</span>
-<span class="token number">2018</span>-12-21T13:36:04.849+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.image.chunks from metadata
-<span class="token number">2018</span>-12-21T13:36:04.974+0800    finished restoring evaluation.image.chunks <span class="token punctuation">(</span><span class="token number">1829</span> documents<span class="token punctuation">)</span>
-<span class="token number">2018</span>-12-21T13:36:04.974+0800    <span class="token keyword">done</span>
+2018-12-21T13:36:00.173+0800    the --db and --collection args should only be used when restoring from a BSON file. Other uses are deprecated and will not exist <span class="token keyword">in</span> the future<span class="token punctuation">;</span> use --nsInclude instead
+2018-12-21T13:36:00.175+0800    building a list of collections to restore from evaluation <span class="token function">dir</span>
+2018-12-21T13:36:00.176+0800    reading metadata <span class="token keyword">for</span> evaluation.image.chunks from evaluation/image.chunks.metadata.json
+2018-12-21T13:36:00.176+0800    reading metadata <span class="token keyword">for</span> evaluation.question from evaluation/question.metadata.json
+2018-12-21T13:36:00.176+0800    reading metadata <span class="token keyword">for</span> evaluation.audio.chunks from evaluation/audio.chunks.metadata.json
+2018-12-21T13:36:00.274+0800    restoring evaluation.image.chunks from evaluation/image.chunks.bson
+2018-12-21T13:36:00.277+0800    reading metadata <span class="token keyword">for</span> evaluation.image.files from evaluation/image.files.metadata.json
+2018-12-21T13:36:00.393+0800    restoring evaluation.audio.chunks from evaluation/audio.chunks.bson
+2018-12-21T13:36:00.475+0800    restoring evaluation.question from evaluation/question.bson
+2018-12-21T13:36:00.571+0800    restoring evaluation.image.files from evaluation/image.files.bson
+2018-12-21T13:36:00.579+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.audio.chunks from metadata
+2018-12-21T13:36:00.653+0800    finished restoring evaluation.audio.chunks <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2018-12-21T13:36:00.654+0800    reading metadata <span class="token keyword">for</span> evaluation.audio.files from evaluation/audio.files.metadata.json
+2018-12-21T13:36:00.739+0800    restoring evaluation.audio.files from evaluation/audio.files.bson
+2018-12-21T13:36:00.747+0800    no indexes to restore
+2018-12-21T13:36:00.747+0800    finished restoring evaluation.question <span class="token punctuation">(</span>880 documents<span class="token punctuation">)</span>
+2018-12-21T13:36:00.747+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.audio.files from metadata
+2018-12-21T13:36:00.823+0800    finished restoring evaluation.audio.files <span class="token punctuation">(</span>1 document<span class="token punctuation">)</span>
+2018-12-21T13:36:00.825+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.image.files from metadata
+2018-12-21T13:36:00.932+0800    finished restoring evaluation.image.files <span class="token punctuation">(</span>663 documents<span class="token punctuation">)</span>
+2018-12-21T13:36:03.167+0800    <span class="token punctuation">[</span><span class="token comment">##############..........]  evaluation.image.chunks  222MB/357MB  (62.1%)</span>
+2018-12-21T13:36:04.849+0800    <span class="token punctuation">[</span><span class="token comment">########################]  evaluation.image.chunks  357MB/357MB  (100.0%)</span>
+2018-12-21T13:36:04.849+0800    restoring indexes <span class="token keyword">for</span> collection evaluation.image.chunks from metadata
+2018-12-21T13:36:04.974+0800    finished restoring evaluation.image.chunks <span class="token punctuation">(</span>1829 documents<span class="token punctuation">)</span>
+2018-12-21T13:36:04.974+0800    <span class="token keyword">done</span>
 </code></pre>
 <p>&#x5BFC;&#x5165;&#x540E;&#x7684;MongoDB Compass&#x4E2D;&#x6570;&#x636E;&#x6548;&#x679C;&#xFF1A;</p>
 <p><img src="../../assets/img/mongorestore_data_in_compass.png" alt="mongorestore data in compass"></p>
@@ -1065,19 +1065,19 @@ total <span class="token number">416536</span>
 <li>&#x5E26;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x7684;</li>
 </ul>
 <pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@xxx-general-01 for_backup_mongodb<span class="token punctuation">]</span><span class="token comment"># mongorestore -h localhost --port 32018 -u storybook -p pwd -d storybook ./storybook</span>
-<span class="token number">2018</span>-10-30T13:59:21.040+0800    building a list of collections to restore from storybook <span class="token function">dir</span>
-<span class="token number">2018</span>-10-30T13:59:21.041+0800    reading metadata <span class="token keyword">for</span> storybook.scholastic from storybook/scholastic.metadata.json
-<span class="token number">2018</span>-10-30T13:59:21.041+0800    reading metadata <span class="token keyword">for</span> storybook.main from storybook/main.metadata.json
-<span class="token number">2018</span>-10-30T13:59:21.061+0800    restoring storybook.main from storybook/main.bson
-<span class="token number">2018</span>-10-30T13:59:21.075+0800    restoring storybook.scholastic from storybook/scholastic.bson
-<span class="token number">2018</span>-10-30T13:59:22.567+0800    restoring indexes <span class="token keyword">for</span> collection storybook.scholastic from metadata
-<span class="token number">2018</span>-10-30T13:59:22.567+0800    finished restoring storybook.scholastic <span class="token punctuation">(</span><span class="token number">51785</span> documents<span class="token punctuation">)</span>
-<span class="token number">2018</span>-10-30T13:59:22.629+0800    restoring indexes <span class="token keyword">for</span> collection storybook.main from metadata
-<span class="token number">2018</span>-10-30T13:59:22.629+0800    finished restoring storybook.main <span class="token punctuation">(</span><span class="token number">51785</span> documents<span class="token punctuation">)</span>
-<span class="token number">2018</span>-10-30T13:59:22.629+0800    <span class="token keyword">done</span>
+2018-10-30T13:59:21.040+0800    building a list of collections to restore from storybook <span class="token function">dir</span>
+2018-10-30T13:59:21.041+0800    reading metadata <span class="token keyword">for</span> storybook.scholastic from storybook/scholastic.metadata.json
+2018-10-30T13:59:21.041+0800    reading metadata <span class="token keyword">for</span> storybook.main from storybook/main.metadata.json
+2018-10-30T13:59:21.061+0800    restoring storybook.main from storybook/main.bson
+2018-10-30T13:59:21.075+0800    restoring storybook.scholastic from storybook/scholastic.bson
+2018-10-30T13:59:22.567+0800    restoring indexes <span class="token keyword">for</span> collection storybook.scholastic from metadata
+2018-10-30T13:59:22.567+0800    finished restoring storybook.scholastic <span class="token punctuation">(</span>51785 documents<span class="token punctuation">)</span>
+2018-10-30T13:59:22.629+0800    restoring indexes <span class="token keyword">for</span> collection storybook.main from metadata
+2018-10-30T13:59:22.629+0800    finished restoring storybook.main <span class="token punctuation">(</span>51785 documents<span class="token punctuation">)</span>
+2018-10-30T13:59:22.629+0800    <span class="token keyword">done</span>
 </code></pre>
 <footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
-2020-05-23 13:06:02
+2020-05-27 21:39:58
 </span></footer>
                                 
                                 </section>
@@ -1121,7 +1121,7 @@ total <span class="token number">416536</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mongodump和mongorestore","level":"1.6.2.1","depth":3,"next":{"title":"mongoexport和mongoimport","level":"1.6.2.2","depth":3,"path":"summary_note/backup_restore/export_import.md","ref":"summary_note/backup_restore/export_import.md","articles":[]},"previous":{"title":"备份和恢复","level":"1.6.2","depth":2,"path":"summary_note/backup_restore/README.md","ref":"summary_note/backup_restore/README.md","articles":[{"title":"mongodump和mongorestore","level":"1.6.2.1","depth":3,"path":"summary_note/backup_restore/dump_restore.md","ref":"summary_note/backup_restore/dump_restore.md","articles":[]},{"title":"mongoexport和mongoimport","level":"1.6.2.2","depth":3,"path":"summary_note/backup_restore/export_import.md","ref":"summary_note/backup_restore/export_import.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/popular_document_db_mongodb/pdf/popular_document_db_mongodb.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/popular_document_db_mongodb/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"popular_document_db_mongodb","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"主流文档型数据库：MongoDB","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"介绍主流文档型关系数据库MongoDB的起源；如何安装；基本的使用方法，包括如何启动服务端和如何用shell、GUI图形界面工具、代码调用API接口等方式去Client端的使用；以及部分高级用法，包括IP限制、用户和权限等；总结各种心得，包括pymongo的各种方面，备份和回复，如何新建空数据库和集合，如何更新已有数据，如何进行正则、列表、嵌套等高级搜索查询，如何使用GridFS保存二进制文件，以及一些常用教程和文档；总结出常见的各种坑及解决办法。"},"file":{"path":"summary_note/backup_restore/dump_restore.md","mtime":"2020-05-23T05:06:02.900Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-08T02:40:41.000Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mongodump和mongorestore","level":"1.6.2.1","depth":3,"next":{"title":"mongoexport和mongoimport","level":"1.6.2.2","depth":3,"path":"summary_note/backup_restore/export_import.md","ref":"summary_note/backup_restore/export_import.md","articles":[]},"previous":{"title":"备份和恢复","level":"1.6.2","depth":2,"path":"summary_note/backup_restore/README.md","ref":"summary_note/backup_restore/README.md","articles":[{"title":"mongodump和mongorestore","level":"1.6.2.1","depth":3,"path":"summary_note/backup_restore/dump_restore.md","ref":"summary_note/backup_restore/dump_restore.md","articles":[]},{"title":"mongoexport和mongoimport","level":"1.6.2.2","depth":3,"path":"summary_note/backup_restore/export_import.md","ref":"summary_note/backup_restore/export_import.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["google-adsense","theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/popular_document_db_mongodb/pdf/popular_document_db_mongodb.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/popular_document_db_mongodb/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"google-adsense":{"ads":[{"client":"ca-pub-6626240105039250"}]},"github-buttons":{"buttons":[{"repo":"popular_document_db_mongodb","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"主流文档型数据库：MongoDB","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"介绍主流文档型关系数据库MongoDB的起源；如何安装；基本的使用方法，包括如何启动服务端和如何用shell、GUI图形界面工具、代码调用API接口等方式去Client端的使用；以及部分高级用法，包括IP限制、用户和权限等；总结各种心得，包括pymongo的各种方面，备份和回复，如何新建空数据库和集合，如何更新已有数据，如何进行正则、列表、嵌套等高级搜索查询，如何使用GridFS保存二进制文件，以及一些常用教程和文档；总结出常见的各种坑及解决办法。"},"file":{"path":"summary_note/backup_restore/dump_restore.md","mtime":"2020-05-27T13:39:58.511Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-16T16:56:36.113Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1129,6 +1129,10 @@ total <span class="token number">416536</span>
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-google-adsense/plugin.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
