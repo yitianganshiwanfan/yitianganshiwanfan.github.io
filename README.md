@@ -70,5 +70,6 @@
     * [iOS自动化测试利器：facebook-wda](https://crifan.github.io/ios_automation_facebook_wda/website)
     * [学习方法思路及技术心得总结](https://crifan.github.io/learn_tech_method_experience/website)
     * [移动端自动化测试概览](https://crifan.github.io/mobile_automation_overview/website)
+    * [最智能的Python的IDE：PyCharm](https://crifan.github.io/most_intelligent_python_ide_pycharm/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
