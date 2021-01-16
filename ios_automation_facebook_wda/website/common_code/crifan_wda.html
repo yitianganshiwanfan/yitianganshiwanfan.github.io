@@ -947,43 +947,43 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
         <span class="token keyword">return</span> namedtuple<span class="token punctuation">(</span><span class="token string">&apos;Point&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&apos;x&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;y&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>x <span class="token operator">+</span> self<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span>
                                                self<span class="token punctuation">.</span>y <span class="token operator">+</span> self<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">origin</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> namedtuple<span class="token punctuation">(</span><span class="token string">&apos;Point&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&apos;x&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;y&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">left</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>x
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">top</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>y
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">right</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>x <span class="token operator">+</span> self<span class="token punctuation">.</span>width
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">bottom</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>y <span class="token operator">+</span> self<span class="token punctuation">.</span>height
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">x0</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>x
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">y0</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>y
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">x1</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>x <span class="token operator">+</span> self<span class="token punctuation">.</span>width
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">y1</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>y <span class="token operator">+</span> self<span class="token punctuation">.</span>height
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">centerX</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>center<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
         <span class="token comment"># return self.center[&quot;x&quot;]</span>
@@ -1038,7 +1038,7 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
                 time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
         <span class="token keyword">return</span> <span class="token boolean">False</span>
 
-    <span class="token decorator annotation punctuation">@retry<span class="token punctuation">.</span>retry</span><span class="token punctuation">(</span>exceptions<span class="token operator">=</span>WDAEmptyResponseError<span class="token punctuation">,</span> tries<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> delay<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+    @retry<span class="token punctuation">.</span>retry<span class="token punctuation">(</span>exceptions<span class="token operator">=</span>WDAEmptyResponseError<span class="token punctuation">,</span> tries<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> delay<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
     <span class="token keyword">def</span> <span class="token function">status</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         res <span class="token operator">=</span> self<span class="token punctuation">.</span>http<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;status&apos;</span><span class="token punctuation">)</span>
         sid <span class="token operator">=</span> res<span class="token punctuation">.</span>sessionId
@@ -1242,21 +1242,21 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
     <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_value<span class="token punctuation">,</span> traceback<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">id</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>_session_id
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">_session_id</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> self<span class="token punctuation">.</span>__session_id<span class="token punctuation">:</span>
             <span class="token keyword">return</span> self<span class="token punctuation">.</span>__session_id
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>status<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;sessionId&apos;</span><span class="token punctuation">]</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">_session_http</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> HTTPClient<span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>http<span class="token punctuation">.</span>new_client<span class="token punctuation">(</span><span class="token string">&quot;session/&quot;</span><span class="token operator">+</span>self<span class="token punctuation">.</span>_session_id<span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@cached_property</span>
+    @cached_property
     <span class="token keyword">def</span> <span class="token function">scale</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">&quot;&quot;&quot;
         UIKit scale factor
@@ -1271,7 +1271,7 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;v=%s&quot;</span> <span class="token operator">%</span> v<span class="token punctuation">)</span>
         <span class="token keyword">return</span> <span class="token builtin">round</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@cached_property</span>
+    @cached_property
     <span class="token keyword">def</span> <span class="token function">bundle_id</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">&quot;&quot;&quot; the session matched bundle id &quot;&quot;&quot;</span>
         v <span class="token operator">=</span> self<span class="token punctuation">.</span>_session_http<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
@@ -1567,7 +1567,7 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
         w<span class="token punctuation">,</span> h <span class="token operator">=</span> self<span class="token punctuation">.</span>window_size<span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>swipe<span class="token punctuation">(</span>w <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> w <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> h<span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">orientation</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">&quot;&quot;&quot;
         Return string
@@ -1575,7 +1575,7 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
         &quot;&quot;&quot;</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>_session_http<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;orientation&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
 
-    <span class="token decorator annotation punctuation">@orientation<span class="token punctuation">.</span>setter</span>
+    @orientation<span class="token punctuation">.</span>setter
     <span class="token keyword">def</span> <span class="token function">orientation</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">&quot;&quot;&quot;
         Args:
@@ -1617,7 +1617,7 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
         httpclient <span class="token operator">=</span> self<span class="token punctuation">.</span>_session_http<span class="token punctuation">.</span>new_client<span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
         <span class="token keyword">return</span> Selector<span class="token punctuation">(</span>httpclient<span class="token punctuation">,</span> self<span class="token punctuation">,</span> xpath<span class="token operator">=</span>value<span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">alert</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> Alert<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
 
@@ -1629,7 +1629,7 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
             kwargs<span class="token punctuation">[</span><span class="token string">&apos;timeout&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>__timeout
         <span class="token keyword">return</span> Selector<span class="token punctuation">(</span>self<span class="token punctuation">.</span>_session_http<span class="token punctuation">,</span> self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">alibaba</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">&quot;&quot;&quot; Only used in alibaba company &quot;&quot;&quot;</span>
         <span class="token keyword">try</span><span class="token punctuation">:</span>
@@ -1639,7 +1639,7 @@ JSONDecodeError <span class="token operator">=</span> json<span class="token pun
             <span class="token keyword">raise</span> RuntimeError<span class="token punctuation">(</span>
                 <span class="token string">&quot;@alibaba property requires wda_taobao library installed&quot;</span><span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">taobao</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">try</span><span class="token punctuation">:</span>
             <span class="token keyword">import</span> wda_taobao
@@ -1656,7 +1656,7 @@ Session <span class="token operator">=</span> Client <span class="token comment"
         self<span class="token punctuation">.</span>_c <span class="token operator">=</span> client
         self<span class="token punctuation">.</span>http <span class="token operator">=</span> client<span class="token punctuation">.</span>http
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">exists</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">try</span><span class="token punctuation">:</span>
             self<span class="token punctuation">.</span>text
@@ -1666,7 +1666,7 @@ Session <span class="token operator">=</span> Client <span class="token comment"
             <span class="token keyword">return</span> <span class="token boolean">False</span>
         <span class="token keyword">return</span> <span class="token boolean">True</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">text</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>http<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;/alert/text&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
         <span class="token comment"># return self._c._session_http.get(&apos;/alert/text&apos;).value</span>
@@ -2410,7 +2410,7 @@ Session <span class="token operator">=</span> Client <span class="token comment"
         kwargs<span class="token punctuation">[</span><span class="token string">&apos;parent_class_chains&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>parent_class_chains <span class="token operator">+</span> <span class="token punctuation">[</span>chain<span class="token punctuation">]</span>
         <span class="token keyword">return</span> Selector<span class="token punctuation">(</span>self<span class="token punctuation">.</span>http<span class="token punctuation">,</span> self<span class="token punctuation">.</span>session<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
 
-    <span class="token decorator annotation punctuation">@property</span>
+    @<span class="token builtin">property</span>
     <span class="token keyword">def</span> <span class="token function">exists</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>find_element_ids<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> self<span class="token punctuation">.</span>index
 
@@ -2672,7 +2672,7 @@ Session <span class="token operator">=</span> Client <span class="token comment"
     <span class="token comment"># tap_hold</span>
 </code></pre>
 <footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
-2020-07-28 18:15:06
+2020-08-09 10:13:38
 </span></footer>
                                 
                                 </section>
@@ -2716,7 +2716,7 @@ Session <span class="token operator">=</span> Client <span class="token comment"
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"crifan版wda","level":"1.6.1.1","depth":3,"next":{"title":"元素处理","level":"1.6.2","depth":2,"path":"common_code/element_process.md","ref":"common_code/element_process.md","articles":[]},"previous":{"title":"wda","level":"1.6.1","depth":2,"path":"common_code/wda.md","ref":"common_code/wda.md","articles":[{"title":"crifan版wda","level":"1.6.1.1","depth":3,"path":"common_code/crifan_wda.md","ref":"common_code/crifan_wda.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/ios_automation_facebook_wda/pdf/ios_automation_facebook_wda.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_automation_facebook_wda","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS自动化测试利器：facebook-wda","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结iOS自动化主流框架facebook-wda的简介，环境搭建以及常见问题，以及开发的心得，尤其是iOS的各种坑，以及常用代码段，并给出部分源码分析，最后附上文档和参考资料。"},"file":{"path":"common_code/crifan_wda.md","mtime":"2020-07-28T10:15:06.678Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-08T02:35:09.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"crifan版wda","level":"1.6.1.1","depth":3,"next":{"title":"元素处理","level":"1.6.2","depth":2,"path":"common_code/element_process.md","ref":"common_code/element_process.md","articles":[]},"previous":{"title":"wda","level":"1.6.1","depth":2,"path":"common_code/wda.md","ref":"common_code/wda.md","articles":[{"title":"crifan版wda","level":"1.6.1.1","depth":3,"path":"common_code/crifan_wda.md","ref":"common_code/crifan_wda.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["google-adsense","theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/ios_automation_facebook_wda/pdf/ios_automation_facebook_wda.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"google-adsense":{"ads":[{"client":"ca-pub-6626240105039250"}]},"github-buttons":{"buttons":[{"repo":"ios_automation_facebook_wda","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS自动化测试利器：facebook-wda","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"总结iOS自动化主流框架facebook-wda的简介，环境搭建以及常见问题，以及开发的心得，尤其是iOS的各种坑，以及常用代码段，并给出部分源码分析，最后附上文档和参考资料。"},"file":{"path":"common_code/crifan_wda.md","mtime":"2020-08-09T02:13:38.608Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-16T16:38:46.064Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2724,6 +2724,10 @@ Session <span class="token operator">=</span> Client <span class="token comment"
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-google-adsense/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>

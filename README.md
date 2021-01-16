@@ -67,5 +67,6 @@
     * [跨平台桌面应用框架：Electron](https://crifan.github.io/desktop_app_framework_electron/website)
     * [编辑器和IDE总结](https://crifan.github.io/editor_ide_summary/website)
     * [工控自动化技术：PLC](https://crifan.github.io/industrial_automation_plc/website)
+    * [iOS自动化测试利器：facebook-wda](https://crifan.github.io/ios_automation_facebook_wda/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
