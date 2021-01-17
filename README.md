@@ -66,5 +66,12 @@
     * [强大的安卓破解辅助工具：XPosed框架](https://crifan.github.io/crack_assistant_xposed_framework/website)
     * [跨平台桌面应用框架：Electron](https://crifan.github.io/desktop_app_framework_electron/website)
     * [编辑器和IDE总结](https://crifan.github.io/editor_ide_summary/website)
+    * [工控自动化技术：PLC](https://crifan.github.io/industrial_automation_plc/website)
+    * [iOS自动化测试利器：facebook-wda](https://crifan.github.io/ios_automation_facebook_wda/website)
+    * [学习方法思路及技术心得总结](https://crifan.github.io/learn_tech_method_experience/website)
+    * [移动端自动化测试概览](https://crifan.github.io/mobile_automation_overview/website)
+    * [最智能的Python的IDE：PyCharm](https://crifan.github.io/most_intelligent_python_ide_pycharm/website)
+    * [多媒体业务核心子系统：IMS](https://crifan.github.io/multimedia_core_system_ims/website)
+    * [主流文档型数据库：MongoDB](https://crifan.github.io/popular_document_db_mongodb/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
