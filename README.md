@@ -75,5 +75,6 @@
     * [主流文档型数据库：MongoDB](https://crifan.github.io/popular_document_db_mongodb/website)
     * [主流Python爬虫框架：Scrapy](https://crifan.github.io/python_spider_scrapy/website)
     * [应用广泛的超强搜索：正则表达式](https://crifan.github.io/super_search_regex/website)
+    * [解放你的双手：自动化测试](https://crifan.github.io/free_hand_test_automation/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
