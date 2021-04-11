@@ -3,7 +3,8 @@
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/intro/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/setup_environment/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/setup_environment/note_common_qa.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/setup_environment/note_common_qa/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/setup_environment/note_common_qa/xcode_build_webdriveragent_xcodeproj.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/ios_pitfall/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/ios_automation_facebook_wda/website/ios_pitfall/get_source_xml.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
