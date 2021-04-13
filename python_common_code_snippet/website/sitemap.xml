@@ -21,6 +21,8 @@
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_code/network_related/beautifulSoup.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_code/network_related/requests.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_code/math.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_code/mail.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_code/csv_excel.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_syntax/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_syntax/function_parameter.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_syntax/dict.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -28,6 +30,7 @@
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_syntax/sort.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_syntax/enum.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_syntax/collections.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/common_syntax/logging.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/python_common_code_snippet/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
