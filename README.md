@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210413`
+最后更新：`20210414`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -78,5 +78,6 @@
     * [解放你的双手：自动化测试](https://crifan.github.io/free_hand_test_automation/website)
     * [让你人生不苦短的编程语言：Python](https://crifan.github.io/make_life_better_python/website)
     * [Python表格处理：CSV和Excel](https://crifan.github.io/python_process_csv_excel/website)
+    * [HTML解析库Python版jQuery：PyQuery](https://crifan.github.io/python_html_parse_pyquery/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
