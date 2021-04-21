@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210418`
+最后更新：`20210421`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -81,5 +81,6 @@
     * [HTML解析库Python版jQuery：PyQuery](https://crifan.github.io/python_html_parse_pyquery/website)
     * [如何买高性价比保险](https://crifan.github.io/buy_cost_effective_insurance/website)
     * [缓解你的痔疮：智能马桶盖](https://crifan.github.io/remit_your_haemorrhoids_intelligent_cover/website)
+    * [最流行的版本管理系统：Git](https://crifan.github.io/popular_version_control_git/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
