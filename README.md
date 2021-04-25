@@ -82,5 +82,6 @@
     * [如何买高性价比保险](https://crifan.github.io/buy_cost_effective_insurance/website)
     * [缓解你的痔疮：智能马桶盖](https://crifan.github.io/remit_your_haemorrhoids_intelligent_cover/website)
     * [最流行的版本管理系统：Git](https://crifan.github.io/popular_version_control_git/website)
+    * [管理好Python的库：包管理器](https://crifan.github.io/python_summary_package_manager/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
