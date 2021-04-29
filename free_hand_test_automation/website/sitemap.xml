@@ -8,7 +8,12 @@
 <url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/selenium.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/puppeteer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/puppeteer/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/puppeteer/init_dev_env.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/puppeteer/find_element.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/puppeteer/input_text.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/puppeteer/wait_elemnt_show.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/puppeteer/get_property.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/pc_side/web/playwright.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/mobile_side/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/free_hand_test_automation/website/mobile_side/android/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
