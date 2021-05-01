@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210430`
+最后更新：`20210501`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -83,5 +83,6 @@
     * [缓解你的痔疮：智能马桶盖](https://crifan.github.io/remit_your_haemorrhoids_intelligent_cover/website)
     * [最流行的版本管理系统：Git](https://crifan.github.io/popular_version_control_git/website)
     * [管理好Python的库：包管理器](https://crifan.github.io/python_summary_package_manager/website)
+    * [扩大你的生活半径：汽车](https://crifan.github.io/expand_life_radius_car/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
