@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210512`
+最后更新：`20210524`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -86,5 +86,6 @@
     * [扩大你的生活半径：汽车](https://crifan.github.io/expand_life_radius_car/website)
     * [垓下古城：固镇县](https://crifan.github.io/gaixia_ancient_city_guzhen/website)
     * [Linux使用和开发心得](https://crifan.github.io/linux_usage_dev_summary/website)
+    * [潜入你的网络：渗透测试](https://crifan.github.io/infiltrate_your_net_penetration_testing/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
