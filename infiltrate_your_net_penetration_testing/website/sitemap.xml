@@ -6,12 +6,18 @@
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penatration_test_overview/test_attack/attack_protect.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/code_injection/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/code_injection/xss.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/xss.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/csrf.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/file/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/file/file_contain.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/file/file_upload.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/file/foler_browser.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/file/any_file_read_download.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/file/xml/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/web_frontend/file/xml/xxe.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/sql_injection.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/rce.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/rce_rci.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/ssrf.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/cors.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/unauthorized_access.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -19,13 +25,6 @@
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/server_language/java/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/server_language/java/java_deserial.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/backend/server_language/java/struts2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/file/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/file/file_contain.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/file/file_upload.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/file/foler_browser.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/file/any_file_read_download.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/file/xml/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_method/file/xml/xxe.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/metasploit.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -37,6 +36,7 @@
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/zap.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/others/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/others/netsparker.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/others/xss_scanner.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/others/nikto.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/others/n_stalker.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/vulnerability_scan/others/whisker.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -49,6 +49,7 @@
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/port_scan/layer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/injection/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/injection/sqlmap.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/injection/commix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_tool/fuzz_testing/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_stage/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_stage/pre_penetration.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -59,6 +60,9 @@
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_related/security_analysis/log.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_related/security_analysis/network_anlysis_tool.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_related/certificates/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_related/certificates/security.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_related/certificates/network.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/penetration_related/certificates/other.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
