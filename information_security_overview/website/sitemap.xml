@@ -38,8 +38,6 @@
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/code_audit/fortify.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/code_audit/rips.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/capture_package/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/capture_package/wireshark.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/crack_password/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/crack_password/john_the_ripper.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/crack_password/hashcat.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
