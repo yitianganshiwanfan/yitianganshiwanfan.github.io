@@ -89,5 +89,6 @@
     * [潜入你的网络：渗透测试](https://crifan.github.io/infiltrate_your_net_penetration_testing/website)
     * [防止iPhone被黑：iOS安全](https://crifan.github.io/prevent_iphone_hacked_ios_security/website)
     * [探究底层机制：二进制安全](https://crifan.github.io/explore_underlying_mechanism_binary_security/website)
+    * [掌握黑客的行踪：安全分析](https://crifan.github.io/grasp_hacker_track_security_analysis/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
