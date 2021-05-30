@@ -885,9 +885,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.2.1" data-path="../../penetration_tool/port_scan/nmap.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="../../penetration_tool/port_scan/nmap/">
             
-                <a href="../../penetration_tool/port_scan/nmap.html">
+                <a href="../../penetration_tool/port_scan/nmap/">
             
                     
                         <b>1.4.2.1.</b>
@@ -897,6 +897,27 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../penetration_tool/port_scan/nmap/zenmap.html">
+            
+                <a href="../../penetration_tool/port_scan/nmap/zenmap.html">
+            
+                    
+                        <b>1.4.2.1.1.</b>
+                    
+                    Zenmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1086,42 +1107,6 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.6.1.1" data-path="../../penetration_related/security_analysis/log.html">
-            
-                <a href="../../penetration_related/security_analysis/log.html">
-            
-                    
-                        <b>1.6.1.1.</b>
-                    
-                    安全日志分析
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.1.2" data-path="../../penetration_related/security_analysis/network_anlysis_tool.html">
-            
-                <a href="../../penetration_related/security_analysis/network_anlysis_tool.html">
-            
-                    
-                        <b>1.6.1.2.</b>
-                    
-                    网络分析工具
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
         </li>
     
         <li class="chapter " data-level="1.6.2" data-path="../../penetration_related/certificates/">
@@ -1301,7 +1286,41 @@
 </li>
 <li>&#x9632;&#x62A4;&#x624B;&#x6BB5;<ul>
 <li>&#x6D4F;&#x89C8;&#x5668;<ul>
-<li><code>CSP</code></li>
+<li><code>CSP</code>=<code>Content Security Policy</code>=(&#x6D4F;&#x89C8;&#x5668;)<code>&#x5185;&#x5BB9;&#x5B89;&#x5168;&#x7B56;&#x7565;</code><ul>
+<li>&#x7528;&#x6765;&#x9650;&#x5236;&#x7F51;&#x9875;&#x8D44;&#x6E90;&#x7684;&#x52A0;&#x8F7D;,&#x5305;&#x62EC;script&#x3001;img&#x3001;iframe&#x7B49;</li>
+<li>&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;<ul>
+<li>&#x670D;&#x52A1;&#x7AEF;<ul>
+<li>&#x8BED;&#x8A00;&#xFF1A;PHP&#x7B49;</li>
+<li>&#x8FD4;&#x56DE;<ul>
+<li>&#x5934;=header<ul>
+<li><code>Content-Security-Policy:default-src &apos;self&apos;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x524D;&#x7AEF;<ul>
+<li>&#x901A;&#x8FC7;iframe&#x7684;csp&#x5C5E;&#x6027;<ul>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">csp</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>script-src &apos;self&apos;<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>11.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">&gt;</span></span></code></li>
+</ul>
+</li>
+<li>&#x901A;&#x8FC7;<code>html&#x7684;</code>meta`&#x5934;&#x8BBE;&#x7F6E;<ul>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Content-Security-Policy<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>default-src &apos;self&apos;; img-src https://*; child-src &apos;none&apos;;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></code></li>
+</ul>
+</li>
+<li>&#x901A;&#x8FC7;&#x7EE7;&#x627F;&#x7236;&#x9875;&#x9762;&#x7684;CSP&#x5C5E;&#x6027;<ul>
+<li>&#x901A;&#x8FC7;iframe src&#x52A0;&#x8F7D;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x7EE7;&#x627F;&#x539F;&#x9875;&#x9762;&#x7684;CSP&#x5C5E;&#x6027;&#xFF0C;&#x5373;&#xFF0C;&#x4F7F;&#x4E24;&#x4E2A;&#x9875;&#x9762;&#x540C;&#x6E90;</li>
+<li>&#x901A;&#x8FC7;iframe srcdoc&#x3001;data&#x534F;&#x8BAE;&#x3001;about:blank&#x534F;&#x8BAE;&#x52A0;&#x8F7D;&#x7684;&#x9875;&#x9762;&#x7EE7;&#x627F;&#x7236;&#x9875;&#x9762;&#x7684;CSP&#x5C5E;&#x6027;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x4F18;&#x5148;&#x7EA7;&#xFF1A;<code>&#x670D;&#x52A1;&#x7AEF;&#x8FD4;&#x56DE;CSP&#x5C5E;&#x6027; &gt; &#x7EE7;&#x627F;&#x7684;CSP&#x5C5E;&#x6027; &gt; iframe csp &gt; meta&#x5934;</code></li>
+</ul>
+</li>
 <li><code>Same-Site Cookies</code></li>
 </ul>
 </li>
@@ -1311,7 +1330,7 @@
 </li>
 </ul>
 <footer class="page-footer"><span class="copyright">crifan.com&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
-2021-05-27 20:05:44
+2021-05-30 11:20:41
 </span></footer>
                                 
                                 </section>
@@ -1355,7 +1374,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Web前端","level":"1.3.1","depth":2,"next":{"title":"XSS","level":"1.3.1.1","depth":3,"path":"penetration_method/web_frontend/xss.md","ref":"penetration_method/web_frontend/xss.md","articles":[]},"previous":{"title":"渗透测试手段","level":"1.3","depth":1,"path":"penetration_method/README.md","ref":"penetration_method/README.md","articles":[{"title":"Web前端","level":"1.3.1","depth":2,"path":"penetration_method/web_frontend/README.md","ref":"penetration_method/web_frontend/README.md","articles":[{"title":"XSS","level":"1.3.1.1","depth":3,"path":"penetration_method/web_frontend/xss.md","ref":"penetration_method/web_frontend/xss.md","articles":[]},{"title":"CSRF","level":"1.3.1.2","depth":3,"path":"penetration_method/web_frontend/csrf.md","ref":"penetration_method/web_frontend/csrf.md","articles":[]},{"title":"文件","level":"1.3.1.3","depth":3,"path":"penetration_method/web_frontend/file/README.md","ref":"penetration_method/web_frontend/file/README.md","articles":[{"title":"文件包含FI","level":"1.3.1.3.1","depth":4,"path":"penetration_method/web_frontend/file/file_contain.md","ref":"penetration_method/web_frontend/file/file_contain.md","articles":[]},{"title":"文件上传FU","level":"1.3.1.3.2","depth":4,"path":"penetration_method/web_frontend/file/file_upload.md","ref":"penetration_method/web_frontend/file/file_upload.md","articles":[]},{"title":"目录浏览","level":"1.3.1.3.3","depth":4,"path":"penetration_method/web_frontend/file/foler_browser.md","ref":"penetration_method/web_frontend/file/foler_browser.md","articles":[]},{"title":"任意文件读取和下载","level":"1.3.1.3.4","depth":4,"path":"penetration_method/web_frontend/file/any_file_read_download.md","ref":"penetration_method/web_frontend/file/any_file_read_download.md","articles":[]},{"title":"XML文件","level":"1.3.1.3.5","depth":4,"path":"penetration_method/web_frontend/file/xml/README.md","ref":"penetration_method/web_frontend/file/xml/README.md","articles":[{"title":"XXE","level":"1.3.1.3.5.1","depth":5,"path":"penetration_method/web_frontend/file/xml/xxe.md","ref":"penetration_method/web_frontend/file/xml/xxe.md","articles":[]}]}]}]},{"title":"后端","level":"1.3.2","depth":2,"path":"penetration_method/backend/README.md","ref":"penetration_method/backend/README.md","articles":[{"title":"SQL注入","level":"1.3.2.1","depth":3,"path":"penetration_method/backend/sql_injection.md","ref":"penetration_method/backend/sql_injection.md","articles":[]},{"title":"RCE/RCI","level":"1.3.2.2","depth":3,"path":"penetration_method/backend/rce_rci.md","ref":"penetration_method/backend/rce_rci.md","articles":[]},{"title":"SSRF","level":"1.3.2.3","depth":3,"path":"penetration_method/backend/ssrf.md","ref":"penetration_method/backend/ssrf.md","articles":[]},{"title":"CORS","level":"1.3.2.4","depth":3,"path":"penetration_method/backend/cors.md","ref":"penetration_method/backend/cors.md","articles":[]},{"title":"越权访问","level":"1.3.2.5","depth":3,"path":"penetration_method/backend/unauthorized_access.md","ref":"penetration_method/backend/unauthorized_access.md","articles":[]},{"title":"后端语言","level":"1.3.2.6","depth":3,"path":"penetration_method/backend/server_language/README.md","ref":"penetration_method/backend/server_language/README.md","articles":[{"title":"Java","level":"1.3.2.6.1","depth":4,"path":"penetration_method/backend/server_language/java/README.md","ref":"penetration_method/backend/server_language/java/README.md","articles":[{"title":"JAVA反序列化","level":"1.3.2.6.1.1","depth":5,"path":"penetration_method/backend/server_language/java/java_deserial.md","ref":"penetration_method/backend/server_language/java/java_deserial.md","articles":[]},{"title":"struts2","level":"1.3.2.6.1.2","depth":5,"path":"penetration_method/backend/server_language/java/struts2.md","ref":"penetration_method/backend/server_language/java/struts2.md","articles":[]}]}]}]}]},"dir":"ltr"},"config":{"plugins":["google-adsense","theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/infiltrate_your_net_penetration_testing/pdf/infiltrate_your_net_penetration_testing.pdf","icon":"fa-file-pdf-o"},"splitter":{},"autocover":{"title":"Gitbook演示"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"google-adsense":{"ads":[{"client":"ca-pub-6626240105039250"}]},"github-buttons":{"buttons":[{"repo":"infiltrate_your_net_penetration_testing","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"潜入你的网络：渗透测试","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"先对渗透测试进行宏观概述，属于安全方向的哪个子领域。再介绍基本的渗透测试和攻击的大体流程和涉及内容，再整理出网络攻击和防御的全流程和涉及的方方面面的内容。总结各种渗透测试的手段，包括Web前端的代码注入类的XSS跨站脚本攻击、CSRF跨站请求伪造，后端的SQL注入、RCE远程代码执行、SSRF服务端请求伪造、CORS跨域资源共享、越权访问，后端语言比如Java的反序列号、struts2等，以及文件类的文件包含、文件上传、目录浏览、任意文件读取和下载、XML文件的XXE等；以及其他渗透测试工具，比如漏洞扫描类的Metasploit、AppScan、AWVS、BurpSuite、Cobalt Strike、Nessus、ZAP和其他一些不常见的工具；以及端口扫描类的nmap、Layer等，注入类的sqlmap等以及模糊测试相关工具；然后根据渗透测试阶段，分渗透前、渗透中、渗透后；以及相关的玩网络安全，包括安全日志分析、网络分析工具等内容。"},"file":{"path":"penetration_method/web_frontend/README.md","mtime":"2021-05-27T12:05:44.915Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-27T12:18:13.244Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Web前端","level":"1.3.1","depth":2,"next":{"title":"XSS","level":"1.3.1.1","depth":3,"path":"penetration_method/web_frontend/xss.md","ref":"penetration_method/web_frontend/xss.md","articles":[]},"previous":{"title":"渗透测试手段","level":"1.3","depth":1,"path":"penetration_method/README.md","ref":"penetration_method/README.md","articles":[{"title":"Web前端","level":"1.3.1","depth":2,"path":"penetration_method/web_frontend/README.md","ref":"penetration_method/web_frontend/README.md","articles":[{"title":"XSS","level":"1.3.1.1","depth":3,"path":"penetration_method/web_frontend/xss.md","ref":"penetration_method/web_frontend/xss.md","articles":[]},{"title":"CSRF","level":"1.3.1.2","depth":3,"path":"penetration_method/web_frontend/csrf.md","ref":"penetration_method/web_frontend/csrf.md","articles":[]},{"title":"文件","level":"1.3.1.3","depth":3,"path":"penetration_method/web_frontend/file/README.md","ref":"penetration_method/web_frontend/file/README.md","articles":[{"title":"文件包含FI","level":"1.3.1.3.1","depth":4,"path":"penetration_method/web_frontend/file/file_contain.md","ref":"penetration_method/web_frontend/file/file_contain.md","articles":[]},{"title":"文件上传FU","level":"1.3.1.3.2","depth":4,"path":"penetration_method/web_frontend/file/file_upload.md","ref":"penetration_method/web_frontend/file/file_upload.md","articles":[]},{"title":"目录浏览","level":"1.3.1.3.3","depth":4,"path":"penetration_method/web_frontend/file/foler_browser.md","ref":"penetration_method/web_frontend/file/foler_browser.md","articles":[]},{"title":"任意文件读取和下载","level":"1.3.1.3.4","depth":4,"path":"penetration_method/web_frontend/file/any_file_read_download.md","ref":"penetration_method/web_frontend/file/any_file_read_download.md","articles":[]},{"title":"XML文件","level":"1.3.1.3.5","depth":4,"path":"penetration_method/web_frontend/file/xml/README.md","ref":"penetration_method/web_frontend/file/xml/README.md","articles":[{"title":"XXE","level":"1.3.1.3.5.1","depth":5,"path":"penetration_method/web_frontend/file/xml/xxe.md","ref":"penetration_method/web_frontend/file/xml/xxe.md","articles":[]}]}]}]},{"title":"后端","level":"1.3.2","depth":2,"path":"penetration_method/backend/README.md","ref":"penetration_method/backend/README.md","articles":[{"title":"SQL注入","level":"1.3.2.1","depth":3,"path":"penetration_method/backend/sql_injection.md","ref":"penetration_method/backend/sql_injection.md","articles":[]},{"title":"RCE/RCI","level":"1.3.2.2","depth":3,"path":"penetration_method/backend/rce_rci.md","ref":"penetration_method/backend/rce_rci.md","articles":[]},{"title":"SSRF","level":"1.3.2.3","depth":3,"path":"penetration_method/backend/ssrf.md","ref":"penetration_method/backend/ssrf.md","articles":[]},{"title":"CORS","level":"1.3.2.4","depth":3,"path":"penetration_method/backend/cors.md","ref":"penetration_method/backend/cors.md","articles":[]},{"title":"越权访问","level":"1.3.2.5","depth":3,"path":"penetration_method/backend/unauthorized_access.md","ref":"penetration_method/backend/unauthorized_access.md","articles":[]},{"title":"后端语言","level":"1.3.2.6","depth":3,"path":"penetration_method/backend/server_language/README.md","ref":"penetration_method/backend/server_language/README.md","articles":[{"title":"Java","level":"1.3.2.6.1","depth":4,"path":"penetration_method/backend/server_language/java/README.md","ref":"penetration_method/backend/server_language/java/README.md","articles":[{"title":"JAVA反序列化","level":"1.3.2.6.1.1","depth":5,"path":"penetration_method/backend/server_language/java/java_deserial.md","ref":"penetration_method/backend/server_language/java/java_deserial.md","articles":[]},{"title":"struts2","level":"1.3.2.6.1.2","depth":5,"path":"penetration_method/backend/server_language/java/struts2.md","ref":"penetration_method/backend/server_language/java/struts2.md","articles":[]}]}]}]}]},"dir":"ltr"},"config":{"plugins":["google-adsense","theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.com，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"http://book.crifan.com/books/infiltrate_your_net_penetration_testing/pdf/infiltrate_your_net_penetration_testing.pdf","icon":"fa-file-pdf-o"},"splitter":{},"autocover":{"title":"Gitbook演示"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.com/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.com/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.com/gitbook/infiltrate_your_net_penetration_testing/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"google-adsense":{"ads":[{"client":"ca-pub-6626240105039250"}]},"github-buttons":{"buttons":[{"repo":"infiltrate_your_net_penetration_testing","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"潜入你的网络：渗透测试","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.com"}},"gitbook":"3.2.3","description":"先对渗透测试进行宏观概述，属于安全方向的哪个子领域。再介绍基本的渗透测试和攻击的大体流程和涉及内容，再整理出网络攻击和防御的全流程和涉及的方方面面的内容。总结各种渗透测试的手段，包括Web前端的代码注入类的XSS跨站脚本攻击、CSRF跨站请求伪造，后端的SQL注入、RCE远程代码执行、SSRF服务端请求伪造、CORS跨域资源共享、越权访问，后端语言比如Java的反序列号、struts2等，以及文件类的文件包含、文件上传、目录浏览、任意文件读取和下载、XML文件的XXE等；以及其他渗透测试工具，比如漏洞扫描类的Metasploit、AppScan、AWVS、BurpSuite、Cobalt Strike、Nessus、ZAP和其他一些不常见的工具；以及端口扫描类的nmap、Layer等，注入类的sqlmap等以及模糊测试相关工具；然后根据渗透测试阶段，分渗透前、渗透中、渗透后；以及相关的玩网络安全，包括安全日志分析、网络分析工具等内容。"},"file":{"path":"penetration_method/web_frontend/README.md","mtime":"2021-05-30T03:20:41.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-30T03:28:53.360Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
