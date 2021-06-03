@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210601`
+最后更新：`20210603`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -90,5 +90,6 @@
     * [防止iPhone被黑：iOS安全](https://crifan.github.io/prevent_iphone_hacked_ios_security/website)
     * [探究底层机制：二进制安全](https://crifan.github.io/explore_underlying_mechanism_binary_security/website)
     * [掌握黑客的行踪：安全分析](https://crifan.github.io/grasp_hacker_track_security_analysis/website)
+    * [防止被黑客攻击：Web安全](https://crifan.github.io/avoid_hacker_attack_web_security/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
