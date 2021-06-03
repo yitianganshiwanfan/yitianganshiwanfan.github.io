@@ -28,15 +28,6 @@
 <url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/field_application/iot.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/field_application/industrial_info.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/field_application/cloud.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/wireshark.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/capsa_free.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/zenoss_core.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/networkminer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/the_dude.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/angry_ip_scanner.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/analysis_tool/web/nimbus_threat_monitor.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/grasp_hacker_track_security_analysis/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
