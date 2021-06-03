@@ -11,11 +11,6 @@
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/security_common/vulnerability_number/cnvd.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/web_security/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/web_security/penetration_test.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/web_security/common_tools/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/web_security/common_tools/os/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/web_security/common_tools/os/kali_linux.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/web_security/organization_standard/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/web_security/organization_standard/owasp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/pc_security.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/device_security/mobile/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -32,11 +27,6 @@
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/info_storage_security/software/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/info_storage_security/software/tee.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/code_audit/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/code_audit/checkmarx_cxenterprise.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/code_audit/armorize_codesecue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/code_audit/fortify.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/code_audit/rips.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/crack_password/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/information_security_overview/website/other_related/tool/crack_password/john_the_ripper.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
