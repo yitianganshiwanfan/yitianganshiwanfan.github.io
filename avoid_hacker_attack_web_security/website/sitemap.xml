@@ -3,11 +3,17 @@
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_security_overview/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_security_overview/common_qa.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/common_term/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_attack/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_attack/method/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_attack/method/dos/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_attack/method/dos/ddos/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_attack/method/dos/ddos/ddos_protect.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/penetration_test.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/fuzz_test/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/fuzz_test/tools/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/fuzz_test/tools/afl.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/waf/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/security_os/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
