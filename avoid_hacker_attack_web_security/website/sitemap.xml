@@ -14,8 +14,16 @@
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/fuzz_test/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/fuzz_test/tools/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/fuzz_test/tools/afl.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/firewall/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/firewall/waf.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/ids/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/ids/sonrt.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/ids/suricata.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/ids/zeek.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/ids/opnsense.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_protect/other_protect/honeypot.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/waf/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/security_os/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/security_os/kali_linux.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/web_tool_sys/analysis/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -35,11 +43,14 @@
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/certificates/security.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/certificates/network.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/certificates/other.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_standard/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_standard/level_protect.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_standard/iso_27001.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_organization/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_organization/owasp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_law/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_law/network_security_law/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_standard/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_standard/iso_27001.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_process/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/security_process/sdl.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/avoid_hacker_attack_web_security/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
