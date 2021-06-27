@@ -28,7 +28,7 @@
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/attack_tech/shell_code.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/executable_tool/disassembler/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/executable_tool/disassembler/capstone.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/executable_tool/disassembler/udis86.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/executable_tool/decompiler/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/executable_tool/decompiler/dnspy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/executable_tool/decompiler/ilspy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -47,6 +47,11 @@
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/modify_memory/ce.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/modify_memory/mhs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/modify_memory/modifymemory.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/bin_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/windows/tools/bin_tool/010editor.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/multi_plat/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/multi_plat/disassembler/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/multi_plat/disassembler/capstone.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/explore_underlying_mechanism_binary_security/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
