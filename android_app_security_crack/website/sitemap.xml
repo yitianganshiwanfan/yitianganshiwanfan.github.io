@@ -14,13 +14,17 @@
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/why_encrypt_harden.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_history.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/code_obfuscation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/code_obfuscation/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/code_obfuscation/proguard.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/code_obfuscation/obfuscator_llvm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/vmp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/harden_method/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/harden_method/common_harden_compare.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/harden_method/common_harden_method.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_deobfuscation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_remove_shell_unpacking.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_remove_shell/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_remove_shell/check_shell_provider.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/crack_apk_intro.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tech/how_apk_to_java_src/1_step_apk_to_java.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -54,6 +58,7 @@
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/decompiler/common_decompilers/dare.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/decompiler/common_decompilers/jad.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/other_crack_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/other_crack_tool/disassembler/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/other_crack_tool/apktool.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/other_crack_tool/smali_baksmali.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_crack_tool/other_crack_tool/ida.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
