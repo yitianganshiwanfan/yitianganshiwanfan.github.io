@@ -20,6 +20,7 @@
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/code_obfuscation/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/code_obfuscation/proguard.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/code_obfuscation/obfuscator_llvm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/junk_code.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/vmp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/harden_method/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/android_app_security_crack/website/android_safety_tech/encrypt_overview/harden_method/common_harden_compare.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
