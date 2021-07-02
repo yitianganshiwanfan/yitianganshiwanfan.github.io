@@ -3,11 +3,9 @@
 <url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/overview/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/automation_framework/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/automation_framework/appium.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/automation_framework/appium/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/automation_framework/uiautomator2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/automation_framework/facebook_wda.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/automation_framework/airtest.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/issues/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/mobile_automation_overview/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
