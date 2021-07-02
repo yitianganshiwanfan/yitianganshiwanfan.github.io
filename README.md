@@ -92,5 +92,6 @@
     * [掌握黑客的行踪：安全分析](https://crifan.github.io/grasp_hacker_track_security_analysis/website)
     * [防止被黑客攻击：Web安全](https://crifan.github.io/avoid_hacker_attack_web_security/website)
     * [Web前端自动化利器：puppeteer](https://crifan.github.io/web_automation_tool_puppeteer/website)
+    * [跨平台Web自动化神器：Playwirght](https://crifan.github.io/web_automation_tool_playwright/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
