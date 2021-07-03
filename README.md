@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210702`
+最后更新：`20210703`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -93,5 +93,6 @@
     * [防止被黑客攻击：Web安全](https://crifan.github.io/avoid_hacker_attack_web_security/website)
     * [Web前端自动化利器：puppeteer](https://crifan.github.io/web_automation_tool_puppeteer/website)
     * [跨平台Web自动化神器：Playwirght](https://crifan.github.io/web_automation_tool_playwright/website)
+    * [主流跨平台自动化框架：Appium](https://crifan.github.io/popular_automation_framework_appium/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
