@@ -94,5 +94,6 @@
     * [Web前端自动化利器：puppeteer](https://crifan.github.io/web_automation_tool_puppeteer/website)
     * [跨平台Web自动化神器：Playwirght](https://crifan.github.io/web_automation_tool_playwright/website)
     * [主流跨平台自动化框架：Appium](https://crifan.github.io/popular_automation_framework_appium/website)
+    * [Python心得：http网络库](https://crifan.github.io/python_summary_http_lib/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
