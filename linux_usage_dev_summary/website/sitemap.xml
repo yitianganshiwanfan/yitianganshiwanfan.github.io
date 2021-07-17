@@ -43,6 +43,19 @@
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/wc.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/file.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/output/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/output/cat.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/output/head.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/output/tail.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/output/less.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/file_folder/file/output/more.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/output/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/output/echo.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/output/filter/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/output/filter/grep.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/output/filter/egrep.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/output/stream_process/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/output/stream_process/sed.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/package_compression/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/package_compression/tar.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/commands/package_compression/zip.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -101,6 +114,8 @@
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/dev_summary/basic_dev_tools.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/dev_summary/data_restore.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/dev_summary/emulate_linux.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/dev_summary/common_issue/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/dev_summary/common_issue/installed_new_still_old.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/linux_usage_dev_summary/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
