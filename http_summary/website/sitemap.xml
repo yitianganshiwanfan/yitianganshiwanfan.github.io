@@ -13,7 +13,9 @@
 <url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_detail/ch4_http_resp_status_code.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_detail/ch5_http_resp_data_format_json.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/ch1_http_tool_lib.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/tool_lib/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/tool_lib/tool.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/tool_lib/lib.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/ch2_http_api_design.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/ch3_http_note_summary.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.com/gitbook/http_summary/website/http_related/ch4_http_file_upload.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
