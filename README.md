@@ -96,5 +96,6 @@
     * [主流跨平台自动化框架：Appium](https://crifan.github.io/popular_automation_framework_appium/website)
     * [Python心得：http网络库](https://crifan.github.io/python_summary_http_lib/website)
     * [隔离Python项目环境：虚拟环境](https://crifan.github.io/isolate_python_project_virtual_environment/website)
+    * [守护你的座驾：汽车安全](https://crifan.github.io/guard_your_car_safety/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
