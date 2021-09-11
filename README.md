@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210910`
+最后更新：`20210911`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -97,5 +97,6 @@
     * [Python心得：http网络库](https://crifan.github.io/python_summary_http_lib/website)
     * [隔离Python项目环境：虚拟环境](https://crifan.github.io/isolate_python_project_virtual_environment/website)
     * [守护你的座驾：汽车安全](https://crifan.github.io/guard_your_car_safety/website)
+    * [好用的画图工具](https://crifan.github.io/best_diagram_tool/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
