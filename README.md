@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210914`
+最后更新：`20210915`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -101,5 +101,6 @@
     * [强大的音视频处理工具：FFmpeg](https://crifan.github.io/media_process_ffmpeg/website)
     * [主流数据格式：JSON](https://crifan.github.io/common_data_format_json/website)
     * [文件对比工具总结](https://crifan.github.io/file_compare_tool_summary/website)
+    * [主流关系数据库：MySQL](https://crifan.github.io/popular_rmdb_mysql/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
