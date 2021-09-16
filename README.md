@@ -103,5 +103,6 @@
     * [文件对比工具总结](https://crifan.github.io/file_compare_tool_summary/website)
     * [主流关系数据库：MySQL](https://crifan.github.io/popular_rmdb_mysql/website)
     * [流行的JS图表库：ECharts](https://crifan.github.io/popular_js_chart_lib_echarts/website)
+    * [常见压缩工具总结](https://crifan.github.io/common_compress_tool_summary/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
