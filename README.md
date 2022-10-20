@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20210919`
+最后更新：`20221020`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -104,5 +104,6 @@
     * [主流关系数据库：MySQL](https://crifan.github.io/popular_rmdb_mysql/website)
     * [流行的JS图表库：ECharts](https://crifan.github.io/popular_js_chart_lib_echarts/website)
     * [常见压缩工具总结](https://crifan.github.io/common_compress_tool_summary/website)
+    * [iOS逆向开发](https://crifan.github.io/ios_reverse_dev/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
