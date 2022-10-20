@@ -106,5 +106,6 @@
     * [常见压缩工具总结](https://crifan.github.io/common_compress_tool_summary/website)
     * [iOS逆向开发](https://crifan.github.io/ios_reverse_dev/website)
     * [iOS逆向开发：iPhone越狱](https://crifan.github.io/ios_re_iphone_jailbreak/website)
+    * [iOS逆向开发：越狱插件开发](https://crifan.github.io/ios_re_jailbreak_tweak/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
