@@ -109,5 +109,6 @@
     * [iOS逆向开发：越狱插件开发](https://crifan.github.io/ios_re_jailbreak_tweak/website)
     * [最流行汇编语言：ARM](https://crifan.github.io/popular_assembly_arm/website)
     * [iOS安全与防护](https://crifan.github.io/ios_security_protect/website)
+    * [iOS逆向开发：砸壳ipa](https://crifan.github.io/ios_re_crack_shell_ipa/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
