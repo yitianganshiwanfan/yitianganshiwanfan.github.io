@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/static_analysis_overview/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/find_ipa_bin.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/bin_info/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/bin_info/mach_o/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/bin_info/mach_o/machoview.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/bin_info/mach_o/jtool2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/bin_info/mach_o/rabin2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/export_str_res/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/export_str_res/strings.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/export_str_res/nm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/export_str_res/otool.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/export_header/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/export_header/class_dump.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/analysis_code_logic/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/analysis_code_logic/ida.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/analysis_code_logic/hopper.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_examples/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_examples/bin_info_exp_str.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/some_experience/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/some_experience/ida_vs_hopper.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>
