@@ -113,5 +113,6 @@
     * [iOS逆向开发：静态分析](https://crifan.github.io/ios_re_static_analysis/website)
     * [iOS逆向开发：动态调试](https://crifan.github.io/ios_re_dynamic_debug/website)
     * [逆向利器：IDA](https://crifan.github.io/reverse_tool_ida/website)
+    * [iOS逆向开发：iOS底层机制](https://crifan.github.io/ios_re_ios_internal/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
