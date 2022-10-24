@@ -198,12 +198,27 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="ui_layout.html">
+        <li class="chapter " data-level="1.4.1" data-path="version.html">
+            
+                <a href="version.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ui_layout.html">
             
                 <a href="ui_layout.html">
             
                     
-                        <b>1.4.1.</b>
+                        <b>1.4.2.</b>
                     
                     界面布局
             
@@ -213,12 +228,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="name_meaning.html">
+        <li class="chapter active" data-level="1.4.3" data-path="name_meaning.html">
             
                 <a href="name_meaning.html">
             
                     
-                        <b>1.4.2.</b>
+                        <b>1.4.3.</b>
                     
                     命名和含义
             
@@ -228,12 +243,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="auto_analysis.html">
+        <li class="chapter " data-level="1.4.4" data-path="auto_analysis.html">
             
                 <a href="auto_analysis.html">
             
                     
-                        <b>1.4.3.</b>
+                        <b>1.4.4.</b>
                     
                     自动分析
             
@@ -243,12 +258,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="search.html">
+        <li class="chapter " data-level="1.4.5" data-path="search.html">
             
                 <a href="search.html">
             
                     
-                        <b>1.4.4.</b>
+                        <b>1.4.5.</b>
                     
                     搜索
             
@@ -258,12 +273,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="shortcut.html">
+        <li class="chapter " data-level="1.4.6" data-path="shortcut.html">
             
                 <a href="shortcut.html">
             
                     
-                        <b>1.4.5.</b>
+                        <b>1.4.6.</b>
                     
                     快捷键
             
@@ -405,12 +420,27 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../ida_features/plugins.html">
+        <li class="chapter " data-level="1.5.4" data-path="../ida_features/import_export.html">
+            
+                <a href="../ida_features/import_export.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    导入和导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../ida_features/plugins.html">
             
                 <a href="../ida_features/plugins.html">
             
                     
-                        <b>1.5.4.</b>
+                        <b>1.5.5.</b>
                     
                     插件
             
@@ -597,6 +627,47 @@
 </ul>
 </li>
 </ul>
+<h3 id="sub函数"><a name="sub函数" class="plugin-anchor" href="#sub函数"><i class="fa fa-link" aria-hidden="true"></i></a>sub函数</h3>
+<p>关于sub函数的一些细节说明：</p>
+<ul>
+<li><code>sub_xxx</code>：普通的函数（有代码处理逻辑的）<ul>
+<li>比如去改名的话，可以改名叫做：<ul>
+<li>sub_BinaryOffset</li>
+<li>sub_AddressInsideBinary</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>nullsub_xxx</code>：空函数（没有任何代码逻辑的）</li>
+</ul>
+<p>此处给出实例：</p>
+<p>举例：</p>
+<p>【未解决】研究抖音越狱检测逻辑：_RxAnnotationInlineLoader的load</p>
+<p>中的：</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> __cdecl <span class="token operator">+</span><span class="token punctuation">[</span>_RxAnnotationInlineLoader load<span class="token punctuation">]</span><span class="token punctuation">(</span>_RxAnnotationInlineLoader_meta <span class="token operator">*</span>self<span class="token punctuation">,</span> SEL a2<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+。。。
+    <span class="token function">j___dyld_register_func_for_add_image</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token punctuation">(</span>__cdecl <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">mach_header</span> <span class="token operator">*</span><span class="token punctuation">,</span> <span class="token class-name">intptr_t</span><span class="token punctuation">)</span><span class="token punctuation">)</span>sub_11326A84<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">j___dyld_register_func_for_remove_image</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token punctuation">(</span>__cdecl <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">mach_header</span> <span class="token operator">*</span><span class="token punctuation">,</span> <span class="token class-name">intptr_t</span><span class="token punctuation">)</span><span class="token punctuation">)</span>nullsub_12445<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="../assets/img/ida_sub_nullsub_example.png" alt="ida_sub_nullsub_example"></p>
+<ul>
+<li>_dyld_register_func_for_add_image传入的函数：sub_11326A84<ul>
+<li>就是个普通的，内部有代码逻辑的函数：<ul>
+<li><img src="../assets/img/ida_sub_has_logic.jpg" alt="ida_sub_has_logic"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>_dyld_register_func_for_remove_image传入的函数：nullsub_12445<ul>
+<li>从名字看，就知道：是个null的 空的 函数</li>
+<li>进入看，果然是空的，啥也没有<ul>
+<li><img src="../assets/img/ida_nullsub_empty.png" alt="ida_nullsub_empty"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="具体含义"><a name="具体含义" class="plugin-anchor" href="#具体含义"><i class="fa fa-link" aria-hidden="true"></i></a>具体含义</h2>
 <h3 id="qword"><a name="qword" class="plugin-anchor" href="#qword"><i class="fa fa-link" aria-hidden="true"></i></a>qword</h3>
 <p>对于qword：</p>
@@ -621,7 +692,7 @@
 <li>【整理】iOS逆向心得：IDA中的unk的含义</li>
 </ul>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-23 22:17:12
+2022-10-24 10:11:56
 </span></footer></body></html>
                                 
                                 </section>
@@ -665,7 +736,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"命名和含义","level":"1.4.2","depth":2,"next":{"title":"自动分析","level":"1.4.3","depth":2,"path":"ida_common/auto_analysis.md","ref":"ida_common/auto_analysis.md","articles":[]},"previous":{"title":"界面布局","level":"1.4.1","depth":2,"path":"ida_common/ui_layout.md","ref":"ida_common/ui_layout.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/reverse_tool_ida/pdf/reverse_tool_ida.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/reverse_tool_ida/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"reverse_tool_ida","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"逆向利器：IDA","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍逆向领域中功能强大且好用的利器：IDA。先介绍IDA概览；再介绍IDA的快速上手过程；再介绍IDA中通用的基础知识，包括界面相关比如布局等、常见命名和含义、自动分析过程、搜索、快捷键；以及介绍IDA各种功能，包括查看代码，比如汇编代码、F5伪代码、函数调用、结构体的类的定义、字符串、函数列表插件等等；再去记录IDA的使用心得；最后整理一些IDA相关的文档和资料，供参考。"},"file":{"path":"ida_common/name_meaning.md","mtime":"2022-10-23T14:17:12.224Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-23T15:09:15.721Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"命名和含义","level":"1.4.3","depth":2,"next":{"title":"自动分析","level":"1.4.4","depth":2,"path":"ida_common/auto_analysis.md","ref":"ida_common/auto_analysis.md","articles":[]},"previous":{"title":"界面布局","level":"1.4.2","depth":2,"path":"ida_common/ui_layout.md","ref":"ida_common/ui_layout.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/reverse_tool_ida/pdf/reverse_tool_ida.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/reverse_tool_ida/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"reverse_tool_ida","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"逆向利器：IDA","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍逆向领域中功能强大且好用的利器：IDA。先介绍IDA概览；再介绍IDA的快速上手过程；再介绍IDA中通用的基础知识，包括版本选择、界面相关比如布局等、常见命名和含义、自动分析过程、搜索、快捷键；以及介绍IDA各种功能，包括查看代码，比如汇编代码、F5伪代码、函数调用、结构体的类的定义、字符串、函数列表插件等等；再去记录IDA的使用心得；最后整理一些IDA相关的文档和资料，供参考。"},"file":{"path":"ida_common/name_meaning.md","mtime":"2022-10-24T02:11:56.307Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-24T04:16:52.461Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

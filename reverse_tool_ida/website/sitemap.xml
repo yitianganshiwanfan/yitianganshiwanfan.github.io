@@ -4,6 +4,7 @@
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_overview/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_quick_start/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_common/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_common/version.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_common/ui_layout.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_common/name_meaning.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_common/auto_analysis.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -17,6 +18,7 @@
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_features/view_code/struct_class_def.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_features/strings.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_features/function_list.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_features/import_export.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_features/plugins.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/ida_usage_note/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/reverse_tool_ida/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
