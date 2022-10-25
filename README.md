@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20221024`
+最后更新：`20221025`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -115,5 +115,6 @@
     * [逆向利器：IDA](https://crifan.github.io/reverse_tool_ida/website)
     * [iOS逆向开发：iOS底层机制](https://crifan.github.io/ios_re_ios_internal/website)
     * [iOS逆向开发：ObjC运行时Runtime](https://crifan.github.io/ios_re_objc_runtime/website)
+    * [iOS逆向开发：Block匿名函数](https://crifan.github.io/ios_re_objc_block/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
