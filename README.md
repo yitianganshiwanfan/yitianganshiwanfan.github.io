@@ -116,5 +116,6 @@
     * [iOS逆向开发：iOS底层机制](https://crifan.github.io/ios_re_ios_internal/website)
     * [iOS逆向开发：ObjC运行时Runtime](https://crifan.github.io/ios_re_objc_runtime/website)
     * [iOS逆向开发：Block匿名函数](https://crifan.github.io/ios_re_objc_block/website)
+    * [iOS逆向开发：越狱检测和反越狱检测](https://crifan.github.io/ios_re_jb_detection/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
