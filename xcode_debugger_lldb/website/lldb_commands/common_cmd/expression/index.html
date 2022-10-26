@@ -452,9 +452,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.10.2" data-path="../debug_control/c.md">
+        <li class="chapter " data-level="1.3.2.10.2" data-path="../debug_control/continue.html">
             
-                <span>
+                <a href="../debug_control/continue.html">
             
                     
                         <b>1.3.2.10.2.</b>
@@ -785,8 +785,169 @@
 </ul>
 </li>
 </ul>
+<hr>
+<h2 id="p和po"><a name="p和po" class="plugin-anchor" href="#p和po"><i class="fa fa-link" aria-hidden="true"></i></a>p和po</h2>
+<ul>
+<li><code>p</code> == <code>expression --</code></li>
+<li><code>po</code> == <code>expression -O --</code></li>
+</ul>
+<h2 id="expression语法"><a name="expression语法" class="plugin-anchor" href="#expression语法"><i class="fa fa-link" aria-hidden="true"></i></a>expression语法</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> <span class="token builtin class-name">help</span> expression
+Evaluate an expression on the current thread.  Displays any returned value with
+LLDB<span class="token string">&apos;s default formatting.  Expects &apos;</span>raw<span class="token string">&apos; input (see &apos;</span><span class="token builtin class-name">help</span> raw-input<span class="token string">&apos;.)
+
+Syntax: expression &lt;cmd-options&gt; -- &lt;expr&gt;
+
+Command Options Usage:
+  expression [-AFLORTgp] [-f &lt;format&gt;] [-G &lt;gdb-format&gt;] [-a &lt;boolean&gt;] [-j &lt;boolean&gt;] [-X &lt;source-language&gt;] [-v[&lt;description-verbosity&gt;]] [-i &lt;boolean&gt;] [-l &lt;source-language&gt;] [-t &lt;unsigned-integer&gt;] [-u &lt;boolean&gt;] [-d &lt;none&gt;] [-S &lt;boolean&gt;] [-D &lt;count&gt;] [-P &lt;count&gt;] [-Y[&lt;count&gt;]] [-V &lt;boolean&gt;] [-Z &lt;count&gt;] -- &lt;expr&gt;
+  expression [-AFLORTgp] [-a &lt;boolean&gt;] [-j &lt;boolean&gt;] [-X &lt;source-language&gt;] [-i &lt;boolean&gt;] [-l &lt;source-language&gt;] [-t &lt;unsigned-integer&gt;] [-u &lt;boolean&gt;] [-d &lt;none&gt;] [-S &lt;boolean&gt;] [-D &lt;count&gt;] [-P &lt;count&gt;] [-Y[&lt;count&gt;]] [-V &lt;boolean&gt;] [-Z &lt;count&gt;] -- &lt;expr&gt;
+  expression [-r] -- &lt;expr&gt;
+  expression &lt;expr&gt;
+
+       -A ( --show-all-children )
+            Ignore the upper bound on the number of children to show.
+
+       -D &lt;count&gt; ( --depth &lt;count&gt; )
+            Set the max recurse depth when dumping aggregate types (default is
+            infinity).
+
+       -F ( --flat )
+            Display results in a flat format that uses expression paths for
+            each variable or member.
+
+       -G &lt;gdb-format&gt; ( --gdb-format &lt;gdb-format&gt; )
+            Specify a format using a GDB format specifier string.
+
+       -L ( --location )
+            Show variable location information.
+
+       -O ( --object-description )
+            Display using a language-specific description API, if possible.
+
+       -P &lt;count&gt; ( --ptr-depth &lt;count&gt; )
+            The number of pointers to be traversed when dumping values (default
+            is zero).
+
+       -R ( --raw-output )
+            Don&apos;</span>t use formatting options.
+
+       -S <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --synthetic-type <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Show the object obeying its synthetic provider, <span class="token keyword">if</span> available.
+
+       -T <span class="token punctuation">(</span> --show-types <span class="token punctuation">)</span>
+            Show variable types when dumping values.
+
+       -V <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --validate <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Show results of <span class="token builtin class-name">type</span> validators.
+
+       -X <span class="token operator">&lt;</span>source-language<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --apply-fixits <span class="token operator">&lt;</span>source-language<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            If true, simple fix-it hints will be automatically applied to the
+            expression.
+
+       -Y<span class="token punctuation">[</span><span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">(</span> --no-summary-depth<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">)</span>
+            Set the depth at <span class="token function">which</span> omitting summary information stops <span class="token punctuation">(</span>default
+            is <span class="token number">1</span><span class="token punctuation">)</span>.
+
+       -Z <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --element-count <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Treat the result of the expression as <span class="token keyword">if</span> its <span class="token builtin class-name">type</span> is an array of
+            this many values.
+
+       -a <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --all-threads <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Should we run all threads <span class="token keyword">if</span> the execution doesn<span class="token string">&apos;t complete on one
+            thread.
+
+       -d &lt;none&gt; ( --dynamic-type &lt;none&gt; )
+            Show the object as its full dynamic type, not its static type, if
+            available.
+            Values: no-dynamic-values | run-target | no-run-target
+
+       -f &lt;format&gt; ( --format &lt;format&gt; )
+            Specify a format to be used for display.
+
+       -g ( --debug )
+            When specified, debug the JIT code by setting a breakpoint on the
+            first instruction and forcing breakpoints to not be ignored (-i0)
+            and no unwinding to happen on error (-u0).
+
+       -i &lt;boolean&gt; ( --ignore-breakpoints &lt;boolean&gt; )
+            Ignore breakpoint hits while running expressions
+
+       -j &lt;boolean&gt; ( --allow-jit &lt;boolean&gt; )
+            Controls whether the expression can fall back to being JITted if
+            it&apos;</span>s not supported by the interpreter <span class="token punctuation">(</span>defaults to <span class="token boolean">true</span><span class="token punctuation">)</span>.
+
+       -l <span class="token operator">&lt;</span>source-language<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --language <span class="token operator">&lt;</span>source-language<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Specifies the Language to use when parsing the expression.  If not
+            <span class="token builtin class-name">set</span> the target.language setting is used.
+
+       -p <span class="token punctuation">(</span> --top-level <span class="token punctuation">)</span>
+            Interpret the expression as a complete translation unit, without
+            injecting it into the <span class="token builtin class-name">local</span> context.  Allows declaration of
+            persistent, top-level entities without a $ prefix.
+
+       -r <span class="token punctuation">(</span> --repl <span class="token punctuation">)</span>
+            Drop into Swift REPL
+
+       -t <span class="token operator">&lt;</span>unsigned-integer<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --timeout <span class="token operator">&lt;</span>unsigned-integer<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Timeout value <span class="token punctuation">(</span>in microseconds<span class="token punctuation">)</span> <span class="token keyword">for</span> running the expression.
+
+       -u <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --unwind-on-error <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Clean up program state <span class="token keyword">if</span> the expression causes a crash, or raises
+            a signal. Note, unlike gdb hitting a breakpoint is controlled by
+            another option <span class="token punctuation">(</span>-i<span class="token punctuation">)</span>.
+
+       -v<span class="token punctuation">[</span><span class="token operator">&lt;</span>description-verbosity<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">(</span> --description-verbosity<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">&lt;</span>description-verbosity<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">)</span>
+            How verbose should the output of this expression be, <span class="token keyword">if</span> the object
+            description is asked for.
+            Values: compact <span class="token operator">|</span> full
+
+Single and multi-line expressions:
+
+    The expression provided on the <span class="token builtin class-name">command</span> line must be a complete expression
+    with no newlines.  To evaluate a multi-line expression, hit a <span class="token builtin class-name">return</span> after
+    an empty expression, and lldb will enter the multi-line expression editor.
+    Hit <span class="token builtin class-name">return</span> on an empty line to end the multi-line expression.
+
+Timeouts:
+
+    If the expression can be evaluated statically <span class="token punctuation">(</span>without running code<span class="token punctuation">)</span> <span class="token keyword">then</span>
+    it will be.  Otherwise, by default the expression will run on the current
+    thread with a short timeout: currently .25 seconds.  If it doesn<span class="token string">&apos;t return
+    in that time, the evaluation will be interrupted and resumed with all
+    threads running.  You can use the -a option to disable retrying on all
+    threads.  You can use the -t option to set a shorter timeout.
+
+User defined variables:
+
+    You can define your own variables for convenience or to be used in
+    subsequent expressions.  You define them the same way you would define
+    variables in C.  If the first character of your user defined variable is a
+    $, then the variable&apos;</span>s value will be available <span class="token keyword">in</span> future expressions,
+    otherwise it will just be available <span class="token keyword">in</span> the current expression.
+
+Continuing evaluation after a breakpoint:
+
+    If the <span class="token string">&quot;-i false&quot;</span> option is used, and execution is interrupted by a
+    breakpoint hit, once you are <span class="token keyword">done</span> with your investigation, you can either
+    remove the expression execution frames from the stack with <span class="token string">&quot;thread return
+    -x&quot;</span> or <span class="token keyword">if</span> you are still interested <span class="token keyword">in</span> the expression result you can issue
+    the <span class="token string">&quot;continue&quot;</span> <span class="token builtin class-name">command</span> and the expression evaluation will complete and the
+    expression result will be available using the <span class="token string">&quot;thread.completed-expression&quot;</span>
+    key <span class="token keyword">in</span> the thread format.
+
+Examples:
+
+    <span class="token function">expr</span> my_struct-<span class="token operator">&gt;</span>a <span class="token operator">=</span> my_array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+    <span class="token function">expr</span> -f bin -- <span class="token punctuation">(</span>index * <span class="token number">8</span><span class="token punctuation">)</span> + <span class="token number">5</span>
+    <span class="token function">expr</span> unsigned int <span class="token variable">$foo</span> <span class="token operator">=</span> <span class="token number">5</span>
+    <span class="token function">expr</span> char c<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">\</span>&quot;foo<span class="token punctuation">\</span>&quot;<span class="token punctuation">;</span> c<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+     Important Note: Because this <span class="token builtin class-name">command</span> takes <span class="token string">&apos;raw&apos;</span> input, <span class="token keyword">if</span> you use any
+     <span class="token builtin class-name">command</span> options you must use <span class="token string">&apos; -- &apos;</span> between the end of the <span class="token builtin class-name">command</span> options
+     and the beginning of the raw input.
+</code></pre>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-26 14:46:53
+2022-10-26 21:48:36
 </span></footer></body></html>
                                 
                                 </section>
@@ -830,7 +991,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"expression","level":"1.3.2.3","depth":3,"next":{"title":"p","level":"1.3.2.3.1","depth":4,"path":"lldb_commands/common_cmd/expression/p.md","ref":"lldb_commands/common_cmd/expression/p.md","articles":[]},"previous":{"title":"register","level":"1.3.2.2","depth":3,"path":"lldb_commands/common_cmd/register.md","ref":"lldb_commands/common_cmd/register.md","articles":[]},"articles":[{"title":"p","level":"1.3.2.3.1","depth":4,"path":"lldb_commands/common_cmd/expression/p.md","ref":"lldb_commands/common_cmd/expression/p.md","articles":[]},{"title":"po","level":"1.3.2.3.2","depth":4,"path":"lldb_commands/common_cmd/expression/po.md","ref":"lldb_commands/common_cmd/expression/po.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/xcode_debugger_lldb/pdf/xcode_debugger_lldb.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/xcode_debugger_lldb/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"xcode_debugger_lldb","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Xcode内置调试器：LLDB","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍Xcode内置的调试器LLDB。先是LLDB概览；再详细介绍LLDB的命令，包括LLDB的命令概览和LLDB的各个命令；LLDB命令概览包括cheat sheet和help语法；LLDB常用命令包括image、register、expression，尤其是其中的p和po、memory、disassemble、thread、frame、breakpoint、watchpoint、以及调试控制相关的命令，包括run、continue、next和nexti、step和stepi、jump、finish、exit等最后再整理出相关心得，包括命令的缩写、Xcode中的lldb、iOS逆向、LLVM等等。最后给出相关的文档和资料。"},"file":{"path":"lldb_commands/common_cmd/expression/README.md","mtime":"2022-10-26T06:46:53.018Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-26T10:05:06.423Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"expression","level":"1.3.2.3","depth":3,"next":{"title":"p","level":"1.3.2.3.1","depth":4,"path":"lldb_commands/common_cmd/expression/p.md","ref":"lldb_commands/common_cmd/expression/p.md","articles":[]},"previous":{"title":"register","level":"1.3.2.2","depth":3,"path":"lldb_commands/common_cmd/register.md","ref":"lldb_commands/common_cmd/register.md","articles":[]},"articles":[{"title":"p","level":"1.3.2.3.1","depth":4,"path":"lldb_commands/common_cmd/expression/p.md","ref":"lldb_commands/common_cmd/expression/p.md","articles":[]},{"title":"po","level":"1.3.2.3.2","depth":4,"path":"lldb_commands/common_cmd/expression/po.md","ref":"lldb_commands/common_cmd/expression/po.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/xcode_debugger_lldb/pdf/xcode_debugger_lldb.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/xcode_debugger_lldb/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"xcode_debugger_lldb","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Xcode内置调试器：LLDB","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍Xcode内置的调试器LLDB。先是LLDB概览；再详细介绍LLDB的命令，包括LLDB的命令概览和LLDB的各个命令；LLDB命令概览包括cheat sheet和help语法；LLDB常用命令包括image、register、expression，尤其是其中的p和po、memory、disassemble、thread、frame、breakpoint、watchpoint、以及调试控制相关的命令，包括run、continue、next和nexti、step和stepi、jump、finish、exit等，且都给出help语法和用法举例；然后再整理出相关心得，包括命令的缩写、Xcode中的lldb、iOS逆向、LLVM等等。最后给出相关的文档和资料。"},"file":{"path":"lldb_commands/common_cmd/expression/README.md","mtime":"2022-10-26T13:48:36.491Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-26T13:52:58.319Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

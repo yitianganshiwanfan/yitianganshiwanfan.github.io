@@ -452,9 +452,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.10.2" data-path="debug_control/c.md">
+        <li class="chapter " data-level="1.3.2.10.2" data-path="debug_control/continue.html">
             
-                <span>
+                <a href="debug_control/continue.html">
             
                     
                         <b>1.3.2.10.2.</b>
@@ -779,8 +779,140 @@
                                 <html><head></head><body><h1 id="memory"><a name="memory" class="plugin-anchor" href="#memory"><i class="fa fa-link" aria-hidden="true"></i></a>memory</h1>
 <p>TODO：</p>
 <p>【记录】lldb命令使用心得：memory</p>
+<hr>
+<h2 id="memory举例"><a name="memory举例" class="plugin-anchor" href="#memory举例"><i class="fa fa-link" aria-hidden="true"></i></a>memory举例</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> x/16gx 0x0000000109117438
+0x109117438: 0x0000000000000000 0x0000000000000000
+0x109117448: 0x00000001052b6a88 0x00000001052b6ad8
+0x109117458: 0x000000010521b03c 0x00000001052b5758
+0x109117468: 0x00000001052b5850 0x00000001052b5980
+0x109117478: 0x00000001052b5ab0 0x00000001052b6638
+0x109117488: 0x00000001052b6674 0x000000010521b40c
+0x109117498: 0x00000001052b65fc 0x00000001052b6a10
+0x1091174a8: 0x00000001052b6a4c 0x00000001052b5a74
+</code></pre>
+<h2 id="memory语法"><a name="memory语法" class="plugin-anchor" href="#memory语法"><i class="fa fa-link" aria-hidden="true"></i></a>memory语法</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> <span class="token builtin class-name">help</span> memory
+Commands <span class="token keyword">for</span> operating on memory <span class="token keyword">in</span> the current target process.
+
+Syntax: memory <span class="token operator">&lt;</span>subcommand<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>subcommand-options<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+
+The following subcommands are supported:
+
+      <span class="token function">find</span>    -- Find a value <span class="token keyword">in</span> the memory of the current target process.
+      <span class="token function">history</span> -- Print recorded stack traces <span class="token keyword">for</span> allocation/deallocation events
+                 associated with an address.
+      <span class="token builtin class-name">read</span>    -- Read from the memory of the current target process.
+      region  -- Get information on the memory region containing an address <span class="token keyword">in</span>
+                 the current target process.
+      <span class="token function">write</span>   -- Write to the memory of the current target process.
+
+For <span class="token function">more</span> <span class="token builtin class-name">help</span> on any particular subcommand, <span class="token builtin class-name">type</span> <span class="token string">&apos;help &lt;command&gt; &lt;subcommand&gt;&apos;</span><span class="token builtin class-name">.</span>
+</code></pre>
+<h3 id="memory-read语法"><a name="memory-read语法" class="plugin-anchor" href="#memory-read语法"><i class="fa fa-link" aria-hidden="true"></i></a>memory read语法</h3>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> <span class="token builtin class-name">help</span> memory <span class="token builtin class-name">read</span>
+Read from the memory of the current target process.
+
+Syntax: memory <span class="token builtin class-name">read</span> <span class="token operator">&lt;</span>cmd-options<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+
+Command Options Usage:
+  memory <span class="token builtin class-name">read</span> <span class="token punctuation">[</span>-drd<span class="token punctuation">]</span> <span class="token punctuation">[</span>-f <span class="token operator">&lt;</span>format<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-c <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-G <span class="token operator">&lt;</span>gdb-format<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-s <span class="token operator">&lt;</span>byte-size<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-l <span class="token operator">&lt;</span>number-per-line<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-o <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+  memory <span class="token builtin class-name">read</span> <span class="token punctuation">[</span>-dbrd<span class="token punctuation">]</span> <span class="token punctuation">[</span>-f <span class="token operator">&lt;</span>format<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-c <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-s <span class="token operator">&lt;</span>byte-size<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-o <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+  memory <span class="token builtin class-name">read</span> <span class="token punctuation">[</span>-AFLORTdrd<span class="token punctuation">]</span> -t <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span> <span class="token punctuation">[</span>-f <span class="token operator">&lt;</span>format<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-c <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-G <span class="token operator">&lt;</span>gdb-format<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-E <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-o <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-d <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-S <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-D <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-P <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-Y<span class="token punctuation">[</span><span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-V <span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-Z <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+  memory <span class="token builtin class-name">read</span> -t <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span> <span class="token punctuation">[</span>-x <span class="token operator">&lt;</span>source-language<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>address-expression<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+
+       -A <span class="token punctuation">(</span> --show-all-children <span class="token punctuation">)</span>
+            Ignore the upper bound on the number of children to show.
+
+       -D <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --depth <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Set the max recurse depth when dumping aggregate types <span class="token punctuation">(</span>default is
+            infinity<span class="token punctuation">)</span>.
+
+       -E <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --offset <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            How many elements of the specified <span class="token builtin class-name">type</span> to skip before starting to
+            display data.
+
+       -F <span class="token punctuation">(</span> --flat <span class="token punctuation">)</span>
+            Display results <span class="token keyword">in</span> a flat <span class="token function">format</span> that uses expression paths <span class="token keyword">for</span>
+            each variable or member.
+
+       -G <span class="token operator">&lt;</span>gdb-format<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --gdb-format <span class="token operator">&lt;</span>gdb-format<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            Specify a <span class="token function">format</span> using a GDB <span class="token function">format</span> specifier string.
+
+       -L <span class="token punctuation">(</span> --location <span class="token punctuation">)</span>
+            Show variable location information.
+
+       -O <span class="token punctuation">(</span> --object-description <span class="token punctuation">)</span>
+            Display using a language-specific description API, <span class="token keyword">if</span> possible.
+
+       -P <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">(</span> --ptr-depth <span class="token operator">&lt;</span>count<span class="token operator">&gt;</span> <span class="token punctuation">)</span>
+            The number of pointers to be traversed when dumping values <span class="token punctuation">(</span>default
+            is zero<span class="token punctuation">)</span>.
+
+       -R <span class="token punctuation">(</span> --raw-output <span class="token punctuation">)</span>
+            Don<span class="token string">&apos;t use formatting options.
+
+       -S &lt;boolean&gt; ( --synthetic-type &lt;boolean&gt; )
+            Show the object obeying its synthetic provider, if available.
+
+       -T ( --show-types )
+            Show variable types when dumping values.
+
+       -V &lt;boolean&gt; ( --validate &lt;boolean&gt; )
+            Show results of type validators.
+
+       -Y[&lt;count&gt;] ( --no-summary-depth=[&lt;count&gt;] )
+            Set the depth at which omitting summary information stops (default
+            is 1).
+
+       -Z &lt;count&gt; ( --element-count &lt;count&gt; )
+            Treat the result of the expression as if its type is an array of
+            this many values.
+
+       -b ( --binary )
+            If true, memory will be saved as binary. If false, the memory is
+            saved save as an ASCII dump that uses the format, size, count and
+            number per line settings.
+
+       -c &lt;count&gt; ( --count &lt;count&gt; )
+            The number of total items to display.
+
+       -d &lt;none&gt; ( --dynamic-type &lt;none&gt; )
+            Show the object as its full dynamic type, not its static type, if
+            available.
+            Values: no-dynamic-values | run-target | no-run-target
+
+       -f &lt;format&gt; ( --format &lt;format&gt; )
+            Specify a format to be used for display.
+
+       -l &lt;number-per-line&gt; ( --num-per-line &lt;number-per-line&gt; )
+            The number of items per line to display.
+
+       -o &lt;filename&gt; ( --outfile &lt;filename&gt; )
+            Specify a path for capturing command output.
+
+       -r ( --force )
+            Necessary if reading over target.max-memory-read-size bytes.
+
+       -s &lt;byte-size&gt; ( --size &lt;byte-size&gt; )
+            The size in bytes to use when displaying with the selected format.
+
+       -t &lt;name&gt; ( --type &lt;name&gt; )
+            The name of a type to view memory as.
+
+       -x &lt;source-language&gt; ( --language &lt;source-language&gt; )
+            The language of the type to view memory as.
+
+       -d ( --append-outfile )
+            Append to the file specified with &apos;</span>--outfile <span class="token operator">&lt;</span>path<span class="token operator">&gt;</span><span class="token string">&apos;.
+
+     This command takes options and free-form arguments.  If your arguments
+     resemble option specifiers (i.e., they start with a - or --), you must use
+     &apos;</span> -- &apos; between the end of the <span class="token builtin class-name">command</span> options and the beginning of the
+     arguments.
+</code></pre>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-26 14:45:16
+2022-10-26 21:48:59
 </span></footer></body></html>
                                 
                                 </section>
@@ -824,7 +956,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"memory","level":"1.3.2.4","depth":3,"next":{"title":"disassemble","level":"1.3.2.5","depth":3,"path":"lldb_commands/common_cmd/disassemble.md","ref":"lldb_commands/common_cmd/disassemble.md","articles":[]},"previous":{"title":"po","level":"1.3.2.3.2","depth":4,"path":"lldb_commands/common_cmd/expression/po.md","ref":"lldb_commands/common_cmd/expression/po.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/xcode_debugger_lldb/pdf/xcode_debugger_lldb.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/xcode_debugger_lldb/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"xcode_debugger_lldb","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Xcode内置调试器：LLDB","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍Xcode内置的调试器LLDB。先是LLDB概览；再详细介绍LLDB的命令，包括LLDB的命令概览和LLDB的各个命令；LLDB命令概览包括cheat sheet和help语法；LLDB常用命令包括image、register、expression，尤其是其中的p和po、memory、disassemble、thread、frame、breakpoint、watchpoint、以及调试控制相关的命令，包括run、continue、next和nexti、step和stepi、jump、finish、exit等最后再整理出相关心得，包括命令的缩写、Xcode中的lldb、iOS逆向、LLVM等等。最后给出相关的文档和资料。"},"file":{"path":"lldb_commands/common_cmd/memory.md","mtime":"2022-10-26T06:45:16.587Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-26T10:05:06.423Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"memory","level":"1.3.2.4","depth":3,"next":{"title":"disassemble","level":"1.3.2.5","depth":3,"path":"lldb_commands/common_cmd/disassemble.md","ref":"lldb_commands/common_cmd/disassemble.md","articles":[]},"previous":{"title":"po","level":"1.3.2.3.2","depth":4,"path":"lldb_commands/common_cmd/expression/po.md","ref":"lldb_commands/common_cmd/expression/po.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/xcode_debugger_lldb/pdf/xcode_debugger_lldb.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/xcode_debugger_lldb/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"xcode_debugger_lldb","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Xcode内置调试器：LLDB","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍Xcode内置的调试器LLDB。先是LLDB概览；再详细介绍LLDB的命令，包括LLDB的命令概览和LLDB的各个命令；LLDB命令概览包括cheat sheet和help语法；LLDB常用命令包括image、register、expression，尤其是其中的p和po、memory、disassemble、thread、frame、breakpoint、watchpoint、以及调试控制相关的命令，包括run、continue、next和nexti、step和stepi、jump、finish、exit等，且都给出help语法和用法举例；然后再整理出相关心得，包括命令的缩写、Xcode中的lldb、iOS逆向、LLVM等等。最后给出相关的文档和资料。"},"file":{"path":"lldb_commands/common_cmd/memory.md","mtime":"2022-10-26T13:48:59.497Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-26T13:52:58.319Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

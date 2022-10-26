@@ -20,6 +20,7 @@
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_commands/common_cmd/watchpoint.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_commands/common_cmd/debug_control/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_commands/common_cmd/debug_control/run.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_commands/common_cmd/debug_control/continue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_commands/common_cmd/debug_control/next/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_commands/common_cmd/debug_control/next/nexti.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_commands/common_cmd/debug_control/step/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
