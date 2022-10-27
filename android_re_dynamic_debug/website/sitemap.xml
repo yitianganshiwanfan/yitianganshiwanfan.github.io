@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/android_re_dynamic_dbg_overview/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/android_root.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/debug_tools.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/decompile_to_smali.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/app_debuggable.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/debug_run_app.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/import_smali_to_as.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/smali_add_breakpoint.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/config_as_project.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/adb_get_process.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/dynamic_dbg_steps/as_debug_app_process.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/other_debug_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/other_debug_tool/frida.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/other_debug_tool/andbug.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/other_debug_tool/redexer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/other_debug_tool/fino.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_re_dynamic_debug/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>
