@@ -31,7 +31,8 @@
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_summary/cmd_abbr.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_summary/xcode_lldb.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_summary/ios_reverse.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_summary/ios_reverse/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_summary/ios_reverse/chisel.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/lldb_summary/llvm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/xcode_debugger_lldb/website/appendix/docs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
