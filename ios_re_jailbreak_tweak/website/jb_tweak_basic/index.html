@@ -3,7 +3,7 @@
 <html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
-        <title>tweak插件 · iOS逆向开发：越狱插件开发</title>
+        <title>越狱插件开发基础知识 · iOS逆向开发：越狱插件开发</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.7.1">
@@ -85,10 +85,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="tweak_dev_method.html" />
+    <link rel="next" href="tweak.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="../ios_jb_tweak_overview/" />
     
 
     <style>
@@ -152,9 +152,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../ios_jailbreak_tweak_overview/">
+        <li class="chapter " data-level="1.2" data-path="../ios_jb_tweak_overview/">
             
-                <a href="../ios_jailbreak_tweak_overview/">
+                <a href="../ios_jb_tweak_overview/">
             
                     
                         <b>1.2.</b>
@@ -167,7 +167,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="./">
+        <li class="chapter active" data-level="1.3" data-path="./">
             
                 <a href="./">
             
@@ -183,7 +183,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="tweak.html">
+        <li class="chapter " data-level="1.3.1" data-path="tweak.html">
             
                 <a href="tweak.html">
             
@@ -218,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../tweak_development/">
+        <li class="chapter " data-level="1.4" data-path="../tweak_dev/">
             
-                <a href="../tweak_development/">
+                <a href="../tweak_dev/">
             
                     
                         <b>1.4.</b>
@@ -234,9 +234,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../tweak_development/theos_logos.html">
+        <li class="chapter " data-level="1.4.1" data-path="../tweak_dev/theos_logos.html">
             
-                <a href="../tweak_development/theos_logos.html">
+                <a href="../tweak_dev/theos_logos.html">
             
                     
                         <b>1.4.1.</b>
@@ -249,9 +249,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../tweak_development/iosopendev.html">
+        <li class="chapter " data-level="1.4.2" data-path="../tweak_dev/iosopendev.html">
             
-                <a href="../tweak_development/iosopendev.html">
+                <a href="../tweak_dev/iosopendev.html">
             
                     
                         <b>1.4.2.</b>
@@ -264,9 +264,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../tweak_development/monkeydev.html">
+        <li class="chapter " data-level="1.4.3" data-path="../tweak_dev/monkeydev.html">
             
-                <a href="../tweak_development/monkeydev.html">
+                <a href="../tweak_dev/monkeydev.html">
             
                     
                         <b>1.4.3.</b>
@@ -350,7 +350,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >tweak插件</a>
+        <a href=".." >越狱插件开发基础知识</a>
     </h1>
 </div>
 
@@ -365,79 +365,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h1 id="tweak插件"><a name="tweak插件" class="plugin-anchor" href="#tweak插件"><i class="fa fa-link" aria-hidden="true"></i></a>tweak插件</h1>
-<p>关于tweak的详细介绍：</p>
+                                <html><head></head><body><h1 id="越狱插件开发基础知识"><a name="越狱插件开发基础知识" class="plugin-anchor" href="#越狱插件开发基础知识"><i class="fa fa-link" aria-hidden="true"></i></a>越狱插件开发基础知识</h1>
 <ul>
-<li>tweak<ul>
-<li>是什么：a dynamic library<ul>
-<li>all kinds of crack patches</li>
+<li>越狱插件<ul>
+<li><code>越狱</code>=<code>jailbreak</code>=<code>jail</code>=<code>jb</code></li>
+<li><code>插件</code>=<code>tweak</code>=<code>扩展</code>=<code>extension</code></li>
 </ul>
 </li>
-<li>叫法：tweak=插件=extension=扩展</li>
-<li>原理：<ul>
-<li>通过一个预定义的过滤器，被注入到特定的程序中，实现替代特定的Objective-C或Swift的方法函数，从而实现特定功能</li>
-<li>底层基于：Cydia Substrate<ul>
-<li>详见：【已解决】iOS中Cydia Substrate</li>
+<li>越狱插件开发工具/框架<ul>
+<li>最常用=最基本的<ul>
+<li><code>Theos</code></li>
 </ul>
 </li>
+<li>集成XCode带GUI的<ul>
+<li><code>iOSOpenDev</code></li>
 </ul>
 </li>
-<li>相关背景<ul>
-<li>iOS有2中dynamic library<ul>
-<li>dylib<ul>
-<li>举例<ul>
-<li>libsqlite.dylib, libz.dylib等</li>
+<li>iOSOpenDev升级版 = 集成XCode和其他各种工具的更强的集成环境<ul>
+<li><code>MonkeyDev</code></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>framework</li>
-</ul>
-</li>
-<li>现状<ul>
-<li>（iOS的）开发者用framework的比较多</li>
-<li>越狱插件Tweak开发：主要用dylib</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>tweak的位置<ul>
-<li>/Library/MobileSubstrate/DynamicLibraries<ul>
-<li>存放了多种文件<ul>
-<li>dylib</li>
-<li>plist：定义插件的hook的范围</li>
-<li>bundle：插件的资源文件</li>
-</ul>
-</li>
-<li>截图举例<ul>
-<li><img src="../assets/img/dynamicLibraries_dylibs.jpg" alt="dynamicLibraries_dylibs"></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>发布<ul>
-<li>2种方式<ul>
-<li>deb包：只能在越狱后的iOS（iPhone）中安装</li>
-<li>ipa包：用（开发者自己的 或 企业）证书，把代码编译封装到ipa包，然后去安装到iOS(iPhone)中<ul>
-<li>当然也有不小的限制，但是支持普通非越狱手机</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>越狱开发=jailbreak development= development of a Tweak=开发一个插件=插件开发</li>
-<li>Theos<ul>
-<li>Theos is a little tool which helps you with all the application creation and compilation.</li>
 </ul>
 </li>
 </ul>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-06-16 10:21:02
+2022-10-27 12:09:24
 </span></footer></body></html>
                                 
                                 </section>
@@ -465,12 +417,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 越狱插件开发基础知识">
+                <a href="../ios_jb_tweak_overview/" class="navigation navigation-prev " aria-label="Previous page: iOS越狱插件开发概述">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="tweak_dev_method.html" class="navigation navigation-next " aria-label="Next page: tweak开发手段">
+                <a href="tweak.html" class="navigation navigation-next " aria-label="Next page: tweak插件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -481,7 +433,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tweak插件","level":"1.3.1","depth":2,"next":{"title":"tweak开发手段","level":"1.3.2","depth":2,"path":"jailbreak_tweak_basic/tweak_dev_method.md","ref":"jailbreak_tweak_basic/tweak_dev_method.md","articles":[]},"previous":{"title":"越狱插件开发基础知识","level":"1.3","depth":1,"path":"jailbreak_tweak_basic/README.md","ref":"jailbreak_tweak_basic/README.md","articles":[{"title":"tweak插件","level":"1.3.1","depth":2,"path":"jailbreak_tweak_basic/tweak.md","ref":"jailbreak_tweak_basic/tweak.md","articles":[]},{"title":"tweak开发手段","level":"1.3.2","depth":2,"path":"jailbreak_tweak_basic/tweak_dev_method.md","ref":"jailbreak_tweak_basic/tweak_dev_method.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_jailbreak_tweak/pdf/ios_re_jailbreak_tweak.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_jailbreak_tweak/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_jailbreak_tweak","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：越狱插件开发","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向开发领域中，关于越狱插件tweak开发的相关知识。"},"file":{"path":"jailbreak_tweak_basic/tweak.md","mtime":"2022-06-16T02:21:02.000Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-20T13:16:53.659Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"越狱插件开发基础知识","level":"1.3","depth":1,"next":{"title":"tweak插件","level":"1.3.1","depth":2,"path":"jb_tweak_basic/tweak.md","ref":"jb_tweak_basic/tweak.md","articles":[]},"previous":{"title":"iOS越狱插件开发概述","level":"1.2","depth":1,"path":"ios_jb_tweak_overview/README.md","ref":"ios_jb_tweak_overview/README.md","articles":[]},"articles":[{"title":"tweak插件","level":"1.3.1","depth":2,"path":"jb_tweak_basic/tweak.md","ref":"jb_tweak_basic/tweak.md","articles":[]},{"title":"tweak开发手段","level":"1.3.2","depth":2,"path":"jb_tweak_basic/tweak_dev_method.md","ref":"jb_tweak_basic/tweak_dev_method.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_jailbreak_tweak/pdf/ios_re_jailbreak_tweak.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_jailbreak_tweak/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_jailbreak_tweak","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：越狱插件开发","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向开发领域中，关于越狱插件tweak开发的相关知识。先是概览，然后介绍基础知识：什么是tweak插件、tweak插件的开发手段；以及具体如何用Theos/Logos、iOSOpenDev、MonkeyDev去开发tweak插件。"},"file":{"path":"jb_tweak_basic/README.md","mtime":"2022-10-27T04:09:24.331Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-27T04:10:50.164Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
