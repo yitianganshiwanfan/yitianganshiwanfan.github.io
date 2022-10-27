@@ -10,7 +10,9 @@
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_reg/common_reg/status.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_reg/reg_other.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/instruction_overview.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/instruction_list/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/instruction_list/alphabet.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/instruction_list/opcode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/mov.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/mem_op.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -18,6 +20,7 @@
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/branch_jump.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/condition_select.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/addressing.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/arithmetic_operation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/logical_calculus.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/system_call.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/popular_assembly_arm/website/arm_assembly/common_instruction/other.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
