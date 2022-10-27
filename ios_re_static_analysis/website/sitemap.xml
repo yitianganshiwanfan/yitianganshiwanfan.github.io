@@ -22,6 +22,9 @@
 <url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/analysis_examples/bin_info_exp_str.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/some_experience/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/some_experience/ida_vs_hopper.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/related_tools/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/related_tools/radare2/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/related_tools/radare2/cutter.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_static_analysis/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
