@@ -91,16 +91,11 @@
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_integrated_tool/androguard.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_integrated_tool/appknox_afe.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/android_hook_framework/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/android_hook_framework/xposed_framework.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/android_hook_framework/cydia_substrate/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/android_hook_framework/cydia_substrate/android_opendebug.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/android_hook_framework/cydia_substrate/introspy_android.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/android_emulator/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/android_emulator/nox.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/android_crack_tool/other_related_tool/file_browser.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/sub_tutorial/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/sub_tutorial/dynamic_debug.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/sub_tutorial/reverse_dev/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/android_app_security_crack/website/sub_tutorial/reverse_dev/dynamic_debug.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/android_app_security_crack/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
