@@ -1,6 +1,6 @@
 # Crifan的电子书大全
 
-最后更新：`20221029`
+最后更新：`20221030`
 
 * 目的：存放我[Crifan](https://github.com/crifan)写的各种成体系的电子书教程
 * 入口地址：[https://crifan.github.io](https://crifan.github.io)
@@ -122,5 +122,6 @@
     * [Android逆向：动态调试](https://crifan.github.io/android_re_dynamic_debug/website)
     * [Android逆向开发](https://crifan.github.io/android_reverse_dev/website)
     * [Android逆向：重新打包apk](https://crifan.github.io/android_re_repack_apk/website)
+    * [Android逆向：开启root](https://crifan.github.io/android_re_enable_root/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
