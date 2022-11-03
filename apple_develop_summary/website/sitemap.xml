@@ -4,10 +4,6 @@
 <url> <loc>https://book.crifan.org/books/apple_develop_summary/website/overview/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/apple_develop_summary/website/common/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/apple_develop_summary/website/common/ide/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/apple_develop_summary/website/common/ide/xcode/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/apple_develop_summary/website/common/ide/xcode/xcodebuild.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/apple_develop_summary/website/common/ide/xcode/xcrun.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/apple_develop_summary/website/common/ide/appcode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/apple_develop_summary/website/common/apple_developer_account.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/apple_develop_summary/website/desktop/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/apple_develop_summary/website/desktop/ideviceinstaller.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
