@@ -19,6 +19,7 @@
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_summary/objc/objc_msgsend.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_summary/objc/runtime.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_summary/po.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/sub_book/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

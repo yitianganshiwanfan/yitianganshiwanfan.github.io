@@ -3,7 +3,7 @@
 <html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
-        <title>lldb+debugserver · iOS逆向开发：动态调试</title>
+        <title>子教程 · iOS逆向开发：动态调试</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.7.1">
@@ -85,10 +85,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="frida.html" />
+    <link rel="next" href="../appendix/" />
     
     
-    <link rel="prev" href="monkeydev.html" />
+    <link rel="prev" href="../debug_summary/po.html" />
     
 
     <style>
@@ -182,9 +182,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../debug_code/">
             
-                <a href="./">
+                <a href="../debug_code/">
             
                     
                         <b>1.4.</b>
@@ -198,9 +198,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="monkeydev.html">
+        <li class="chapter " data-level="1.4.1" data-path="../debug_code/monkeydev.html">
             
-                <a href="monkeydev.html">
+                <a href="../debug_code/monkeydev.html">
             
                     
                         <b>1.4.1.</b>
@@ -213,9 +213,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="lldb_debugserver.html">
+        <li class="chapter " data-level="1.4.2" data-path="../debug_code/lldb_debugserver.html">
             
-                <a href="lldb_debugserver.html">
+                <a href="../debug_code/lldb_debugserver.html">
             
                     
                         <b>1.4.2.</b>
@@ -228,9 +228,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="frida.html">
+        <li class="chapter " data-level="1.4.3" data-path="../debug_code/frida.html">
             
-                <a href="frida.html">
+                <a href="../debug_code/frida.html">
             
                     
                         <b>1.4.3.</b>
@@ -446,9 +446,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../sub_book/">
+        <li class="chapter active" data-level="1.7" data-path="./">
             
-                <a href="../sub_book/">
+                <a href="./">
             
                     
                         <b>1.7.</b>
@@ -527,7 +527,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >lldb+debugserver</a>
+        <a href=".." >子教程</a>
     </h1>
 </div>
 
@@ -542,112 +542,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h1 id="lldbdebugserver"><a name="lldbdebugserver" class="plugin-anchor" href="#lldbdebugserver"><i class="fa fa-link" aria-hidden="true"></i></a>lldb+debugserver</h1>
-<p>TODO：</p>
+                                <html><head></head><body><h1 id="子教程"><a name="子教程" class="plugin-anchor" href="#子教程"><i class="fa fa-link" aria-hidden="true"></i></a>子教程</h1>
+<p>iOS逆向的动态调试中，已把部分独立内容整理到子教程：</p>
 <ul>
-<li>【已解决】把增加了权限的debugserver拷贝到越狱iPhone中</li>
-<li>【已解决】debugserver带日志运行报错：Failed to open log file for writing errno 1 Operation not permitted</li>
-<li>【已解决】debugserver启动iOS的app抖音报错：Segmentation fault 11</li>
-<li>【已解决】用debugserver和lldb去调试iOS的app</li>
-</ul>
-<hr>
-<p>iOS逆向调试代码逻辑的调试工具之一是：命令行的<code>lldb + debugserver</code></p>
-<p><img src="../assets/img/lldb_debugserver_arch.jpg" alt="lldb_debugserver_arch"></p>
-<ul>
-<li><code>debugserver</code><ul>
-<li>是什么：一个终端的应用<ul>
-<li>也是：<code>XCode</code>去调试iOS设备中程序时候的进程名</li>
-</ul>
-</li>
-<li>在哪里：iOS设备中<ul>
-<li>位置：<code>/Developer/usr/bin/debugserver</code></li>
-<li>注：iOS中默认没安装<ul>
-<li>iOS中安装<code>debugserver</code><ul>
-<li>在设备连接过一次<code>Xcode</code>，并在<code>Window</code>-&gt;<code>Devices</code>中添加此设备后<ul>
-<li><code>debugserver</code>才会被<code>Xcode</code>安装到<code>iOS</code>的<code>/Developer/usr/bin/</code>下</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>作用：作为服务端，接受来自远端的<code>gdb</code>或<code>lldb</code>的调试<ul>
-<li>可以理解为：<code>lldb</code>的<code>server</code></li>
-</ul>
-</li>
-<li>为何需要<ul>
-<li>iOS中，由于App运行检测到越狱后会直接退出，所以需要通过<code>debugserver</code>来启动程序</li>
-</ul>
-</li>
-<li>通过<code>debugserver</code>来启动程序<ul>
-<li>举例<ul>
-<li><code>debugserver -x backboard 0.0.0.0:1234 ./*</code></li>
-<li><code>debugserver *:1234 -a &quot;MoneyPlatListedVersion&quot;</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>从技术上，应属于：LLDB的远程调试，需要用到：<code>lldb-server</code></p>
-<ul>
-<li>lldb-server 远程调试<ul>
-<li>分2个端<ul>
-<li><code>lldb client</code><ul>
-<li>运行在 local system<ul>
-<li>比如<code>Linux</code>、<code>Mac</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>lldb server</code><ul>
-<li>不同平台<ul>
-<li><code>Linux</code>和<code>Android</code>：<code>lldb-server</code><ul>
-<li>不依赖于<code>lldb</code><ul>
-<li>因为：已静态链接包含了<code>LLDB</code>的核心功能</li>
-<li>对比：<code>lldb</code>是默认是动态链接<code>liblldb.so</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>Mac</code>和<code>iOS</code>：<code>debugserver</code></li>
-</ul>
-</li>
-<li>运行在 remote system</li>
-<li>实现了remote-gdb的功能</li>
-</ul>
-</li>
-<li>两者通讯<ul>
-<li>用的是：<code>gdb-remote</code>协议<ul>
-<li>一般是在TCP/IP之上运行</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>细节详见：<ul>
-<li><code>docs/lldb-gdb-remote.txt</code></li>
-</ul>
-</li>
-<li>资料<ul>
-<li>主页<ul>
-<li>Remote Debugging — The LLDB Debugger<ul>
-<li><a href="http://lldb.llvm.org/use/remote.html" target="_blank">http://lldb.llvm.org/use/remote.html</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>MonkeyDev<ul>
+<li><a href="https://book.crifan.org/books/ios_re_monkeydev_debug/website/" target="_blank">iOS逆向开发：MonkeyDev调试 (crifan.org)</a></li>
 </ul>
 </li>
 </ul>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-23 16:16:55
+2022-11-03 15:06:43
 </span></footer></body></html>
                                 
                                 </section>
@@ -675,12 +579,12 @@
 
             
                 
-                <a href="monkeydev.html" class="navigation navigation-prev " aria-label="Previous page: MonkeyDev">
+                <a href="../debug_summary/po.html" class="navigation navigation-prev " aria-label="Previous page: po">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="frida.html" class="navigation navigation-next " aria-label="Next page: Frida">
+                <a href="../appendix/" class="navigation navigation-next " aria-label="Next page: 附录">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -691,7 +595,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"lldb+debugserver","level":"1.4.2","depth":2,"next":{"title":"Frida","level":"1.4.3","depth":2,"path":"debug_code/frida.md","ref":"debug_code/frida.md","articles":[]},"previous":{"title":"MonkeyDev","level":"1.4.1","depth":2,"path":"debug_code/monkeydev.md","ref":"debug_code/monkeydev.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_dynamic_debug/pdf/ios_re_dynamic_debug.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_dynamic_debug/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_dynamic_debug","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：动态调试","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向中的动态调试，包括动态调试的概览；以及调试代码逻辑方面，包括调试工具的MonkeyDev、lldb+debugserver、Frida等；以及相关子领域，比如反调试和反反调试等；以及查看界面元素的工具，比如Reveal、Cycript、LLDBTools、chisel、FLEX等；最后给出一些经验心得。"},"file":{"path":"debug_code/lldb_debugserver.md","mtime":"2022-10-23T08:16:55.600Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-03T07:07:49.789Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"子教程","level":"1.7","depth":1,"next":{"title":"附录","level":"1.8","depth":1,"path":"appendix/README.md","ref":"appendix/README.md","articles":[{"title":"参考资料","level":"1.8.1","depth":2,"path":"appendix/reference.md","ref":"appendix/reference.md","articles":[]}]},"previous":{"title":"po","level":"1.6.3","depth":2,"path":"debug_summary/po.md","ref":"debug_summary/po.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_dynamic_debug/pdf/ios_re_dynamic_debug.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_dynamic_debug/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_dynamic_debug","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：动态调试","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向中的动态调试，包括动态调试的概览；以及调试代码逻辑方面，包括调试工具的MonkeyDev、lldb+debugserver、Frida等；以及相关子领域，比如反调试和反反调试等；以及查看界面元素的工具，比如Reveal、Cycript、LLDBTools、chisel、FLEX等；最后给出一些经验心得。"},"file":{"path":"sub_book/README.md","mtime":"2022-11-03T07:06:43.206Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-03T07:07:49.789Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
