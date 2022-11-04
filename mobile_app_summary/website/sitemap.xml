@@ -41,15 +41,7 @@
 <url> <loc>https://book.crifan.org/books/mobile_app_summary/website/app_ops/crash_collection/bugly.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/mobile_app_summary/website/app_ops/inside_report_issue/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/mobile_app_summary/website/app_ops/inside_report_issue/pgyer.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/ios_dev_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/language/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/language/java.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/language/kotlin.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/dev_tool/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/dev_tool/eclipse_adt.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/dev_tool/android_studio.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/android_dev_summary/good_lib_tool.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/mobile_app_summary/website/sub_book/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/mobile_app_summary/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/mobile_app_summary/website/appendix/reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
