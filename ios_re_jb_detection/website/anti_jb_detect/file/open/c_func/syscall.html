@@ -463,44 +463,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.8.1" data-path="../../../../jb_detection/dyld/dladdr.html">
-            
-                <a href="../../../../jb_detection/dyld/dladdr.html">
-            
-                    
-                        <b>1.3.8.1.</b>
-                    
-                    dladdr
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.8.2" data-path="../../../../jb_detection/dyld/dlopen_dlsym.html">
-            
-                <a href="../../../../jb_detection/dyld/dlopen_dlsym.html">
-            
-                    
-                        <b>1.3.8.2.</b>
-                    
-                    dlopen+dlsym
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.8.3" data-path="../../../../jb_detection/dyld/_dyld_series.html">
+        <li class="chapter " data-level="1.3.8.1" data-path="../../../../jb_detection/dyld/_dyld_series.html">
             
                 <a href="../../../../jb_detection/dyld/_dyld_series.html">
             
                     
-                        <b>1.3.8.3.</b>
+                        <b>1.3.8.1.</b>
                     
                     _dyld系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../../../../jb_detection/dyld/dylib.html">
+            
+                <a href="../../../../jb_detection/dyld/dylib.html">
+            
+                    
+                        <b>1.3.8.2.</b>
+                    
+                    dylib
             
                 </a>
             
@@ -874,44 +859,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.8.1" data-path="../../../dyld/dladdr.html">
-            
-                <a href="../../../dyld/dladdr.html">
-            
-                    
-                        <b>1.4.8.1.</b>
-                    
-                    dladdr
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.8.2" data-path="../../../dyld/dlopen_dlsym.html">
-            
-                <a href="../../../dyld/dlopen_dlsym.html">
-            
-                    
-                        <b>1.4.8.2.</b>
-                    
-                    dlopen+dlsym
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.8.3" data-path="../../../dyld/_dyld_series.html">
+        <li class="chapter " data-level="1.4.8.1" data-path="../../../dyld/_dyld_series.html">
             
                 <a href="../../../dyld/_dyld_series.html">
             
                     
-                        <b>1.4.8.3.</b>
+                        <b>1.4.8.1.</b>
                     
                     _dyld系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../../../dyld/dylib.html">
+            
+                <a href="../../../dyld/dylib.html">
+            
+                    
+                        <b>1.4.8.2.</b>
+                    
+                    dylib
             
                 </a>
             
@@ -939,12 +909,27 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.10" data-path="../../../getsectiondata.html">
+        <li class="chapter " data-level="1.4.10" data-path="../../../app_self.html">
+            
+                <a href="../../../app_self.html">
+            
+                    
+                        <b>1.4.10.</b>
+                    
+                    app本身
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../../../getsectiondata.html">
             
                 <a href="../../../getsectiondata.html">
             
                     
-                        <b>1.4.10.</b>
+                        <b>1.4.11.</b>
                     
                     getsectiondata
             
@@ -954,12 +939,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.11" data-path="../../../kernel_level.html">
+        <li class="chapter " data-level="1.4.12" data-path="../../../kernel_level.html">
             
                 <a href="../../../kernel_level.html">
             
                     
-                        <b>1.4.11.</b>
+                        <b>1.4.12.</b>
                     
                     内核级反越狱
             
@@ -1149,7 +1134,6 @@
 <li>【已解决】iOS的tweak插件去hook函数syscall出现递归调用死循环</li>
 <li>【已解决】iOS的tweak插件Logos的%orig的实现原理如何规避绕开原函数的递归调用</li>
 <li>【未解决】iOS反越狱检测：syscall</li>
-<li></li>
 </ul>
 <h2 id="syscall的fork"><a name="syscall的fork" class="plugin-anchor" href="#syscall的fork"><i class="fa fa-link" aria-hidden="true"></i></a>syscall的fork</h2>
 <ul>
@@ -1161,8 +1145,445 @@
 <ul>
 <li>【已解决】iOS反越狱检测hook绕过：syscall的stat和stat64</li>
 </ul>
+<hr>
+<pre class="language-"><code class="lang-c">
+<span class="token comment">/*==============================================================================
+ Define
+==============================================================================*/</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token operator">!</span><span class="token function">defined</span><span class="token punctuation">(</span>PT_DENY_ATTACH<span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">PT_DENY_ATTACH</span>          <span class="token expression"><span class="token number">31</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span>  <span class="token comment">// !defined(PT_DENY_ATTACH)</span></span>
+
+<span class="token comment">/*==============================================================================
+ Const
+==============================================================================*/</span>
+
+<span class="token comment">/*==============================================================================
+ Hook: syscall()
+==============================================================================*/</span>
+
+<span class="token comment">/*
+    https://www.theiphonewiki.com/wiki/Kernel_Syscalls
+    TODO: support syscall(access_extended)
+ */</span>
+
+
+<span class="token keyword">int</span> <span class="token function">syscall</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// normally max number of syscall parameter is not exceed 8</span>
+<span class="token comment">// refer: https://opensource.apple.com/source/xnu/xnu-4570.1.46/bsd/kern/syscalls.master</span>
+<span class="token keyword">int</span> MaxSupportArgNum_syscall <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+
+<span class="token operator">%</span><span class="token function">hookf</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> syscall<span class="token punctuation">,</span> <span class="token keyword">int</span> number<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;number=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> syscallRetValue <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Setting up some variables to get all the parameters from syscall</span>
+    <span class="token keyword">void</span> <span class="token operator">*</span>paraPtr<span class="token punctuation">,</span> <span class="token operator">*</span>paraList<span class="token punctuation">[</span>MaxSupportArgNum_syscall<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//    char *paraPtr, *paraList[MaxSupportArgNum_syscall];</span>
+    va_list argList<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> curParaNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cfgHookEnable_syscall<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// #define    SYS_fork           2</span>
+        bool isFork <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_fork <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isFork<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;number=%d -&gt; return %d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> FORK_FAILED<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> FORK_FAILED<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_open           5</span>
+        bool isOpen <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_open <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isOpen<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//int open(const char *path, int oflag, ...);</span>
+            <span class="token comment">// -&gt;</span>
+    <span class="token comment">//        int open(const char *pathname, int flags);</span>
+    <span class="token comment">//        int open(const char *pathname, int flags, mode_t mode);</span>
+
+            <span class="token comment">//5    AUE_OPEN_RWTC   ALL     { int open(user_addr_t path, int flags, int mode) NO_SYSCALL_STUB; }</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> fisrtPath <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> secondFlags <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//        mode_t thirdMode = va_arg(argList, mode_t);</span>
+            <span class="token class-name">mode_t</span> thirdMode <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">mode_t</span><span class="token punctuation">)</span><span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;fisrtPath=%{public}s, secondFlags=%d, thirdMode=%d&quot;</span><span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> secondFlags<span class="token punctuation">,</span> thirdMode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            bool isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>fisrtPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                errno <span class="token operator">=</span> ENOENT<span class="token punctuation">;</span>
+                <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;set errno=%d&quot;</span><span class="token punctuation">,</span> errno<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                syscallRetValue <span class="token operator">=</span> OPEN_FAILED<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> secondFlags<span class="token punctuation">,</span> thirdMode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_open: number=%d -&gt; isJbPath=%{bool}d, fisrtPath=%{public}s -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_ptrace         26</span>
+        bool isPtrace <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_ptrace <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isPtrace<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">// https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man2/ptrace.2.html</span>
+            <span class="token comment">// int ptrace(int request, pid_t pid, caddr_t addr, int data);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> request <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> pid <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">char</span><span class="token operator">*</span> addr <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> data <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;request=%d, pid=%d, addr=%p, data=%d&quot;</span><span class="token punctuation">,</span> request<span class="token punctuation">,</span> pid<span class="token punctuation">,</span> addr<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>PT_DENY_ATTACH <span class="token operator">==</span> request<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> PTRACE_FAILED<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> pid<span class="token punctuation">,</span> addr<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_ptrace: request=%d, pid=%d, addr=%p, data=%d -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> request<span class="token punctuation">,</span> pid<span class="token punctuation">,</span> addr<span class="token punctuation">,</span> data<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_access         33</span>
+        bool isAccess <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_access <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isAccess<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// int access(const char *path, int amode);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> path <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> amode <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isAccess=%{bool}d, path=%{public}s, amode=0x%x&quot;</span><span class="token punctuation">,</span> isAccess<span class="token punctuation">,</span> path<span class="token punctuation">,</span> amode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            bool isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> ACCESS_FAILED<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> path<span class="token punctuation">,</span> amode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_access: number=%d -&gt; path=%{public}s, amode=0x%x -&gt; isJbPath=%{bool}d -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> path<span class="token punctuation">,</span> amode<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_statfs         157</span>
+        bool isStatfs <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_statfs <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isStatfs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// int statfs(const char *path, struct statfs *buf);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> path <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span> buf <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isStatfs=%{bool}d, path=%{public}s, buf=%p&quot;</span><span class="token punctuation">,</span> isStatfs<span class="token punctuation">,</span> path<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            bool isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> STATFS_FAILED<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> path<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_statfs: number=%d -&gt; path=%{public}s, buf=%p -&gt; isJbPath=%{bool}d -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> path<span class="token punctuation">,</span> buf<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_fstatfs        158</span>
+        bool isFstatfs <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_fstatfs <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isFstatfs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            bool isGetPathOk <span class="token operator">=</span> false<span class="token punctuation">;</span>
+            bool isJbPath <span class="token operator">=</span> false<span class="token punctuation">;</span>
+            <span class="token keyword">char</span> parsedPath<span class="token punctuation">[</span>PATH_MAX<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token function">memset</span><span class="token punctuation">(</span>parsedPath<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> PATH_MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// int fstatfs(int fd, struct statfs *buf);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> fd <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span> buf <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isFstatfs=%{bool}d, fd=%d, buf=%p&quot;</span><span class="token punctuation">,</span> isFstatfs<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            isGetPathOk <span class="token operator">=</span> <span class="token function">getFilePath</span><span class="token punctuation">(</span>fd<span class="token punctuation">,</span> parsedPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isGetPathOk=%s, parsedPath=%s&quot;</span><span class="token punctuation">,</span> <span class="token function">boolToStr</span><span class="token punctuation">(</span>isGetPathOk<span class="token punctuation">)</span><span class="token punctuation">,</span> parsedPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isGetPathOk<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>parsedPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    syscallRetValue <span class="token operator">=</span> STATFS_FAILED<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">// can not get path -&gt; can not check is jailbreak or not -&gt; not hook</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_fstatfs: number=%d -&gt; fd=%d, buf=%p -&gt; isJbPath=%{bool}d -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> buf<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_stat           188</span>
+        <span class="token comment">// #define    SYS_stat64         338</span>
+        bool isStat <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_stat <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bool isStat64 <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_stat64 <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isStat <span class="token operator">||</span> isStat64<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//int     stat(const char *, struct stat *) __DARWIN_INODE64(stat);</span>
+            <span class="token comment">//int     stat64(const char *, struct stat64 *) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_5, __MAC_10_6, __IPHONE_NA, __IPHONE_NA);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> fisrtPath <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">void</span> <span class="token operator">*</span>secondStat <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isStat=%{bool}d, isStat64=%{BOOL}d, fisrtPath=%{public}s, secondStat=%p&quot;</span><span class="token punctuation">,</span> isStat<span class="token punctuation">,</span> isStat64<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> secondStat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            bool isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>fisrtPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span>  OPEN_FAILED<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">//        if (isStat){</span>
+        <span class="token comment">//            struct stat *statInfo = (struct stat *)secondStat;</span>
+        <span class="token comment">//            syscallRetValue = %orig(number, fisrtPath, statInfo);</span>
+        <span class="token comment">//        } else if(isStat64){</span>
+        <span class="token comment">//            struct stat64 *stat64Info = (struct stat64 *)secondStat;</span>
+        <span class="token comment">//            syscallRetValue = %orig(number, fisrtPath, stat64Info);</span>
+        <span class="token comment">//        }</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> secondStat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_stat/SYS_stat64: number=%d -&gt; isJbPath=%{bool}d, fisrtPath=%{public}s -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_fstat          189</span>
+        bool isFstat <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_fstat <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isFstat<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            bool isGetPathOk <span class="token operator">=</span> false<span class="token punctuation">;</span>
+            bool isJbPath <span class="token operator">=</span> false<span class="token punctuation">;</span>
+            <span class="token keyword">char</span> parsedPath<span class="token punctuation">[</span>PATH_MAX<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token function">memset</span><span class="token punctuation">(</span>parsedPath<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> PATH_MAX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// int fstat(int fd, struct stat *buf);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> fd <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span> buf <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isFstat=%{bool}d, fd=%d, buf=%p&quot;</span><span class="token punctuation">,</span> isFstat<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            isGetPathOk <span class="token operator">=</span> <span class="token function">getFilePath</span><span class="token punctuation">(</span>fd<span class="token punctuation">,</span> parsedPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isGetPathOk=%{bool}d, parsedPath=%s&quot;</span><span class="token punctuation">,</span> isGetPathOk<span class="token punctuation">,</span> parsedPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isGetPathOk<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>parsedPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    syscallRetValue <span class="token operator">=</span>  STAT_FAILED<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_fstat: number=%d -&gt; fd=%d -&gt; isGetPathOk=%{bool}d, parsedPath=%{public}s -&gt; isJbPath=%{bool}d -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> fd<span class="token punctuation">,</span> isGetPathOk<span class="token punctuation">,</span> parsedPath<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_lstat          190</span>
+        bool isLstat <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_lstat <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isLstat<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// int lstat(const char* path, struct stat* buf);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> fisrtPath <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span> secondBuf <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isLstat=%{bool}d, fisrtPath=%{public}s, secondBuf=%p&quot;</span><span class="token punctuation">,</span> isLstat<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> secondBuf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            bool isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>fisrtPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span>  STAT_FAILED<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> secondBuf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_lstat: number=%d -&gt; isJbPath=%{bool}d, fisrtPath=%{public}s -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> fisrtPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// #define    SYS_fstatat        469</span>
+        bool isFstatat <span class="token operator">=</span> <span class="token punctuation">(</span>SYS_fstatat <span class="token operator">==</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isFstatat<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            bool isJbPath <span class="token operator">=</span> false<span class="token punctuation">;</span>
+
+            <span class="token comment">// int fstatat(int dirfd, const char *pathname, struct stat *buf, int flags);</span>
+            <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> dirfd <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>pathname <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">struct</span> <span class="token class-name">stat</span> <span class="token operator">*</span>buf <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> flags <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isFstatat=%{bool}d, dirfd=%d, pathname=%{public}s, buf=%p, flags=%d&quot;</span><span class="token punctuation">,</span> isFstatat<span class="token punctuation">,</span> dirfd<span class="token punctuation">,</span> pathname<span class="token punctuation">,</span> buf<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> absPath <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+            bool isAbsPath <span class="token operator">=</span> <span class="token function">strStartsWith</span><span class="token punctuation">(</span>pathname<span class="token punctuation">,</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isAbsPath=%{bool}d&quot;</span><span class="token punctuation">,</span> isAbsPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isAbsPath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                absPath <span class="token operator">=</span> pathname<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">// is relative path</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>dirfd <span class="token operator">==</span> AT_FDCWD<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;dirfd is AT_FDCWD=%d&quot;</span><span class="token punctuation">,</span> AT_FDCWD<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                    <span class="token comment">// pathname is interpreted relative to the current working directory of the calling process (like access())</span>
+                    <span class="token comment">// TODO: try get current working directory -&gt; avoid caller pass the special path, finnaly is jailbreak path</span>
+                    <span class="token comment">// eg: current working directory is &quot;/usr/xxx/yyy/&quot;, then pass in &quot;../../libexec/cydia/zzz&quot;</span>
+                    <span class="token comment">// finnal path is &quot;/usr/libexec/cydia/zzz&quot;, match jailbreak path: &quot;/usr/libexec/cydia/&quot;, is jaibreak path</span>
+                    <span class="token comment">// but use &quot;../../libexec/cydia/zzz&quot; can not check whether is jailbreak path</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// get file path from dir fd</span>
+                    <span class="token keyword">char</span> filePath<span class="token punctuation">[</span>PATH_MAX<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    bool isGetPathOk <span class="token operator">=</span> <span class="token function">getFilePath</span><span class="token punctuation">(</span>dirfd<span class="token punctuation">,</span> filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;isGetPathOk=%s&quot;</span><span class="token punctuation">,</span> <span class="token function">boolToStr</span><span class="token punctuation">(</span>isGetPathOk<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>isGetPathOk<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">char</span><span class="token operator">*</span> fullPath <span class="token operator">=</span> <span class="token function">strPathJoin</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> pathname<span class="token punctuation">)</span>
+                        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;fullPath=%{public}s&quot;</span><span class="token punctuation">,</span> fullPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        absPath <span class="token operator">=</span> fullPath<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">NULL</span> <span class="token operator">!=</span> absPath<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                isJbPath <span class="token operator">=</span> <span class="token function">isJailbreakPath</span><span class="token punctuation">(</span>absPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;absPath=%{public}s -&gt; isJbPath=%{bool}d&quot;</span><span class="token punctuation">,</span> absPath<span class="token punctuation">,</span> isJbPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>isJbPath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;hook jailbreak path: %s&quot;</span><span class="token punctuation">,</span> absPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    syscallRetValue <span class="token operator">=</span> STATFS_FAILED<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> dirfd<span class="token punctuation">,</span> pathname<span class="token punctuation">,</span> buf<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> dirfd<span class="token punctuation">,</span> pathname<span class="token punctuation">,</span> buf<span class="token punctuation">,</span> flags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;SYS_fstatat: number=%d -&gt; dirfd=%d, pathname=%{public}s, buf=%p, flags=0x%x -&gt; isJbPath=%{bool}d -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> dirfd<span class="token punctuation">,</span> pathname<span class="token punctuation">,</span> buf<span class="token punctuation">,</span> flags<span class="token punctuation">,</span> isJbPath<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token function">va_start</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>paraPtr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>argList<span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//    while ((paraPtr = (char *) va_arg(argList, char *))) {</span>
+        paraList<span class="token punctuation">[</span>curParaNum<span class="token punctuation">]</span> <span class="token operator">=</span> paraPtr<span class="token punctuation">;</span>
+        curParaNum <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;[%d] paraPtr=%p&quot;</span><span class="token punctuation">,</span> curParaNum<span class="token punctuation">,</span> paraPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">va_end</span><span class="token punctuation">(</span>argList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//    iosLogDebug(&quot;argList=%{public}s&quot;, argList);</span>
+    <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;curParaNum=%d&quot;</span><span class="token punctuation">,</span> curParaNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//    return %orig;</span>
+<span class="token comment">//    return %orig(number, ...);</span>
+<span class="token comment">//    int retValue = %orig();</span>
+
+<span class="token comment">//    int retValue = callOriginSyscall(number, curParaNum, paraList);</span>
+<span class="token comment">////    int retValue = callOriginSyscall(number, curParaNum, (void *)paraList);</span>
+<span class="token comment">//    iosLogDebug(&quot;retValue=%d&quot;, retValue);</span>
+<span class="token comment">//    return retValue;</span>
+
+    <span class="token keyword">int</span> paraNum <span class="token operator">=</span> curParaNum<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para3 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p,para3=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para3 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para4 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p,para3=%p,para4=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para3 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para4 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para5 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p,para3=%p,para4=%p,para5=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">6</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para3 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para4 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para5 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para6 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p,para3=%p,para4=%p,para5=%p,para6=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">7</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para3 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para4 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para5 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para6 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para7 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p,para3=%p,para4=%p,para5=%p,para6=%p,para7=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">,</span> para7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">,</span> para7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">8</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para3 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para4 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para5 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para6 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para7 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para8 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p,para3=%p,para4=%p,para5=%p,para6=%p,para7=%p,para8=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">,</span> para7<span class="token punctuation">,</span> para8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">,</span> para7<span class="token punctuation">,</span> para8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">9</span> <span class="token operator">==</span> paraNum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para1 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para2 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para3 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para4 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para5 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para6 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para7 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para8 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span><span class="token operator">*</span> para9 <span class="token operator">=</span> paraList<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">iosLogDebug</span><span class="token punctuation">(</span><span class="token string">&quot;para1=%p,para2=%p,para3=%p,para4=%p,para5=%p,para6=%p,para7=%p,para8=%p,para9=%p&quot;</span><span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">,</span> para7<span class="token punctuation">,</span> para8<span class="token punctuation">,</span> para9<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        syscallRetValue <span class="token operator">=</span> <span class="token operator">%</span><span class="token function">orig</span><span class="token punctuation">(</span>number<span class="token punctuation">,</span> para1<span class="token punctuation">,</span> para2<span class="token punctuation">,</span> para3<span class="token punctuation">,</span> para4<span class="token punctuation">,</span> para5<span class="token punctuation">,</span> para6<span class="token punctuation">,</span> para7<span class="token punctuation">,</span> para8<span class="token punctuation">,</span> para9<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">iosLogInfo</span><span class="token punctuation">(</span><span class="token string">&quot;number=%d -&gt; syscallRetValue=%d&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> syscallRetValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> syscallRetValue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-25 21:56:59
+2022-11-06 15:06:14
 </span></footer></body></html>
                                 
                                 </section>
@@ -1206,7 +1627,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"syscall","level":"1.4.2.1.1.1","depth":5,"next":{"title":"svc 0x80内联汇编","level":"1.4.2.1.1.2","depth":5,"path":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","ref":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","articles":[]},"previous":{"title":"C函数","level":"1.4.2.1.1","depth":4,"path":"anti_jb_detect/file/open/c_func/README.md","ref":"anti_jb_detect/file/open/c_func/README.md","articles":[{"title":"syscall","level":"1.4.2.1.1.1","depth":5,"path":"anti_jb_detect/file/open/c_func/syscall.md","ref":"anti_jb_detect/file/open/c_func/syscall.md","articles":[]},{"title":"svc 0x80内联汇编","level":"1.4.2.1.1.2","depth":5,"path":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","ref":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_jb_detection/pdf/ios_re_jb_detection.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_jb_detection/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_jb_detection","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：越狱检测和反越狱检测","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向期间涉及到的iOS的越狱检测和反越狱检测方面的内容。包括常用的越狱检测手段，比如URL Scheme、文件方面的：文件属性、文件打开和文件写入；其中文件打开又包括C函数和iOS函数，其中C函数又包括syscall的C函数和svc 0x80内联汇编；以及文件写入包括C函数和iOS函数；以及其他检测手段：环境变量、是否可调试、system、沙箱完整性校验、越狱相关进程、dyld动态库，包括dladdr，dlopen+dlsym和_dyld开头的系列函数、ObjC运行时、app本身、已安装app、SSH相关、getsectiondata等；以及上述各种方法的反越狱检测的具体实现，以及其他一些额外的反越狱检测手段，比如内核级反越狱；接着整理越狱检测和反越狱检测的通用的内容，比如app的启动过程、越狱路径相关，尤其是越狱路径列表。以及其他一些心得。"},"file":{"path":"anti_jb_detect/file/open/c_func/syscall.md","mtime":"2022-10-25T13:56:59.890Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-04T09:31:19.022Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"syscall","level":"1.4.2.1.1.1","depth":5,"next":{"title":"svc 0x80内联汇编","level":"1.4.2.1.1.2","depth":5,"path":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","ref":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","articles":[]},"previous":{"title":"C函数","level":"1.4.2.1.1","depth":4,"path":"anti_jb_detect/file/open/c_func/README.md","ref":"anti_jb_detect/file/open/c_func/README.md","articles":[{"title":"syscall","level":"1.4.2.1.1.1","depth":5,"path":"anti_jb_detect/file/open/c_func/syscall.md","ref":"anti_jb_detect/file/open/c_func/syscall.md","articles":[]},{"title":"svc 0x80内联汇编","level":"1.4.2.1.1.2","depth":5,"path":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","ref":"anti_jb_detect/file/open/c_func/svc_0x80_asm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_jb_detection/pdf/ios_re_jb_detection.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_jb_detection/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_jb_detection","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：越狱检测和反越狱检测","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向期间涉及到的iOS的越狱检测和反越狱检测方面的内容。包括常用的越狱检测手段，比如URL Scheme、文件方面的：文件属性、文件打开和文件写入；其中文件打开又包括C函数和iOS函数，其中C函数又包括syscall的C函数和svc 0x80内联汇编；以及文件写入包括C函数和iOS函数；以及其他检测手段：环境变量、是否可调试、system、沙箱完整性校验、越狱相关进程、dyld动态库，包括dylib的dladdr、dlopen、dlsym和_dyld开头的系列函数、ObjC运行时、app本身、已安装app、SSH相关、getsectiondata等；以及上述各种方法的反越狱检测的具体实现，以及其他一些额外的反越狱检测手段，比如内核级反越狱；接着整理越狱检测和反越狱检测的通用的内容，比如app的启动过程、越狱路径相关，尤其是越狱路径列表。以及其他一些心得。且均已贴出相关的越狱检测和反越狱检测的代码段和独立的代码仓库。"},"file":{"path":"anti_jb_detect/file/open/c_func/syscall.md","mtime":"2022-11-06T07:06:14.516Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-06T08:28:42.883Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
