@@ -3,12 +3,11 @@
 <html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>设备端安全 · 信息安全概览</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="Crifan Li <admin@crifan.org>">
+        <meta name="generator" content="HonKit 3.7.1">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
         
         
     
@@ -21,11 +20,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-menu/expandable-chapters.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
@@ -33,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter-nosessionbutcookie/splitter.css">
                 
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
                 
             
                 
@@ -110,7 +105,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -817,8 +812,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本书使用 GitBook 发布
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
         </a>
     </li>
 </ul>
@@ -856,88 +851,78 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8BBE;&#x5907;&#x7AEF;&#x5B89;&#x5168;"><a name="&#x8BBE;&#x5907;&#x7AEF;&#x5B89;&#x5168;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x7AEF;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x7AEF;&#x5B89;&#x5168;</h1>
-<p>&#x548C;Web&#x7F51;&#x7EDC;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x7EDF;&#x79F0;&#x4E3A; &#x8BBE;&#x5907;&#x7AEF;&#x7684;&#x5B89;&#x5168;&#x3002;</p>
-<p>&#x4E3B;&#x8981;&#x5305;&#x62EC;&#xFF1A;</p>
+                                <html><head></head><body><h1 id="设备端安全"><a name="设备端安全" class="plugin-anchor" href="#设备端安全"><i class="fa fa-link" aria-hidden="true"></i></a>设备端安全</h1>
+<p>TODO：</p>
+<p>【未解决】Mac中有哪些常用的破解逆向方面的工具软件</p>
+<hr>
+<p>和Web网络相对应的，可以统称为 设备端的安全。</p>
+<p>主要包括：</p>
 <ul>
-<li>PC&#x7AEF;<ul>
+<li>PC端<ul>
 <li><code>Windows</code></li>
 <li><code>Mac</code></li>
 <li><code>Linux</code></li>
 </ul>
 </li>
-<li>&#x79FB;&#x52A8;&#x7AEF;<ul>
+<li>移动端<ul>
 <li><code>Android</code></li>
 <li><code>iOS</code></li>
 </ul>
 </li>
-<li><code>IoT</code>=&#x7269;&#x8054;&#x7F51;&#x8BBE;&#x5907;</li>
+<li><code>IoT</code>=物联网设备</li>
 </ul>
-<p>&#x4E0B;&#x9762;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7EF4;&#x5EA6;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
-<h2 id="&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;-&#x9006;&#x5411;&#x5DE5;&#x7A0B;-&#x5DE5;&#x5177;"><a name="&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;-&#x9006;&#x5411;&#x5DE5;&#x7A0B;-&#x5DE5;&#x5177;" class="plugin-anchor" href="#&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;-&#x9006;&#x5411;&#x5DE5;&#x7A0B;-&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6; &#x9006;&#x5411;&#x5DE5;&#x7A0B; &#x5DE5;&#x5177;</h2>
+<p>下面根据不同维度详细介绍。</p>
+<h2 id="可执行文件-逆向工程-工具"><a name="可执行文件-逆向工程-工具" class="plugin-anchor" href="#可执行文件-逆向工程-工具"><i class="fa fa-link" aria-hidden="true"></i></a>可执行文件 逆向工程 工具</h2>
 <ul>
-<li><code>Windows</code>&#x7684;<code>PE</code>&#x683C;&#x5F0F;&#x7684;<code>exe&#x6587;&#x4EF6;</code>&#x3001;<code>dll&#x6587;&#x4EF6;</code><ul>
+<li><code>Windows</code>的<code>PE</code>格式的<code>exe文件</code>、<code>dll文件</code><ul>
 <li><code>OllyDBG</code></li>
-<li><code>IDA PRO</code><ul>
-<li>&#x4E8C;&#x8FDB;&#x5236;&#x5206;&#x6790;</li>
+<li><a href="https://book.crifan.org/books/reverse_tool_ida/website/" target="_blank">IDA</a><ul>
+<li>二进制分析</li>
 </ul>
 </li>
 <li><code>Hiew</code><ul>
-<li>&#x53CD;&#x6C47;&#x7F16; + 16&#x8FDB;&#x5236;&#x7F16;&#x8F91;&#x5668;</li>
-<li>&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x65E0;GUI</li>
+<li>反汇编 + 16进制编辑器</li>
+<li>命令行，无GUI</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>Linux</code>&#x7684;<code>ELF</code>&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;<ul>
+<li><code>Linux</code>的<code>ELF</code>格式的文件<ul>
 <li><code>GDB</code></li>
-<li><code>IDA PRO</code></li>
-<li><code>Hopper</code><ul>
-<li>Disassembler + Pseudo C decompiler</li>
-</ul>
-</li>
+<li><a href="https://book.crifan.org/books/reverse_tool_ida/website/" target="_blank">IDA</a></li>
+<li><a href="https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/analysis_code_logic/hopper.html" target="_blank">Hopper</a></li>
 <li><code>Evan&apos;s debugger</code><ul>
-<li>Linux&#x4E2D;&#x7C7B;&#x4F3C;&#x4E8E;OllyDBG&#x7684;&#x5DE5;&#x5177;</li>
+<li>Linux中类似于OllyDBG的工具</li>
 </ul>
 </li>
 <li><code>Insight</code><ul>
-<li>GDB&#x7684;GUI</li>
-<li>&#x6709;&#x70B9;&#x8FC7;&#x65F6;&#x4E86;</li>
+<li>GDB的GUI</li>
+<li>有点过时了</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>Mac</code>&#x7684;<code>MACH-O</code>&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;<ul>
-<li><code>Hopper</code></li>
-<li><code>IDA PRO</code></li>
-<li><code>LLDB</code></li>
+<li><code>Mac</code>的二进制=<code>iOS</code>的二进制=<code>Mach-O</code>格式的文件<ul>
+<li><a href="https://book.crifan.org/books/ios_re_static_analysis/website/analysis_content/analysis_code_logic/hopper.html" target="_blank">Hopper</a></li>
+<li><a href="https://book.crifan.org/books/reverse_tool_ida/website/" target="_blank">IDA</a></li>
 <li><code>MachOView</code></li>
+<li><code>otool</code></li>
+<li><a href="https://book.crifan.org/books/xcode_debugger_lldb/website/" target="_blank">LLDB</a></li>
 </ul>
 </li>
-<li><code>Android</code>&#x7684;<code>dex</code>&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#xFF08;apk&#x6587;&#x4EF6;&#x5185;&#x7684;&#xFF09;<ul>
-<li><code>APK TOOL</code><ul>
-<li>Disassembler and Assembler (SMALI)</li>
-</ul>
-</li>
+<li><code>Android</code>的<code>dex</code>格式的文件（apk文件内的）<ul>
+<li><a href="https://book.crifan.org/books/android_re_repack_apk/website/repack_tool/apktool.html" target="_blank">apktool</a></li>
 <li><code>JEB</code><ul>
 <li>Android disassembler (SMALI) and decompiler (JAVA)</li>
 </ul>
 </li>
-<li>IDA PRO</li>
-</ul>
-</li>
-<li><code>iOS</code>&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;<ul>
-<li><code>IDA Pro</code></li>
-<li><code>Hopper</code></li>
-<li><code>otool</code></li>
+<li><a href="https://book.crifan.org/books/reverse_tool_ida/website/" target="_blank">IDA</a></li>
 </ul>
 </li>
 </ul>
-<p>TODO&#xFF1A;</p>
-<p>&#x3010;&#x672A;&#x89E3;&#x51B3;&#x3011;Mac&#x4E2D;&#x6709;&#x54EA;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x7834;&#x89E3;&#x9006;&#x5411;&#x65B9;&#x9762;&#x7684;&#x5DE5;&#x5177;&#x8F6F;&#x4EF6;</p>
-<footer class="page-footer"><span class="copyright">crifan.org&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
-2021-05-29 14:11:52
-</span></footer>
+<footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
+2022-11-07 16:04:07
+</span></footer></body></html>
                                 
                                 </section>
                             
@@ -980,17 +965,61 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设备端安全","level":"1.5","depth":1,"next":{"title":"计算机安全","level":"1.5.1","depth":2,"path":"device_security/pc_security.md","ref":"device_security/pc_security.md","articles":[]},"previous":{"title":"渗透测试","level":"1.4.1","depth":2,"path":"web_security/penetration_test.md","ref":"web_security/penetration_test.md","articles":[]},"dir":"ltr"},"config":{"plugins":["google-adsense","theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/information_security_overview/pdf/information_security_overview.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/information_security_overview/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"google-adsense":{"ads":[{"client":"ca-pub-6626240105039250"}]},"github-buttons":{"buttons":[{"repo":"information_security_overview","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.org>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"信息安全概览","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"3.2.3","description":"边学习信息安全技术，边总结技术教程。已整理出宏观的各个方面的安全的分类和概念。以及基本的计算机安全、移动端安全、物联网安全等细节内容。目前已把部分内容抽出成独立子教程，包括Web安全、渗透测试、安全分析、二进制安全、iOS安全、Android安全、工控安全。"},"file":{"path":"device_security/README.md","mtime":"2021-05-29T06:11:52.758Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-18T02:30:55.084Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"设备端安全","level":"1.5","depth":1,"next":{"title":"计算机安全","level":"1.5.1","depth":2,"path":"device_security/pc_security.md","ref":"device_security/pc_security.md","articles":[]},"previous":{"title":"渗透测试","level":"1.4.1","depth":2,"path":"web_security/penetration_test.md","ref":"web_security/penetration_test.md","articles":[]},"articles":[{"title":"计算机安全","level":"1.5.1","depth":2,"path":"device_security/pc_security.md","ref":"device_security/pc_security.md","articles":[]},{"title":"移动安全","level":"1.5.2","depth":2,"path":"device_security/mobile/README.md","ref":"device_security/mobile/README.md","articles":[{"title":"Android安全","level":"1.5.2.1","depth":3,"path":"device_security/mobile/android.md","ref":"device_security/mobile/android.md","articles":[]},{"title":"iOS安全","level":"1.5.2.2","depth":3,"path":"device_security/mobile/ios.md","ref":"device_security/mobile/ios.md","articles":[]}]},{"title":"工控物联网安全","level":"1.5.3","depth":2,"path":"device_security/industrial_control_iot/README.md","ref":"device_security/industrial_control_iot/README.md","articles":[]},{"title":"特定设备安全","level":"1.5.4","depth":2,"path":"device_security/specific_device/README.md","ref":"device_security/specific_device/README.md","articles":[{"title":"WiFi安全","level":"1.5.4.1","depth":3,"path":"device_security/specific_device/wifi/README.md","ref":"device_security/specific_device/wifi/README.md","articles":[{"title":"Aircrack-ng","level":"1.5.4.1.1","depth":4,"path":"device_security/specific_device/wifi/aircrack_ng.md","ref":"device_security/specific_device/wifi/aircrack_ng.md","articles":[]},{"title":"Wifiphisher","level":"1.5.4.1.2","depth":4,"path":"device_security/specific_device/wifi/wifiphisher.md","ref":"device_security/specific_device/wifi/wifiphisher.md","articles":[]}]}]}],"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/information_security_overview/pdf/information_security_overview.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/information_security_overview/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"information_security_overview","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"信息安全概览","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"边学习信息安全技术，边总结技术教程。已整理出宏观的各个方面的安全的分类和概念。以及基本的计算机安全、移动端安全、物联网安全等细节内容。目前已把部分内容抽出成独立子教程，包括Web安全、渗透测试、安全分析、二进制安全、iOS安全、Android安全、工控安全。"},"file":{"path":"device_security/README.md","mtime":"2022-11-07T08:04:07.275Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-07T08:11:57.569Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-google-adsense/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-menu/expandable-chapters.js"></script>
         
     
         
@@ -1002,31 +1031,15 @@
         
     
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter-nosessionbutcookie/splitter.js"></script>
         
     
         
         <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         

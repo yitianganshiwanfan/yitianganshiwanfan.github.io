@@ -3,12 +3,11 @@
 <html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>TEE · 信息安全概览</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="Crifan Li <admin@crifan.org>">
+        <meta name="generator" content="HonKit 3.7.1">
+        <meta name="author" content="Crifan Li <admin@crifan.com>">
         
         
     
@@ -21,11 +20,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-menu/expandable-chapters.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
@@ -33,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter-nosessionbutcookie/splitter.css">
                 
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
                 
             
                 
@@ -110,7 +105,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -817,8 +812,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本书使用 GitBook 发布
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
         </a>
     </li>
 </ul>
@@ -856,66 +851,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="tee"><a name="tee" class="plugin-anchor" href="#tee"><i class="fa fa-link" aria-hidden="true"></i></a>TEE</h1>
+                                <html><head></head><body><h1 id="tee"><a name="tee" class="plugin-anchor" href="#tee"><i class="fa fa-link" aria-hidden="true"></i></a>TEE</h1>
 <ul>
 <li><code>TEE</code>=<code>OP-TEE</code><ul>
-<li>&#x540D;&#x79F0;<ul>
-<li><code>TEE</code>=<code>Trusted Execution Environment</code>=<code>&#x4FE1;&#x4EFB;&#x6267;&#x884C;&#x73AF;&#x5883;</code>=<code>&#x53EF;&#x4FE1;&#x4EFB;&#x6267;&#x884C;&#x73AF;&#x5883;</code></li>
-<li><code>OP-TEE</code>=<code>Open Portable Trusted Execution Environment</code>=<code>Open-Source Portable Trusted Execution Environment</code>=<code>&#x5F00;&#x653E;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x53EF;&#x4FE1;&#x4EFB;&#x6267;&#x884C;&#x73AF;&#x5883;</code></li>
+<li>名称<ul>
+<li><code>TEE</code>=<code>Trusted Execution Environment</code>=<code>信任执行环境</code>=<code>可信任执行环境</code></li>
+<li><code>OP-TEE</code>=<code>Open Portable Trusted Execution Environment</code>=<code>Open-Source Portable Trusted Execution Environment</code>=<code>开放可移植的可信任执行环境</code></li>
 </ul>
 </li>
-<li>&#x4E00;&#x53E5;&#x8BDD;&#x63CF;&#x8FF0;<ul>
-<li>&#x57FA;&#x4E8E;TrustZone&#x6280;&#x672F;&#x642D;&#x5EFA;&#x7684;&#x5B89;&#x5168;&#x6267;&#x884C;&#x73AF;&#x5883;<ul>
+<li>一句话描述<ul>
+<li>基于TrustZone技术搭建的安全执行环境<ul>
 <li>designed as companion to a non-secure Linux kernel running on Arm<ul>
-<li>&#x6CE8;&#xFF1A;Cortex-A cores using the TrustZone technology</li>
+<li>注：Cortex-A cores using the TrustZone technology</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>&#x7528;&#x9014;=&#x76EE;&#x7684;=&#x4E3A;&#x4EC0;&#x4E48;<ul>
-<li>&#x4E3A;&#x4E86;&#x66F4;&#x5B89;&#x5168;<ul>
-<li>&#x5904;&#x7406;&#x90A3;&#x4E9B;&#x9700;&#x8981;&#x548C;&#x5B89;&#x5168;&#x5BC6;&#x5207;&#x76F8;&#x5173;&#x7684;&#x3001;&#x9700;&#x8981;&#x4FDD;&#x5BC6;&#x5904;&#x7406;&#x7684;&#x4FE1;&#x606F;</li>
+<li>用途=目的=为什么<ul>
+<li>为了更安全<ul>
+<li>处理那些需要和安全密切相关的、需要保密处理的信息</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>&#x5386;&#x53F2;<ul>
-<li>&#x6700;&#x65E9;&#x662F;ST-Ericsson&#x5F00;&#x53D1;&#x7684;<ul>
+<li>历史<ul>
+<li>最早是ST-Ericsson开发的<ul>
 <li><a href="http://www.stericsson.com/" target="_blank">http://www.stericsson.com/</a></li>
 </ul>
 </li>
-<li>2013&#x5E74;&#xFF0C;ST-Ericsson&#x5B9E;&#x73B0;&#x4E86;&#x517C;&#x5BB9;<code>GlobalPlatform</code><ul>
+<li>2013年，ST-Ericsson实现了兼容<code>GlobalPlatform</code><ul>
 <li><a href="https://globalplatform.org/" target="_blank">https://globalplatform.org/</a></li>
 </ul>
 </li>
-<li>2013&#x5E74;&#x4E4B;&#x540E;&#xFF0C;ST&#x548C;Ericsson&#x5206;&#x5F00;&#x4E86;</li>
-<li>&#x73B0;&#x5728;TEE&#x5C5E;&#x4E8E;STMicroelectronics<ul>
+<li>2013年之后，ST和Ericsson分开了</li>
+<li>现在TEE属于STMicroelectronics<ul>
 <li><a href="https://www.st.com/content/st_com/en.html" target="_blank">https://www.st.com/content/st_com/en.html</a></li>
 </ul>
 </li>
-<li>2013&#x5E74;&#x540E;&#x671F;&#xFF0C;Linaro&#x6210;&#x7ACB;&#x4E86;<code>SWG</code>=<code>Security Working Group</code>=<code>&#x5B89;&#x5168;&#x5DE5;&#x4F5C;&#x7EC4;</code><ul>
-<li>&#x5176;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4EFB;&#x52A1;&#x4E4B;&#x4E00;&#x5C31;&#x662F;&#x7EE7;&#x7EED;&#x5F00;&#x53D1;TEE</li>
+<li>2013年后期，Linaro成立了<code>SWG</code>=<code>Security Working Group</code>=<code>安全工作组</code><ul>
+<li>其最重要的任务之一就是继续开发TEE</li>
 </ul>
 </li>
-<li>&#x5728;&#x5F00;&#x6E90;TEE&#x4E4B;&#x524D;&#xFF0C;&#x82B1;&#x4E86;&#x5F88;&#x591A;&#x4E2A;&#x6708;&#x53BB;&#x628A;&#x4E4B;&#x524D;&#x90E8;&#x5206;&#x79C1;&#x6709;&#x6A21;&#x5757;&#xFF0C;&#x6362;&#x6210;&#x5F00;&#x6E90;&#x5B9E;&#x73B0;<ul>
-<li>&#x5305;&#x62EC;&#xFF1A;&#x5BC6;&#x7801;&#x5E93;, &#x5B89;&#x5168;&#x76D1;&#x63A7;, &#x7F16;&#x8BD1;&#x7CFB;&#x7EDF;&#x53CA;&#x5176;&#x4ED6;</li>
+<li>在开源TEE之前，花了很多个月去把之前部分私有模块，换成开源实现<ul>
+<li>包括：密码库, 安全监控, 编译系统及其他</li>
 </ul>
 </li>
-<li>2014-06-12&#xFF0C;TEE&#x5F00;&#x6E90;&#x4E86;&#xFF0C;&#x53EB;&#x505A;OP-TEE<ul>
-<li>&#x76EE;&#x524D;&#x73B0;&#x72B6;&#x4E3B;&#x8981;&#x662F;&#xFF1A;<ul>
-<li>&#x9879;&#x76EE;&#x5C5E;&#x4E8E;STMicroelectronics</li>
-<li>&#x4F46;&#x662F;Linaro&#x548C;STMicroelectronics&#x8054;&#x5408;&#x5728;&#x5F00;&#x53D1;</li>
+<li>2014-06-12，TEE开源了，叫做OP-TEE<ul>
+<li>目前现状主要是：<ul>
+<li>项目属于STMicroelectronics</li>
+<li>但是Linaro和STMicroelectronics联合在开发</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>2015&#x5E74;&#xFF0C;&#x9879;&#x76EE;&#x6240;&#x6709;&#x6743;&#x4ECE;STMicroelectronics&#x8F6C;&#x7ED9;Linaro&#x4E86;</li>
+<li>2015年，项目所有权从STMicroelectronics转给Linaro了</li>
 </ul>
 </li>
-<li>&#x8D44;&#x6599;<ul>
-<li>&#x5B98;&#x7F51;<ul>
+<li>资料<ul>
+<li>官网<ul>
 <li><a href="https://www.op-tee.org" target="_blank">https://www.op-tee.org</a></li>
 </ul>
 </li>
@@ -926,8 +921,8 @@
 </li>
 </ul>
 </li>
-<li>&#x6280;&#x672F;&#x6587;&#x6863;<ul>
-<li>OP-TEE Documentation &#x2014; OP-TEE documentation documentation<ul>
+<li>技术文档<ul>
+<li>OP-TEE Documentation — OP-TEE documentation documentation<ul>
 <li><a href="http://optee.readthedocs.io" target="_blank">http://optee.readthedocs.io</a></li>
 </ul>
 </li>
@@ -935,7 +930,7 @@
 </li>
 </ul>
 </li>
-<li>&#x4E3B;&#x8981;&#x8BBE;&#x8BA1;&#x76EE;&#x6807;<ul>
+<li>主要设计目标<ul>
 <li>Isolation<ul>
 <li>the TEE provides isolation from the non-secure OS and protects the loaded Trusted Applications (TAs) from each other using underlying hardware support,</li>
 </ul>
@@ -950,51 +945,51 @@
 </li>
 </ul>
 </li>
-<li><code>OP-TEE</code>&#x5305;&#x542B;&#x5185;&#x5BB9;<ul>
+<li><code>OP-TEE</code>包含内容<ul>
 <li><code>Secure world</code> OS=<code>optee_os</code><ul>
-<li>&#x73B0;&#x6709;&#x5B9E;&#x73B0;&#xFF1A;<ul>
-<li><code>OP-TEE OS</code>, <code>Trusty</code>, &#x9AD8;&#x901A;&#x7684;<code>QSEE</code>, <code>SierraTEE</code><ul>
-<li>&#x6CE8;&#xFF1A;&#x6240;&#x6709;&#x65B9;&#x6848;&#x7684;&#x5916;&#x90E8;&#x63A5;&#x53E3;&#x90FD;&#x4F1A;&#x9075;&#x5FAA;<code>GP</code>=<code>Global Platform</code>&#x6807;&#x51C6;</li>
+<li>现有实现：<ul>
+<li><code>OP-TEE OS</code>, <code>Trusty</code>, 高通的<code>QSEE</code>, <code>SierraTEE</code><ul>
+<li>注：所有方案的外部接口都会遵循<code>GP</code>=<code>Global Platform</code>标准</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>&#x5BF9;&#x6BD4;&#xFF1A;Normal world os<ul>
-<li>&#x666E;&#x901A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF1A;Linux&#x3001;Android&#x7B49;</li>
+<li>对比：Normal world os<ul>
+<li>普通操作系统：Linux、Android等</li>
 </ul>
 </li>
-<li>&#x95EE;&#xFF1A;&#x5404;&#x5BB6;&#x5382;&#x5546;&#x548C;&#x7EC4;&#x7EC7;&#x7684;<code>TEE OS</code>&#x5230;&#x5E95;&#x6709;&#x4F55;&#x533A;&#x522B;?<ul>
-<li>&#x7B54;&#xFF1A;<code>TA</code>&#x7684;&#x6DFB;&#x52A0;&#x548C;&#x52A0;&#x8F7D;&#x65F6;&#x7684;&#x6821;&#x9A8C;&#x6709;&#x6240;&#x533A;&#x522B;</li>
+<li>问：各家厂商和组织的<code>TEE OS</code>到底有何区别?<ul>
+<li>答：<code>TA</code>的添加和加载时的校验有所区别</li>
 </ul>
 </li>
-<li>&#x7CFB;&#x7EDF;&#x67B6;&#x6784;<ul>
+<li>系统架构<ul>
 <li><img src="../../assets/img/op_tee_arch_1.jpg" alt="op_tee_arch_1"></li>
 <li><img src="../../assets/img/op_tee_arch_2.jpg" alt="op_tee_arch_2"></li>
 <li><img src="../../assets/img/op_tee_arch_3.jpg" alt="op_tee_arch_3"></li>
 </ul>
 </li>
-<li>&#x76F8;&#x5173;&#x6982;&#x5FF5;<ul>
-<li><code>TA</code>=<code>Trusted Application</code>=&#x53EF;&#x4FE1;&#x5E94;&#x7528;</li>
-<li><code>CA</code>=<code>Client Application</code>=&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x7528;</li>
+<li>相关概念<ul>
+<li><code>TA</code>=<code>Trusted Application</code>=可信应用</li>
+<li><code>CA</code>=<code>Client Application</code>=客户端应用</li>
 </ul>
 </li>
-<li>&#x539F;&#x7406;<ul>
-<li>&#x4EA7;&#x54C1;&#x5F00;&#x53D1;&#x56E2;&#x961F;&#x8D1F;&#x8D23;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x5728;<code>Linux</code>&#x4E0A;&#x7684;<code>CA</code>&#x548C;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x5728;<code>OP-TEE</code>&#x4E0A;&#x7684;<code>TA</code></li>
-<li><code>CA</code>&#x4F7F;&#x7528;<code>TEE client API</code>&#x4E0E;<code>TA</code>&#x901A;&#x4FE1;&#xFF0C;&#x5E76;&#x4E14;&#x4ECE;<code>TA</code>&#x83B7;&#x53D6;&#x5B89;&#x5168;&#x670D;&#x52A1;</li>
-<li><code>CA</code>&#x548C;<code>TA</code>&#x4F7F;&#x7528;<code>&#x5171;&#x4EAB;&#x5185;&#x5B58;</code>&#x8FDB;&#x884C;&#x901A;&#x4FE1;</li>
+<li>原理<ul>
+<li>产品开发团队负责开发一个运行在<code>Linux</code>上的<code>CA</code>和一个运行在<code>OP-TEE</code>上的<code>TA</code></li>
+<li><code>CA</code>使用<code>TEE client API</code>与<code>TA</code>通信，并且从<code>TA</code>获取安全服务</li>
+<li><code>CA</code>和<code>TA</code>使用<code>共享内存</code>进行通信</li>
 </ul>
 </li>
-<li>&#x8FD0;&#x884C;&#x673A;&#x5236;<ul>
-<li>&#x5F53;&#x5904;&#x4E8E;<code>secure world</code>&#x72B6;&#x6001;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x6267;&#x884C;<code>TEE OS</code>&#x90E8;&#x5206;&#x7684;&#x4EE3;&#x7801;</li>
-<li>&#x5F53;&#x5904;&#x4E8E;<code>non-secure world</code>&#x72B6;&#x6001;&#x65F6;,&#x5C31;&#x6267;&#x884C;<code>linux kernel</code>&#x90E8;&#x5206;&#x7684;&#x4EE3;&#x7801;</li>
+<li>运行机制<ul>
+<li>当处于<code>secure world</code>状态，那么就会执行<code>TEE OS</code>部分的代码</li>
+<li>当处于<code>non-secure world</code>状态时,就执行<code>linux kernel</code>部分的代码</li>
 </ul>
 </li>
-<li>&#x4E3E;&#x4F8B;<ul>
-<li>&#x82AF;&#x6765;&#x79D1;&#x6280;&#x548C;&#x74F6;&#x94B5;&#x4FE1;&#x606F;&#x5408;&#x4F5C;&#x5F00;&#x53D1;&#x57FA;&#x4E8E;RISC-V&#x7684;TEE&#x65B9;&#x6848;<ul>
+<li>举例<ul>
+<li>芯来科技和瓶钵信息合作开发基于RISC-V的TEE方案<ul>
 <li><img src="../../assets/img/tee_example_nuclei_security_solution.png" alt="tee_example_nuclei_security_solution"><ul>
-<li>&#x5176;&#x4E2D;&#x4E5F;&#x662F;&#x7B26;&#x5408;TEE&#x7684;&#x67B6;&#x6784;<ul>
-<li>&#x53EF;&#x4FE1;&#x533A;</li>
-<li>&#x4E0D;&#x53EF;&#x4FE1;&#x533A;</li>
+<li>其中也是符合TEE的架构<ul>
+<li>可信区</li>
+<li>不可信区</li>
 </ul>
 </li>
 </ul>
@@ -1007,19 +1002,17 @@
 </li>
 <li><code>Normal world</code> client=<code>optee_client</code></li>
 <li>test suite = <code>optee_test/xtest</code></li>
-<li>linux&#x9A71;&#x52A8;</li>
+<li>linux驱动</li>
 </ul>
 </li>
-<li>&#x5E38;&#x89C1;&#x95EE;&#x9898;<ul>
-<li>Linux&#x5185;&#x6838;<ul>
-<li>Linux&#x5185;&#x6838;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;TEE&#x90E8;&#x5206;&#x7684;&#x8D44;&#x6E90;&#x5417;?<ul>
-<li>Linux kernel&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;TEE&#x90E8;&#x5206;&#x7684;&#x8D44;&#x6E90;</li>
+<li>常见问题<ul>
+<li>Linux内核<ul>
+<li>Linux内核能直接访问TEE部分的资源吗?<ul>
+<li>Linux kernel不能直接访问TEE部分的资源</li>
 </ul>
 </li>
-<li>Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x624D;&#x80FD;&#x8BBF;&#x95EE;TEE&#x90E8;&#x5206;&#x7684;&#x8D44;&#x6E90;&#x5462;?<ul>
-<li>Linux kernel&#x80FD;&#x901A;&#x8FC7;&#x7279;&#x5B9A;&#x7684;<code>TA</code>&#x548C;<code>CA</code>&#x6765;&#x8BBF;&#x95EE;TEE&#x90E8;&#x5206;&#x7279;&#x5B9A;&#x7684;&#x8D44;&#x6E90;</li>
-</ul>
-</li>
+<li>Linux 内核如何才能访问TEE部分的资源呢?<ul>
+<li>Linux kernel能通过特定的<code>TA</code>和<code>CA</code>来访问TEE部分特定的资源</li>
 </ul>
 </li>
 </ul>
@@ -1027,9 +1020,11 @@
 </ul>
 </li>
 </ul>
-<footer class="page-footer"><span class="copyright">crifan.org&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;4.0&#x56FD;&#x9645;(CC BY 4.0)&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x540E;&#x66F4;&#x65B0;&#xFF1A;
-2021-09-18 10:05:18
-</span></footer>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
+2021-01-16 21:40:21
+</span></footer></body></html>
                                 
                                 </section>
                             
@@ -1072,17 +1067,61 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TEE","level":"1.6.2.1","depth":3,"next":{"title":"其他安全相关","level":"1.7","depth":1,"path":"other_related/README.md","ref":"other_related/README.md","articles":[{"title":"相关工具","level":"1.7.1","depth":2,"path":"other_related/tool/README.md","ref":"other_related/tool/README.md","articles":[{"title":"破解密码","level":"1.7.1.1","depth":3,"path":"other_related/tool/crack_password/README.md","ref":"other_related/tool/crack_password/README.md","articles":[{"title":"John the Ripper","level":"1.7.1.1.1","depth":4,"path":"other_related/tool/crack_password/john_the_ripper.md","ref":"other_related/tool/crack_password/john_the_ripper.md","articles":[]},{"title":"Hashcat","level":"1.7.1.1.2","depth":4,"path":"other_related/tool/crack_password/hashcat.md","ref":"other_related/tool/crack_password/hashcat.md","articles":[]},{"title":"Hydra","level":"1.7.1.1.3","depth":4,"path":"other_related/tool/crack_password/hydra.md","ref":"other_related/tool/crack_password/hydra.md","articles":[]}]},{"title":"代理工具","level":"1.7.1.2","depth":3,"path":"other_related/tool/proxy_tool.md","ref":"other_related/tool/proxy_tool.md","articles":[]},{"title":"远程操作工具","level":"1.7.1.3","depth":3,"path":"other_related/tool/remote_tool.md","ref":"other_related/tool/remote_tool.md","articles":[]}]}]},"previous":{"title":"软件","level":"1.6.2","depth":2,"path":"info_storage_security/software/README.md","ref":"info_storage_security/software/README.md","articles":[{"title":"TEE","level":"1.6.2.1","depth":3,"path":"info_storage_security/software/tee.md","ref":"info_storage_security/software/tee.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["google-adsense","theme-comscore","anchors","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","splitter","-sharing","sharing-plus","tbfed-pagefooter","expandable-chapters-small","ga","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/information_security_overview/pdf/information_security_overview.pdf","icon":"fa-file-pdf-o"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","alipayText":"支付宝打赏给Crifan","button":"打赏","title":"","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","wechatText":"微信打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/information_security_overview/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"google-adsense":{"ads":[{"client":"ca-pub-6626240105039250"}]},"github-buttons":{"buttons":[{"repo":"information_security_overview","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-28297199-1"},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.org>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"信息安全概览","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"3.2.3","description":"边学习信息安全技术，边总结技术教程。已整理出宏观的各个方面的安全的分类和概念。以及基本的计算机安全、移动端安全、物联网安全等细节内容。目前已把部分内容抽出成独立子教程，包括Web安全、渗透测试、安全分析、二进制安全、iOS安全、Android安全、工控安全。"},"file":{"path":"info_storage_security/software/tee.md","mtime":"2021-09-18T02:05:18.681Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-18T02:30:55.084Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TEE","level":"1.6.2.1","depth":3,"next":{"title":"其他安全相关","level":"1.7","depth":1,"path":"other_related/README.md","ref":"other_related/README.md","articles":[{"title":"相关工具","level":"1.7.1","depth":2,"path":"other_related/tool/README.md","ref":"other_related/tool/README.md","articles":[{"title":"破解密码","level":"1.7.1.1","depth":3,"path":"other_related/tool/crack_password/README.md","ref":"other_related/tool/crack_password/README.md","articles":[{"title":"John the Ripper","level":"1.7.1.1.1","depth":4,"path":"other_related/tool/crack_password/john_the_ripper.md","ref":"other_related/tool/crack_password/john_the_ripper.md","articles":[]},{"title":"Hashcat","level":"1.7.1.1.2","depth":4,"path":"other_related/tool/crack_password/hashcat.md","ref":"other_related/tool/crack_password/hashcat.md","articles":[]},{"title":"Hydra","level":"1.7.1.1.3","depth":4,"path":"other_related/tool/crack_password/hydra.md","ref":"other_related/tool/crack_password/hydra.md","articles":[]}]},{"title":"代理工具","level":"1.7.1.2","depth":3,"path":"other_related/tool/proxy_tool.md","ref":"other_related/tool/proxy_tool.md","articles":[]},{"title":"远程操作工具","level":"1.7.1.3","depth":3,"path":"other_related/tool/remote_tool.md","ref":"other_related/tool/remote_tool.md","articles":[]}]}]},"previous":{"title":"软件","level":"1.6.2","depth":2,"path":"info_storage_security/software/README.md","ref":"info_storage_security/software/README.md","articles":[{"title":"TEE","level":"1.6.2.1","depth":3,"path":"info_storage_security/software/tee.md","ref":"info_storage_security/software/tee.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/information_security_overview/pdf/information_security_overview.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/information_security_overview/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"information_security_overview","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"信息安全概览","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"边学习信息安全技术，边总结技术教程。已整理出宏观的各个方面的安全的分类和概念。以及基本的计算机安全、移动端安全、物联网安全等细节内容。目前已把部分内容抽出成独立子教程，包括Web安全、渗透测试、安全分析、二进制安全、iOS安全、Android安全、工控安全。"},"file":{"path":"info_storage_security/software/tee.md","mtime":"2021-01-16T13:40:21.842Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-07T08:11:57.569Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-google-adsense/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-expandable-menu/expandable-chapters.js"></script>
         
     
         
@@ -1094,31 +1133,15 @@
         
     
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        <script src="../../gitbook/gitbook-plugin-splitter-nosessionbutcookie/splitter.js"></script>
         
     
         
         <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
