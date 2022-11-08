@@ -129,5 +129,6 @@
     * [iOS逆向开发：MonkeyDev调试](https://crifan.github.io/ios_re_monkeydev_debug/website)
     * [Android开发总结](https://crifan.github.io/android_dev_summary/website)
     * [iOS逆向YouTube：protobuf逆向](https://crifan.github.io/ios_re_protobuf_reverse/website)
+    * [iOS逆向开发：iOSOpenDev开发插件](https://crifan.github.io/ios_re_iosopendev_tweak/website)
 * 其他独立内容
   * [crifan的折腾精神、学习能力和逻辑能力的体现](https://crifan.github.io/crifan_play_learn_logic_spirit/)
