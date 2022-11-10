@@ -9,13 +9,15 @@
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/normal_ios/gpbdescriptor.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/normal_ios/gpbfielddescriptor.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/lite_cpp/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/lite_cpp/messagelite.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/lite_cpp/messagelite/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/lite_cpp/messagelite/define.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/normal_ios/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/normal_ios/ytiplayerrequest.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/normal_ios/ytiadbreakrequest.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/normal_ios/ytiinnertubecontext.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/normal_ios/yticlientinfo.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/normal_ios/ytionesiehotconfig.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/lite_cpp/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/protobuf_re/youtube/lite_cpp/onesierequestproto.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_protobuf_reverse/website/appendix/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

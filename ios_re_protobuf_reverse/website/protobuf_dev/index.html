@@ -280,9 +280,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.2.1" data-path="../protobuf_re/lite_cpp/messagelite.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="../protobuf_re/lite_cpp/messagelite/">
             
-                <a href="../protobuf_re/lite_cpp/messagelite.html">
+                <a href="../protobuf_re/lite_cpp/messagelite/">
             
                     
                         <b>1.4.2.1.</b>
@@ -292,6 +292,27 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../protobuf_re/lite_cpp/messagelite/define.html">
+            
+                <a href="../protobuf_re/lite_cpp/messagelite/define.html">
+            
+                    
+                        <b>1.4.2.1.1.</b>
+                    
+                    MessageLite定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -385,6 +406,21 @@
                         <b>1.4.3.1.4.</b>
                     
                     YTIClientInfo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.5" data-path="../protobuf_re/youtube/normal_ios/ytionesiehotconfig.html">
+            
+                <a href="../protobuf_re/youtube/normal_ios/ytionesiehotconfig.html">
+            
+                    
+                        <b>1.4.3.1.5.</b>
+                    
+                    YTIOnesieHotConfig
             
                 </a>
             
@@ -536,16 +572,19 @@
 <li><code>protobuf</code><ul>
 <li><code>protobuf</code>=<code>Protocol Buffers</code></li>
 <li>概述<ul>
+<li><code>Protocol buffers</code>是Google用于序列化结构化数据的语言中立、平台中立、可扩展机制<ul>
 <li>Protocol buffers are Google&apos;s language-neutral, platform-neutral, extensible mechanism for serializing structured data</li>
 </ul>
 </li>
+</ul>
+</li>
 <li>特点<ul>
-<li>比JSON、XML等格式，占用体积更小，更快，更简单</li>
+<li>比<code>JSON</code>、<code>XML</code>等格式，占用体积更小，更快，更简单</li>
 </ul>
 </li>
 <li>是什么：是一系列的组合 = 包含三部分<ul>
 <li><code>定义语言</code>：definition language<ul>
-<li>自己写的：.proto文件</li>
+<li>自己写的：<code>.proto</code>文件</li>
 </ul>
 </li>
 <li><code>代码</code>=<code>code</code><ul>
@@ -559,12 +598,19 @@
 <li><code>序列化</code>：serialization format for data<ul>
 <li>写入文件</li>
 <li>或：用网络传输</li>
-<li>注：<ul>
-<li>相关名词<ul>
-<li><code>序列化</code>=<code>serialize</code>=<code>encode</code>=<code>编码</code></li>
-<li><code>反序列化</code>=<code>deserialize</code>=<code>parse</code>=<code>解析</code>=<code>decode</code>=<code>解码</code></li>
 </ul>
 </li>
+</ul>
+</li>
+<li>相关名词<ul>
+<li><code>encode</code>=<code>编码</code>=<code>serialize</code>=<code>序列化</code><ul>
+<li>把原始数据编码成protobuf的二进制数据</li>
+</ul>
+</li>
+<li><code>decode</code>=<code>解码</code>=<code>deserialize</code>=<code>反序列化</code>=<code>parse</code>=<code>解析</code><ul>
+<li>把protobuf的二进制数据解码出原始的数据定义<ul>
+<li>以对应的语言的类的形式保存</li>
+<li>=解码出来是对应的某种语言的某个protobuf的类</li>
 </ul>
 </li>
 </ul>
@@ -572,20 +618,20 @@
 </ul>
 </li>
 <li>支持多种语言<ul>
-<li>proto2<ul>
-<li>Java</li>
-<li>Python</li>
-<li>Objective-C</li>
-<li>C++</li>
-<li>PHP</li>
+<li><code>proto2</code><ul>
+<li><code>Java</code></li>
+<li><code>Python</code></li>
+<li><code>Objective-C</code></li>
+<li><code>C++</code></li>
+<li><code>PHP</code></li>
 </ul>
 </li>
-<li>proto3<ul>
-<li>Kotlin</li>
-<li>Dart</li>
-<li>Go</li>
-<li>Ruby</li>
-<li>C#</li>
+<li><code>proto3</code><ul>
+<li><code>Kotlin</code></li>
+<li><code>Dart</code></li>
+<li><code>Go</code></li>
+<li><code>Ruby</code></li>
+<li><code>C#</code></li>
 </ul>
 </li>
 </ul>
@@ -627,8 +673,8 @@
 <li><img src="../assets/img/protocol_buffers_workflow.png" alt="protocol_buffers_workflow"></li>
 </ul>
 </li>
-<li>proto compiler = protoc<ul>
-<li>输入：.proto</li>
+<li><code>proto compiler</code> = <code>protoc</code><ul>
+<li>输入：<code>.proto</code></li>
 <li>输出：对应的特定语言的代码<ul>
 <li>对每个字段和方法，都有一个accessor访问器<ul>
 <li>用于 在 数据结构 和 二进制数据 之间解析和转换</li>
@@ -637,15 +683,15 @@
 </ul>
 </li>
 <li>编译生成的文件<ul>
-<li>C++：.h和.cc</li>
-<li>Java：.java</li>
-<li>Kotlin：.kt</li>
-<li>Python：生成内容是一个模块module，放在.proto文件中</li>
-<li>Go：.pb.go</li>
-<li>Ruby：.rb</li>
-<li>Objective-C：pbobjc.h和pbobjc.m</li>
-<li>C#：.cs</li>
-<li>Dart：.pb.dart</li>
+<li><code>C++</code>：<code>.h</code>和<code>.cc</code></li>
+<li><code>Java</code>：<code>.java</code></li>
+<li><code>Kotlin</code>：<code>.kt</code></li>
+<li><code>Python</code>：生成内容是一个模块module，放在<code>.proto</code>文件中</li>
+<li><code>Go</code>：<code>.pb.go</code></li>
+<li><code>Ruby</code>：<code>.rb</code></li>
+<li><code>Objective-C</code>：<code>pbobjc.h</code>和<code>pbobjc.m</code></li>
+<li><code>C#</code>：<code>.cs</code></li>
+<li><code>Dart</code>：<code>.pb.dart</code></li>
 </ul>
 </li>
 </ul>
@@ -705,7 +751,7 @@ email <span class="token operator">=</span> john<span class="token punctuation">
 <li><a href="https://chromium.googlesource.com/external/github.com/google/protobuf/+/HEAD/examples" target="_blank">examples - external/github.com/google/protobuf - Git at Google (googlesource.com)</a></li>
 </ul>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-11-04 15:38:42
+2022-11-10 10:30:39
 </span></footer></body></html>
                                 
                                 </section>
@@ -749,7 +795,7 @@ email <span class="token operator">=</span> john<span class="token punctuation">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Protobuf正向","level":"1.3","depth":1,"next":{"title":"Protobuf逆向","level":"1.4","depth":1,"path":"protobuf_re/README.md","ref":"protobuf_re/README.md","articles":[{"title":"普通的iOS类","level":"1.4.1","depth":2,"path":"protobuf_re/normal_ios/README.md","ref":"protobuf_re/normal_ios/README.md","articles":[{"title":"GPBMessage","level":"1.4.1.1","depth":3,"path":"protobuf_re/normal_ios/gpbmessage.md","ref":"protobuf_re/normal_ios/gpbmessage.md","articles":[]},{"title":"GPBDescriptor","level":"1.4.1.2","depth":3,"path":"protobuf_re/normal_ios/gpbdescriptor.md","ref":"protobuf_re/normal_ios/gpbdescriptor.md","articles":[]},{"title":"GPBFieldDescriptor","level":"1.4.1.3","depth":3,"path":"protobuf_re/normal_ios/gpbfielddescriptor.md","ref":"protobuf_re/normal_ios/gpbfielddescriptor.md","articles":[]}]},{"title":"lite的C++类","level":"1.4.2","depth":2,"path":"protobuf_re/lite_cpp/README.md","ref":"protobuf_re/lite_cpp/README.md","articles":[{"title":"MessageLite","level":"1.4.2.1","depth":3,"path":"protobuf_re/lite_cpp/messagelite.md","ref":"protobuf_re/lite_cpp/messagelite.md","articles":[]}]},{"title":"YouTube中Protobuf","level":"1.4.3","depth":2,"path":"protobuf_re/youtube/README.md","ref":"protobuf_re/youtube/README.md","articles":[{"title":"普通的iOS类","level":"1.4.3.1","depth":3,"path":"protobuf_re/youtube/normal_ios/README.md","ref":"protobuf_re/youtube/normal_ios/README.md","articles":[{"title":"YTIPlayerRequest","level":"1.4.3.1.1","depth":4,"path":"protobuf_re/youtube/normal_ios/ytiplayerrequest.md","ref":"protobuf_re/youtube/normal_ios/ytiplayerrequest.md","articles":[]},{"title":"YTIAdBreakRequest","level":"1.4.3.1.2","depth":4,"path":"protobuf_re/youtube/normal_ios/ytiadbreakrequest.md","ref":"protobuf_re/youtube/normal_ios/ytiadbreakrequest.md","articles":[]},{"title":"YTIInnerTubeContext","level":"1.4.3.1.3","depth":4,"path":"protobuf_re/youtube/normal_ios/ytiinnertubecontext.md","ref":"protobuf_re/youtube/normal_ios/ytiinnertubecontext.md","articles":[]},{"title":"YTIClientInfo","level":"1.4.3.1.4","depth":4,"path":"protobuf_re/youtube/normal_ios/yticlientinfo.md","ref":"protobuf_re/youtube/normal_ios/yticlientinfo.md","articles":[]}]},{"title":"lite的C++类","level":"1.4.3.2","depth":3,"path":"protobuf_re/youtube/lite_cpp/README.md","ref":"protobuf_re/youtube/lite_cpp/README.md","articles":[{"title":"OnesieRequestProto","level":"1.4.3.2.1","depth":4,"path":"protobuf_re/youtube/lite_cpp/onesierequestproto.md","ref":"protobuf_re/youtube/lite_cpp/onesierequestproto.md","articles":[]}]}]}]},"previous":{"title":"Protobuf概览","level":"1.2","depth":1,"path":"protobuf_overview/README.md","ref":"protobuf_overview/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_protobuf_reverse/pdf/ios_re_protobuf_reverse.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_protobuf_reverse/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_protobuf_reverse","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向YouTube：protobuf逆向","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"整理iOS逆向YouTube期间涉及到的Protobuf的逆向。先是概览；再是Protobuf的正向相关知识；然后是Protobuf逆向内容，包括普通的iOS的类、lite精简版的C++的类、YouTube中Protobuf的内容；其中，普通的iOS的类有GPBMessage、GPBDescriptor、GPBFieldDescriptor；lite精简版C++的类有MessageLite；YouTube中的普通的iOS类的Protobuf类有：YTIPlayerRequest、YTIAdBreakRequest、YTIInnerTubeContext，YTIClientInfo，以及lite的C++类有OnesieRequestProto；"},"file":{"path":"protobuf_dev/README.md","mtime":"2022-11-04T07:38:42.773Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-04T07:59:07.743Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Protobuf正向","level":"1.3","depth":1,"next":{"title":"Protobuf逆向","level":"1.4","depth":1,"path":"protobuf_re/README.md","ref":"protobuf_re/README.md","articles":[{"title":"普通的iOS类","level":"1.4.1","depth":2,"path":"protobuf_re/normal_ios/README.md","ref":"protobuf_re/normal_ios/README.md","articles":[{"title":"GPBMessage","level":"1.4.1.1","depth":3,"path":"protobuf_re/normal_ios/gpbmessage.md","ref":"protobuf_re/normal_ios/gpbmessage.md","articles":[]},{"title":"GPBDescriptor","level":"1.4.1.2","depth":3,"path":"protobuf_re/normal_ios/gpbdescriptor.md","ref":"protobuf_re/normal_ios/gpbdescriptor.md","articles":[]},{"title":"GPBFieldDescriptor","level":"1.4.1.3","depth":3,"path":"protobuf_re/normal_ios/gpbfielddescriptor.md","ref":"protobuf_re/normal_ios/gpbfielddescriptor.md","articles":[]}]},{"title":"lite的C++类","level":"1.4.2","depth":2,"path":"protobuf_re/lite_cpp/README.md","ref":"protobuf_re/lite_cpp/README.md","articles":[{"title":"MessageLite","level":"1.4.2.1","depth":3,"path":"protobuf_re/lite_cpp/messagelite/README.md","ref":"protobuf_re/lite_cpp/messagelite/README.md","articles":[{"title":"MessageLite定义","level":"1.4.2.1.1","depth":4,"path":"protobuf_re/lite_cpp/messagelite/define.md","ref":"protobuf_re/lite_cpp/messagelite/define.md","articles":[]}]}]},{"title":"YouTube中Protobuf","level":"1.4.3","depth":2,"path":"protobuf_re/youtube/README.md","ref":"protobuf_re/youtube/README.md","articles":[{"title":"普通的iOS类","level":"1.4.3.1","depth":3,"path":"protobuf_re/youtube/normal_ios/README.md","ref":"protobuf_re/youtube/normal_ios/README.md","articles":[{"title":"YTIPlayerRequest","level":"1.4.3.1.1","depth":4,"path":"protobuf_re/youtube/normal_ios/ytiplayerrequest.md","ref":"protobuf_re/youtube/normal_ios/ytiplayerrequest.md","articles":[]},{"title":"YTIAdBreakRequest","level":"1.4.3.1.2","depth":4,"path":"protobuf_re/youtube/normal_ios/ytiadbreakrequest.md","ref":"protobuf_re/youtube/normal_ios/ytiadbreakrequest.md","articles":[]},{"title":"YTIInnerTubeContext","level":"1.4.3.1.3","depth":4,"path":"protobuf_re/youtube/normal_ios/ytiinnertubecontext.md","ref":"protobuf_re/youtube/normal_ios/ytiinnertubecontext.md","articles":[]},{"title":"YTIClientInfo","level":"1.4.3.1.4","depth":4,"path":"protobuf_re/youtube/normal_ios/yticlientinfo.md","ref":"protobuf_re/youtube/normal_ios/yticlientinfo.md","articles":[]},{"title":"YTIOnesieHotConfig","level":"1.4.3.1.5","depth":4,"path":"protobuf_re/youtube/normal_ios/ytionesiehotconfig.md","ref":"protobuf_re/youtube/normal_ios/ytionesiehotconfig.md","articles":[]}]},{"title":"lite的C++类","level":"1.4.3.2","depth":3,"path":"protobuf_re/youtube/lite_cpp/README.md","ref":"protobuf_re/youtube/lite_cpp/README.md","articles":[{"title":"OnesieRequestProto","level":"1.4.3.2.1","depth":4,"path":"protobuf_re/youtube/lite_cpp/onesierequestproto.md","ref":"protobuf_re/youtube/lite_cpp/onesierequestproto.md","articles":[]}]}]}]},"previous":{"title":"Protobuf概览","level":"1.2","depth":1,"path":"protobuf_overview/README.md","ref":"protobuf_overview/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_protobuf_reverse/pdf/ios_re_protobuf_reverse.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_protobuf_reverse/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_protobuf_reverse","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向YouTube：protobuf逆向","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"整理iOS逆向YouTube期间涉及到的Protobuf的逆向。先是概览；再是Protobuf的正向相关知识；然后是Protobuf逆向内容，包括普通的iOS的类、lite精简版的C++的类、YouTube中Protobuf的内容；其中，普通的iOS的类有GPBMessage、GPBDescriptor、GPBFieldDescriptor；lite精简版C++的类有MessageLite及其定义；YouTube中的普通的iOS类的Protobuf类有：YTIPlayerRequest、YTIAdBreakRequest、YTIInnerTubeContext，YTIClientInfo、YTIOnesieHotConfig，以及lite的C++类有OnesieRequestProto；"},"file":{"path":"protobuf_dev/README.md","mtime":"2022-11-10T02:30:39.561Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-10T02:33:53.215Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
