@@ -531,6 +531,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <html><head></head><body><h1 id="心得"><a name="心得" class="plugin-anchor" href="#心得"><i class="fa fa-link" aria-hidden="true"></i></a>心得</h1>
+<p>TODO：</p>
+<ul>
+<li>smali断点不生效<ul>
+<li>【未解决】再次出现AS调试Google Pixel3中的YouTube的问题：Smali断点不生效</li>
+<li>【记录】Android 11的Google Pixel3中确认adb shell是否工作正常</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：调试相关设置</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：smali文件类型File type</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：卸载重装smalidea插件</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：故意打开ADM的DDMS有冲突多试试</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：Android Studio中adb相关设置</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：用DDMS和monitor配合试试</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：USB数据线和端口相关</li>
+<li>【未解决】Android Studio调试Smali：通过Remote JVM Debug的attach to remote VM的调试按钮去调试</li>
+<li>【已解决】Android Device Monitor的DDMS中看不到app包名进程的名称都是问号</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：JDWP进程相关</li>
+<li>【未解决】尝试解决Android Studio中smali断点不生效：Smali插件相关</li>
+</ul>
+</li>
+</ul>
+<hr>
 <p>安卓逆向期间，折腾Android Studio去调试smali代码，其实更麻烦的不在于搞懂本身的流程，而在于：</p>
 <p>找到一个好用的调试设备：已root好的，可以顺利调试的安卓手机</p>
 <p>因为期间遇到Google Pixel 3的adb异常，导致adb shell各种命令无法正常运行，包括adb的ps无法正常获取进程列表</p>
@@ -538,8 +558,21 @@
 <p>解决了该问题了，AS中能attach到进程，后续就顺利多了。</p>
 <p>并且另外Google Pixel 3本身不稳定，导致虽然开始能调试，但是后来出现开发者选项崩溃的问题，无法进入设置了。对于正常安卓逆向开发，也有很大影响。</p>
 <p>总之：还是要找个靠谱的root后的安卓手机，才能保证后续安卓逆向的顺利。</p>
+<h2 id="如何调试逻辑"><a name="如何调试逻辑" class="plugin-anchor" href="#如何调试逻辑"><i class="fa fa-link" aria-hidden="true"></i></a>如何调试逻辑</h2>
+<p>TODO：</p>
+<ul>
+<li>【记录】用Android Studio调试YouTube的smali代码：smali/anwu.smali</li>
+<li>【记录】用Android Studio调试YouTube的smali代码：smali_classes2/azfv.smali</li>
+<li>【记录】用Android Studio调试YouTube的smali代码：smali/anuh.smali</li>
+<li>【记录】用Android Studio调试YouTube的smali代码：smali_classes2的WatchWhileActivity.smali</li>
+<li></li>
+<li>【记录】用AS调试YouTube的Smali代码：调试相关业务逻辑</li>
+<li>【未解决】给AS调试YouTube的Smali代码：加url过滤</li>
+<li>【已解决】Xposed如何hook混淆后的安卓应用中的类名和函数名</li>
+</ul>
+<hr>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-27 15:57:46
+2022-11-10 15:13:07
 </span></footer></body></html>
                                 
                                 </section>
@@ -583,7 +616,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"心得","level":"1.5","depth":1,"next":{"title":"实例","level":"1.6","depth":1,"path":"example/README.md","ref":"example/README.md","articles":[]},"previous":{"title":"Fino","level":"1.4.4","depth":2,"path":"other_debug_tool/fino.md","ref":"other_debug_tool/fino.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/android_re_dynamic_debug/pdf/android_re_dynamic_debug.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/android_re_dynamic_debug/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"android_re_dynamic_debug","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Android逆向：动态调试","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍Android逆向开发期间，如何动态调试apk的smali代码。此处以YouTube为例，介绍主要步骤：确保安卓已root、调试工具选择、反编译出smali代码、确保app可调试、调试方式启动app、Android Studio中导入smali代码、给smali加断点、配置Android Studio项目、确保adb可获取进程列表、Android Studio调试app进程；以及一些心得。"},"file":{"path":"summary/README.md","mtime":"2022-10-27T07:57:46.927Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-06T15:23:26.972Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"心得","level":"1.5","depth":1,"next":{"title":"实例","level":"1.6","depth":1,"path":"example/README.md","ref":"example/README.md","articles":[]},"previous":{"title":"Fino","level":"1.4.4","depth":2,"path":"other_debug_tool/fino.md","ref":"other_debug_tool/fino.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/android_re_dynamic_debug/pdf/android_re_dynamic_debug.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/android_re_dynamic_debug/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"android_re_dynamic_debug","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Android逆向：动态调试","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍Android逆向开发期间，如何动态调试apk的smali代码。此处以YouTube为例，介绍主要步骤：确保安卓已root、调试工具选择、反编译出smali代码、确保app可调试、调试方式启动app、Android Studio中导入smali代码、给smali加断点、配置Android Studio项目、确保adb可获取进程列表、Android Studio调试app进程；以及一些心得。"},"file":{"path":"summary/README.md","mtime":"2022-11-10T07:13:07.875Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-10T07:19:29.529Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
