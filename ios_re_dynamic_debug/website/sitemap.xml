@@ -13,6 +13,7 @@
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/lldbtools.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/chisel.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/flex.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/passionfruit.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_summary/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_summary/xcode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_summary/objc/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
