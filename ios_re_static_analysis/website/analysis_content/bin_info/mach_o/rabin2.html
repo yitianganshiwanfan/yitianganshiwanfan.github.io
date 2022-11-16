@@ -654,15 +654,162 @@
                                 <section class="normal markdown-section">
                                 
                                 <html><head></head><body><h1 id="rabin2"><a name="rabin2" class="plugin-anchor" href="#rabin2"><i class="fa fa-link" aria-hidden="true"></i></a>rabin2</h1>
-<p>TODO：</p>
+<h2 id="下载和安装"><a name="下载和安装" class="plugin-anchor" href="#下载和安装"><i class="fa fa-link" aria-hidden="true"></i></a>下载和安装</h2>
+<p>从官网<a href="https://rada.re/n/radare2.html" target="_blank">radare</a>，找到下载地址来源，比如</p>
+<p><a href="https://github.com/radareorg/radare2/releases" target="_blank">Releases · radareorg/radare2</a></p>
+<p>下载对应的版本，比如我此处的：</p>
 <ul>
-<li>【记录】静态分析Mask的动态库：MaskPro.dylib</li>
-<li>【记录】静态分析Mask的动态库：Mask.dylib</li>
-<li>【记录】用radare2查看抖音二进制信息</li>
-<li>【记录】用rabin2查看抖音AwemeCore二进制的信息</li>
+<li>Mac<ul>
+<li>Intel Chip<ul>
+<li><a href="https://github.com/radareorg/radare2/releases/download/5.7.8/radare2-x64-5.7.8.pkg" target="_blank">radare2-x64-5.7.8.pkg</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>然后去安装pkg包，安装后，即可有<code>/usr/local/bin/rabin2</code></p>
+<p>之前某次安装后的版本：</p>
+<pre class="language-"><code class="lang-bash">➜  ~ rabin2 --version
+rabin2: illegal option -- -
+rabin2 <span class="token number">4.3</span>.1 <span class="token number">134</span> @ darwin-x86-64 git.4.3.1
+commit: 815529f204bede6a232fce8b3ac88a905c6943c6 build: <span class="token number">2020</span>-03-06__16:31:10
+</code></pre>
+<h2 id="用法"><a name="用法" class="plugin-anchor" href="#用法"><i class="fa fa-link" aria-hidden="true"></i></a>用法</h2>
+<h3 id="用rabin2查看抖音awemecore二进制的信息"><a name="用rabin2查看抖音awemecore二进制的信息" class="plugin-anchor" href="#用rabin2查看抖音awemecore二进制的信息"><i class="fa fa-link" aria-hidden="true"></i></a>用rabin2查看抖音AwemeCore二进制的信息</h3>
+<ul>
+<li>(1) File Identification<pre class="language-"><code class="lang-bash">rabin2 -I v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore
+</code></pre>
+</li>
+<li>(2)Entrypoint<pre class="language-"><code class="lang-bash">rabin2 -e v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore
+</code></pre>
+</li>
+<li>(3)Imports<pre class="language-"><code class="lang-bash">rabin2 -i v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore
+</code></pre>
+</li>
+<li>(4)Exports<pre class="language-"><code class="lang-bash">rabin2 -E v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_E.txt
+</code></pre>
+</li>
+<li>(5)Symbols<pre class="language-"><code class="lang-bash">rabin2 -s v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_s.txt
+rabin2 -sr v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_sr.txt
+</code></pre>
+</li>
+<li>(6)Libraries<pre class="language-"><code class="lang-bash">rabin2 -l v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_l.txt
+</code></pre>
+</li>
+<li>(7)Strings<pre class="language-"><code class="lang-bash">rabin2 -z v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_z.txt
+rabin2 -zr v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_zr.txt
+</code></pre>
+</li>
+<li>(8)Program Sections<pre class="language-"><code class="lang-bash">rabin2 -S v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_S_section.txt
+rabin2 -Sr v18.9.0/Payload/Aweme.app/Frameworks/AwemeCore.framework/AwemeCore <span class="token operator">&gt;</span> AwemeCore_rabin2_Sr_section.txt
+</code></pre>
+</li>
+</ul>
+<h2 id="心得"><a name="心得" class="plugin-anchor" href="#心得"><i class="fa fa-link" aria-hidden="true"></i></a>心得</h2>
+<p>很多的参数，都可以加上r，表示（输出内容是一致的，但是格式不同）以radare格式输出</p>
+<p>举例：</p>
+<pre class="language-"><code class="lang-bash">rabin2 -I
+rabin2 -Ir
+
+rabin2 -s
+rabin2 -sr
+
+rabin2 -z
+rabin2 -zr
+
+rabin2 -S
+rabin2 -Sr
+</code></pre>
+<p>等等</p>
+<h2 id="rabin2的help语法"><a name="rabin2的help语法" class="plugin-anchor" href="#rabin2的help语法"><i class="fa fa-link" aria-hidden="true"></i></a>rabin2的help语法</h2>
+<pre class="language-"><code class="lang-bash">➜  ~ rabin2 --help
+rabin2: illegal option -- -
+Usage: rabin2 <span class="token punctuation">[</span>-AcdeEghHiIjlLMqrRsSUvVxzZ<span class="token punctuation">]</span> <span class="token punctuation">[</span>-@ at<span class="token punctuation">]</span> <span class="token punctuation">[</span>-a arch<span class="token punctuation">]</span> <span class="token punctuation">[</span>-b bits<span class="token punctuation">]</span> <span class="token punctuation">[</span>-B addr<span class="token punctuation">]</span>
+              <span class="token punctuation">[</span>-C F:C:D<span class="token punctuation">]</span> <span class="token punctuation">[</span>-f str<span class="token punctuation">]</span> <span class="token punctuation">[</span>-m addr<span class="token punctuation">]</span> <span class="token punctuation">[</span>-n str<span class="token punctuation">]</span> <span class="token punctuation">[</span>-N m:M<span class="token punctuation">]</span> <span class="token punctuation">[</span>-P<span class="token punctuation">[</span>-P<span class="token punctuation">]</span> pdb<span class="token punctuation">]</span>
+              <span class="token punctuation">[</span>-o str<span class="token punctuation">]</span> <span class="token punctuation">[</span>-O str<span class="token punctuation">]</span> <span class="token punctuation">[</span>-k query<span class="token punctuation">]</span> <span class="token punctuation">[</span>-D lang symname<span class="token punctuation">]</span> <span class="token function">file</span>
+ -@ <span class="token punctuation">[</span>addr<span class="token punctuation">]</span>       show section, symbol or <span class="token function">import</span> at addr
+ -A              list sub-binaries and their arch-bits pairs
+ -a <span class="token punctuation">[</span>arch<span class="token punctuation">]</span>       <span class="token builtin class-name">set</span> arch <span class="token punctuation">(</span>x86, arm, <span class="token punctuation">..</span> or <span class="token operator">&lt;</span>arch<span class="token operator">&gt;</span>_<span class="token operator">&lt;</span>bits<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+ -b <span class="token punctuation">[</span>bits<span class="token punctuation">]</span>       <span class="token builtin class-name">set</span> bits <span class="token punctuation">(</span><span class="token number">32</span>, <span class="token number">64</span> <span class="token punctuation">..</span>.<span class="token punctuation">)</span>
+ -B <span class="token punctuation">[</span>addr<span class="token punctuation">]</span>       override base address <span class="token punctuation">(</span>pie bins<span class="token punctuation">)</span>
+ -c              list classes
+ -cc             list classes <span class="token keyword">in</span> header <span class="token function">format</span>
+ -C <span class="token punctuation">[</span>fmt:C:D<span class="token punctuation">]</span>    create <span class="token punctuation">[</span>elf,mach0,pe<span class="token punctuation">]</span> with Code and Data hexpairs <span class="token punctuation">(</span>see -a<span class="token punctuation">)</span>
+ -d              show debug/dwarf information
+ -D lang name    demangle symbol name <span class="token punctuation">(</span>-D all <span class="token keyword">for</span> bin.demangle<span class="token operator">=</span>true<span class="token punctuation">)</span>
+ -e              entrypoint
+ -ee             constructor/destructor entrypoints
+ -E              globally exportable symbols
+ -f <span class="token punctuation">[</span>str<span class="token punctuation">]</span>        <span class="token keyword">select</span> sub-bin named str
+ -F <span class="token punctuation">[</span>binfmt<span class="token punctuation">]</span>     force to use that bin plugin <span class="token punctuation">(</span>ignore header check<span class="token punctuation">)</span>
+ -g              same as -SMZIHVResizcld -SS -SSS -ee <span class="token punctuation">(</span>show all info<span class="token punctuation">)</span>
+ -G <span class="token punctuation">[</span>addr<span class="token punctuation">]</span>       load address <span class="token builtin class-name">.</span> offset to header
+ -h              this <span class="token builtin class-name">help</span> message
+ -H              header fields
+ -i              imports <span class="token punctuation">(</span>symbols imported from libraries<span class="token punctuation">)</span>
+ -I              binary info
+ -j              output <span class="token keyword">in</span> json
+ -k <span class="token punctuation">[</span>sdb-query<span class="token punctuation">]</span>  run sdb query. <span class="token keyword">for</span> example: <span class="token string">&apos;*&apos;</span>
+ -K <span class="token punctuation">[</span>algo<span class="token punctuation">]</span>       calculate checksums <span class="token punctuation">(</span>md5, sha1, <span class="token punctuation">..</span><span class="token punctuation">)</span>
+ -l              linked libraries
+ -L <span class="token punctuation">[</span>plugin<span class="token punctuation">]</span>     list supported bin plugins or plugin details
+ -m <span class="token punctuation">[</span>addr<span class="token punctuation">]</span>       show <span class="token builtin class-name">source</span> line at addr
+ -M              main <span class="token punctuation">(</span>show address of main symbol<span class="token punctuation">)</span>
+ -n <span class="token punctuation">[</span>str<span class="token punctuation">]</span>        show section, symbol or <span class="token function">import</span> named str
+ -N <span class="token punctuation">[</span>min:max<span class="token punctuation">]</span>    force min:max number of chars per string <span class="token punctuation">(</span>see -z and -zz<span class="token punctuation">)</span>
+ -o <span class="token punctuation">[</span>str<span class="token punctuation">]</span>        output file/folder <span class="token keyword">for</span> <span class="token function">write</span> operations <span class="token punctuation">(</span>out by default<span class="token punctuation">)</span>
+ -O <span class="token punctuation">[</span>str<span class="token punctuation">]</span>        write/extract operations <span class="token punctuation">(</span>-O <span class="token builtin class-name">help</span><span class="token punctuation">)</span>
+ -p              show physical addresses
+ -P              show debug/pdb information
+ -PP             download pdb <span class="token function">file</span> <span class="token keyword">for</span> binary
+ -q              be quiet, just show fewer data
+ -qq             show <span class="token function">less</span> info <span class="token punctuation">(</span>no offset/size <span class="token keyword">for</span> -z <span class="token keyword">for</span> ex.<span class="token punctuation">)</span>
+ -Q              show load address used by dlopen <span class="token punctuation">(</span>non-aslr libs<span class="token punctuation">)</span>
+ -r              radare output
+ -R              relocations
+ -s              symbols
+ -S              sections
+ -SS             segments
+ -SSS            sections mapping to segments
+ -t              display <span class="token function">file</span> hashes
+ -T              display <span class="token function">file</span> signature
+ -u              unfiltered <span class="token punctuation">(</span>no <span class="token function">rename</span> duplicated symbols/sections<span class="token punctuation">)</span>
+ -U              resoUrces
+ -v              display version and quit
+ -V              Show binary version information
+ -w              display try/catch blocks
+ -x              extract bins contained <span class="token keyword">in</span> <span class="token function">file</span>
+ -X <span class="token punctuation">[</span>fmt<span class="token punctuation">]</span> <span class="token punctuation">[</span>f<span class="token punctuation">]</span> <span class="token punctuation">..</span> package <span class="token keyword">in</span> fat or <span class="token function">zip</span> the given files and bins contained <span class="token keyword">in</span> <span class="token function">file</span>
+ -z              strings <span class="token punctuation">(</span>from data section<span class="token punctuation">)</span>
+ -zz             strings <span class="token punctuation">(</span>from raw bins <span class="token punctuation">[</span>e bin.rawstr<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+ -zzz            dump raw strings to stdout <span class="token punctuation">(</span>for huge files<span class="token punctuation">)</span>
+ -Z              guess size of binary program
+Environment:
+ RABIN2_LANG:      e bin.lang         <span class="token comment"># assume lang for demangling</span>
+ RABIN2_NOPLUGINS: <span class="token comment"># do not load shared plugins (speedup loading)</span>
+ <span class="token assign-left variable">RABIN2_DEMANGLE</span><span class="token operator">=</span><span class="token number">0</span>:e bin.demangle     <span class="token comment"># do not demangle symbols</span>
+ RABIN2_MAXSTRBUF: e bin.maxstrbuf    <span class="token comment"># specify maximum buffer size</span>
+ RABIN2_STRFILTER: e bin.str.filter   <span class="token comment">#  r2 -qc &apos;e bin.str.filter=??&apos; -</span>
+ RABIN2_STRPURGE:  e bin.str.purge    <span class="token comment"># try to purge false positives</span>
+ RABIN2_DEBASE64:  e bin.debase64     <span class="token comment"># try to debase64 all strings</span>
+ RABIN2_DMNGLRCMD: e bin.demanglercmd <span class="token comment"># try to purge false positives</span>
+ RABIN2_PDBSERVER: e pdb.server       <span class="token comment"># use alternative PDB server</span>
+ RABIN2_SYMSTORE:  e pdb.symstore     <span class="token comment"># path to downstream symbol store</span>
+ RABIN2_PREFIX:    e bin.prefix       <span class="token comment"># prefix symbols/sections/relocs with a specific string</span>
+ R2_CONFIG:        <span class="token comment"># sdb config file</span>
+</code></pre>
+<h2 id="资料"><a name="资料" class="plugin-anchor" href="#资料"><i class="fa fa-link" aria-hidden="true"></i></a>资料</h2>
+<ul>
+<li><code>Radare2</code>官网资料<ul>
+<li><a href="https://book.rada.re/index.html" target="_blank">Introduction - The Official Radare2 Book</a><ul>
+<li><a href="https://book.rada.re/tools/rabin2/intro.html" target="_blank">Rabin2 - The Official Radare2 Book</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-23 15:01:47
+2022-11-16 12:32:15
 </span></footer></body></html>
                                 
                                 </section>
@@ -706,7 +853,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"rabin2","level":"1.4.1.1.3","depth":4,"next":{"title":"导出字符串资源","level":"1.4.2","depth":2,"path":"analysis_content/export_str_res/README.md","ref":"analysis_content/export_str_res/README.md","articles":[{"title":"strings","level":"1.4.2.1","depth":3,"path":"analysis_content/export_str_res/strings.md","ref":"analysis_content/export_str_res/strings.md","articles":[]},{"title":"nm","level":"1.4.2.2","depth":3,"path":"analysis_content/export_str_res/nm.md","ref":"analysis_content/export_str_res/nm.md","articles":[]},{"title":"otool","level":"1.4.2.3","depth":3,"path":"analysis_content/export_str_res/otool.md","ref":"analysis_content/export_str_res/otool.md","articles":[]}]},"previous":{"title":"jtool2","level":"1.4.1.1.2","depth":4,"path":"analysis_content/bin_info/mach_o/jtool2.md","ref":"analysis_content/bin_info/mach_o/jtool2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_static_analysis/pdf/ios_re_static_analysis.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_static_analysis/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_static_analysis","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：静态分析","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向开发期间的静态分析。先是静态分析的概览；接着是从ipa中找到要分析的二进制文件；再是静态分析主要涉及的内容，包括用MachOView、jtool2、rabin2等查看Mach-O二进制信息，用strings、nm、otool等导出字符串资源，用class-dump导出ObjC头文件，用IDA、Hopper等分析代码逻辑等等；然后给出一些相关实例；最后再整理一些相关的经验心得。"},"file":{"path":"analysis_content/bin_info/mach_o/rabin2.md","mtime":"2022-10-23T07:01:47.074Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-16T03:53:38.491Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"rabin2","level":"1.4.1.1.3","depth":4,"next":{"title":"导出字符串资源","level":"1.4.2","depth":2,"path":"analysis_content/export_str_res/README.md","ref":"analysis_content/export_str_res/README.md","articles":[{"title":"strings","level":"1.4.2.1","depth":3,"path":"analysis_content/export_str_res/strings.md","ref":"analysis_content/export_str_res/strings.md","articles":[]},{"title":"nm","level":"1.4.2.2","depth":3,"path":"analysis_content/export_str_res/nm.md","ref":"analysis_content/export_str_res/nm.md","articles":[]},{"title":"otool","level":"1.4.2.3","depth":3,"path":"analysis_content/export_str_res/otool.md","ref":"analysis_content/export_str_res/otool.md","articles":[]}]},"previous":{"title":"jtool2","level":"1.4.1.1.2","depth":4,"path":"analysis_content/bin_info/mach_o/jtool2.md","ref":"analysis_content/bin_info/mach_o/jtool2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_static_analysis/pdf/ios_re_static_analysis.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_static_analysis/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_static_analysis","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：静态分析","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"介绍iOS逆向开发期间的静态分析。先是静态分析的概览；接着是从ipa中找到要分析的二进制文件；再是静态分析主要涉及的内容，包括用MachOView、jtool2、rabin2等查看Mach-O二进制信息，用strings、nm、otool等导出字符串资源，用class-dump导出ObjC头文件，用IDA、Hopper等分析代码逻辑等等；然后给出一些相关实例；最后再整理一些相关的经验心得。"},"file":{"path":"analysis_content/bin_info/mach_o/rabin2.md","mtime":"2022-11-16T04:32:15.854Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-11-16T04:33:50.918Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
