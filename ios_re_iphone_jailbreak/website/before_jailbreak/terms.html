@@ -85,7 +85,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="jailbreak_tool.html" />
+    <link rel="next" href="jailbreak_tool/" />
     
     
     <link rel="prev" href="./" />
@@ -198,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="jailbreak_tool.html">
+        <li class="chapter " data-level="1.3.2" data-path="jailbreak_tool/">
             
-                <a href="jailbreak_tool.html">
+                <a href="jailbreak_tool/">
             
                     
                         <b>1.3.2.</b>
@@ -210,6 +210,72 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="jailbreak_tool/unc0ver.html">
+            
+                <a href="jailbreak_tool/unc0ver.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    unc0ver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="jailbreak_tool/checkra1n.html">
+            
+                <a href="jailbreak_tool/checkra1n.html">
+            
+                    
+                        <b>1.3.2.2.</b>
+                    
+                    checkra1n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="jailbreak_tool/palera1n.html">
+            
+                <a href="jailbreak_tool/palera1n.html">
+            
+                    
+                        <b>1.3.2.3.</b>
+                    
+                    palera1n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="jailbreak_tool/xinaa15.html">
+            
+                <a href="jailbreak_tool/xinaa15.html">
+            
+                    
+                        <b>1.3.2.4.</b>
+                    
+                    XinaA15
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -265,14 +331,44 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.2" data-path="../doing_jailbreak/do_jailbreak/cherkra1n.html">
+        <li class="chapter " data-level="1.4.1.2" data-path="../doing_jailbreak/do_jailbreak/checkra1n.html">
             
-                <a href="../doing_jailbreak/do_jailbreak/cherkra1n.html">
+                <a href="../doing_jailbreak/do_jailbreak/checkra1n.html">
             
                     
                         <b>1.4.1.2.</b>
                     
-                    cherkra1n
+                    checkra1n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../doing_jailbreak/do_jailbreak/palera1n.html">
+            
+                <a href="../doing_jailbreak/do_jailbreak/palera1n.html">
+            
+                    
+                        <b>1.4.1.3.</b>
+                    
+                    palera1n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../doing_jailbreak/do_jailbreak/xinaa15.html">
+            
+                <a href="../doing_jailbreak/do_jailbreak/xinaa15.html">
+            
+                    
+                        <b>1.4.1.4.</b>
+                    
+                    XinaA15
             
                 </a>
             
@@ -639,6 +735,13 @@
 <p>越狱前，要了解很多基本概念：</p>
 <h2 id="jbjailbreak越狱"><a name="jbjailbreak越狱" class="plugin-anchor" href="#jbjailbreak越狱"><i class="fa fa-link" aria-hidden="true"></i></a><code>jb</code>=<code>jailbreak</code>=越狱</h2>
 <ul>
+<li>技术角度<ul>
+<li>越狱=iOS越狱=iOS jailbreak = iPhone越狱<ul>
+<li>含义：获取iOS设备的Root权限的技术手段</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>类比：iPhone=iOS系统，就像一个监狱<ul>
 <li>普通iPhone的用户，就像在监狱内，虽然被iOS系统管理约束着，也很安全，但是失去了很多自由</li>
 <li>想要更加自由，就要从监狱中逃出来 = 越狱</li>
@@ -647,14 +750,86 @@
 </ul>
 </li>
 </ul>
-<p>越狱效果：</p>
+<h2 id="普通越狱-vs-rootless无根越狱"><a name="普通越狱-vs-rootless无根越狱" class="plugin-anchor" href="#普通越狱-vs-rootless无根越狱"><i class="fa fa-link" aria-hidden="true"></i></a>普通越狱 vs rootless无根越狱</h2>
 <ul>
-<li>很久之前：越狱后，就一直保持越狱状态<ul>
+<li>普通越狱= 有根越狱<ul>
+<li>rootfs可写，包括根目录/也可以写<ul>
+<li>palera1n中也叫：<code>fakefs-rootful</code> = <code>rootful</code>越狱</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>rootless</code>越狱 = 无根越狱<ul>
+<li>rootfs只读，只有/var可写</li>
+</ul>
+</li>
+</ul>
+<h2 id="完美越狱-vs-不完美越狱-vs-半完美越狱-vs-半不完美越狱"><a name="完美越狱-vs-不完美越狱-vs-半完美越狱-vs-半不完美越狱" class="plugin-anchor" href="#完美越狱-vs-不完美越狱-vs-半完美越狱-vs-半不完美越狱"><i class="fa fa-link" aria-hidden="true"></i></a>完美越狱 vs 不完美越狱 vs 半完美越狱 vs 半不完美越狱</h2>
+<ul>
+<li>核心逻辑：2种类型<ul>
+<li>重启后，是否要（用特殊软件）引导才能开机<ul>
+<li>是<ul>
+<li>全越狱=完美越狱<ul>
+<li>越狱后的iPhone可以正常关机和重启</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>否<ul>
+<li>半越狱=不完美越狱<ul>
+<li>iPhone重启后<ul>
+<li>屏幕就会一直停留在启动画面，也就是“白苹果”状态</li>
+<li>或者能正常开机，但已经安装的破解软件都无法正常使用</li>
+</ul>
+</li>
+<li>需要将设备与PC连接后，使用软件进行引导才能使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>重启后，是否还保留越狱状态<ul>
+<li>是<ul>
+<li>全越狱</li>
+</ul>
+</li>
+<li>否<ul>
+<li>半越狱</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2种核心逻辑组合出4种：越狱类型=Types of Jailbreaks<ul>
+<li><code>untethered</code> = <code>Untethered jailbreak</code>= 完美越狱：不需要引导启动<ul>
+<li>指设备在进行重启后，越狱状态仍被完整保留</li>
+</ul>
+</li>
+<li><code>semi-untethered</code>=<code>Semi-untethered jailbreak</code>=半完美越狱<ul>
+<li>指设备在重启后，将丢失越狱状态；而若想要再恢复越狱环境，只需在设备上进行某些操作即可恢复越狱</li>
+</ul>
+</li>
+<li><code>tethered</code>=<code>Tethered jailbreak</code>=不完美越狱：需要引导启动<ul>
+<li>当处于此状态的iOS设备开机重启后，之前进行的越狱程序就会失效，用户将失去Root权限，需要将设备连接电脑来使用（如特定版本下的红雪（redsn0w））等越狱软件进行引导开机以后，才可再次使用越狱程序。否则设备将无法正常引导</li>
+</ul>
+</li>
+<li><code>semi-tethered</code>=<code>Semi-tethered jailbreak</code>=半不完美越狱<ul>
+<li>指设备在重启后，将丢失越狱状态，并恢复成未越狱状态。如果想要恢复越狱环境，必须连接计算机并在越狱工具的引导下引导来恢复越狱状态</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>=&gt; 典型越狱效果：</p>
+<ul>
+<li>很久之前：越狱后，就一直保持越狱状态（完美越狱）<ul>
 <li>重启iPhone也能保持越狱状态</li>
 </ul>
 </li>
-<li>现在：越狱后，重启iPhone会丢失越狱<ul>
-<li>所以往往重启iPhone后，还要去：恢复越狱<ul>
+<li>现在：越狱后，重启iPhone会<strong>丢失越狱</strong>（半完美越狱）<ul>
+<li>所以重启iPhone后，往往还要去：<strong>恢复越狱</strong><ul>
 <li>恢复越狱，等于重新执行一遍越狱流程，重新（再次）越狱</li>
 </ul>
 </li>
@@ -695,7 +870,7 @@
 <li>【整理】UICache是什么和作用</li>
 </ul>
 <footer class="page-footer"><span class="copyright">crifan.org，使用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名4.0国际(CC BY 4.0)协议</a>发布 all right reserved，powered by Gitbook</span><span class="footer-modification">最后更新：
-2022-10-26 15:57:40
+2023-03-02 22:13:49
 </span></footer></body></html>
                                 
                                 </section>
@@ -728,7 +903,7 @@
                 </a>
                 
                 
-                <a href="jailbreak_tool.html" class="navigation navigation-next " aria-label="Next page: 越狱工具">
+                <a href="jailbreak_tool/" class="navigation navigation-next " aria-label="Next page: 越狱工具">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -739,7 +914,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"名词解释","level":"1.3.1","depth":2,"next":{"title":"越狱工具","level":"1.3.2","depth":2,"path":"before_jailbreak/jailbreak_tool.md","ref":"before_jailbreak/jailbreak_tool.md","articles":[]},"previous":{"title":"越狱前","level":"1.3","depth":1,"path":"before_jailbreak/README.md","ref":"before_jailbreak/README.md","articles":[{"title":"名词解释","level":"1.3.1","depth":2,"path":"before_jailbreak/terms.md","ref":"before_jailbreak/terms.md","articles":[]},{"title":"越狱工具","level":"1.3.2","depth":2,"path":"before_jailbreak/jailbreak_tool.md","ref":"before_jailbreak/jailbreak_tool.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_iphone_jailbreak/pdf/ios_re_iphone_jailbreak.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_iphone_jailbreak/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_iphone_jailbreak","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：iPhone越狱","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"iOS逆向开发系列教程之iPhone越狱，先是越狱的概述，再介绍越狱前要选择合适越狱工具，比如unc0ver、checkra1n等；以及越狱中，如何用unc0ver、checkra1n给iPhone手机越狱，以及越狱后的各种事项，包括恢复越狱、文件管理、包管理的Cydia和Sileo、辅助工具爱思助手和安装ipa。"},"file":{"path":"before_jailbreak/terms.md","mtime":"2022-10-26T07:57:40.462Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-10-27T13:43:07.077Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"名词解释","level":"1.3.1","depth":2,"next":{"title":"越狱工具","level":"1.3.2","depth":2,"path":"before_jailbreak/jailbreak_tool/README.md","ref":"before_jailbreak/jailbreak_tool/README.md","articles":[{"title":"unc0ver","level":"1.3.2.1","depth":3,"path":"before_jailbreak/jailbreak_tool/unc0ver.md","ref":"before_jailbreak/jailbreak_tool/unc0ver.md","articles":[]},{"title":"checkra1n","level":"1.3.2.2","depth":3,"path":"before_jailbreak/jailbreak_tool/checkra1n.md","ref":"before_jailbreak/jailbreak_tool/checkra1n.md","articles":[]},{"title":"palera1n","level":"1.3.2.3","depth":3,"path":"before_jailbreak/jailbreak_tool/palera1n.md","ref":"before_jailbreak/jailbreak_tool/palera1n.md","articles":[]},{"title":"XinaA15","level":"1.3.2.4","depth":3,"path":"before_jailbreak/jailbreak_tool/xinaa15.md","ref":"before_jailbreak/jailbreak_tool/xinaa15.md","articles":[]}]},"previous":{"title":"越狱前","level":"1.3","depth":1,"path":"before_jailbreak/README.md","ref":"before_jailbreak/README.md","articles":[{"title":"名词解释","level":"1.3.1","depth":2,"path":"before_jailbreak/terms.md","ref":"before_jailbreak/terms.md","articles":[]},{"title":"越狱工具","level":"1.3.2","depth":2,"path":"before_jailbreak/jailbreak_tool/README.md","ref":"before_jailbreak/jailbreak_tool/README.md","articles":[{"title":"unc0ver","level":"1.3.2.1","depth":3,"path":"before_jailbreak/jailbreak_tool/unc0ver.md","ref":"before_jailbreak/jailbreak_tool/unc0ver.md","articles":[]},{"title":"checkra1n","level":"1.3.2.2","depth":3,"path":"before_jailbreak/jailbreak_tool/checkra1n.md","ref":"before_jailbreak/jailbreak_tool/checkra1n.md","articles":[]},{"title":"palera1n","level":"1.3.2.3","depth":3,"path":"before_jailbreak/jailbreak_tool/palera1n.md","ref":"before_jailbreak/jailbreak_tool/palera1n.md","articles":[]},{"title":"XinaA15","level":"1.3.2.4","depth":3,"path":"before_jailbreak/jailbreak_tool/xinaa15.md","ref":"before_jailbreak/jailbreak_tool/xinaa15.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","anchors","expandable-menu","-lunr","-search","search-plus","disqus","-highlight","prism","prism-themes","github-buttons","-splitter","splitter-nosessionbutcookie","-sharing","sharing-plus","tbfed-pagefooter","donate","sitemap-general","copy-code-button","callouts","toolbar-button"],"root":"./src","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"crifan.org，使用<a href='https://creativecommons.org/licenses/by/4.0/deed.zh'>署名4.0国际(CC BY 4.0)协议</a>发布","modify_label":"最后更新：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"crifan"},"callouts":{"showTypeInHeader":false},"toolbar-button":{"label":"下载PDF","url":"https://book.crifan.org/books/ios_re_iphone_jailbreak/pdf/ios_re_iphone_jailbreak.pdf","icon":"fa-file-pdf-o"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"title":"","button":"打赏","wechat":"https://www.crifan.org/files/res/crifan_com/crifan_wechat_pay.jpg","alipay":"https://www.crifan.org/files/res/crifan_com/crifan_alipay_pay.jpg","wechatText":"微信打赏给Crifan","alipayText":"支付宝打赏给Crifan"},"sitemap-general":{"prefix":"https://book.crifan.org/books/ios_re_iphone_jailbreak/website/"},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"splitter-nosessionbutcookie":{},"prism-themes":{},"github-buttons":{"buttons":[{"repo":"ios_re_iphone_jailbreak","user":"crifan","type":"star","count":true,"size":"small"},{"user":"crifan","type":"follow","width":"120","count":false,"size":"small"}]},"expandable-menu":{},"copy-code-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"Crifan Li <admin@crifan.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS逆向开发：iPhone越狱","language":"zh-hans","links":{"sidebar":{"主页":"http://www.crifan.org"}},"gitbook":"*","description":"iOS逆向开发系列教程之iPhone越狱，先是越狱的概述，再介绍越狱前要选择合适越狱工具，比如unc0ver、checkra1n、palera1n、XinaA15等；以及越狱中，如何用unc0ver、checkra1n、palera1n等工具给iPhone手机越狱，以及越狱后的各种事项，包括恢复越狱、文件管理、包管理的Cydia和Sileo、辅助工具爱思助手和安装ipa。"},"file":{"path":"before_jailbreak/terms.md","mtime":"2023-03-02T14:13:49.688Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2023-03-02T15:21:07.524Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
