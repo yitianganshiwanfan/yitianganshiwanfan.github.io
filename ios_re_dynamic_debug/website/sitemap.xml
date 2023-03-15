@@ -9,7 +9,11 @@
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_code/frida.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/reveal.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/cycript.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/cycript/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/cycript/init_env.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/cycript/basic_usage.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/cycript/note_summary.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/cycript/output_example.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/lldbtools.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/chisel.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://book.crifan.org/books/ios_re_dynamic_debug/website/debug_ui/flex.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
